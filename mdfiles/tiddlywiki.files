@@ -1,0 +1,17 @@
+{
+  "directories": [
+    {
+      "path": "./",
+      "filesRegExp": "^.*\\.md$",
+      "searchSubdirectories": true,
+      "isEditableFile": true,
+      "fields": {
+        "title": {
+          "source": "basename",
+          "prefix": "neotw-"
+        },
+        "type": "text/markdown"
+      }
+    }
+  ]
+}
