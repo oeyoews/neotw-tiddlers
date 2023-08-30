@@ -1,0 +1,1 @@
+vercel 的cron如果成为正式版就是付费的功能, 而且cron只是支持serverless, 不同于github actions 的定时触发更新
