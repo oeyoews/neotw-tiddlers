@@ -1,0 +1,1 @@
+如果package.json 的name 有空格获取其他不规范命名, yarn会检查报错, pnpm不会
