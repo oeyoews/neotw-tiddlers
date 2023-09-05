@@ -1,0 +1,1 @@
+element-ui 是由饿了么团队（ElemeFE）开发的一款基于 Vue.js 框架的 UI 组件库。ElemeFE 团队是阿里巴巴的前端技术团队之一，致力于为 Web 开发者提供优秀的前端技术解决方案。element-ui 组件库具有易用性、美观性和灵活性，成为 Vue.js 生态圈中非常受欢迎的 UI 组件库之一。

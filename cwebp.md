@@ -1,0 +1,1 @@
+* use cwebp input.png -o output.png to compress png

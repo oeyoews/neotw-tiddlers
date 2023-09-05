@@ -1,0 +1,1 @@
+<img src="https://v1.jinrishici.com/all.svg">

@@ -1,0 +1,1 @@
+{{$:/plugins/oeyoews/tiddlywiki-cards/gallary}}

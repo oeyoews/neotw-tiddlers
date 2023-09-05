@@ -1,0 +1,1 @@
+* if you not use jsx, React not necessary imported if you dont use it

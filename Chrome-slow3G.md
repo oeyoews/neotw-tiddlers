@@ -1,0 +1,1 @@
+* on network, you can choose slow 3G

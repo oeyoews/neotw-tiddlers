@@ -1,0 +1,1 @@
+* <https://manateelazycat.github.io/think/2023/02/14/chatgpt.html>

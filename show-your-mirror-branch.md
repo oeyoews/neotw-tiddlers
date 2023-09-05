@@ -1,0 +1,1 @@
+* <https://wiki.manjaro.org/index.php/Switching_Branches/zh-cn>

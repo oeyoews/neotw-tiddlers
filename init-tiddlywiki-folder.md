@@ -1,0 +1,2 @@
+```
+tiddlywiki <wikifolder> --init <editionName>

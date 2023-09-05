@@ -1,0 +1,1 @@
+* <https://www.joshwcomeau.com/blog/how-to-learn-stuff-quickly/>

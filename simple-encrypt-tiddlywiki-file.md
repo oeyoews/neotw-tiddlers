@@ -1,0 +1,1 @@
+if use --password on tiddlywiki, this file will be more larger, about more 2M, so if you just want to add password on open website simple, not encrypt all website(note: if your html download, this content will be check by editor to open this html file)

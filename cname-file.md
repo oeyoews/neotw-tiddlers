@@ -1,0 +1,1 @@
+* not all dns provider support cname file, such as aliyun

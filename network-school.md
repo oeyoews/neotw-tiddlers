@@ -1,0 +1,1 @@
+school network not allow proxy

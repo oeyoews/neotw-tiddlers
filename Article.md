@@ -1,0 +1,2 @@
+<$image source="articles.png" class="h-12 w-auto block mx-auto animate-pulse" />
+<<table-dynamic filter:[publish[article]] fields:"title created tags tbl-expand" caption:"" class:"capitalize" editButton:"no" pagination:"yes" sortOp:'sortan' emptyMessage:"Nothing">>

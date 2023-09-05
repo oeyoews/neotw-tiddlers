@@ -1,0 +1,1 @@
+> maybe can add animation on switch different layout, such as from landing layout to home page layout
