@@ -4,5 +4,5 @@ modified: 20230907110820925
 modifier: oeyoews
 module-type: route
 overwrite: yes
-title: $:/plugins/oeyoews/neotw-pwa/routes/get-manifest.js
+title: $:/plugins/oeyoews/neotw-pwa/routes/get-tiddlywiki-image.js
 type: application/javascript
