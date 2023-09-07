@@ -1,0 +1,1 @@
+https://next.ossinsight.io/widgets
