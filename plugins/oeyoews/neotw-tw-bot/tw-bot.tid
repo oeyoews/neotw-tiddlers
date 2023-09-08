@@ -1,0 +1,15 @@
+caption: {{$:/plugins/oeyoews/neotw-tw-bot/icon}} 记录一闪而过的瞬间
+created: 20230908140340206
+creator: oeyoews
+icon: $:/plugins/oeyoews/neotw-tw-bot/icon
+modified: 20230908140349209
+modifier: oeyoews
+tags: 
+title: $:/plugins/oeyoews/neotw-tw-bot/tw-bot.tid
+type: text/vnd.tiddlywiki
+
+<!-- tags: $:/tags/SideBar -->
+
+<div class="my-4">
+  <$tw-bot />
+</div>
