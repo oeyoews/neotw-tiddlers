@@ -3,7 +3,7 @@ created: 20230117102714737
 creator: oeyoews
 giscus: yes
 icon: tom.svg
-modified: 20230908071130153
+modified: 20230908155700827
 modifier: oeyoews
 page-cover: gradient.svg
 pin: yes
@@ -12,8 +12,6 @@ sticky-footer:
 tags: 
 title: GettingStarted
 type: text/vnd.tiddlywiki
-
-<$tw-bot />
 
 {{Cards}}
 
