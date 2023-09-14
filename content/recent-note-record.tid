@@ -1,3 +1,11 @@
+created: 20230115132708917
+creator: oeyoews
+modified: 20230914072755370
+modifier: oeyoews
+tags: 
+title: recent-note-record
+type: text/vnd.tiddlywiki
+
 <ul>
   <$list filter="[!is[system]!<currentTiddler>days[-100]!sort[modified]]">
     <li>
