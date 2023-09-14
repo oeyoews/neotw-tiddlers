@@ -1,5 +1,3 @@
-![rss](./files/rss-banner.png)
-
 > 原来rss feeds 用起来这么爽, 之前一直还不理解
 
 > personal atom feed: https://neotw.oeyoewl.top/atom.xml
