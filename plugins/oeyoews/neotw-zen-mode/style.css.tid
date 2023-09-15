@@ -1,0 +1,16 @@
+created: 20230915010941726
+modified: 20230915015858860
+tags: $:/tags/Stylesheet
+title: $:/plugins/oeyoews/neotw-zen-mode/style.css
+type: text/vnd.tiddlywiki
+
+.tc-edit-tags,
+.tc-edit-field-add,
+[role="region"] .tc-tiddler-title,
+.tc-edit-type-selector-wrapper {
+  display: none !important;
+}
+
+<!-- [role="region"] .tc-tiddler-frame { -->
+<!--   background: transparent !important; -->
+<!-- } -->
