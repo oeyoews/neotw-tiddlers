@@ -1,6 +1,6 @@
 created: 20230604024022812
 creator: oeyoews
-modified: 20230604092035333
+modified: 20230918114409537
 modifier: oeyoews
 tags: JavaScript
 title: dispatchEvent
@@ -34,3 +34,39 @@ myButton.dispatchEvent(clickEvent);
 在这个示例中，我们使用 `dispatchEvent` 方法手动触发了一个按钮的单击事件。由于按钮的单击事件被触发，所以控制台会输出 `'按钮被单击了'`。
 
 需要注意的是，通过 `dispatchEvent` 方法触发的事件不会触发浏览器的默认行为，除非事件对象的 `cancelable` 属性被设置为 `false`。此外，使用 `dispatchEvent` 方法触发的事件也不会触发事件冒泡，除非事件对象的 `bubbles` 属性被设置为 `true`。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dispatchEvent 示例</title>
+  </head>
+  <body>
+    <button id="myButton">点击我触发事件</button>
+
+    <!-- JavaScript 代码 -->
+    <script>
+      // 获取按钮元素
+      const button = document.getElementById("myButton");
+
+      // 创建自定义事件
+      const customEvent = new Event("customEvent");
+
+      // 添加事件监听器
+      button.addEventListener("click", function () {
+        console.log("按钮被点击了");
+
+        // 触发自定义事件
+        button.dispatchEvent(customEvent);
+      });
+
+      // 在自定义事件上添加另一个事件监听器
+      button.addEventListener("customEvent", function () {
+        console.log("自定义事件被触发了");
+      });
+    </script>
+  </body>
+</html>
+```

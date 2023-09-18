@@ -3,7 +3,7 @@ created: 20230117102714737
 creator: oeyoews
 giscus: yes
 icon: tom.svg
-modified: 20230914093540907
+modified: 20230918135241294
 modifier: oeyoews
 page-cover: gradient.svg
 pin: yes
@@ -13,9 +13,18 @@ tags:
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
+<$list filter="[{$:/info/url/protocol}match[http:]]">
+
 {{Cards}}
 
+</$list>
+
 <$list filter="[{$:/info/url/protocol}match[https:]]">
+
+!! 近期更新动态
+
+<$cards />
+
 {{$:/plugins/oeyoews/tiddlywiki-cards/gallary}}
 {{$:/plugins/oeyoews/neotw/Readme}}
 {{$:/plugins/oeyoews/tiddlywiki-cards/sites1}}
