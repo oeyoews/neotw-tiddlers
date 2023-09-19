@@ -1,14 +1,12 @@
 cn-title: 太微介绍
 created: 20230117102714737
 creator: oeyoews
-giscus: yes
 icon: tom.svg
-modified: 20230918141055331
+modified: 20230918155132111
 modifier: oeyoews
 page-cover: gradient.svg
 pin: yes
 publish: public
-sticky-footer: 
 tags: 
 title: GettingStarted
 type: text/vnd.tiddlywiki
@@ -20,10 +18,5 @@ type: text/vnd.tiddlywiki
 </$list>
 
 <$list filter="[{$:/info/url/protocol}match[https:]]">
-
-!! 近期更新动态
-
-<$cards />
-
 {{$:/plugins/oeyoews/neotw/Readme}}
 </$list>
