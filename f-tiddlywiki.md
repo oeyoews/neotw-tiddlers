@@ -1,1 +1,0 @@
-<<friend-card "Tiddlywiki" "Tiddlywiki document" "https://tiddlywiki.com/favicon.ico">>
