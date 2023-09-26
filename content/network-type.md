@@ -1,0 +1,3 @@
+```js
+navigator.connection
+```

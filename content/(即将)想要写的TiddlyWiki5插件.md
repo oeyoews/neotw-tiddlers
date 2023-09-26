@@ -6,14 +6,14 @@
 ## TODO
 
 :::todo
-- [ ] 默认不出现红框, 而是提示界面, 点击显示具体错误
+- [x] 默认不出现红框, 而是提示界面, 点击显示具体错误
 - [ ] for two thousands tiddler, daylight plugins will be slow to automatcially switch mode
 - [ ] 自动预览导入内容或者图片, 选择是否需要修改名字
-- [ ] 使用单独布局, https://github.com/casualwriter/vanilla-chatgpt 模仿官网ui
+- [ ] 使用单独布局, https://github.com/casualwriter/vanilla- [x] chatgpt 模仿官网ui
 - [ ] https://tiddlywiki.com/editions/translators/
-- [ ] tm-modal to write tiddler linke notion
+- [ ] tm-modal to write tiddler link notion
 - [ ] 盘古插件 neotw-pangu
-- [ ] 标题支持fold
+- [ ] 文章标题支持fold
 - [ ] autolist plugin
 - [ ] 浮动目录(markdown)
 - [ ] 所见即所得(个人并不是其爱好者, 更喜欢所写即所见)
@@ -25,7 +25,7 @@
 - [ ] 可拖动tiddler, 调整顺序
 - [ ] 全文输出 Rss 插件
 - [ ] 全文搜索插件 
-- [ ] 日间模式插件
+- [x] 日间模式插件
 - [ ] Tiddlywiki LSP
 - [ ] 插件更新提示插件
 - [ ] 类vscode 插件商店
