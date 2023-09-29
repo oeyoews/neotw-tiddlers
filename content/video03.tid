@@ -1,14 +1,11 @@
 created: 20230331152923700
 creator: oeyoews
-modified: 20230913125644465
+modified: 20230929151547785
 modifier: oeyoews
 publish: public
-tags: 
-title: youtbe-video
+tags: video
+title: video03
 type: text/vnd.tiddlywiki
 
-<$youtube youtubeId="cWdrnvZ1S7Y" />
-
-<$youtube youtubeId="o7GyFa90klg" />
 
 <$youtube youtubeId="PLjNhkoz3yGwG9ISeHEYsdUSQdQarKJ8u3" playlist/>
