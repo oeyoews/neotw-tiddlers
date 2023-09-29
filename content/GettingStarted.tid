@@ -2,7 +2,7 @@ cn-title: 太微介绍
 created: 20230117102714737
 creator: oeyoews
 icon: tom.svg
-modified: 20230929070347886
+modified: 20230929150353906
 modifier: oeyoews
 page-cover: gradient.svg
 page-icon: fluent-emoji-flat:waving-hand
@@ -12,6 +12,6 @@ tags:
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
-<$cards filter='JavaScript React TiddlyWiki Journal Tailwindcss books Article Private CSS' />
+<$cards filter='Videos JavaScript React TiddlyWiki Journal Tailwindcss books Article Private CSS' />
 
 {{$:/plugins/oeyoews/neotw/Readme}}
