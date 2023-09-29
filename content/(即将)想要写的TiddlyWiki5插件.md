@@ -6,6 +6,8 @@
 ## TODO
 
 :::todo
+- [ ] 构建输出的时候如果有大文件图片, 就输出警告
+- [ ] slugify plugin: 优化链接
 - [x] 默认不出现红框, 而是提示界面, 点击显示具体错误
 - [ ] for two thousands tiddler, daylight plugins will be slow to automatcially switch mode
 - [ ] 自动预览导入内容或者图片, 选择是否需要修改名字
