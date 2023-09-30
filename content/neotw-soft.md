@@ -46,7 +46,9 @@
     <!--+tree+-->
 
 ##  bootiso
+
   - ventoy
+  - rufus（Windows）
   - etcher [etcher-link](https://www.balena.io/etcher/)
 
 ##  IME
