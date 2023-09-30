@@ -1,1 +1,1 @@
-<<table-dynamic filter:[tag[Journal]![Journal]] fields:"title created tags tbl-expand" caption:"" class:"capitalize" editButton:"no" pagination:"yes" sortOp:'sortan' emptyMessage:"Nothing">>
+<<table-dynamic filter:[tag[Journal]] fields:"title"  class:"capitalize" editButton:"no" pagination:"yes" sortOp:'sortan' emptyMessage:"Nothing">>
