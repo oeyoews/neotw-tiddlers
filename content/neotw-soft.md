@@ -58,14 +58,6 @@
     - fcitx5-pinyin-moegirl
     - fcitx5-chinese-addons
 
-        <!--- nvm                        # node 版本管理-->
-        <!-- # virtual-desktop            # plasma widget-->
-## QQ
-- com.qq.tim.spark
-- com.qq.wexin.deepin
-- qq(electron): icalingua
--  wechat-uos                 # wechat
-
 - jdk8-openjdk
     <!-- # fgit                       # hub.fastgit.org-->
     <!-- # deskreen                   # 投屏软件-->
@@ -88,17 +80,6 @@
   - lx-music-desktop-bin
   - clementine(support podcast)
   - museeks
-
-      <!-- # https://www.cnblogs.com/kevingrace/p/10188283.html-->
-      <!-- # terminal session recorder-->
-      <!--- asciinema-->
--  kate
-
-
-## analyse memory
-valgrind
-massif-visualizer
-
 
 ## picture show
 - inkscape
