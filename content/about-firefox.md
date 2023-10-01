@@ -1,0 +1,1 @@
+IMO, firefox always have some wired question or bugs
