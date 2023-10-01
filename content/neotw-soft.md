@@ -52,7 +52,10 @@
   - etcher [etcher-link](https://www.balena.io/etcher/)
 
 ##  IME
-- fcitx-im
+
+>  使用fcitx5-im（with pacman)无效？？？ 需要分开装
+
+- fcitx5-im
  -  manjaro-asian-input-support-fcitx5
 - fcitx5-pinyin-zhwiki
     - fcitx5-pinyin-moegirl
