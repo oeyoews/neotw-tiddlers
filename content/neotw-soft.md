@@ -1,7 +1,7 @@
 @[toc]
 
 ## Gnome
-  - trayIconsReloaded
+  - gnome-shell-extension-tray-icons-reloaded
   - locks
   - GPaste
   - kimpanel

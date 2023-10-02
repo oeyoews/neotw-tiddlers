@@ -1,1 +1,0 @@
-{{$:/plugins/oeyoews/neotw-surfing-keys/keyboard-list}}

@@ -1,5 +1,3 @@
-@[toc]
-
 ### Reverd
 
 * git revert id    # 会有冲突出现  ？
@@ -37,7 +35,7 @@
 * git push --tags
 
 ### Reset
-* git reset -- filename  or git restore --staged/-S <filename>
+* git reset -- filename  or git restore --staged/-S filename
 * git restore file (workspace)
 * git reset --hard id / tag
 
@@ -65,10 +63,11 @@
 * git branch -a/-r
 
 ### Checkout
+
 * git checkout -- name //使用head的最新内容替换工作目录的内容LL ( only workspace)
 * git checkout branchname         # switch anotherbranch (git branch dev    && git checkout dev)
 * git checkout --orphan=new-br    #  根据当前的分支，生成新的分支，但是没有提交记录，只能提交才能看到新的分支
-* git checkout --merge <branch>
+* git checkout --merge branch
 * git checkout . # restore the current directory to lasted commits
 * git checkout filename # in workspace
 * git checkout -                  # 切换到上个分支
@@ -77,7 +76,7 @@
 * git push -f
 * git pull -p # 在拉去的时候自动删除远程分支已经不存在的本地分支  prune
 * git push --all origin # 将本地的所有分支推送到远程主机，不论是否存在与否
-* `git push origin  <branchname>`   # 将新的分支推送到远端
+* `git push origin  branchname`   # 将新的分支推送到远端
 * 也可以进行强行推送（not recommend），直接把远程仓库覆盖掉
 * `git push origin  master --force`
 * `git push origin  :master`
