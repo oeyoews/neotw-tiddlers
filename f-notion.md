@@ -1,1 +1,0 @@
-<<friend-card 'Neoblog' 'notion with react nextjs' 'https:/neoblog.oeyoewl.top/favicon.ico' 'https:/neoblog.oeyoewl.top'>>

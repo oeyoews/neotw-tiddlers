@@ -1,1 +1,0 @@
-<<friend-card "tiddlyhost" "tiddlywiki static html" "https://tiddlyhost.com/assets/logo-d172f33f619f67863d9e0c60088fc1f396e6e85a7938f0b9c11049ef10c045fd.svg">>

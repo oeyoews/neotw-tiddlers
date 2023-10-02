@@ -1,1 +1,0 @@
-<<friend-card 'Talk Tiddlywiki' 'learn tiddlywiki' '<https://talk.tiddlywiki.org/uploads/default/optimized/1X/39026bc4f2982199e99372b6c3c9655d07544b7d_2_32x32.svg>' '<https://talk.tiddlywiki.org>'>>

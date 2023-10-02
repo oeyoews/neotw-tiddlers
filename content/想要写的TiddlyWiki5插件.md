@@ -15,7 +15,7 @@
 - [ ] 使用单独布局, https://github.com/casualwriter/vanilla- [x] chatgpt 模仿官网ui
 - [ ] https://tiddlywiki.com/editions/translators/
 - [ ] tm-modal to write tiddler link notion
-- [ ] 盘古插件 neotw-pangu
+- [ ] 盘古插件 neotw-pangu: 格式化文本， 符合基本中文习惯， 空格空行逗号处理
 - [ ] 文章标题支持fold
 - [ ] autolist plugin
 - [ ] 浮动目录(markdown)
