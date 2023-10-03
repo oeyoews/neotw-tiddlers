@@ -1,9 +1,9 @@
 ```bash
 localectl status 
 
-sudoedit /etc/vconsole.conf
+sudoedit /etc/vconsole.conf 
 
-loadkeys: Unable to open file: cn: 没有那个文件或目录
+loadkeys: Unable to open file: cn: 没有那个文件或目录 -> cn to en 即可
 ```
 
 [[keymap|https://wiki.archlinux.org/title/Linux_console_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Keyboard_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)]]
