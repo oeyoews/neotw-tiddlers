@@ -1,0 +1,1 @@
+firefox 不支持 smoothscroll
