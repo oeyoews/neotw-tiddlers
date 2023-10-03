@@ -6,6 +6,7 @@
 ## TODO
 
 :::todo
+- [ ] support `tiddlywiki --init oeyoews`
 - [ ] add dplayer(很少用到, 目前不做)
 - [ ] 构建输出的时候如果有大文件图片, 就输出警告
 - [ ] slugify plugin: 优化链接
