@@ -1,1 +1,1 @@
-firefox 不支持 smoothscroll
+firefox 不支持 smoothscroll, 但是上面显示的是开启了的
