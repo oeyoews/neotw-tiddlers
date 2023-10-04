@@ -1,1 +1,0 @@
-* dark or light mode on gnome not work
