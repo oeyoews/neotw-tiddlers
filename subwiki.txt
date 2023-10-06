@@ -1,1 +1,1 @@
-../subwiki
+../docs
