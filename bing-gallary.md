@@ -1,1 +1,0 @@
-* <https://peapix.com/bing>
