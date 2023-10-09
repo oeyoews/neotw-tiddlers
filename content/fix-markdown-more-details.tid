@@ -1,0 +1,9 @@
+created: 20231009135829776
+creator: Lenovo
+modified: 20231009135911765
+modifier: Lenovo
+tags: $:/tags/Stylesheet
+title: fix-markdown-more-details
+type: text/vnd.tiddlywiki
+
+summary::-webkit-details-marker{display:none}
