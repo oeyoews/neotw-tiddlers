@@ -1,1 +1,0 @@
-This microsoft activate scripts support hack windows and office
