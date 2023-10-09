@@ -14,6 +14,7 @@
 
 :::bug proxy
 - [ ] wsl 代理不能用 v2raya
+- [ ] 同样uwp也没有网络,听说clash使用tun模式可以
 :::
 
 :::tip
