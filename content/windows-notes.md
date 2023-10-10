@@ -28,3 +28,10 @@ windows11 自带解压,不需要下载bandzip解压缩软件
 :::tip font
 window 上edge的视觉比Google chrome 字体支持好一点
 :::
+
+:::error edge
+
+edge://flage naviagtion to disable
+
+即使禁止左右滑动, 但是页面仍然还是抖动
+:::
