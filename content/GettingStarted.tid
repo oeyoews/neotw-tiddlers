@@ -2,8 +2,8 @@ cn-title: 太微介绍
 created: 20230117102714737
 creator: oeyoews
 icon: tom.svg
-modified: 20230929151230549
-modifier: oeyoews
+modified: 20231010081848800
+modifier: Lenovo
 page-cover: gradient.svg
 page-icon: fluent-emoji-flat:waving-hand
 pin: yes
@@ -11,6 +11,8 @@ publish: public
 tags: 
 title: GettingStarted
 type: text/vnd.tiddlywiki
+
+{{tagpie}}
 
 <$cards filter='Videos JavaScript React TiddlyWiki Journal Tailwindcss books Article Private' />
 
