@@ -12,6 +12,8 @@
 
 ## NOTES
 
+* winget 的速度还是可以的, 不过有些东西还是从GitHub上下载
+
 :::note bluetooth
 - [ ] 蓝牙键盘不能识别到
 :::
@@ -55,4 +57,12 @@ wsl或者windows不适合写代码, 延迟真的很大, 对于我个人使用惯
 
 :::note virtualbox
 * virtualbox need efi for manjaro(maybe), 如果直接放大会导致黑屏, 体验也不好, 显示会花屏, 由于v2raya在windows上不能透明代理, 虚拟机还需要单独设置(放弃了)
+:::
+
+:::example ohmyposh
+https://ohmyposh.dev/docs/
+:::
+
+:::note git
+use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 :::
