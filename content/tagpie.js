@@ -5,6 +5,7 @@ type: text/application
 description: tag pie on tiddlywiki
 \*/
 
+// TODO: group legend scroll type https://echarts.apache.org/examples/en/editor.html?c=pie-legend
 // 生命周期不随着widget变化???
 // TODO: 生命周期
 // TODO: refresh
@@ -13,10 +14,11 @@ description: tag pie on tiddlywiki
 // TODO: 定义事件
 // TODO: tag排序
 // TOOD: 封装成插件
+// TODO: percent
 
 const data = [];
 
-function getCount(tag) {
+function getData(tag) {
 	const count = $tw.wiki.filterTiddlers(`[tag[${tag}]]`).length
 	return {
 		value: count,
@@ -27,7 +29,7 @@ function getCount(tag) {
 // const tags = $tw.wiki.filterTiddlers('[tags[]!prefix[$:/]]')
 const tags = ['JavaScript', 'CSS', 'Journal', 'React', 'Videos', 'TiddlyWiki', 'Tailwindcss', 'books']
 
-tags.forEach(tag => data.push(getCount(tag)))
+tags.forEach(tag => data.push(getData(tag)))
 
 
 const option = {
@@ -37,17 +39,21 @@ const option = {
 		left: 'center'
 	},
 	tooltip: {
-		trigger: 'item'
+		trigger: 'item',
+		formatter: '{a} <br/>{b} : {c} ({d}%)'
 	},
 	legend: {
 		orient: 'vertical',
-		left: 'left'
+		right: 10,
+		top: 20,
+		bottom: 20,
 	},
 	series: [
 		{
-			name: 'Access From',
+			name: 'Tag',
 			type: 'pie',
 			radius: '50%',
+			center: ['40%', '50%'],
 			data,
 			emphasis: {
 				itemStyle: {
