@@ -2,7 +2,7 @@ cn-title: 太微介绍
 created: 20230117102714737
 creator: oeyoews
 icon: tom.svg
-modified: 20231010085823856
+modified: 20231010124225756
 modifier: Lenovo
 page-cover: gradient.svg
 page-icon: fluent-emoji-flat:waving-hand
@@ -14,6 +14,7 @@ type: text/vnd.tiddlywiki
 
 {{tagpie}}
 {{heatmap}}
+{{sevenday}}
 
 <$cards filter='Videos JavaScript React TiddlyWiki Journal Tailwindcss books Article Private' />
 

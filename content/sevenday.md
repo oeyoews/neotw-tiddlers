@@ -1,0 +1,1 @@
+<$echarts $tiddler="sevenday.js" />

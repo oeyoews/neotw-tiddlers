@@ -75,20 +75,18 @@ const option = {
 function onMount(echartsInstance) {
 }
 
+function onUpdate(echartsInstance) {
+	echartsInstance.setOption(option)
+}
+
 // TODO: 监听对应的tags tiddler, 更新
 function shouldUpdate(state, changedTiddlers, changedAttributes) {
 	return true;
 }
 
-function onUpdate(echartsInstance) {
-	echartsInstance.setOption(option)
-}
-
-function onUnmount(state) {
-  
-}
+function onUnmount(state) { }
 
 // https://tiddly-gittly.github.io/tw-echarts/#%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%AF%A5%E6%8F%92%E4%BB%B6%3F
 module.exports = {
-	onMount, onUpdate
+	onMount, onUpdate, shouldUpdate, onUnmount
 }
