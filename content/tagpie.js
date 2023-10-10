@@ -31,8 +31,18 @@ const option = {
 	title: {
 		text: '文章标签占比分布',
 		subtext: '用户标签',
-		left: 'center'
+		left: 'center',
+		top: "bottom",
 	},
+	toolbox: {
+        show: true,
+        left: 0,
+        bottom: 0,
+        feature: {
+          restore: {},
+          saveAsImage: {},
+        },
+      },
 	tooltip: {
 		trigger: 'item',
 		formatter: '{a} <br/>{b} : {c} ({d}%)'
