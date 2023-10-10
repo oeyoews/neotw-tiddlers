@@ -9,6 +9,7 @@
 * qq wechat 
 * v2raya marktext  
 * windows terminal
+* flameshot
 
 ## NOTES
 
@@ -65,4 +66,8 @@ https://ohmyposh.dev/docs/
 
 :::note git
 use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
+:::
+
+:::note memory
+软件几乎没开,内存就占了一半了
 :::
