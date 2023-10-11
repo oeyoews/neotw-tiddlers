@@ -5,8 +5,6 @@ type: text/application
 description: seven
 \*/
 
-// TODO: add click to show tiddlers https://github.com/tiddly-gittly/tw-echarts/blob/e8322a1eeebd224031de44432b7ec0ca4be6e92f/src/echarts/addons/oflg/CalendarHeatmap/CalendarHeatmap.js
-
 const getData = (date) => $tw.wiki.filterTiddlers(`[sameday:created[${date}]!is[system]!has[draft.of]]`).length
 
 function getSevenDaysBefore(dateString) {
