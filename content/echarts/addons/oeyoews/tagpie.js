@@ -54,7 +54,14 @@ function onUpdate(myChart, _, addonAttributes) {
 		},
 		tooltip: {
 			trigger: 'item',
-			formatter: '{b} : {c} ({d}%)'
+			formatter: function (params) {
+				const {name, value, percent} = params
+				if(value) {
+					return `${name} 标签 有 ${value}个条目, ${percent}%`;
+				} else {
+					return name;
+				}
+			}
 		},
 		legend: {
 			orient: 'vertical',

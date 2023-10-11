@@ -5,22 +5,19 @@ type: text/application
 description: seven
 \*/
 
+// TODO: 简化时间的处理
 const getData = (date) => $tw.wiki.filterTiddlers(`[sameday:created[${date}]!is[system]!has[draft.of]]`).length
 
-function getSevenDaysBefore(dateString) {
-	let currentDate;
-
-	if (!dateString) {
-		// 如果没有传入日期参数，默认使用当前日期
-		currentDate = new Date();
-	} else {
-		// 解析传入的日期字符串
+function parsesixDate(dateString) {
 		const year = parseInt(dateString.substr(0, 4));
 		const month = parseInt(dateString.substr(4, 2)) - 1; // 月份从0开始，需要减1
 		const day = parseInt(dateString.substr(6, 2));
+	const realDate = new Date(year, month, day).toLocaleDateString();
+	return realDate;
+}
 
-		currentDate = new Date(year, month, day);
-	}
+function getSevenDaysBefore(dateString) {
+	const currentDate = dateString ? parsesixDate(dateString) : new Date()
 
 	const sevenDays = [];
 
@@ -59,7 +56,9 @@ function onUpdate(myChart, _state, addonAttributes) {
 		tooltip: {
 			trigger: 'item',
 			formatter: function (params) {
-				return params.value ? `今日文章数量: ${params.value}` : '今日没有新的文章'
+				const {name:date, value:count} = params;
+				const realDate = parsesixDate(date);
+				return count ? `${realDate} 有 ${count} 篇文章` : `${realDate} 没有新的文章`
 			}
 		},
 		// color: [''],
