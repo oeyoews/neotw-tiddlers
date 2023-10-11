@@ -64,6 +64,7 @@ wsl或者windows不适合写代码, 延迟真的很大, 对于我个人使用惯
 https://ohmyposh.dev/docs/
 :::note
 配置ohpyposh后, 启动会耗时, 在vscode中很明显
+* 不支持自动提示
 :::
 :::
 
@@ -78,3 +79,5 @@ use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 :::note music 
 ~~开一个网易云, 直接占20%的内存, 离谱, 还不如开个网页,~~ electron这么吃内存吗,开一个vscode就直接飙到80%
 :::
+
+* darkmode 发虚还不那么明显
