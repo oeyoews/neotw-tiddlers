@@ -2,4 +2,8 @@ tiddlyhost 会自动构建tiddlers.json https://neotw.tiddlyhost.com/tiddlers.js
 
 用户也可以在构建的时候同时构建这个json文件,并且上传到网站, 所以完全可以使用其他blog框架,拿到这个数据源重新进行展示
 
+
+:::warning
 * 不过要注意tiddler的纯度, markdown一定要保证纯文本, 不要包含macro, widget或者一些扩展过的markdown 语法
+* 当前这个网站输出的tiddler.json有将近2M
+:::
