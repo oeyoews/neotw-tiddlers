@@ -43,14 +43,15 @@ function getSevenDaysBefore(dateString) {
 
 function onUpdate(myChart, _state, addonAttributes) {
 
+	const {date, title: text="最近文章数量", subtitle: subtext='', disableClick='no'} = addonAttributes;
 	const data = []
-	const sevendays = getSevenDaysBefore(addonAttributes.date)
+	const sevendays = getSevenDaysBefore(date)
 	sevendays.forEach(date => data.push(getData(date)))
 
 	const option = {
 		title: {
-			text: '最近七天内文章数量',
-			subtext: '',
+			text,
+			subtext,
 			left: 'center'
 		},
 		tooltip: {
@@ -86,7 +87,7 @@ function onUpdate(myChart, _state, addonAttributes) {
 	};
 
 	myChart.setOption(option)
-	myChart.on('click', 'series', function (params) {
+  myChart.on('click', 'series', function (params) {
 		const { name: date } = params
 		const goto = new $tw.Story();
 		const filter = `[sameday:created[${date}]!is[system]!has[draft.of]]`
