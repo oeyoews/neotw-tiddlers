@@ -51,7 +51,9 @@ const option = {
 	},
 		tooltip: {
 		trigger: 'item',
-		formatter: '{b} : {c}'
+		formatter: function (params) {
+			return params.value ? `今日文章数量: ${params.value}` : '今日没有新的文章'
+		}
 	},
 	// color: [''],
 	xAxis: {
