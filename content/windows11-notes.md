@@ -76,5 +76,5 @@ use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 :::
 
 :::note music 
-开一个网易云, 直接占20%的内存, 离谱, 还不如开个网页, electron这么吃内存吗,开一个vscode就直接飙到80%
+~~开一个网易云, 直接占20%的内存, 离谱, 还不如开个网页,~~ electron这么吃内存吗,开一个vscode就直接飙到80%
 :::

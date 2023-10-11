@@ -1,9 +1,9 @@
 caption: Recently added
 created: 20220828022145583
 creator: oeyoews
-list: sevenday.js tagpie.js fix-markdown-more-details $:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js startup-order.svg $:/plugins/kookma/shiraz/styles/ui/view-toolbar-button-visibility announcement how-to-use-tiddlywiki@oeyoews folded-ribbon/macro folded-ribbon/styles folded-ribbon/exam/left-flat folded-ribbon/exam/left folded-ribbon/exam/right-flat folded-ribbon/exam/right bing-everyday-seven self-introduce $:/core/ui/EditTemplate/body/preview/output fix-conflict $:/config/FileSystemExtensions $:/config/SaverFilter $:/language/MissingTiddler/Hint neotw-stylesheet $:/themes/nico/notebook/ui/Sidebar/Sections recent-note-record $:/StaticBanner
+list: fix/markdown-slash-gray-onmarkdown sevenday.js tagpie.js fix-markdown-more-details $:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js startup-order.svg $:/plugins/kookma/shiraz/styles/ui/view-toolbar-button-visibility announcement how-to-use-tiddlywiki@oeyoews folded-ribbon/macro folded-ribbon/styles folded-ribbon/exam/left-flat folded-ribbon/exam/left folded-ribbon/exam/right-flat folded-ribbon/exam/right bing-everyday-seven self-introduce $:/core/ui/EditTemplate/body/preview/output fix-conflict $:/config/FileSystemExtensions $:/config/SaverFilter $:/language/MissingTiddler/Hint neotw-stylesheet $:/themes/nico/notebook/ui/Sidebar/Sections recent-note-record $:/StaticBanner
 list-before: 
-modified: 20231010125155017
+modified: 20231011012421085
 modifier: Lenovo
 tags: $:/tags/Favorites/Folder
 title: $:/favorites/folders/recent

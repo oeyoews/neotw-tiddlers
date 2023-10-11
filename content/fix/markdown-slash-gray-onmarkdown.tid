@@ -1,0 +1,11 @@
+created: 20231011012223257
+creator: Lenovo
+modified: 20231011012421085
+modifier: Lenovo
+tags: $:/tags/Stylesheet
+title: fix/markdown-slash-gray-onmarkdown
+type: text/vnd.tiddlywiki
+
+s {
+  color: darkgrey;
+}
