@@ -81,3 +81,6 @@ use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 :::
 
 * darkmode 发虚还不那么明显
+
+
+* 软件管家下载绿色软件自然不会创建快捷方式
