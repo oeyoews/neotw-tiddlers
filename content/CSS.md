@@ -1,2 +1,1 @@
-<$image source="CSS.png" class="h-12 w-auto block mx-auto" />
-<<table-dynamic filter:[tag[CSS]![CSS]] fields:"title created tags tbl-expand" caption:"" class:"capitalize" editButton:"no" pagination:"yes" sortOp:'sortan' emptyMessage:"Nothing">>
+<$echarts $tiddler="echarts/addons/oeyoews/tagpie.js" filter="[tag[CSS]]"/>

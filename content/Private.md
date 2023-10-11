@@ -1,2 +1,5 @@
-<$image source="private.png" class="h-12 w-auto block mx-auto animate-pulse" />
-<<table-dynamic filter:[publish[private]] fields:"title created tags tbl-expand" caption:"" class:"capitalize" editButton:"no" pagination:"yes" sortOp:'sortan' emptyMessage:"Nothing">>
+:::warning
+这里存储的是个人内容, 不对外开放
+:::
+
+<$echarts $tiddler="echarts/addons/oeyoews/tagpie.js" filter="[publish[private]]"/>

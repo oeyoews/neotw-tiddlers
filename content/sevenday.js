@@ -6,7 +6,6 @@ description: seven
 \*/
 
 // TODO: add click to show tiddlers https://github.com/tiddly-gittly/tw-echarts/blob/e8322a1eeebd224031de44432b7ec0ca4be6e92f/src/echarts/addons/oflg/CalendarHeatmap/CalendarHeatmap.js
-// TODO: add date addonAttributes
 
 const getData = (date) => $tw.wiki.filterTiddlers(`[sameday[${date}]!is[system]!has[draft.of]]`).length
 

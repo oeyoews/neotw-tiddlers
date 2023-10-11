@@ -1,1 +1,1 @@
-<<table-dynamic filter:[tag[Journal]] fields:"title"  class:"capitalize" editButton:"no" pagination:"yes" sortOp:'sortan' emptyMessage:"Nothing">>
+<$echarts $tiddler="echarts/addons/oeyoews/tagpie.js" filter="[tag[Journal]]"/>
