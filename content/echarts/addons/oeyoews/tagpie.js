@@ -11,7 +11,7 @@ description: tag pie on tiddlywiki
 \*/
 
 function getData(tag) {
-	const count = $tw.wiki.filterTiddlers(`[tag[${tag}]]`).length
+	const count = $tw.wiki.filterTiddlers(`[tag[${tag}]!has[draft.of]]`).length
 	return {
 		value: count,
 		name: tag
@@ -93,9 +93,9 @@ function onUpdate(myChart, _, addonAttributes) {
 // TODO: 需要手动重新setoption, 需要手动刷新echarts dom
 function shouldUpdate(_, changedTiddlers) {
 	// changeTiddlers 会包含一些系统tiddler的状态变换tiddler, 应该去掉
-	const changedTiddlersLength = changedTiddlers.filter(
+	const changedTiddlersLength = Object.keys(changedTiddlers).filter(
 		tiddler => !(tiddler.startsWith('$:/') || tiddler.startsWith('Draft of')).length);
-	return false;
+	return changedTiddlersLength ? true : false;
 }
 
 // function onUnmount() {}
