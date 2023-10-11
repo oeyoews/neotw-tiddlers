@@ -1,8 +1,8 @@
 created: 20230930042131333
 creator: oeyoews
-modified: 20230930042131333
-modifier: oeyoews
+modified: 20231011141116263
+modifier: Lenovo
 title: $:/config/PageControlButtons/Visibility/$:/plugins/oeyoews/tiddlywiki-daylight/pagecontrol
 type: text/vnd.tiddlywiki
 
-hide
+show

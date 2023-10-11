@@ -1,0 +1,7 @@
+gantt
+    title 项目进度表
+    dateFormat YYYY-MM-DD
+    section 项目任务
+    任务1           :a1, 2023-01-01, 30d
+    任务2           :a2, after a1, 20d
+    任务3           :a3, after a2, 10d
