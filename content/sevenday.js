@@ -5,19 +5,28 @@ type: text/application
 description: seven
 \*/
 
-function getData(date) {
-	const count = $tw.wiki.filterTiddlers(`[sameday[${date}]!is[system]]`).length
-	return count
-}
+// TODO: add click to show tiddlers https://github.com/tiddly-gittly/tw-echarts/blob/e8322a1eeebd224031de44432b7ec0ca4be6e92f/src/echarts/addons/oflg/CalendarHeatmap/CalendarHeatmap.js
+// TODO: add date addonAttributes
 
-function getSevendays() {
-	// 获取当前日期
-	const currentDate = new Date();
+const getData = (date) => $tw.wiki.filterTiddlers(`[sameday[${date}]!is[system]!has[draft.of]]`).length
 
-	// 初始化一个空数组来存储最近七天的日期
+function getSevenDaysBefore(dateString) {
+	let currentDate;
+
+	if (!dateString) {
+		// 如果没有传入日期参数，默认使用当前日期
+		currentDate = new Date();
+	} else {
+		// 解析传入的日期字符串
+		const year = parseInt(dateString.substr(0, 4));
+		const month = parseInt(dateString.substr(4, 2)) - 1; // 月份从0开始，需要减1
+		const day = parseInt(dateString.substr(6, 2));
+
+		currentDate = new Date(year, month, day);
+	}
+
 	const sevenDays = [];
 
-	// 循环生成最近七天的日期
 	for (let i = 0; i < 7; i++) {
 		// 获取当前日期的年、月、日
 		const year = currentDate.getFullYear();
@@ -31,66 +40,61 @@ function getSevendays() {
 		// 将当前日期减一天，以便生成前一天的日期
 		currentDate.setDate(currentDate.getDate() - 1);
 	}
-	return sevenDays
+
+	return sevenDays;
 }
 
 
-// generate recent seven days
-// date formate is YYYYDDMM
-const data = []
-// get recent seven date days with YYYYMMDD
-const sevendays = getSevendays()
-sevendays.forEach(date => data.push(getData(date)))
+// function shouldUpdate(state, changedTiddlers, changedAttributes) { return true; }
 
+function onUpdate(echartsInstance, _state, addonAttributes) {
 
-const option = {
-	title: {
-		text: '最近七天内文章数量',
-		subtext: '',
-		left: 'center'
-	},
+	const data = []
+	const sevendays = getSevenDaysBefore(addonAttributes.date)
+	sevendays.forEach(date => data.push(getData(date)))
+
+	const option = {
+		title: {
+			text: '最近七天内文章数量',
+			subtext: '',
+			left: 'center'
+		},
 		tooltip: {
-		trigger: 'item',
-		formatter: function (params) {
-			return params.value ? `今日文章数量: ${params.value}` : '今日没有新的文章'
-		}
-	},
-	// color: [''],
-	xAxis: {
-		type: 'category',
-		data: sevendays,
-	},
-	yAxis: {
-		type: 'value'
-	},
-	series: [
-		{
-			data,
-			type: 'line',
-			emphasis: {
-				itemStyle: {
-					scale: 1.25,
-					shadowOffsetX: 0,
-					shadowColor: 'rgba(0, 0, 0, 0.5)'
-				}
-			},
-			smooth: true
-		}
-	]
-};
+			trigger: 'item',
+			formatter: function (params) {
+				return params.value ? `今日文章数量: ${params.value}` : '今日没有新的文章'
+			}
+		},
+		// color: [''],
+		xAxis: {
+			type: 'category',
+			data: sevendays,
+		},
+		yAxis: {
+			type: 'value'
+		},
+		series: [
+			{
+				data,
+				type: 'line',
+				emphasis: {
+					itemStyle: {
+						scale: 1.25,
+						shadowOffsetX: 0,
+						shadowColor: 'rgba(0, 0, 0, 0.5)'
+					}
+				},
+				smooth: true
+			}
+		]
+	};
 
-
-function shouldUpdate(state, changedTiddlers, changedAttributes) {
-	return true;
-}
-
-function onUpdate(echartsInstance) {
 	echartsInstance.setOption(option)
 }
 
-function onMount() { }
-function onUnmount(state) { }
+// function onMount() {}
+// function onUnmount(state) { }
 
 module.exports = {
-	onMount, onUpdate, onUnmount, shouldUpdate
+	onUpdate
 }
