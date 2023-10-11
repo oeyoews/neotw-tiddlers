@@ -23,7 +23,7 @@ function getData(tag) {
 const goto = new $tw.Story();
 
 const gotoTagTiddler = (params) => {
-	const title = params.data.name
+	const title = params.name
 	const existTiddler = $tw.wiki.tiddlerExists(title)
 	if (!existTiddler) {
 		console.log(title + ' not found')

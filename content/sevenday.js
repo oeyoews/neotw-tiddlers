@@ -7,7 +7,7 @@ description: seven
 
 // TODO: add click to show tiddlers https://github.com/tiddly-gittly/tw-echarts/blob/e8322a1eeebd224031de44432b7ec0ca4be6e92f/src/echarts/addons/oflg/CalendarHeatmap/CalendarHeatmap.js
 
-const getData = (date) => $tw.wiki.filterTiddlers(`[sameday[${date}]!is[system]!has[draft.of]]`).length
+const getData = (date) => $tw.wiki.filterTiddlers(`[sameday:created[${date}]!is[system]!has[draft.of]]`).length
 
 function getSevenDaysBefore(dateString) {
 	let currentDate;
@@ -44,9 +44,9 @@ function getSevenDaysBefore(dateString) {
 }
 
 
-// function shouldUpdate(state, changedTiddlers, changedAttributes) { return true; }
+// function shouldUpdate(_state, changedTiddlers, _changedAttributes) { return true; }
 
-function onUpdate(echartsInstance, _state, addonAttributes) {
+function onUpdate(myChart, _state, addonAttributes) {
 
 	const data = []
 	const sevendays = getSevenDaysBefore(addonAttributes.date)
@@ -88,7 +88,23 @@ function onUpdate(echartsInstance, _state, addonAttributes) {
 		]
 	};
 
-	echartsInstance.setOption(option)
+	myChart.setOption(option)
+	myChart.on('click', 'series', function (params) {
+		const { name: date } = params
+		const goto = new $tw.Story();
+		const filter = `[sameday:created[${date}]!is[system]!has[draft.of]]`
+		const hasTiddler = $tw.wiki.filterTiddlers(filter).length
+		if (!hasTiddler)  return;
+		$tw.rootWidget.invokeActionString(
+			'<$action-setfield $tiddler="$:/temp/advancedsearch" text="""' +
+			filter +
+			'"""/><$action-setfield $tiddler="$:/temp/advancedsearch/input" text="""' +
+			filter +
+			'"""/><$action-setfield $tiddler="$:/temp/advancedsearch/refresh" text="yes"/><$action-setfield $tiddler="$:/state/tab--1498284803" text="$:/core/ui/AdvancedSearch/Filter"/>',
+		);
+		goto.navigateTiddler('$:/AdvancedSearch');
+
+	})
 }
 
 // function onMount() {}
