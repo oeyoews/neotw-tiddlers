@@ -1,3 +1,0 @@
-**otp**
-
-one time password
