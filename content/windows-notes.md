@@ -62,6 +62,9 @@ wsl或者windows不适合写代码, 延迟真的很大, 对于我个人使用惯
 
 :::example ohmyposh
 https://ohmyposh.dev/docs/
+:::note
+配置ohpyposh后, 启动会耗时, 在vscode中很明显
+:::
 :::
 
 :::note git
@@ -70,4 +73,8 @@ use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 
 :::note memory
 软件几乎没开,内存就占了一半了
+:::
+
+:::note music 
+开一个网易云, 直接占20%的内存, 离谱, 还不如开个网页, electron这么吃内存吗,开一个vscode就直接飙到80%
 :::

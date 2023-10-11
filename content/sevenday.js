@@ -6,7 +6,7 @@ description: seven
 \*/
 
 function getData(date) {
-	const count = $tw.wiki.filterTiddlers(`[sameday[${date}]]`).length
+	const count = $tw.wiki.filterTiddlers(`[sameday[${date}]!is[system]]`).length
 	return count
 }
 
