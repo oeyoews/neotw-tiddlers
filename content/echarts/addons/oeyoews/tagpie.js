@@ -33,11 +33,19 @@ function onUpdate(myChart, _, addonAttributes) {
     doughnut,
     filter = "[tags[]!prefix[$:/]]",
     sort = "descend",
-		width: borderWidth = '0',
+	  width,
 		toolbox = 'hide'
   } = addonAttributes;
   // data必须在执行onUpdate函数的时候获取到最新数据,不要写在函数外面
   const data = [];
+	
+  // alpha sort default
+  const tags = $tw.wiki.filterTiddlers(filter).sort();
+  tags.forEach((tag) => data.push(getData(tag)));
+	
+  const borderWidth = data.length > 10 ? 0 : width;
+	
+	// 如果类型过多, width 自动设置为0, 此时无视用户的width配置
   // 配置具体参考echarts官方文档
   const option = {
     title: {
@@ -92,10 +100,6 @@ function onUpdate(myChart, _, addonAttributes) {
       },
     ],
   };
-
-  // alpha sort default
-  const tags = $tw.wiki.filterTiddlers(filter).sort();
-  tags.forEach((tag) => data.push(getData(tag)));
 
   // descend or ascend sort
   data.sort(function (a, b) {
