@@ -33,6 +33,8 @@ function onUpdate(myChart, _, addonAttributes) {
     doughnut,
     filter = "[tags[]!prefix[$:/]]",
     sort = "descend",
+		width: borderWidth = '0',
+		toolbox = 'hide'
   } = addonAttributes;
   // data必须在执行onUpdate函数的时候获取到最新数据,不要写在函数外面
   const data = [];
@@ -45,7 +47,7 @@ function onUpdate(myChart, _, addonAttributes) {
       top: "bottom",
     },
     toolbox: {
-      show: true,
+      show: toolbox === 'show' ? true : false,
       left: 0,
       bottom: 0,
       feature: {
@@ -81,7 +83,7 @@ function onUpdate(myChart, _, addonAttributes) {
         data,
         itemStyle: {
           borderRadius: 10,
-          borderWidth: 0,
+          borderWidth,
           borderColor: "#fff",
         },
         emphasis: {
@@ -123,7 +125,10 @@ module.exports = {
 };
 
 /*
- * @param: filter, 默认是用户的所有tiddler, 但是你也可以使用 filter='[tag[Journal]]' 列出所有的 Journal tiddler
+ * @description: 理论上所有的option配置都可以暴露出来, 这里仅仅暴露一些常用的配置, echarts将这些工作交给了addon, 大概是不同类型的addon处理起来比较复杂,但是与此同时,addon就更具有扩展性
+ * @param: filter 默认是用户的所有tiddler, 但是你也可以使用 filter='[tag[Journal]]' 列出所有的 Journal tiddler
  * @param: sort {descend|ascend}
  * @param: doughnut {'yes'}
+ * @param: width {0}
+ * @param: toolbox {'show'|'hide'}
  */
