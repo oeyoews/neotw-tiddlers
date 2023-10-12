@@ -37,6 +37,7 @@ function onUpdate(myChart, _, addonAttributes) {
 		radius = 10,
 		toolbox = 'hide',
     doughnut,
+		legend
   } = addonAttributes;
   // data必须在执行onUpdate函数的时候获取到最新数据,不要写在函数外面
   const data = [];
@@ -79,6 +80,7 @@ function onUpdate(myChart, _, addonAttributes) {
       },
     },
     legend: {
+			show: legend === 'yes' ? true : false,
       orient: "vertical",
       right: 10,
       top: 20,
@@ -90,7 +92,7 @@ function onUpdate(myChart, _, addonAttributes) {
         name: "Tag",
         type: "pie",
         radius: doughnut === "yes" ? ["40%", "70%"] : "50%",
-        center: ["40%", "50%"],
+        center: legend === 'yes' ? ["40%", "50%"] : '50%',
         data,
         itemStyle: {
           borderRadius,
@@ -134,8 +136,11 @@ module.exports = {
 /*
  * @description: 理论上所有的option配置都可以暴露出来, 这里仅仅暴露一些常用的配置, echarts将这些工作交给了addon, 大概是不同类型的addon处理起来比较复杂,但是与此同时,addon就更具有扩展性
  * @param: filter 默认是用户的所有tiddler, 但是你也可以使用 filter='[tag[Journal]]' 列出所有的 Journal tiddler
+ * @param: title
+ * @param: radius
  * @param: sort {descend|ascend}
  * @param: doughnut {'yes'}
  * @param: width {0}
+ * @param: legend {'yes'}
  * @param: toolbox {'show'|'hide'}
  */
