@@ -102,15 +102,25 @@ function onUpdate(myChart, _state, addonAttributes) {
         name: "created",
         data: createdData,
         type: "line",
-        areaStyle: {
+				symbolSize: 10,
+		    endLabel: {
+        show: true,
+        formatter: '{a}',
+        distance: 20
+      },
+        // areaStyle: {
           // normal: {
           //   color: "green", //改变区域颜色
           //   lineStyle: {
           //     color: "green", //改变折线颜色
           //   },
           // },
-        },
+        // },
+				lineStyle: {
+        width: 4
+      },
         emphasis: {
+ 				  focus: 'series',
           itemStyle: {
             scale: 1.5,
             shadowOffsetX: 0,
@@ -122,9 +132,19 @@ function onUpdate(myChart, _state, addonAttributes) {
       {
         name: "modified",
         data: modifiedData,
+				lineStyle: {
+        width: 4
+      },
+				symbolSize: 10,
         type: "line",
+		    endLabel: {
+        show: true,
+        formatter: '{a}',
+        distance: 20
+      },
         areaStyle: {},
         emphasis: {
+ 				  focus: 'series',
           itemStyle: {
             scale: 1.25,
             shadowOffsetX: 0,
