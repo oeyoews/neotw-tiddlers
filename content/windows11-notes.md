@@ -84,3 +84,10 @@ use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 
 
 * 软件管家下载绿色软件自然不会创建快捷方式
+
+:::bug
+电脑修好后的第三天, tw 的vim(怀疑是vim的bug) 卡掉了, 然后就是浏览器提示无响应, 网易云音乐停止播放, 鼠标无响应,然后绿屏
+* https://answers.microsoft.com/zh-hans/windows/forum/all/%E6%9C%8D%E5%8A%A1%E5%99%A8-8cfc164f-4be5-4fdd/47c8b73e-57c4-4217-8232-8d9b03153bfc?page=1
+* https://www.hanboshi.com/articles/128.html
+* 内存暴了会导致蓝屏?? 
+:::
