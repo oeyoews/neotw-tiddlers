@@ -7,6 +7,7 @@ description: seven
 
 // TODO: 简化时间的处理
 // TODO: 指定线的颜色, 区域的颜色
+// @description: echarts 几乎支持每一处的样式设置, 这里仅根据需要设置必要的样式
 const getData = (date, type = "created") =>
   $tw.wiki.filterTiddlers(`[sameday:${type}[${date}]!is[system]!has[draft.of]]`)
     .length;
@@ -171,7 +172,7 @@ function onUpdate(myChart, _state, addonAttributes) {
   };
 
   myChart.setOption(option);
-  myChart.on("dbclick", "series", function (params) {
+  myChart.on("click", "series", function (params) {
     const { name: date, value: count, seriesName } = params;
     const goto = new $tw.Story();
     const filter = `[sameday:${seriesName}[${date}]!is[system]!has[draft.of]]`;
