@@ -45,10 +45,6 @@ function getSevenDaysBefore(dateString, daysLength=7) {
   return sevenDays;
 }
 
-function shouldUpdate(_state, changedTiddlers, _changedAttributes) {
-	return false; 
-}
-
 function onUpdate(myChart, _state, addonAttributes) {
   const {
 		days,
@@ -191,9 +187,19 @@ function onUpdate(myChart, _state, addonAttributes) {
   });
 }
 
+function shouldUpdate(_state, changedTiddlers, _changedAttributes) {
+	return false; 
+}
+
 // function onMount() {}
 // function onUnmount(state) { }
 
+/**
+ *	@param: days 指定天数
+ *  date: 指定日期
+ *  title: 标题
+ *  subtitle: 副标题
+ */
 module.exports = {
   onUpdate, shouldUpdate
 };
