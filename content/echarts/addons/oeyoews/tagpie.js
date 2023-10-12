@@ -30,11 +30,13 @@ const gotoTagTiddler = (params) => {
 function onUpdate(myChart, _, addonAttributes) {
   // 暴露参数给用户
   const {
-    doughnut,
+		title: text,
     filter = "[tags[]!prefix[$:/]]",
     sort = "descend",
-	  width,
-		toolbox = 'hide'
+	  width = 2,
+		radius = 10,
+		toolbox = 'hide',
+    doughnut,
   } = addonAttributes;
   // data必须在执行onUpdate函数的时候获取到最新数据,不要写在函数外面
   const data = [];
@@ -44,15 +46,16 @@ function onUpdate(myChart, _, addonAttributes) {
   tags.forEach((tag) => data.push(getData(tag)));
 	
   const borderWidth = data.length > 10 ? 0 : width;
+	const borderRadius = data.length > 10 ? 5 : radius;
 	
 	// 如果类型过多, width 自动设置为0, 此时无视用户的width配置
   // 配置具体参考echarts官方文档
   const option = {
     title: {
-      text: "文章标签占比分布",
-      subtext: "用户标签",
-      left: "center",
-      top: "bottom",
+      text, 
+      subtext: "",
+      left: "left",
+      top: "top",
     },
     toolbox: {
       show: toolbox === 'show' ? true : false,
@@ -90,7 +93,7 @@ function onUpdate(myChart, _, addonAttributes) {
         center: ["40%", "50%"],
         data,
         itemStyle: {
-          borderRadius: 10,
+          borderRadius,
           borderWidth,
           borderColor: "#fff",
         },
