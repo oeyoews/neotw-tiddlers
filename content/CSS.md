@@ -1,1 +1,1 @@
-<$echarts $tiddler="echarts/addons/oeyoews/tagpie.js" filter="[tag[CSS]]"/>
+<$echarts $tiddler="addon/tagpie.js" filter="[tag[CSS]]"/>

@@ -6,4 +6,4 @@ modifier: Lenovo
 title: Vue
 type: text/vnd.tiddlywiki
 
-<$echarts $tiddler="echarts/addons/oeyoews/tagpie.js" filter="[tag[Vue]]"/>
+<$echarts $tiddler="addon/tagpie.js" filter="[tag[Vue]]"/>

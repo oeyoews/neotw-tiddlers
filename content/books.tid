@@ -8,7 +8,7 @@ tags:
 title: books
 type: text/vnd.tiddlywiki
 
-<$echarts $tiddler="echarts/addons/oeyoews/tagpie.js" filter="[tag[books]]"/>
+<$echarts $tiddler="addon/tagpie.js" filter="[tag[books]]"/>
 
 <$cards filter='[tag[books]!sort[modified]]' standard=false/>
 
