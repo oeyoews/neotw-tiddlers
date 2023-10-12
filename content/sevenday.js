@@ -74,7 +74,7 @@ function onUpdate(myChart, _state, addonAttributes) {
       data: ["created", "modified"],
     },
     tooltip: {
-      trigger: "item",
+      trigger: "item", // item
       formatter: function (params) {
         const { name: date, value: count, seriesName } = params;
         const realDate = parsesixDate(date);
@@ -94,14 +94,18 @@ function onUpdate(myChart, _state, addonAttributes) {
       boundaryGap: false,
       type: "category",
       data: sevendays,
+			name: '日期'
     },
     yAxis: {
       type: "value",
+			name: '文章数量'
     },
+  	 animationDuration: 1000,
     series: [
       {
         name: "created",
         data: createdData,
+		showSymbol: true,
         type: "line",
 				symbolSize: 10,
 		    endLabel: {
@@ -138,6 +142,7 @@ function onUpdate(myChart, _state, addonAttributes) {
       },
 				symbolSize: 10,
         type: "line",
+		showSymbol: true,
 		    endLabel: {
         show: true,
         formatter: '{a}',
