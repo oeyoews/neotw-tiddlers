@@ -19,3 +19,7 @@ relate issus: https://github.com/flameshot-org/flameshot/issues/2893
 ```
 经常出现这个问题, 有时候切换节点也不起作用;
 :::
+
+:::bug
+flameshot on windows shortcut cannot work
+:::
