@@ -4,17 +4,14 @@ module-type: echarts-component
 type: text/application
 description: tag pie on tiddlywiki
 
-// @param: filter, 默认是用户的所有tiddler, 但是你也可以使用 filter='[tag[Journal]]' 列出所有的 Journal tiddler
-// usage: <$echarts $tiddler="tagpie.js" filter="[tags[]!is[system]]"
-
 // TODO: 优化代码结构
 \*/
 
 function getData(tag) {
 	const count = $tw.wiki.filterTiddlers(`[tag[${tag}]!has[draft.of]]`).length
 	return {
-		value: count,
-		name: tag
+		name: tag,
+		value: count
 	}
 }
 
@@ -34,6 +31,7 @@ const gotoTagTiddler = (params) => {
 }
 
 function onUpdate(myChart, _, addonAttributes) {
+	const {doughnut, filter='[tags[]!prefix[$:/]]', sort="descend"} = addonAttributes
 	// 这里的数据必须每次都要重新赋值, 从而拿到新的值
 	const data = [];
 	const option = {
@@ -48,6 +46,7 @@ function onUpdate(myChart, _, addonAttributes) {
 			left: 0,
 			bottom: 0,
 			feature: {
+        dataView: { show: true, readOnly: false },
 				restore: {},
 				saveAsImage: {},
 			},
@@ -74,25 +73,33 @@ function onUpdate(myChart, _, addonAttributes) {
 			{
 				name: 'Tag',
 				type: 'pie',
-				radius: '50%',
+				radius: doughnut === "yes" ? ['40%', '70%'] : "50%",
 				center: ['40%', '50%'],
 				data,
+	      itemStyle: {
+					borderRadius: 10,
+					borderWidth: 0,
+					borderColor: '#fff',
+      },
 				emphasis: {
-					itemStyle: {
-						shadowBlur: 10,
-						shadowOffsetX: 0,
-						shadowColor: 'rgba(0, 0, 0, 0.5)'
-					}
+					itemStyle: {}
 				}
 			}
 		]
 	};
 
-	const filter = addonAttributes.filter || '[tags[]!prefix[$:/]]'
-  const tags =  $tw.wiki.filterTiddlers(filter)
-
+	
+  const tags =  $tw.wiki.filterTiddlers(filter).sort()
 	tags.forEach(tag => data.push(getData(tag)))
-
+	
+	sort ==="descend" && data.sort(function(a,b) {
+		return b.value - a.value;
+	})
+	sort ==="ascend" && data.sort(function(a,b) {
+		return a.value - b.value;
+	})
+	
+	
 	myChart.setOption(option)
 	myChart.on('click', 'series', gotoTagTiddler)
 }
@@ -107,7 +114,12 @@ function shouldUpdate(_, changedTiddlers) {
 
 // function onUnmount() {}
 
-// https://tiddly-gittly.github.io/tw-echarts/#%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%AF%A5%E6%8F%92%E4%BB%B6%3F
 module.exports = {
 	onUpdate, shouldUpdate
 }
+
+/**
+  * @param: filter, 默认是用户的所有tiddler, 但是你也可以使用 filter='[tag[Journal]]' 列出所有的 Journal tiddler
+  * @param: sort descend|ascend
+	* @param: doughnut 'yes'
+  */
