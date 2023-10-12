@@ -43,7 +43,9 @@ function getSevenDaysBefore(dateString) {
   return sevenDays;
 }
 
-// function shouldUpdate(_state, changedTiddlers, _changedAttributes) { return true; }
+function shouldUpdate(_state, changedTiddlers, _changedAttributes) {
+	return false; 
+}
 
 function onUpdate(myChart, _state, addonAttributes) {
   const {
@@ -73,6 +75,11 @@ function onUpdate(myChart, _state, addonAttributes) {
     legend: {
       data: ["created", "modified"],
     },
+		toolbox: {
+		feature: {
+        restore: {},
+    }
+		},
     tooltip: {
       trigger: "item", // item
       formatter: function (params) {
@@ -100,7 +107,7 @@ function onUpdate(myChart, _state, addonAttributes) {
       type: "value",
 			name: '文章数量'
     },
-  	 animationDuration: 1000,
+  	 animationDuration: 5000,
     series: [
       {
         name: "created",
@@ -121,9 +128,9 @@ function onUpdate(myChart, _state, addonAttributes) {
           //   },
           // },
         // },
-				lineStyle: {
-        width: 4
-      },
+				lineStyle: { width: 4, 
+										// color: 'purple' 
+									 },
         emphasis: {
  				  focus: 'series',
           itemStyle: {
@@ -132,7 +139,7 @@ function onUpdate(myChart, _state, addonAttributes) {
             shadowColor: "rgba(0, 0, 0, 0.5)",
           },
         },
-        smooth: true,
+        smooth: true
       },
       {
         name: "modified",
@@ -148,10 +155,11 @@ function onUpdate(myChart, _state, addonAttributes) {
         formatter: '{a}',
         distance: 20
       },
-        areaStyle: {},
+        // areaStyle: {},
         emphasis: {
  				  focus: 'series',
           itemStyle: {
+						// color: '',
             scale: 1.25,
             shadowOffsetX: 0,
             shadowColor: "rgba(0, 0, 0, 0.5)",
@@ -163,7 +171,7 @@ function onUpdate(myChart, _state, addonAttributes) {
   };
 
   myChart.setOption(option);
-  myChart.on("click", "series", function (params) {
+  myChart.on("dbclick", "series", function (params) {
     const { name: date, value: count, seriesName } = params;
     const goto = new $tw.Story();
     const filter = `[sameday:${seriesName}[${date}]!is[system]!has[draft.of]]`;
@@ -184,5 +192,5 @@ function onUpdate(myChart, _state, addonAttributes) {
 // function onUnmount(state) { }
 
 module.exports = {
-  onUpdate,
+  onUpdate, shouldUpdate
 };
