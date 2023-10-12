@@ -4,7 +4,6 @@ module-type: echarts-component
 type: text/application
 description: tag pie on tiddlywiki
 
-// TODO: 优化代码结构
 \*/
 
 function getData(tag) {
@@ -15,7 +14,6 @@ function getData(tag) {
 	}
 }
 
-// function onMount() { }
 
 const goto = new $tw.Story();
 
@@ -31,9 +29,11 @@ const gotoTagTiddler = (params) => {
 }
 
 function onUpdate(myChart, _, addonAttributes) {
-	const {doughnut, filter='[tags[]!prefix[$:/]]', sort="descend"} = addonAttributes
-	// 这里的数据必须每次都要重新赋值, 从而拿到新的值
+	// 暴露参数给用户
+	const { doughnut, filter='[tags[]!prefix[$:/]]', sort="descend" } = addonAttributes;
+	// data必须在执行onUpdate函数的时候获取到最新数据,不要写在函数外面
 	const data = [];
+	// 配置具体参考echarts官方文档
 	const option = {
 		title: {
 			text: '文章标签占比分布',
@@ -54,7 +54,7 @@ function onUpdate(myChart, _, addonAttributes) {
 		tooltip: {
 			trigger: 'item',
 			formatter: function (params) {
-				const {name, value, percent} = params
+				const {name, value, percent} = params;
 				if(value) {
 					return `${name} 标签 有 ${value}个条目, ${percent}%`;
 				} else {
@@ -88,23 +88,20 @@ function onUpdate(myChart, _, addonAttributes) {
 		]
 	};
 
-	
+	// alpha sort default
   const tags =  $tw.wiki.filterTiddlers(filter).sort()
 	tags.forEach(tag => data.push(getData(tag)))
 	
-	sort ==="descend" && data.sort(function(a,b) {
-		return b.value - a.value;
+	// descend or ascend sort
+	data.sort(function(a,b) {
+		return sort === "descend" ? b.value - a.value : a.value - b.value;
 	})
-	sort ==="ascend" && data.sort(function(a,b) {
-		return a.value - b.value;
-	})
-	
 	
 	myChart.setOption(option)
 	myChart.on('click', 'series', gotoTagTiddler)
 }
 
-// TODO: 需要手动重新setoption, 需要手动刷新echarts dom
+// TODO: need refresh manually here
 function shouldUpdate(_, changedTiddlers) {
 	// changeTiddlers 会包含一些系统tiddler的状态变换tiddler, 应该去掉
 	const changedTiddlersLength = Object.keys(changedTiddlers).filter(
@@ -112,6 +109,7 @@ function shouldUpdate(_, changedTiddlers) {
 	return changedTiddlersLength ? true : false;
 }
 
+// function onMount() { }
 // function onUnmount() {}
 
 module.exports = {
@@ -120,6 +118,6 @@ module.exports = {
 
 /**
   * @param: filter, 默认是用户的所有tiddler, 但是你也可以使用 filter='[tag[Journal]]' 列出所有的 Journal tiddler
-  * @param: sort descend|ascend
-	* @param: doughnut 'yes'
+  * @param: sort {descend|ascend}
+	* @param: doughnut {'yes'}
   */
