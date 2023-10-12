@@ -37,6 +37,7 @@ function onUpdate(myChart, _, addonAttributes) {
 		radius = 10,
 		toolbox = 'hide',
     doughnut,
+		focusSelf,
 		legend
   } = addonAttributes;
   // data必须在执行onUpdate函数的时候获取到最新数据,不要写在函数外面
@@ -100,6 +101,7 @@ function onUpdate(myChart, _, addonAttributes) {
           borderColor: "#fff",
         },
         emphasis: {
+					focus: focusSelf ==="yes" ? 'self' : '',
           itemStyle: {},
         },
       },
