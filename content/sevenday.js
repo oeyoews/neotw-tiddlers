@@ -56,6 +56,7 @@ function onUpdate(myChart, _state, addonAttributes) {
 
   const sevendays = getSevenDaysBefore(date);
 
+	// TODO: 封装成函数 https://echarts.apache.org/examples/en/editor.html?c=bump-chart 
   const createdData = [];
   const modifiedData = [];
 
