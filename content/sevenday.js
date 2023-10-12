@@ -6,7 +6,8 @@ description: seven
 \*/
 
 // TODO: 简化时间的处理
-const getData = (date, type="created") =>
+// TODO: 指定线的颜色, 区域的颜色
+const getData = (date, type = "created") =>
   $tw.wiki.filterTiddlers(`[sameday:${type}[${date}]!is[system]!has[draft.of]]`)
     .length;
 
@@ -50,47 +51,46 @@ function onUpdate(myChart, _state, addonAttributes) {
     title: text = "最近文章动态",
     subtitle: subtext = "",
     disableClick = "no",
-		smooth = 'true',
+    smooth = "true",
   } = addonAttributes;
-	
-	
+
   const sevendays = getSevenDaysBefore(date);
-	
+
   const createdData = [];
-	const modifiedData = [];
-	
+  const modifiedData = [];
+
   sevendays.forEach((date) => createdData.push(getData(date)));
-  sevendays.forEach((date) => modifiedData.push(getData(date, 'modified')));
+  sevendays.forEach((date) => modifiedData.push(getData(date, "modified")));
 
   const option = {
     title: {
       text,
       subtext,
       left: "center",
-			top: 'bottom'
+      top: "bottom",
     },
-		legend: {
-			data: ['created', 'modified']
-		},
+    legend: {
+      data: ["created", "modified"],
+    },
     tooltip: {
       trigger: "item",
       formatter: function (params) {
         const { name: date, value: count, seriesName } = params;
         const realDate = parsesixDate(date);
-				if(seriesName === 'created') {
-        return count
-          ? `${realDate} 写了 ${count} 篇文章`
-          : `${realDate} 没有写新的文章`;
-         } else {
+        if (seriesName === "created") {
           return count
-          ? `${realDate} 更新了 ${count} 篇文章`
-          : `${realDate} 没有文章更新`;
-				 }
-				}
+            ? `${realDate} 写了 ${count} 篇文章`
+            : `${realDate} 没有写新的文章`;
+        } else {
+          return count
+            ? `${realDate} 更新了 ${count} 篇文章`
+            : `${realDate} 没有文章更新`;
+        }
+      },
     },
     // color: [''],
     xAxis: {
-		  boundaryGap: false,
+      boundaryGap: false,
       type: "category",
       data: sevendays,
     },
@@ -99,13 +99,20 @@ function onUpdate(myChart, _state, addonAttributes) {
     },
     series: [
       {
-				name: 'created',
+        name: "created",
         data: createdData,
         type: "line",
-				areaStyle: {},
+        areaStyle: {
+          // normal: {
+          //   color: "green", //改变区域颜色
+          //   lineStyle: {
+          //     color: "green", //改变折线颜色
+          //   },
+          // },
+        },
         emphasis: {
           itemStyle: {
-            scale: 1.25,
+            scale: 1.5,
             shadowOffsetX: 0,
             shadowColor: "rgba(0, 0, 0, 0.5)",
           },
@@ -113,10 +120,10 @@ function onUpdate(myChart, _state, addonAttributes) {
         smooth: true,
       },
       {
-				name: 'modified',
+        name: "modified",
         data: modifiedData,
         type: "line",
-				areaStyle: {},
+        areaStyle: {},
         emphasis: {
           itemStyle: {
             scale: 1.25,
@@ -134,7 +141,7 @@ function onUpdate(myChart, _state, addonAttributes) {
     const { name: date, value: count, seriesName } = params;
     const goto = new $tw.Story();
     const filter = `[sameday:${seriesName}[${date}]!is[system]!has[draft.of]]`;
-		
+
     if (!count) return;
     $tw.rootWidget.invokeActionString(
       '<$action-setfield $tiddler="$:/temp/advancedsearch" text="""' +

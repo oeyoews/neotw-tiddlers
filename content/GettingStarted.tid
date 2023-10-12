@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: tom.svg
-modified: 20231011115517138
+modified: 20231012051135481
 modifier: Lenovo
 page-cover: gradient.svg
 page-icon: fluent-emoji-flat:waving-hand
@@ -11,9 +11,9 @@ tags:
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
+{{sevenday}}
 {{tagpie}}
 {{heatmap}}
-{{sevenday}}
 
 <$cards filter='Videos JavaScript React TiddlyWiki Journal Tailwindcss books Article Private table-todo thoughts 名词' />
 
