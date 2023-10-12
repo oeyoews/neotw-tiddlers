@@ -1,7 +1,9 @@
+<div class="my-8">
 <div class="dark:hidden">
-<$echarts $tiddler="sevenday.js" $theme='light'/>
+<$echarts $tiddler="addon/sevenday.js" $theme='light'/>
 </div>
 
 <div class="hidden dark:inline">
-<$echarts $tiddler="sevenday.js" $theme='dark'/>
+<$echarts $tiddler="addon/sevenday.js" $theme='dark'/>
+</div>
 </div>

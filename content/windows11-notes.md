@@ -7,7 +7,7 @@
 * nodejs  git github-desktop
 * vscode chrome
 * qq wechat 
-* v2raya marktext  
+* v2raya marktext(还是不习惯, 还是用vscode吧)  
 * windows terminal
 * flameshot
 
