@@ -1,4 +1,4 @@
-<$echarts $tiddler="addon/sevenday.js"/>
+<$echarts $tiddler="addon/sevenday.js" $theme='auto'/>
 
 <$echarts $tiddler="addon/sevenday.js" days=30 date='20231007'/>
 

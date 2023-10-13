@@ -1,0 +1,1 @@
+* if pm2 not restart automatically, use pm2 delete , and start it, stop and start will break automatically

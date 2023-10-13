@@ -1,1 +1,0 @@
-* if pm2 not restart automatically, use pm2 delete <id>, and start it
