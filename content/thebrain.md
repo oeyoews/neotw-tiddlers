@@ -1,0 +1,1 @@
+<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" aliasField="caption" levels=2 focussedTiddler={{$:/temp/focussedTiddler}} graphTitle=" " draggable="yes" previewDelay='100' focusBlur="true" legend='no'/>
