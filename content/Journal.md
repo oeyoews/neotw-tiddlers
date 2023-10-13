@@ -1,1 +1,1 @@
-<$echarts $tiddler="addon/tagpie.js" filter="[tag[Journal]]" $theme='auto'/>
+<$echarts $tiddler="addon/tagpie.js" filter="[tag[Journal]]" $theme='light'/>
