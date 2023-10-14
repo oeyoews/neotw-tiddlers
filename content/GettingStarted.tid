@@ -1,7 +1,7 @@
 created: 20230117102714737
 creator: oeyoews
 description: HomePage
-icon: $:/favicon.ico
+icon: $:/core/icon
 modified: 20231013093209110
 modifier: Lenovo
 page-cover: gradient.svg
