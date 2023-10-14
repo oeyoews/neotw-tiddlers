@@ -1,9 +1,9 @@
 caption: TSKPL 插件库 (本机预览版)
 created: 20231014001559904
 creator: Lenovo
-modified: 20231014002000513
+modified: 20231014051034583
 modifier: Lenovo
 tags: $:/tags/PluginLibrary
 title: TSKPL 插件库 (本机预览版)
 type: text/vnd.tiddlywiki
-url: http://127.0.0.1:8090/library/index.html
+url: http://127.0.0.1:8080/library/index.html
