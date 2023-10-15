@@ -1,3 +1,8 @@
+:::info
+<iconify-icon icon="fluent:leaf-two-20-regular" style="color: #2c8d11;" />
+Windows 更新致力于帮助减少碳排放
+:::
+
 :::note windows notes
 下面是体验糟糕的windows的一些糟糕体验笔记
 :::
