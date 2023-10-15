@@ -1,7 +1,11 @@
-<<.preamble "🔌 (即将)想要写的TiddlyWiki5插件; 仅作为个人练习记录, 无意优化TiddlyWiki5的使用体验, 如果有那就算是无意的吧 😄">>
+:::warning
+不再更新
+:::
 
+:::info
+🔌 (即将)想要写的TiddlyWiki5插件; 仅作为个人练习记录, 无意优化TiddlyWiki5的使用体验, 如果有那就算是无意的吧 😄
+:::
 
-@[toc]
 
 ## TODO
 
@@ -42,13 +46,13 @@
 ## Ing
 
 :::info
-- [ ] 时钟翻页效果 https://www.qireader.com.cn/tags/!readlater/entries/2pWeqXJNm71VrbXM
 - [ ] update toggle sidebar position icon and effects
 :::
 
-## Done
+## DONE
 
-:::
+:::example
+- [x] 时钟翻页效果 https://www.qireader.com.cn/tags/!readlater/entries/2pWeqXJNm71VrbXM
 :::
 
 ## 写插件遇到的一些问题
