@@ -9,11 +9,13 @@
 
 ## 使用操作系统(平台)
 
-* Linux(:penguin:)
+* <$iconify icon="logos:linux-tux" />
 
 ## 启动方式
 
-* ~~Pm2~~ docker+NodeJs(命令行, 其实tiddlywiki不区分系统, 只要相关的使用条件满足就行)
+1. <$iconify icon="logos:pm2" /> + <$iconify icon="logos:nodejs" />
+2. <$iconify icon="logos:docker" />
+
 
 ## 如何记笔记
 
@@ -30,7 +32,7 @@
 
 ## Tiddlywiki 样式
 
-* 使用 <iconify-icon icon="simple-icons:tailwindcss" /> tailwindcss来写, 省去手写样式, 并且节省空间和时间
+* 使用 <iconify-icon icon="logos:tailwindcss" /> tailwindcss来写, 省去手写样式, 并且节省空间和时间
 
 ## 自己写的一些插件
 
