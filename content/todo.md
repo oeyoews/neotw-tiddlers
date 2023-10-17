@@ -3,12 +3,9 @@
 :::
 
 <table>
-<$list filter="[tag[todo]!is[system]!is[shadow]!sort[modified]]">
+<$list filter="[tag[todo]!sort[modified]]">
 <tr>
 <td width="600px" style="padding:5px;"> <$link to={{!!title}}><$view field="title"/></$link>
-</td>
-<td width="600px" style="padding:5px;"> 
-	<$view field="modified"/>
 </td>
 </tr>
 </$list>
