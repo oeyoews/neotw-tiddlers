@@ -1,1 +1,0 @@
-github-desktop 每次push后, 都会额外执行一次fetch, 如果是自己的仓库, 这一步自然很多余

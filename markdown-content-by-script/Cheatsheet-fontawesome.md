@@ -1,1 +1,0 @@
-<https://thediveo.github.io/TW5FontAwesome/output/fontawesome.html#Cheatsheet>
