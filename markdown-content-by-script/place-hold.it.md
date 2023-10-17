@@ -1,1 +1,0 @@
-[img class="" [<http://place-hold.it/256x256>]]
