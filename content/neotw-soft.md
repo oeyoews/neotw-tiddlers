@@ -1,5 +1,3 @@
-@[toc]
-
 ## Gnome
   - gnome-shell-extension-tray-icons-reloaded
   - locks

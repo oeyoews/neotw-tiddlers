@@ -1,0 +1,11 @@
+created: 20220909175056464
+creator: oeyoews
+modified: 20231017081752602
+modifier: Lenovo
+tags: TiddlyWiki
+title: savewikifolder-file
+type: text/vnd.tiddlywiki
+
+```wikitext
+tiddlywiki --load ./mywiki.html --savewikifolder ./mywikifolder
+```

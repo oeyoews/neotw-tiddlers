@@ -1,0 +1,18 @@
+created: 20220828011107715
+creator: oeyoews
+modified: 20231017082448081
+modifier: Lenovo
+tags: 
+title: neotw/configuration
+type: text/vnd.tiddlywiki
+
+\define time() 
+<$view field="modified" format="date" template="YYYY0MM0DD0hh0mm"/>
+\end
+
+```bash
+<<countplugins>>
+* <$checkbox tiddler="$:/config/oeyoews/settings.json" index="name" checked="neotw" unchecked="tiddlywiki" default="neotw"> 
+project name is
+</$checkbox> __{{$:/config/oeyoews/settings.json##name}}__
+```

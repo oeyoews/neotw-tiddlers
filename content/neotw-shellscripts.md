@@ -1,5 +1,6 @@
 ## some shell brackets
 
+```bash
 @shell
 - $() and \`\`:  命令替换
 - $(()) : 数学计算，**等运算符号不会被shell解析其他含义
@@ -12,3 +13,4 @@
 - {}: codeblock
 
 @endshell
+```
