@@ -1,9 +1,11 @@
 created: 20231012055329001
 creator: Lenovo
-modified: 20231012133913778
+modified: 20231017084316168
 modifier: Lenovo
-tags: $:/tags/SideBar
+tags: $:/tags/SideBar $:/tags/PageTemplate
 title: clock
 type: text/vnd.tiddlywiki
 
-<$echarts $tiddler="addon/clock.js" />
+<div class="fixed -top-12 -right-8 -z-10 hidden lg:block">
+	<$echarts $tiddler="addon/clock.js" $width="250px" />
+</div>
