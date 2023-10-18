@@ -1,12 +1,15 @@
 created: 20231017235829236
 creator: Lenovo
-modified: 20231018014423062
+modified: 20231018040437340
 modifier: Lenovo
 tags: 
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
 <table>
+<tr>
+<th>Title</th>
+</tr>
 <$list filter="[tag<currentTiddler>!sort[modified]!has[draft.of]limit[200]]">
 	<$list-template>
 <tr>
