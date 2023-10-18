@@ -1,0 +1,21 @@
+created: 20231017235829236
+creator: Lenovo
+modified: 20231018014423062
+modifier: Lenovo
+tags: 
+title: tagTableTemplate
+type: text/vnd.tiddlywiki
+
+<table>
+<$list filter="[tag<currentTiddler>!sort[modified]!has[draft.of]limit[200]]">
+	<$list-template>
+<tr>
+<td class="p-2 bg-gray-200 capitalize"> 
+		<$link />
+</td>
+</tr>
+	</$list-template>
+<$list-empty>
+ 这里是一个tag table template!
+</$list-empty>
+</$list>
