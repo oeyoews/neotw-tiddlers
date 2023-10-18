@@ -1,3 +1,5 @@
+{{||headerTemplate}}
+
 ![](https://miro.medium.com/v2/resize:fit:1050/1*lA-_v4GToxBmh1v7D7xk3A.jpeg)
 
 [![Emmanuel Odii](https://miro.medium.com/v2/resize:fill:66:66/1*urianex_H3N9EL-Sy8KEnA.jpeg)](https://medium.com/@emmanuelodii80?source=post_page-----d91f95891adb--------------------------------)

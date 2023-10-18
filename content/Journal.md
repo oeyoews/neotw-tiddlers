@@ -1,4 +1,6 @@
 :::abstract
 Daily Journal
 :::
-{{||tagTableTemplate}}
+
+
+{{ ||tagTableTemplate }}

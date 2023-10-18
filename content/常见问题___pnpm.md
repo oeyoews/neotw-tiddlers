@@ -1,3 +1,5 @@
+{{||headerTemplate}}
+
 ## 常见问题
 
 ## 如果包存储在全局存储中，为什么我的 `node_modules` 使用了磁盘空间？[​](#如果包存储在全局存储中为什么我的-node_modules-使用了磁盘空间 "Direct link to 如果包存储在全局存储中为什么我的-node_modules-使用了磁盘空间")

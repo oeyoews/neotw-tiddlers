@@ -1,9 +1,10 @@
 created: 20230501105846310
 creator: oeyoews
 icon: Journal.png
-modified: 20231018035849160
+modified: 20231018045650138
 modifier: Lenovo
 page-icon: fluent-emoji:ledger
 tags: 
+template: tagTableTemplate
 title: Journal
 type: text/markdown

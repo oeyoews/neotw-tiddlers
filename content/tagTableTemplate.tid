@@ -1,6 +1,6 @@
 created: 20231017235829236
 creator: Lenovo
-modified: 20231018041323911
+modified: 20231018053052160
 modifier: Lenovo
 tags: 
 title: tagTableTemplate
@@ -22,3 +22,4 @@ type: text/vnd.tiddlywiki
  这里是一个tag table template!
 </$list-empty>
 </$list>
+</table>
