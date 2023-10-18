@@ -1,6 +1,6 @@
-:::info
+:::tip
 <iconify-icon icon="fluent:leaf-two-20-regular" style="color: #2c8d11;" />
-Windows 更新致力于帮助减少碳排放
+Windows 更新致力于帮助减少碳排放.
 :::
 
 :::note windows notes
@@ -96,3 +96,7 @@ use ssh not https,  ssh-keygen 不是很好用, 总是没有权限
 * https://www.hanboshi.com/articles/128.html
 * 内存暴了会导致蓝屏?? 
 :::
+
+* 新版的window11 似乎增加了一些emoji 和一些字体的支持, 不会很模糊了
+* 动画有延迟
+* 鼠标移动不够平滑, 似乎是没有开启平滑启动的区别

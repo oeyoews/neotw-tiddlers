@@ -1,7 +1,7 @@
 created: 20230602154318789
 creator: oeyoews
-modified: 20230918113230989
-modifier: oeyoews
+modified: 20231018055553751
+modifier: Lenovo
 tags: JavaScript
 title: map-foreach
 type: text/vnd.tiddlywiki
@@ -14,7 +14,7 @@ type: text/vnd.tiddlywiki
 
 下面是 `forEach` 和 `map` 方法的使用示例：
 
-```
+```js
 const arr = [1, 2, 3, 4];
 
 // 使用 forEach 方法
