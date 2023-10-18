@@ -6,4 +6,4 @@
 借助TiddlyWiki5, 我几乎完成了所有关于笔记软件的需求, 也满足了所有关于博客网站的幻想, 可以算得上最后一个笔记软件了
 :::
 
-<$echarts $tiddler="addon/tagpie.js" filter="[tag[TiddlyWiki]]"/>
+{{||tagTableTemplate}}
