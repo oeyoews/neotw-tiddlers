@@ -1,10 +1,8 @@
-> 原来rss feeds 用起来这么爽, 之前一直还不理解
+原来 <$iconify icon="simple-icons:rss" /> 用起来这么爽.
 
-> personal atom feed: https://neotw.oeyoewl.top/atom.xml
-
-## TODO
-
-* 使用rss 可以做很多事情， 订阅各个平台的更新， youtube的视频的更新， 音乐更新， 省去了打开软件的麻烦， 提高效率， 正在摸索相关工作流
+:::todo
+使用 Rss 可以做很多事情， 订阅各个平台的更新， <$iconify icon="logos:youtube" /> 视频的更新， 音乐更新，省去了打开软件的麻烦， 提高效率， 正在摸索相关工作流
+:::
 
 ## Why Rss
 
@@ -90,7 +88,7 @@ https://github.com/:user.atom
 * deploy: https://docs.rsshub.app/install/#bu-shu-dao-vercel-zeit-now
 * https://chrome.google.com/webstore/detail/web-monitor/fipadnnmmoiomfllhbbnhjnghopkgfpb?utm_source=official
 
-## Notion
+## <$iconify icon="logos:notion" />
 
 * use notionfeed
 
