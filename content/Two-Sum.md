@@ -1,5 +1,3 @@
-<$ocover/>
-
 ```js
 /**
 Name: two-sum
