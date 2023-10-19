@@ -1,1 +1,1 @@
-favicon.ico 默认32x32
+favicon.ico 默认 32x32

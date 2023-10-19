@@ -1,4 +1,4 @@
-`backdrop-filter` 和 `filter` 都是CSS中用于添加图像效果的属性，但它们有不同的作用和用途：
+`backdrop-filter` 和 `filter` 都是 CSS 中用于添加图像效果的属性，但它们有不同的作用和用途：
 
 1. **`filter` 属性**：
 

@@ -1,8 +1,8 @@
-sessionStorage是会话存储，只能在同一个浏览器窗口（或者标签页）中共享数据，在浏览器窗口关闭时，存储在sessionStorage中的数据也会被清除。
+sessionStorage 是会话存储，只能在同一个浏览器窗口（或者标签页）中共享数据，在浏览器窗口关闭时，存储在 sessionStorage 中的数据也会被清除。
 
-而localStorage是本地存储，可以在不同浏览器窗口（或者标签页）之间共享数据，并且即使关闭了浏览器窗口，存储在localStorage中的数据仍然存在。
+而 localStorage 是本地存储，可以在不同浏览器窗口（或者标签页）之间共享数据，并且即使关闭了浏览器窗口，存储在 localStorage 中的数据仍然存在。
 
-因此，如果您希望在刷新浏览器后仍然保留数据，应该使用localStorage而不是sessionStorage。
+因此，如果您希望在刷新浏览器后仍然保留数据，应该使用 localStorage 而不是 sessionStorage。
 
 ```html
 <!DOCTYPE html>

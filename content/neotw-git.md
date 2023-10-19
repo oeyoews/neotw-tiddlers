@@ -10,7 +10,7 @@
 * git log --all -n 4 --graph  --oneline     # 结合  部分的参数
 
 ### Misc
-* git -b develop https://github.com/..... # only to clone a appointment
+* git -b develop https://github.com/…… # only to clone a appointment
 * git ls-remote  //  detail
 
 ### Status
@@ -47,7 +47,7 @@
 * doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 * 匹配模式最后跟"/"说明要忽略的是目录
 * 可以忽略该仓库的所有文件,不用写递归的路径
-* deploy*/   # 忽略以deploy开头任意字符结束的目录
+* deploy*/   # 忽略以 deploy 开头任意字符结束的目录
 
 ### Remote
 * git remote rm origin           # 删除已经关联的远程仓库
@@ -64,7 +64,7 @@
 
 ### Checkout
 
-* git checkout -- name //使用head的最新内容替换工作目录的内容LL ( only workspace)
+* git checkout -- name //使用 head 的最新内容替换工作目录的内容 LL ( only workspace)
 * git checkout branchname         # switch anotherbranch (git branch dev    && git checkout dev)
 * git checkout --orphan=new-br    #  根据当前的分支，生成新的分支，但是没有提交记录，只能提交才能看到新的分支
 * git checkout --merge branch
@@ -80,23 +80,23 @@
 * 也可以进行强行推送（not recommend），直接把远程仓库覆盖掉
 * `git push origin  master --force`
 * `git push origin  :master`
-表示推送一个空的分支到远程的master分支。相当于删除远程的master分支；
+表示推送一个空的分支到远程的 master 分支。相当于删除远程的 master 分支；
 等同`git push origin --delete master`
-`git push -all origin `
+`git push -all origin`
  不管远程仓库是否存在相应的分支，将本地的所有的分支全部推送上去。
-`git push -f  origin `
-`git push -f -u origin master            `
-版本回退 但是会抹去远程库的提交信息 首先进行本地的版本回退，由于进行里本地的版本回滚，版本将落后于远程分支，因此必须要使用强制推送进行版本覆盖，然后进行向远程仓库强制推送  master 为默认本仓库创建的第一个分支， 而 origin为默认是指向这一个仓库，相当于别名
+`git push -f  origin`
+`git push -f -u origin master`
+版本回退 但是会抹去远程库的提交信息 首先进行本地的版本回退，由于进行里本地的版本回滚，版本将落后于远程分支，因此必须要使用强制推送进行版本覆盖，然后进行向远程仓库强制推送  master 为默认本仓库创建的第一个分支， 而 origin 为默认是指向这一个仓库，相当于别名
 
 ### Commit
 * git commit -am ' '  // commit file message already added
 
 ### Merge
 * git branch --merged    # 显示已经合并到当前分支的分支列表  --no-merged
-* git pull  --rebase origin master  # 根据远端的readme生成readme文件，在本地生成readme文件
+* git pull  --rebase origin master  # 根据远端的 readme 生成 readme 文件，在本地生成 readme 文件
 * git push -f gitee master      # 强制上传，覆盖掉远端的文件（注意，远端确定没有重要的文件）
 * git push origin --all # 推送所有的分支到远程仓库
-* git push -u origin bugs    #    将本地的bugs分支推送到远程的bugs，如果没有则会被建立，并且建立两者的关联，之后直接使用git push  就可以
+* git push -u origin bugs    #    将本地的 bugs 分支推送到远程的 bugs，如果没有则会被建立，并且建立两者的关联，之后直接使用 git push  就可以
 
 ### Cache
 * git rm -r --cached .
@@ -109,7 +109,7 @@
 * ~/.gitconfig   # 全局配置文件
 * git config --global core.editor vim
 * git config --global credential.helper store    # 存储账户密码，但是需要输入一次
-* git config -l # 列出git的初始化信息。  可以查看当前的仓库链接的是那个具体仓库
+* git config -l # 列出 git 的初始化信息。  可以查看当前的仓库链接的是那个具体仓库
 * git config --global user.name "oeyoews"
 * git config --global user.email "2956398608@qq.com" # 带有空格
 
@@ -119,19 +119,19 @@
 * ssh -T git@github.com
 
 ### Multi_repository_address
-* 在.git 文件里面的url下面添加一个新的url，可以同时推送到github和gitee上。
+* 在.git 文件里面的 url 下面添加一个新的 url，可以同时推送到 github 和 gitee 上。
 
 ### Gitlab
-* settings -> general -> advance  # 修改clone的地址 gitlab
+* settings -> general -> advance  # 修改 clone 的地址 gitlab
 
 ### Enhance_speed
 * https://raw.githubusercontent.com/ 进行了代理，地址为 https://raw.fastgit.org/ 。
 
 ### GitReset
-`git reset --hard id  `
-hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，commit的信息会被删除，并且不会保存之前错误的源码， id不确定要写几位，一般写前面几位就行了，git会自动寻找   HEAD 表示当前版本
-`git reset  --mixed `
-> 等于 ` git reset` ，会保留源码，就是之前的所有提交信息都会被保留，只是将commit和index的信息回退，即更改指针的指向,reset 的指针向后移动了，删除里一些commit，而revert的指针是一直向前的，在commit之后有commit一次
+`git reset --hard id`
+hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，commit 的信息会被删除，并且不会保存之前错误的源码， id 不确定要写几位，一般写前面几位就行了，git 会自动寻找   HEAD 表示当前版本
+`git reset  --mixed`
+> 等于 `git reset` ，会保留源码，就是之前的所有提交信息都会被保留，只是将 commit 和 index 的信息回退，即更改指针的指向,reset 的指针向后移动了，删除里一些 commit，而 revert 的指针是一直向前的，在 commit 之后有 commit 一次
 
 ### Relative_web
 [thin_large_repository](https://gitee.com/help/articles/4232#article-header0)

@@ -1,1 +1,1 @@
-tailwindcss plugin 在vscode 经常不触发提示, webstorm 则没有这个问题
+tailwindcss plugin 在 vscode 经常不触发提示, webstorm 则没有这个问题

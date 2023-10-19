@@ -1,6 +1,6 @@
 前端开发中常用的设计模式有以下几种：
 
-1. 单例模式（Singleton Pattern）：单例模式是指保证一个类仅有一个实例，并提供一个全局的访问点。它通常用于管理全局资源、配置信息、日志等。在JavaScript中，可以通过闭包和模块化的方式来实现单例模式。
+1. 单例模式（Singleton Pattern）：单例模式是指保证一个类仅有一个实例，并提供一个全局的访问点。它通常用于管理全局资源、配置信息、日志等。在 JavaScript 中，可以通过闭包和模块化的方式来实现单例模式。
 
 2. 工厂模式（Factory Pattern）：工厂模式是指定义一个用于创建对象的接口，让子类决定实例化哪一个类。它将对象的创建延迟到子类中进行，从而避免了在代码中显式地引用具体类。常用于创建一些复杂的对象。
 
@@ -16,7 +16,7 @@
 
 好的，让我来举几个前端开发中常用的设计模式的例子：
 
-1. 单例模式：在前端开发中，单例模式常用于管理全局资源、配置信息和日志等。例如，我们可以通过创建一个全局的Logger对象来实现日志的记录和管理：
+1. 单例模式：在前端开发中，单例模式常用于管理全局资源、配置信息和日志等。例如，我们可以通过创建一个全局的 Logger 对象来实现日志的记录和管理：
 
 ```js
 class Logger {
@@ -83,9 +83,9 @@ logger.add('World');
 logger.print();
 ```
 
-在这个例子中，我们通过创建一个闭包来实现单例模式，保证了Logger对象仅有一个实例。我们在Logger对象中定义了一些方法，如add和print，用于记录和输出日志。然后，我们通过调用Logger.getInstance()方法来获取Logger对象的实例，从而实现了全局的日志管理。
+在这个例子中，我们通过创建一个闭包来实现单例模式，保证了 Logger 对象仅有一个实例。我们在 Logger 对象中定义了一些方法，如 add 和 print，用于记录和输出日志。然后，我们通过调用 Logger.getInstance()方法来获取 Logger 对象的实例，从而实现了全局的日志管理。
 
-2. 工厂模式：在前端开发中，工厂模式常用于创建复杂的对象和组件，例如React组件、Redux store等。以下是一个简单的React组件工厂的例子：
+2. 工厂模式：在前端开发中，工厂模式常用于创建复杂的对象和组件，例如 React 组件、Redux store 等。以下是一个简单的 React 组件工厂的例子：
 
 ```javascript
 class Button extends React.Component {
@@ -111,9 +111,9 @@ const ButtonComponent = ComponentFactory.create('button');
 const InputComponent = ComponentFactory.create('input');
 ```
 
-在这个例子中，我们定义了两个React组件Button和Input，分别用于创建按钮和输入框。然后，我们创建了一个ComponentFactory工厂类，用于根据传入的参数来创建对应的组件。最后，我们通过调用ComponentFactory.create('button')和ComponentFactory.create('input')来获取Button和Input组件的实例，从而实现了组件的动态创建和管理。
+在这个例子中，我们定义了两个 React 组件 Button 和 Input，分别用于创建按钮和输入框。然后，我们创建了一个 ComponentFactory 工厂类，用于根据传入的参数来创建对应的组件。最后，我们通过调用 ComponentFactory.create('button')和 ComponentFactory.create('input')来获取 Button 和 Input 组件的实例，从而实现了组件的动态创建和管理。
 
-3. 观察者模式：在前端开发中，观察者模式常用于处理事件和状态的变化，例如React组件的生命周期、Redux store的状态更新等。以下是一个简单的Redux store的观察者的例子：
+3. 观察者模式：在前端开发中，观察者模式常用于处理事件和状态的变化，例如 React 组件的生命周期、Redux store 的状态更新等。以下是一个简单的 Redux store 的观察者的例子：
 
 ```javascript
 class Store {
@@ -149,6 +149,6 @@ store.subscribe((state) => {
 store.dispatch({ type: 'INCREMENT' });
 ```
 
-在这个例子中，我们定义了一个Redux store的类Store，用于管理应用的状态。我们在Store类中定义了getState、subscribe和dispatch等方法，用于获取状态、添加观察者和派发action。然后，我们在store对象上添加了一个观察者函数来监听状态的变化。最后，我们调用store.dispatch({ type: 'INCREMENT' })来触发状态的变化，从而实现了观察者模式的应用。
+在这个例子中，我们定义了一个 Redux store 的类 Store，用于管理应用的状态。我们在 Store 类中定义了 getState、subscribe 和 dispatch 等方法，用于获取状态、添加观察者和派发 action。然后，我们在 store 对象上添加了一个观察者函数来监听状态的变化。最后，我们调用 store.dispatch({ type: 'INCREMENT' })来触发状态的变化，从而实现了观察者模式的应用。
 
 希望这些例子能够帮助您更好地理解前端常用的设计模式，以及如何在实际开发中应用它们。

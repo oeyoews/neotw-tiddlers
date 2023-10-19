@@ -1,4 +1,4 @@
-在同源页面中，可以使用`window.postMessage()`方法实现数据共享。`postMessage()`方法允许将消息发送到另一个窗口或跨窗口的iframe中。
+在同源页面中，可以使用`window.postMessage()`方法实现数据共享。`postMessage()`方法允许将消息发送到另一个窗口或跨窗口的 iframe 中。
 
 以下是一些基本步骤来实现同源页面之间的数据共享：
 
@@ -10,7 +10,7 @@
 
 在源页面中：
 
-```
+```plain
 // 源页面
 const targetWindow = window.parent; // 获取目标窗口对象
 targetWindow.postMessage('hello', 'http://localhost:8080'); // 向目标窗口发送消息
@@ -18,7 +18,7 @@ targetWindow.postMessage('hello', 'http://localhost:8080'); // 向目标窗口�
 
 在目标页面中：
 
-```
+```plain
 // 目标页面
 window.addEventListener('message', function(event) {
   if (event.origin === 'http://localhost:8080') { // 确认消息来源
@@ -30,4 +30,4 @@ window.addEventListener('message', function(event) {
 
 在这个示例中，源页面向目标窗口发送了一个消息`hello`，并指定消息需要发送到`http://localhost:8080`。当目标页面接收到来自源页面的消息时，它会打印出消息内容，并向源页面发送响应消息`world`。
 
-需要注意的是，也同样需要在接收页面中进行安全检查，以确保消息来自预期的来源，并防止XSS攻击等风险。此外，在使用`postMessage()`方法时，还需要谨慎处理消息内容，避免不良用户通过此方式传递恶意代码。
+需要注意的是，也同样需要在接收页面中进行安全检查，以确保消息来自预期的来源，并防止 XSS 攻击等风险。此外，在使用`postMessage()`方法时，还需要谨慎处理消息内容，避免不良用户通过此方式传递恶意代码。

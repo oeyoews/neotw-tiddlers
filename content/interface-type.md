@@ -1,4 +1,4 @@
-用interface描述**数据结构**，用type描述**类型关系**
+用 interface 描述**数据结构**，用 type 描述**类型关系**
 
 在 TypeScript 中，`interface` 和 `type` 是用于描述对象形状的两种方式，它们有一些相似之处，但也有一些不同之处。
 

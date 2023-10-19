@@ -1,4 +1,4 @@
-```
+```plain
 npx tiddlywiki . --build <none>
 ```
 

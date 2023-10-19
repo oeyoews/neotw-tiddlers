@@ -5,4 +5,4 @@ java.lang.UnsupportedClassVersionError: com/intellij/idea/Main has been compiled
 ```
 
 
-系统jdk版本太低, 在2023-2.1-1 之后需要高版本jdk, 之前是11
+系统 jdk 版本太低, 在 2023-2.1-1 之后需要高版本 jdk, 之前是 11

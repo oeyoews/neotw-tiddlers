@@ -5,9 +5,9 @@ npm install github:oeyoews/TiddlyWiki5#commitid
 ```
 
 :::bug
-pnpm 总是弹窗警告, 在github.dev环境下就没有这个问题
+pnpm 总是弹窗警告, 在 github.dev 环境下就没有这个问题
 :::
 
 :::note editor
-虽然焦点不丢失了, 但是vim的undo还是失效
+虽然焦点不丢失了, 但是 vim 的 undo 还是失效
 :::

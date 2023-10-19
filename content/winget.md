@@ -1,5 +1,5 @@
 :::note
-winget 默认安装c盘, winget settings 可以打开配置文件
+winget 默认安装 c 盘, winget settings 可以打开配置文件
 :::
 
 ```bash

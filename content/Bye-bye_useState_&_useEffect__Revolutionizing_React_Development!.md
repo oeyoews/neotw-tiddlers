@@ -13,7 +13,7 @@ Today, I want to show you an alternative for the **useState** and **useEffect** 
 
 Many developers continue to use the useState and useEffect hooks to update states, but I have not been fond of this approach. The issue is that it causes the component to mount, remount, and unmount simultaneously, leading to unexpected behavior. As a result, when logging something into the console, you may see the result repeated three times.许多开发人员继续使用 useState 和 useEffect 钩子来更新状态，但我不喜欢这种方法。问题是它会导致组件同时装载、重新装载和卸载，从而导致意外行为。因此，在将某些内容登录到控制台时，您可能会看到结果重复三次。
 
-## Introducing the useLoaderData Hook:介绍 useLoaderData Hook：
+## Introducing the useLoaderData Hook:介绍 useLoaderData Hook
 
 The `useLoaderData` hook is a custom hook in React that helps you load data into your component. It simplifies the process of fetching data from an API or performing any asynchronous operation.钩 `useLoaderData` 子是 React 中的一个自定义钩子，可帮助您将数据加载到组件中。它简化了从 API 获取数据或执行任何异步操作的过程。
 
@@ -23,7 +23,7 @@ The `useLoaderData` hook handles the loading state for you, so you don't need to
 
 By using the `useLoaderData` hook, you can keep your component code clean and organized, separating the data-loading logic from the rest of your component's responsibilities. It allows you to easily fetch and manage data in a more beginner-friendly way.通过使用 `useLoaderData` 挂钩，您可以保持组件代码干净有序，将数据加载逻辑与组件的其余职责分开。它允许您以更适合初学者的方式轻松获取和管理数据。
 
-## Why the useLoaderHook? 为什么使用LoaderHook？
+## Why the useLoaderHook? 为什么使用 LoaderHook？
 
 The useLoaderHook* from react-router helps achieve the same functionality* with minimal effort. These are some examples of why you should use it.
 
@@ -33,14 +33,14 @@ The useLoaderHook* from react-router helps achieve the same functionality* with 
 
 And lots more. 等等。
 
-## Let’s see How This Works.让我们看看这是如何工作的。
+## Let’s see How This Works.让我们看看这是如何工作的
 
 It’s assumed that you have a good knowledge of how react-router 6 works. If you don’t, Feel free to check out the docs [here](https://reactrouter.com/en/main)假设你对 react-router 6 的工作原理有很好的了解。如果您不这样做，请随时在此处查看文档
 
 Firstly, we have to set up the routing system in our application to work with the Loader API. Before now, we have been using the BrowserRouter setup to handle the various routes for our application.首先，我们必须在应用程序中设置路由系统以使用加载器 API。在此之前，我们一直在使用 BrowserRouter 设置来处理应用程序的各种路由。\
 Let’s spend a little time talking about this.让我们花一点时间谈谈这个。
 
-```
+```plain
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom"
 import HomeComponent from "./home"
 import AboutCompoent from "./about"
@@ -62,7 +62,7 @@ Think for a second about what’s happening.想一想正在发生的事情。
 
 Well. The BrowserRouter from react-router creates an array of object from the `Routes` children. The snippet below provides a clear illustration of how this is working.井。来自 react-router 的 BrowserRouter 从 `Routes` 子对象创建一个对象数组。下面的代码片段清楚地说明了它是如何工作的。
 
-```
+```plain
 BrowserRouter([
 {
     path: '/',
@@ -82,7 +82,7 @@ Yes, That’s how it keeps being **recursive.**是的，这就是它保持递归
 
 However, this method can’t be used to use the **loaderData** hook. We have to do a bit of refactoring. Don’t panic, It’s a bit similar to this. I highly recommend you check out the react-router docs for more information.但是，此方法不能用于使用 loaderData 挂钩。我们必须做一些重构。不要惊慌，它有点类似于这个。我强烈建议您查看 反应路由器文档 了解更多信息。
 
-```
+```plain
 import { 
 createBrowserRouter,
 createRoutesFromElements,
@@ -111,7 +111,7 @@ function App() {
 I have imported `createBrowserRouter`, `createRoutesFromElement`, `RouterProvider`.我已经导入 `createBrowserRouter` 了 、 、 `createRoutesFromElement` `RouterProvider` 。\
 Then, initialize a variable named `browserRoutes` to serve as that object that should be rendered. Noticed that I called the `createRoutesFromElements` function inside of the `createBrowserRouter` function. This was because I want to parse or convert the Routes to an object and the `createRoutesFromElements` as the name implies can help me do that. Then lastly the `RouterProvider` was returned with the value of the new `browserRouter`. Let's take a look at what we would have done without using the createRoutesFromElements function.然后，初始化一个名为 `browserRoutes` 作为应呈现的对象的变量。注意到我在函数内部调用了 `createRoutesFromElements` `createBrowserRouter` 函数。这是因为我想解析或将路由转换为对象，顾名思义 `createRoutesFromElements` 可以帮助我做到这一点。然后最后返回新的 `RouterProvider` `browserRouter` .让我们来看看如果不使用 createRoutesFromElements 函数，我们会做什么。
 
-```
+```plain
 createBrowserRouter([
 {
     path: '/',
@@ -127,13 +127,13 @@ createBrowserRouter([
 
 I am not a big fan of this as your route can even go nested and at some point, this becomes confusing. You should keep things very simple.我不是这个的忠实粉丝，因为你的路线甚至可以嵌套，在某些时候，这变得令人困惑。你应该让事情变得非常简单。
 
-## Exploring the Loader functions:探索加载器功能：
+## Exploring the Loader functions:探索加载器功能
 
 As we now have a bit of an understanding of how we can set up our application to use the Loader API, let’s see how we can use the API.由于我们现在对如何设置应用程序以使用 Loader API 有了一定的了解，让我们看看如何使用 API。
 
 Say you intend to fetch data from an endpoint andto be displayed on the `homeComponent`. What most developers would do is: initialize a state and update the state in the **useEffect **hook. The snippet below provides a clear illustration of what I am talking about.假设您打算从端点获取数据并显示在 . `homeComponent` 大多数开发人员会做的是：初始化一个状态并在 useEffect 钩子中更新状态。下面的片段清楚地说明了我在说什么。
 
-```
+```plain
 import { useState } from 'react'
 
 const HomeComponent = () => {
@@ -162,9 +162,9 @@ export default HomeComponent
 This is a tonne of lines as we might want to simplify this a bit and maybe reuse the same function.这是一吨行，因为我们可能希望简化一点，并可能重用相同的功能。
 
 To use **Loaders**, you have to define a **loader **function. Loader functions are like **Custom Hooks**.要使用加载器，您必须定义一个加载器函数。加载器函数类似于自定义钩子。\
-Besides, the naming convention of the function doesn’t matter as you can call it anything. In the code snippet below, I will create a basic loader function that fetches data from an API like I showed in the snipppet above此外，函数的命名约定并不重要，因为您可以称呼它为任何东西。在下面的代码片段中，我将创建一个基本的加载器函数，该函数从 API 获取数据，如我在上面的截图中显示的
+Besides, the naming convention of the function doesn’t matter as you can call it anything. In the code snippet below, I will create a basic loader function that fetches data from an API like I showed in the snipppet above 此外，函数的命名约定并不重要，因为您可以称呼它为任何东西。在下面的代码片段中，我将创建一个基本的加载器函数，该函数从 API 获取数据，如我在上面的截图中显示的
 
-```
+```plain
 export async function LoaderFunction () {
     const request = await fetch('http://localhost:3004/file');
     if (!request.ok) throw new Error ('Failed to fetch item')
@@ -176,7 +176,7 @@ export async function LoaderFunction () {
 Now, we have to import the loader function to component where our routes are being handled. After setting up your route system using the `createBrowserRouter` and `createRouteFromElements` you should have access to a prop called `loader`. There you should pass in the `LoaderFunction` you created as the value.现在，我们必须将加载器函数导入到处理路由的组件中。使用 `createBrowserRouter` 和 `createRouteFromElements` 设置路由系统后，您应该可以访问名为 `loader` 的道具。在那里，您应该传入 `LoaderFunction` 您创建的值。\
 In the code snippet below provides a clear illustration of this.在下面的代码片段中提供了对此的清晰说明。
 
-```
+```plain
 import { 
 createBrowserRouter,
 createRoutesFromElements,
@@ -206,7 +206,7 @@ function App() {
 After that, We can access the data returned by the loader function using the **useLoaderData **Hook from react-router in the HomeComponent.之后，我们可以使用 useLoaderData Hook 从 HomeComponent 中的 react-router 访问加载器函数返回的数据。\
 The code snippet below best explains what just read.下面的代码片段最好地解释了刚刚阅读的内容。
 
-```
+```plain
 import { useLoaderData } from "react-router-dom"
 
 const HomeComponent = () => {
@@ -231,9 +231,9 @@ Noticed we got rid of the guard clause that checks if the data is null.请注意
 This is because react-router makes it load the data as soon as the url/path is active. So, it Makes the necessary requests even before the **Component is Mounted**. Yes!这是因为 react-router 让它在 url/path 处于活动状态时立即加载数据。因此，它甚至在挂载组件之前就发出了必要的请求。是的！
 
 We are only making provisions for the happy path. What if we pass a non-existing endpoint? If that’s the case, don’t panic as react-router also allow us to pass components to another prop called `errorElement` .我们只是在为快乐的道路做准备。如果我们传递一个不存在的端点怎么办？如果是这种情况，请不要惊慌，因为 react-router 还允许我们将组件传递给另一个名为 `errorElement` .\
-This is specifically for Errors just as we use `ErrorBoundaries`. Let's see how this works in the snippet below这是专门针对错误的，就像我们使用 `ErrorBoundaries` .让我们在下面的代码片段中看看它是如何工作的
+This is specifically for Errors just as we use `ErrorBoundaries`. Let's see how this works in the snippet below 这是专门针对错误的，就像我们使用 `ErrorBoundaries` .让我们在下面的代码片段中看看它是如何工作的
 
-```
+```plain
 import { 
 createBrowserRouter,
 createRoutesFromElements,
@@ -265,4 +265,4 @@ Since it pre-fetches the data before mounting the component, the loading state b
 
 That’s all of the basics you need to know about making requests using the **Data Layer API**这就是您需要了解的有关使用数据层 API 发出请求的所有基础知识
 
-If you found this helpful, please consider following me on [**Twitter**](https://twitter.com/devodii_), reacting to this post, leaving a comment, or support me by buying me a coffee through this [**link**](https://www.buymeacoffee.com/emmanuelod5).如果您觉得这有帮助，请考虑在Twitter上关注我，对此帖子做出反应，发表评论，或通过此链接为我买咖啡来支持我。
+If you found this helpful, please consider following me on [**Twitter**](https://twitter.com/devodii_), reacting to this post, leaving a comment, or support me by buying me a coffee through this [**link**](https://www.buymeacoffee.com/emmanuelod5).如果您觉得这有帮助，请考虑在 Twitter 上关注我，对此帖子做出反应，发表评论，或通过此链接为我买咖啡来支持我。

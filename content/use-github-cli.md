@@ -1,3 +1,3 @@
-    gh repo clone oeyoews/oeyoews demo-oeyoews -- --depth 1
+   plain gh repo clone oeyoews/oeyoews demo-oeyoews -- --depth 1
 		
-		gh auth login
+		gplainplainh auth login

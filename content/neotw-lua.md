@@ -2,12 +2,12 @@
 
 [make_lua_plugin](https://www.2n.pl/blog/how-to-write-neovim-plugins-in-lua)
 
-###  NOTE:
+###  NOTE
 - unpack(v5.1)  ==> table.unpack(v5.4)
 
     lspinstaller site: .local/share/lsp-servers/...
 
-    system yay site : /usr/libs/lua....(by pkgbuild)
+    system yay site : /usr/libs/lua……(by pkgbuild)
 
 ### logical operator
 - and: if has false, return fasle

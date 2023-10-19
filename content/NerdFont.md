@@ -1,6 +1,6 @@
 Nerd Font 是一种开源字体项目，旨在扩展常见等宽字体的功能，使其适用于开发人员和计算机爱好者。Nerd Font 将大量图标、图形和特殊字符添加到字体中，以增强其在代码编辑器和终端应用程序中的使用。
 
-Nerd Font 最初基于 Font Awesome 项目，但现在已经扩展到支持其他常见的图标集，如Devicons、Powerline、Octicons等。它还提供了一些额外的补充字符，如箭头、数学符号、终端相关符号等。
+Nerd Font 最初基于 Font Awesome 项目，但现在已经扩展到支持其他常见的图标集，如 Devicons、Powerline、Octicons 等。它还提供了一些额外的补充字符，如箭头、数学符号、终端相关符号等。
 
 Nerd Font 具有以下特点和优势：
 

@@ -1,1 +1,1 @@
-global 属于load-modules 里面 [[startup-order.svg]]
+global 属于 load-modules 里面 [[startup-order.svg]]

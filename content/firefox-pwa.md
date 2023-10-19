@@ -1,1 +1,1 @@
-firefox 不支持pwa installation
+firefox 不支持 pwa installation

@@ -1,1 +1,1 @@
-对象关系映射（Object Relational Mapping，简称ORM
+对象关系映射（Object Relational Mapping，简称 ORM

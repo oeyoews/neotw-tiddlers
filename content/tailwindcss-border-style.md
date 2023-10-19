@@ -1,4 +1,4 @@
-tailwindcss 如果禁用预设, border-style 会是none, 不会显示border(tw应该是自己加了)
+tailwindcss 如果禁用预设, border-style 会是 none, 不会显示 border(tw 应该是自己加了)
 ```html 
 <!DOCTYPE html>
 <html>

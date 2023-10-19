@@ -4,19 +4,19 @@ ctrl + a /  ctrl + b      # prefix
 
 prefix -  # 垂直平分 窗口
 
-`prefix> C-c`表示您必须先按Ctrl+a或Ctrl+，b再按Ctrl+c
+`prefix> C-c`表示您必须先按 Ctrl+a 或 Ctrl+，b 再按 Ctrl+c
 
 prefix C c  # 新建会话  creat
 
-prefix s   # 选择窗口 select    安装x进行关闭窗口
+prefix s   # 选择窗口 select    安装 x 进行关闭窗口
 prefix ?   # show all shortkeys
-prefix and press x   # 关闭整个tmux
+prefix and press x   # 关闭整个 tmux
 
-prefix  d # 临时退出tmux   deattch
+prefix  d # 临时退出 tmux   deattch
 
-tmux  a -t  (nu)  # 连接已经存在的session  panel->window->session
+tmux  a -t  (nu)  # 连接已经存在的 session  panel->window->session
 
-tmux ls   # 列出所有的window
+tmux ls   # 列出所有的 window
 
 prefix t  # show time
 

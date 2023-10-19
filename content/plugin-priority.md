@@ -1,1 +1,1 @@
-* 插件一旦加上plugin-priority, 优先级总是会比影子条目搞
+* 插件一旦加上 plugin-priority, 优先级总是会比影子条目搞

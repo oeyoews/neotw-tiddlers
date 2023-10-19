@@ -28,23 +28,23 @@
 
 ## github
 
-    - notes: git checkout -b dev [commitid]
+   plain - notes: git checkout -b dev [commitid]
 
 ## debug
 
-    - when have browser cache, don't use to clean the cache, just open private mode to debug it
+   plain - when have browser cache, don't use to clean the cache, just open private mode to debug it
 
 ## gnome another clipboard
 
-    - clipboard indicator
+   plain - clipboard indicator
 
 ## soft
 
-    - notable
+   plain - notable
 
 ## note
 
-    - roam research
+   plain - roam research
     - renotexxx
     - logseq
     - zotero

@@ -1,4 +1,4 @@
-```
+```plain
 yarn create next-app --tailwind <project-folder-name>
 yarn next telemetry disable
 ```

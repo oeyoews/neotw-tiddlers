@@ -47,7 +47,7 @@
 * fontawesome.com
 ## themes
 
-* [notetheme ](https://nicolas.petton.fr/tw/notebook.html)
+* [notetheme](https://nicolas.petton.fr/tw/notebook.html)
 
 ## images
 

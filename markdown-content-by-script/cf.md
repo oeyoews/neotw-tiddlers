@@ -1,1 +1,1 @@
-但ChatGPT 配备了 CloudFlare 防火墙，不仅会检测用户访问页面时的IP, 还会每隔一段时间就断开用户（包含ChatGPT PLUS用户）的连接，
+但 ChatGPT 配备了 CloudFlare 防火墙，不仅会检测用户访问页面时的 IP, 还会每隔一段时间就断开用户（包含 ChatGPT PLUS 用户）的连接，

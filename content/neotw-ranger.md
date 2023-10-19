@@ -21,7 +21,7 @@ tsz -i file_name.
 - cw
 - a
 
-S   //进入指定的文件夹，进入一个新的终端，退出当前的终端，会再次回到ranger中
+S   //进入指定的文件夹，进入一个新的终端，退出当前的终端，会再次回到 ranger 中
 
 / #search
 
@@ -55,7 +55,7 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
   export RANGER_LOAD_DEFAULT_RC=FALSE
   sudo pacman -S  --noconfirm libcaca highlight atool lynx w3m elinks  mediainfo   # install  depencies
 
-#找出含有docx的一行，然后将其注释起来：
+#找出含有 docx 的一行，然后将其注释起来：
 #ext docx?, has catdoc,       terminal = catdoc -- "$@" | "$PAGER"
   s # enter this shell environment.
   git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons

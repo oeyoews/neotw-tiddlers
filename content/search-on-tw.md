@@ -1,4 +1,4 @@
-`$tw.wiki.search` 负责搜索文本, 最后会返回一个array或者string
+`$tw.wiki.search` 负责搜索文本, 最后会返回一个 array 或者 string
 
 ```js
 exports.search = function(text,options) {

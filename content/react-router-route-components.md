@@ -20,7 +20,7 @@ As you can see, the usage is very similar between the two packages - the only di
 
 router 和 route 是两个不同的概念，它们在 React Router 中扮演不同的角色。
 
-Router: Router是 React Router 中最基本的组件之一。它是一个高阶组件，用于将整个应用程序包装在路由器中。它提供了一个上下文对象，使得子组件可以访问到 react-router 的一些路由信息和方法。
+Router: Router 是 React Router 中最基本的组件之一。它是一个高阶组件，用于将整个应用程序包装在路由器中。它提供了一个上下文对象，使得子组件可以访问到 react-router 的一些路由信息和方法。
 
 Route: Route 是用于路由匹配的组件，用来控制那个页面渲染。每个 Route 组件都要有一个 path 属性，它表示这个路由所匹配的路径，当 URL 与路径匹配时，就会显示相应的 UI 界面。
 

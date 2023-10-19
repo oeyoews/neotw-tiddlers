@@ -51,7 +51,7 @@
 
 ##  IME
 
->  使用fcitx5-im（with pacman)无效？？？ 需要分开装
+> 使用 fcitx5-im（with pacman)无效？？？ 需要分开装
 
 - fcitx5-im
  -  manjaro-asian-input-support-fcitx5
@@ -306,4 +306,4 @@ imagemagick(cmd: display)
 
   * passline(in github)
 <!-- ## ppt on web-->
-      <!---  beamer(todo)-->
+   plain   <!---  beamer(todo)-->

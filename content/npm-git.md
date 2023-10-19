@@ -1,1 +1,1 @@
-npm 如果直接安装githu的包, 需要依赖git
+npm 如果直接安装 githu 的包, 需要依赖 git

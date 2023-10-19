@@ -2,7 +2,7 @@
 
 > https://github.com/Jermolene/TiddlyWiki5/blob/526e997aa4de03acdc2ff56ac7c19b3ff06cbb64/languages/da-DK/Docs/ModuleTypes.multids#L9
 
-```
+```plain
 allfilter 运算符：“all”过滤器运算符的子运算符。
 动画：动画可以与 RevealWidget 一起使用。
 位图编辑器操作：位图编辑器工具栏操作。

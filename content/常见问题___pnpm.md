@@ -10,9 +10,9 @@ pnpm 创建从全局存储到项目下 `node_modules` 文件夹的 [硬链接](h
 
 * [为什么硬链接似乎与原始链接占用相同的空间？](https://unix.stackexchange.com/questions/88423/why-do-hard-links-seem-to-take-the-same-space-as-the-originals)
 * [Pnpm 聊天室的一个帖子](https://gist.github.com/zkochan/106cfef49f8476b753a9cbbf9c65aff1)
-* [Pnpm repo中的一个 issue](https://github.com/pnpm/pnpm/issues/794)
+* [Pnpm repo 中的一个 issue](https://github.com/pnpm/pnpm/issues/794)
 
-## 能用于Windows吗？[​](#能用于windows吗 "Direct link to 能用于Windows吗？")
+## 能用于 Windows 吗？[​](#能用于windows吗 "Direct link to 能用于Windows吗？")
 
 短回答：当然 长答案：在 Windows 上使用符号链接至少可以说是有问题的，但是，pnpm 有一个解决方法。 对于 Windows，我们用[junctions](https://docs.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions)替代。
 
@@ -54,17 +54,17 @@ pnpm 在以下两种情况下的功能有所不同：
 
 ## `pnpm` 代表什么？[​](#pnpm-代表什么 "Direct link to pnpm-代表什么")
 
-`pnpm` 代表 performant（高性能的）` npm`。 [@rstacruz](https://github.com/rstacruz/)想出了这个名字。
+`pnpm` 代表 performant（高性能的）`npm`。 [@rstacruz](https://github.com/rstacruz/)想出了这个名字。
 
 ## `pnpm` 无法在 <!-- --><<!-- -->你的项目>中使用 ？[​](#pnpm-无法在-你的项目中使用- "Direct link to pnpm-无法在-你的项目中使用-")
 
 在大多数情况下，这意味着被使用的依赖项之一没有在 `package.json` 中被声明的。 It is a common mistake caused by flat `node_modules`. 如果发生这种情况，这是依赖项中的错误，应修复依赖项。 但这可能需要时间，因此 pnpm 支持额外的解决方法来使有问题的包工作。
 
-### 解决方案1[​](#解决方案1 "Direct link to 解决方案1")
+### 解决方案 1[​](#解决方案1 "Direct link to 解决方案1")
 
 In case there are issues, you can use the [`node-linker=hoisted`](https://pnpm.io/zh/npmrc#node-linker) setting. This creates a flat `node_modules` structure similar to the one created by `npm`.
 
-### 解决方案2[​](#解决方案2 "Direct link to 解决方案2")
+### 解决方案 2[​](#解决方案2 "Direct link to 解决方案2")
 
 在下面的例子中，一个依赖在它自己的 deps 列表中**没有** `iterall` 模块。
 
@@ -72,7 +72,7 @@ In case there are issues, you can use the [`node-linker=hoisted`](https://pnpm.i
 
 您可以这样做，方法是通过 `pnpm add iterall`安装它，并自动将它添加到您项目的 `package.json` 中。
 
-```
+```plain
   "dependencies": {
     ...
     "iterall": "^1.2.2",
@@ -80,7 +80,7 @@ In case there are issues, you can use the [`node-linker=hoisted`](https://pnpm.i
   }
 ```
 
-### 解决方案3[​](#解决方案3 "Direct link to 解决方案3")
+### 解决方案 3[​](#解决方案3 "Direct link to 解决方案3")
 
 解决方案之一是使用 [hooks](https://pnpm.io/zh/pnpmfile#hooks) 将缺少的依赖项添加到包的 `package.json` 中。
 
@@ -88,7 +88,7 @@ An example was [Webpack Dashboard](https://github.com/pnpm/pnpm/issues/1043) whi
 
 It used to throw an error:
 
-```
+```plain
 Error: Cannot find module 'babel-traverse'
   at /node_modules/inspectpack@2.2.3/node_modules/inspectpack/lib/actions/parse
 ```
@@ -97,7 +97,7 @@ Error: Cannot find module 'babel-traverse'
 
 解决方案是创建一个 `.pnpmfile.cjs` ，内容如下：
 
-```
+```plain
 module.exports = {
   hooks: {
     readPackage: (pkg) => {

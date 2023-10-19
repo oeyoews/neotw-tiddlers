@@ -1,10 +1,10 @@
 https://wiki.archlinux.org/title/Laptop/Lenovo
 
-``` 
+```plain 
 i8042.dumbkbd
 ```
 
-```
+```plain
 sudo dmesg | grep i8042
 ```
 
