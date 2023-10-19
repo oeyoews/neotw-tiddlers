@@ -1,13 +1,13 @@
 created: 20231018050301960
 creator: Lenovo
 links: 
-modified: 20231019045439837
+modified: 20231019064141314
 modifier: Lenovo
 tags: Journal
 title: headerTemplate
 type: text/vnd.tiddlywiki
 
-<div class="bg-gray-200 p-2 rounded">
+<div class="bg-gray-200 p-2 rounded dark:bg-black dark:text-white">
 <$list filter="[<currentTiddler>has[url]]">
 	<$list-template>
 <tr><td class="p-2 bg-gray-200 dark:bg-black dark:text-white"> 
