@@ -1,3 +1,5 @@
+{{||headerTemplate}}
+
 最新推荐文章于 2023-07-15 10:28:40 发布
 
 版权声明：本文为博主原创文章，遵循[ CC 4.0 BY-SA ](http://creativecommons.org/licenses/by-sa/4.0/)版权协议，转载请附上原文出处链接和本声明。
@@ -75,3 +77,5 @@ test3();
 执行test3()，执行test1()，遇到promise，阻塞代码，此时test2()不执行，运行test1()，等待2s，输出111，运行resolve()，执行test2()，等待1s，输出222。
 
 参考链接：[理解 JavaScript 的 async/await](https://segmentfault.com/a/1190000007535316)
+
+> https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function
