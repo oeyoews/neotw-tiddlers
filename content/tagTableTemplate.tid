@@ -1,12 +1,12 @@
 created: 20231017235829236
 creator: Lenovo
-modified: 20231018053052160
+modified: 20231020102620461
 modifier: Lenovo
 tags: 
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
-<table class="">
+<table>
 <tr>
 <th>Title</th>
 </tr>
