@@ -1,8 +1,8 @@
 created: 20231020100306711
 creator: Lenovo
-modified: 20231020101657595
+modified: 20231020102124526
 modifier: Lenovo
-tags: Journal
+tags: Tailwindcss
 title: tailwind-color-list
 type: text/vnd.tiddlywiki
 
@@ -16,21 +16,42 @@ type: text/vnd.tiddlywiki
 \procedure main(number)
 <$list filter="[enlist<colors>]" variable="color">
 <div>
-
-<div class="font-bold capitalize my-1">
-<<color>> <br>
-</div>
-
-<div class="space-x-1">
-<$list filter="[enlist<numbers>]" variable="number">
-<span class={{{ [<color>addprefix[bg-]addsuffix[-]addsuffix<number>addsuffix[ ]addsuffix<classes>] }}}>
-<<number>>
-</span>
-</$list>
-</div>
-
+	<div class="font-bold capitalize my-1">
+	<<color>> <br>
+	</div>
+	<div class="space-x-1">
+	<$list filter="[enlist<numbers>]" variable="number">
+		<span class={{{ [<color>addprefix[bg-]addsuffix[-]addsuffix<number>addsuffix[ ]addsuffix<classes>] }}}><<number>></span>
+	</$list>
+	</div>
 </div>
 </$list>
 \end
 
 <<main>>
+
+```html
+\procedure colors() slate gray zinc neutral stone red orange amber yellow lime green emerald teal cyan sky blue indigo violet purple fuchsia pink rose
+
+\procedure numbers() 50 100 200 300 400 500 600 700 800 900 950
+
+
+\procedure classes()  p-2 capitalize rounded h-10 w-10
+
+\procedure main(number)
+<$list filter="[enlist<colors>]" variable="color">
+<div>
+	<div class="font-bold capitalize my-1">
+	<<color>> <br>
+	</div>
+	<div class="space-x-1">
+	<$list filter="[enlist<numbers>]" variable="number">
+		<span class={{{ [<color>addprefix[bg-]addsuffix[-]addsuffix<number>addsuffix[ ]addsuffix<classes>] }}}><<number>></span>
+	</$list>
+	</div>
+</div>
+</$list>
+\end
+
+<<main>>
+```
