@@ -1,18 +1,16 @@
 created: 20230115132708917
 creator: oeyoews
-modified: 20231020102951388
+modified: 20231021021813251
 modifier: Lenovo
 tags: 
-title: recent-note-record
+title: 最近更新
 type: text/vnd.tiddlywiki
 
 <table>
-<tr>
-<th>
-最近更新
-</th>
-</tr>
-  <$list filter="[!is[system]!<currentTiddler>days[-100]!sort[modified]]">
+<tr><th>
+{{!!title}} {{{ [!is[system]days[-100]count[]] }}}
+</th></tr>
+  <$list filter="[!is[system]days[-100]!sort[modified]]">
 <tr><td class="p-2 bg-gray-200 capitalize dark:bg-black dark:text-white">
 		<$link><$view field="title"/></$link>
         <$list filter="[<currentTiddler>days[-7]]"> <span class="text-rose-500 ml-1"><sup>new</sup></span></$list>
