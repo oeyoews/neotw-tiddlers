@@ -1,11 +1,13 @@
 created: 20231012055329001
 creator: Lenovo
-modified: 20231017133240410
+modified: 20231021140356501
 modifier: Lenovo
 tags: $:/tags/PageTemplate
 title: clock
 type: text/vnd.tiddlywiki
 
+<% if [{$:/info/url/protocol}match[http:]] %>
 <div class="fixed -top-12 -right-8 -z-10 hidden lg:block">
 	<$echarts $tiddler="addon/clock.js" $width="250px" />
 </div>
+<% endif %>

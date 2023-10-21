@@ -1,3 +1,7 @@
+:::warning 
+<$iconify icon="devicon:bun" /> bun 1.0 虽然能用, 但是bug很多, 几乎没有么生态
+:::
+
 * 全局使用 bun 安装 vercel
 
 `bun add --global vercel` 导致 vercel 安装了一个 4.8 的 typescript 在 ~/node_modules(bun 全局安装的目录在自动生成不理解, 为什么还有一个 ~/.bun/cache, 难道是为了全局自动安装吗, 是的, 不知道是不是又是硬链接)
