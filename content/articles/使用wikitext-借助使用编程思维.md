@@ -22,3 +22,7 @@ const formateTitle = `${title}: 这是一个变量`
 :::success
 wikitext 关联性极强, 每部分都需要其他部分的相关知识作为铺垫, 所以这也就是为什么一边看不懂的原因, 就好比你在学习第一章节的内容,  <$iconify icon="twemoji:teacher" /> 告诉你说, 这个现在不需要理解, 后面会讲到的; 但是阅读文档的时候没有人会告诉我们
 :::
+
+## 循环
+
+enlist 是一个不错的操作符号, [[tailwind-color-list]]
