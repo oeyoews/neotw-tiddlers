@@ -1,5 +1,5 @@
 :::warning 
-<$iconify icon="devicon:bun" /> bun 1.0 虽然能用, 但是bug很多, 几乎没有么生态
+<$iconify icon="devicon:bun" /> bun 1.0 虽然能用, 但是 bug 很多, 几乎没有么生态
 :::
 
 * 全局使用 bun 安装 vercel
