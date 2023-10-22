@@ -1,1 +1,1 @@
-<$youtube youtubeId="cWdrnvZ1S7Y" />
+<$youtube yid="cWdrnvZ1S7Y" />
