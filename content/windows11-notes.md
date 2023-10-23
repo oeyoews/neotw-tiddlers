@@ -9,6 +9,7 @@ Windows 更新致力于帮助减少碳排放.
 
 ## windows software
 
+* calibre
 * nodejs  git github-desktop
 * vscode chrome
 * qq wechat 

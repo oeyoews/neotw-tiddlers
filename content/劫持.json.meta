@@ -1,0 +1,6 @@
+dependents: 
+list: readme
+plugin-type: plugin
+title: 劫持
+type: application/json
+version: 0.0.1

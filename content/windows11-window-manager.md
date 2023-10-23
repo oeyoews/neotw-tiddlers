@@ -1,4 +1,6 @@
-* komorebi
+:::info komorebi
+不顺手, 动画不流畅自然, 需要搭配autohotkey, 没有完全集成
+:::
 
 ```js
 winget install komorebi
