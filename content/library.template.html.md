@@ -1,10 +1,6 @@
-created: 20231015125919186
-creator: Lenovo
-modified: 20231015133017168
-modifier: Lenovo
-title: $:/plugins/tiddlywiki/pluginlibrary/library.template.html
-type: text/vnd.tiddlywiki
+* 注意这个 recipes的路径不会动态生成
 
+```html
 \rules only filteredtranscludeinline transcludeinline
 <!doctype html>
 <html>
@@ -48,3 +44,4 @@ assetList.forEach( ({title}) => {
 
 </body>
 </html>
+```
