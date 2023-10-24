@@ -1,6 +1,8 @@
+author: oeyoews
+book: 劫持
 dependents: 
 list: readme
 plugin-type: plugin
-title: 平凡的世界
+title: 劫持
 type: application/json
 version: 0.0.1
