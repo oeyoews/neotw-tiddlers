@@ -1,0 +1,11 @@
+author: oeyoews
+book: Wonder
+caption: Wonder
+cover: //github.com/oeyoews/reading-books-with-tiddlywiki/blob/main/image/Wonder.png?raw=true
+dependents: 
+description: Wonder
+list: readme
+plugin-type: plugin
+title: $:/plugins/books/Wonder
+type: application/json
+version: 0.0.1

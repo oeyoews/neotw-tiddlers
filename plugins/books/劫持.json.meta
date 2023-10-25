@@ -1,9 +1,11 @@
 author: oeyoews
 book: 劫持
+caption: 劫持
 cover: //github.com/oeyoews/reading-books-with-tiddlywiki/blob/main/image/劫持.png?raw=true
 dependents: 
+description: 劫持
 list: readme
 plugin-type: plugin
-title: 劫持
+title: $:/plugins/books/劫持
 type: application/json
 version: 0.0.1
