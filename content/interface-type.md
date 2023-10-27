@@ -1,4 +1,8 @@
+:::abstract
 用 interface 描述**数据结构**，用 type 描述**类型关系**
+
+ type 具有更多高级的类型功能，而 interface 更专注于对象形状的定义。
+:::
 
 在 TypeScript 中，`interface` 和 `type` 是用于描述对象形状的两种方式，它们有一些相似之处，但也有一些不同之处。
 
