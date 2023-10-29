@@ -1,0 +1,10 @@
+caption: QRCode
+created: 20231029123729517
+creator: Lenovo
+modified: 20231029123805107
+modifier: Lenovo
+tags: $:/tags/SideBar
+title: remember me
+type: text/vnd.tiddlywiki
+
+<$qrcode />
