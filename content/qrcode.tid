@@ -1,11 +1,11 @@
 created: 20231029064018505
 creator: Lenovo
-modified: 20231029071649834
+modified: 20231029081944032
 modifier: Lenovo
 tags: $:/tags/PageTemplate
 title: qrcode
 type: text/vnd.tiddlywiki
 
 <div class="fixed bottom-0 right-0">
-[img [tiddlywiki-starter-kit-qrcode.png]]
+[img class="w-24 md:w-auto" [tiddlywiki-starter-kit-qrcode.png]]
 </div>
