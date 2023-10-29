@@ -1,1 +1,0 @@
-<$qrcode text="qrcode with svg format" width=700/>

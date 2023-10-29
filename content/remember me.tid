@@ -1,10 +1,12 @@
 caption: QRCode
 created: 20231029123729517
 creator: Lenovo
-modified: 20231029123805107
+modified: 20231029135326879
 modifier: Lenovo
-tags: $:/tags/SideBar
+tags: 
 title: remember me
 type: text/vnd.tiddlywiki
 
-<$qrcode />
+<div class="w-48">
+<$qrcode save=true width=512 />
+</div>
