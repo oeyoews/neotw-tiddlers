@@ -1,6 +1,6 @@
 created: 20230115132708917
 creator: oeyoews
-modified: 20231021021813251
+modified: 20231030123117269
 modifier: Lenovo
 tags: 
 title: 最近更新
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 <tr><th>
 {{!!title}} {{{ [!is[system]days[-100]count[]] }}}
 </th></tr>
-  <$list filter="[!is[system]days[-100]!sort[modified]]">
+  <$list filter="[!is[system]days[-100]!sort[modified]limit[100]]">
 <tr><td class="p-2 bg-gray-200 capitalize dark:bg-black dark:text-white">
 		<$link><$view field="title"/></$link>
         <$list filter="[<currentTiddler>days[-7]]"> <span class="text-rose-500 ml-1"><sup>new</sup></span></$list>
