@@ -2,7 +2,7 @@
 
 ts-node 需要特殊配置， baseurl
 
-> bun 直接运行ts, 不需要这些坑
+> bun 直接运行 ts, 不需要这些坑
 
 ```json
 	"ts-node": {

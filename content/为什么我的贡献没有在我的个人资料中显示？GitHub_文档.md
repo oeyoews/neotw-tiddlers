@@ -1,6 +1,6 @@
 ## [关于您的贡献图](#about-your-contribution-graph)
 
-你的个人资料贡献图是你对 GitHub.com拥有的存储库所做的贡献的记录。 贡献按照协调世界时 (UTC) 而不是您当地的时区加时间戳。 只有在满足特定标准时才会计算贡献。 在某些情况下，我们可能需要重建您的图表才能显示贡献。
+你的个人资料贡献图是你对 GitHub.com 拥有的存储库所做的贡献的记录。 贡献按照协调世界时 (UTC) 而不是您当地的时区加时间戳。 只有在满足特定标准时才会计算贡献。 在某些情况下，我们可能需要重建您的图表才能显示贡献。
 
 如果您是使用 SAML 单点登录 (SSO) 的组织的成员，则在没有活动的 SSO 会话时，您将无法在配置文件上看到来自该组织的贡献活动。 从组织外部查看您个人资料的用户将看到您组织的贡献活动的匿名贡献活动。
 
@@ -14,7 +14,7 @@
 
 如果提交符合以下所有条件，则会在贡献图中显示：
 
-* 用于提交的电子邮件地址与你在 GitHub.com上的帐户关联。
+* 用于提交的电子邮件地址与你在 GitHub.com 上的帐户关联。
 
 * 提交在独立的仓库而不是复刻中进行。
 
@@ -45,13 +45,13 @@
 
 ### [您的本地 Git 提交电子邮件地址未连接到您的帐户](#your-local-git-commit-email-isnt-connected-to-your-account)
 
-提交必须是使用与你在 GitHub.com上的帐户连接的电子邮件地址或使用在电子邮件设置中提供给你的 GitHub 提供的 `noreply` 电子邮件地址进行的，这样才能显示在贡献图上。有关 `noreply` 电子邮件地址的详细信息，请参阅“[设置提交电子邮件地址](https://docs.github.com/zh/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#about-commit-email-addresses)”。
+提交必须是使用与你在 GitHub.com 上的帐户连接的电子邮件地址或使用在电子邮件设置中提供给你的 GitHub 提供的 `noreply` 电子邮件地址进行的，这样才能显示在贡献图上。有关 `noreply` 电子邮件地址的详细信息，请参阅“[设置提交电子邮件地址](https://docs.github.com/zh/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#about-commit-email-addresses)”。
 
 可以通过将 `.patch` 添加到提交 URL 的末尾来检查用于提交的电子邮件地址： 例如，以下提交 URL 包括 `.patch`。
 
 <https://github.com/octocat/octocat.github.io/commit/67c0afc1da354d8571f51b6f0af8f2794117fd10.patch>
 
-```
+```plain
 From 67c0afc1da354d8571f51b6f0af8f2794117fd10 Mon Sep 17 00:00:00 2001
 From: The Octocat <octocat@nowhere.com>
 Date: Sun, 27 Apr 2014 15:36:39 +0530
@@ -60,7 +60,7 @@ Subject: [PATCH] updated index for better welcome message
 
 `From:` 字段中的电子邮件地址是在[本地 git 配置设置](https://docs.github.com/zh/get-started/quickstart/set-up-git)中设置的地址。 在此示例中，用于提交的电子邮件地址为 `octocat@nowhere.com`。
 
-如果用于提交的电子邮件地址未连接到你在 GitHub.com上的帐户，必须向你在 GitHub.com 上的帐户[添加电子邮件地址](https://docs.github.com/zh/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account)。 您的贡献图将在添加新地址后自动重建。
+如果用于提交的电子邮件地址未连接到你在 GitHub.com 上的帐户，必须向你在 GitHub.com 上的帐户[添加电子邮件地址](https://docs.github.com/zh/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account)。 您的贡献图将在添加新地址后自动重建。
 
 注意：如果使用托管用户帐户，则不能向帐户添加其他电子邮件地址，即使向标识提供者 (IdP) 注册了多个电子邮件地址也是如此。 因此，只有由注册到 IdP 的主电子邮件地址创作的提交才能与托管用户帐户相关联。
 
@@ -82,7 +82,7 @@ Subject: [PATCH] updated index for better welcome message
 在复刻中进行的提交不会计入您的贡献。 要将其计入，您必须执行以下操作之一：
 
 * [打开拉取请求](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)，将更改合并到父存储库中。
-* 要拆离分叉并将其变成 GitHub.com上的独立存储库，请联系 [GitHub 支持](https://support.github.com/contact?tags=docs-generic)。 如果分支有自己的分支，请说明分支是应与你的存储库一起移至新网络，还是保留在当前网络中。 有关详细信息，请参阅“[关于分叉](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)”。
+* 要拆离分叉并将其变成 GitHub.com 上的独立存储库，请联系 [GitHub 支持](https://support.github.com/contact?tags=docs-generic)。 如果分支有自己的分支，请说明分支是应与你的存储库一起移至新网络，还是保留在当前网络中。 有关详细信息，请参阅“[关于分叉](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)”。
 
 ## [延伸阅读](#further-reading)
 

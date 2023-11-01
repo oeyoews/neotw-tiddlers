@@ -14,7 +14,7 @@ Here's what you need to know when upgrading from 3.x projects:以下是从 3.x �
 
 Ever since the 2.0 our recommendation has been to install Yarn on a per-project basis using the `yarnPath` setting (automatically set either of `yarn init -2` and `yarn set version`). We intentionally don't release modern releases on the npm `yarn` package, [so as not to break older projects which didn't migrate yet](https://yarnpkg.com/getting-started/qa#why-is-the-yarn-package-on-npm-still-on-1x).自 2.0 以来，我们的建议是使用以下 `yarnPath` 设置（自动设置 和 `yarn set version` ）。 `yarn init -2` 我们故意不在 npm `yarn` 包上发布现代版本，以免破坏尚未迁移的旧项目。
 
-To that end we used to recommend using the `yarnPath` setting pointing to a checked-in binary, but this pattern increased friction more than we liked - many people didn't like the idea of adding a binary to their repository, however small. We listened, and worked conjointely with Node.js on a project called [Corepack](https://nodejs.org/api/corepack.html). Corepack is a tool shipped with Node.js 16+ that will automatically select the right package manager version to run depending on the project you're working on.为此，我们曾经建议使用指向已签入二进制文件的 `yarnPath` 设置，但这种模式增加了比我们喜欢的更多的摩擦 - 许多人不喜欢将二进制文件添加到他们的存储库的想法，无论多么小。我们倾听并与Node合作.js在一个名为Corepack的项目上。Corepack 是 Node.js 16+ 附带的工具，它将根据您正在处理的项目自动选择要运行的正确包管理器版本。
+To that end we used to recommend using the `yarnPath` setting pointing to a checked-in binary, but this pattern increased friction more than we liked - many people didn't like the idea of adding a binary to their repository, however small. We listened, and worked conjointely with Node.js on a project called [Corepack](https://nodejs.org/api/corepack.html). Corepack is a tool shipped with Node.js 16+ that will automatically select the right package manager version to run depending on the project you're working on.为此，我们曾经建议使用指向已签入二进制文件的 `yarnPath` 设置，但这种模式增加了比我们喜欢的更多的摩擦 - 许多人不喜欢将二进制文件添加到他们的存储库的想法，无论多么小。我们倾听并与 Node 合作.js 在一个名为 Corepack 的项目上。Corepack 是 Node.js 16+ 附带的工具，它将根据您正在处理的项目自动选择要运行的正确包管理器版本。
 
 Now that Corepack is shipped with both Node 18 and 20 we no longer need to rely on `yarnPath`, and as a result we updated our [installation guide](https://yarnpkg.com/getting-started/install) to reflect that. The `yarn init -2` and `yarn set version` commands have been updated to favor updating the `packageManager` field when possible.现在 Corepack 随节点 18 和 20 一起提供，我们不再需要依赖 `yarnPath` ，因此我们更新了安装指南以反映这一点。和 `yarn set version` 命令已更新， `yarn init -2` 以便尽可能更新 `packageManager` 字段。
 
@@ -39,7 +39,7 @@ caution 谨慎
 
 Installs operating under Hardened Mode constraints are significantly slower than usual as they need to perform many network requests that would be skipped otherwise. We don't recommend enabling it by default - if you need it in a specific CI job, toggle it on via an environment variable:在强化模式约束下运行的安装比平时慢得多，因为它们需要执行许多网络请求，否则这些请求将被跳过。我们不建议默认启用它 - 如果您在特定的 CI 作业中需要它，请通过环境变量将其打开：
 
-```
+```plain
 export YARN_ENABLE_HARDENED_MODE=1
 ```
 
@@ -47,9 +47,9 @@ export YARN_ENABLE_HARDENED_MODE=1
 
 Yarn is the only package manager to implement a [constraints engine](https://yarnpkg.com/features/constraints). If you don't know it, this feature lets you define a set of rules that your project must satisfy. For instance, the Yarn repository enforces that no two workspaces depend on different versions of any given dependencies, unless explicitly allowed.Yarn 是唯一实现约束引擎的包管理器。如果您不知道，此功能允许您定义项目必须满足的一组规则。例如，Yarn 存储库强制要求没有两个工作区依赖于任何给定依赖项的不同版本，除非明确允许。
 
-Our constraints engine used to be powered by Tau-Prolog, a JavaScript [Prolog](https://en.wikipedia.org/wiki/Prolog#Rules_and_facts) implementation. Unlike imperative languages like JavaScript, Prolog uses a different model called logic programming - you define that something exists if a rule is true. It's a very interesting pattern that integrates well with the concept of rule-based linting. Unfortunately, Prolog proved very complex to use, increasing the learning curve of constraints past the threshold we were comfortable with.我们的约束引擎过去由 JavaScript Prolog 实现的 Tau-Prolog 提供支持。与JavaScript等命令式语言不同，Prolog使用一种称为逻辑编程的不同模型 - 如果规则为真，则定义存在某些东西。这是一个非常有趣的模式，与基于规则的 linting 的概念很好地集成在一起。不幸的是，Prolog被证明使用起来非常复杂，将约束的学习曲线增加到了我们满意的阈值之外。
+Our constraints engine used to be powered by Tau-Prolog, a JavaScript [Prolog](https://en.wikipedia.org/wiki/Prolog#Rules_and_facts) implementation. Unlike imperative languages like JavaScript, Prolog uses a different model called logic programming - you define that something exists if a rule is true. It's a very interesting pattern that integrates well with the concept of rule-based linting. Unfortunately, Prolog proved very complex to use, increasing the learning curve of constraints past the threshold we were comfortable with.我们的约束引擎过去由 JavaScript Prolog 实现的 Tau-Prolog 提供支持。与 JavaScript 等命令式语言不同，Prolog 使用一种称为逻辑编程的不同模型 - 如果规则为真，则定义存在某些东西。这是一个非常有趣的模式，与基于规则的 linting 的概念很好地集成在一起。不幸的是，Prolog 被证明使用起来非常复杂，将约束的学习曲线增加到了我们满意的阈值之外。
 
-As a result, Prolog constraints are deprecated starting from Yarn 4, and **they have been superseded by a shiny new JavaScript-based engine, with optional TypeScript support!** We have been writing our own rules at [Datadog](https://www.datadoghq.com/) with this framework for a couple of months now, with great success. You can also check the public [Yarn repository](https://github.com/yarnpkg/berry/blob/c3b319a8943dcc35e689ebff4051c112bfc598f5/yarn.config.cjs#L17-L43) for a practical example of the kind of rules you can enforce at the repository level, and the [newly revamped documentation](https://yarnpkg.com/features/constraints) is there to help you quickly get up to speed.因此，Prolog 约束从 Yarn 4 开始被弃用，并且它们已被一个闪亮的基于 JavaScript 的新引擎所取代，该引擎具有可选的 TypeScript 支持！几个月来，我们一直在Datadog上用这个框架编写自己的规则，并取得了巨大的成功。您还可以查看公共 Yarn 存储库，以获取可以在存储库级别强制执行的规则类型的实际示例，新修订的文档可帮助您快速上手。
+As a result, Prolog constraints are deprecated starting from Yarn 4, and **they have been superseded by a shiny new JavaScript-based engine, with optional TypeScript support!** We have been writing our own rules at [Datadog](https://www.datadoghq.com/) with this framework for a couple of months now, with great success. You can also check the public [Yarn repository](https://github.com/yarnpkg/berry/blob/c3b319a8943dcc35e689ebff4051c112bfc598f5/yarn.config.cjs#L17-L43) for a practical example of the kind of rules you can enforce at the repository level, and the [newly revamped documentation](https://yarnpkg.com/features/constraints) is there to help you quickly get up to speed.因此，Prolog 约束从 Yarn 4 开始被弃用，并且它们已被一个闪亮的基于 JavaScript 的新引擎所取代，该引擎具有可选的 TypeScript 支持！几个月来，我们一直在 Datadog 上用这个框架编写自己的规则，并取得了巨大的成功。您还可以查看公共 Yarn 存储库，以获取可以在存储库级别强制执行的规则类型的实际示例，新修订的文档可帮助您快速上手。
 
 tip 提示
 
@@ -63,7 +63,7 @@ As a result, while Yarn still supports third-party plugins (and will continue to
 
 Various pieces of the UI got revamped to better convey information. For example, `yarn install` now tells you the packages you added, and their total weight. You will also notice it doesn't print as much warnings around peer dependencies, as we now try to only print warnings for actionable situations:
 
-```
+```plain
 ➤ YN0000: · Yarn 4.0.0
 
 ➤ YN0000: ┌ Resolution step
@@ -87,7 +87,7 @@ Various pieces of the UI got revamped to better convey information. For example,
 
 Another example is the `yarn config` command, which sports a new tree display and now also accepts an arbitrary number of settings as positional arguments, letting you select what you wish to see:
 
-```
+```plain
 ├─ cacheFolder
 
 │  ├─ Description: Folder where the cache files must be written
@@ -111,11 +111,11 @@ Another example is the `yarn config` command, which sports a new tree display an
 
 The 4.0 isn't lagging behind in performance improvements, and shows to be significantly faster at installs than the 3.6. For instance, here's the difference in time to install Gatsby and its ~350MiB dependency tree from a cold cache. The 3x improved performances are due to a new package metadata cache which significantly improves performances of repeated installs:
 
-```
+```plain
 hyperfine -L v stable,canary --prepare 'rm -rf ~/.yarn/berry/cache' 'cd $(mktemp -d) && yarn init -2 && yarn set version {v} && yarn && yarn add gatsby --mode=skip-build'
 ```
 
-```
+```plain
 Benchmark 1: 3.6.0
   Time (mean ± σ):     65.599 s ±  2.214 s    [User: 82.952 s, System: 8.638 s]
   Range (min … max):   62.167 s … 68.277 s    10 runs

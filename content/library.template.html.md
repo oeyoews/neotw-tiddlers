@@ -1,4 +1,4 @@
-* 注意这个 recipes的路径不会动态生成
+* 注意这个 recipes 的路径不会动态生成
 
 ```html
 \rules only filteredtranscludeinline transcludeinline

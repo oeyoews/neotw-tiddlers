@@ -2,7 +2,7 @@
 
 语法如下：
 
-```
+```plain
 Object.assign(target, ...sources)
 ```
 
