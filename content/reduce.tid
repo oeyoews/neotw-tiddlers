@@ -1,10 +1,45 @@
 created: 20230528110216050
 creator: oeyoews
-modified: 20230528110224700
-modifier: oeyoews
+modified: 20231103040754208
+modifier: Lenovo
 tags: JavaScript
 title: reduce
 type: text/vnd.tiddlywiki
+
+`reduce()` 是 JavaScript 数组的一个高阶函数，用于对数组中的每个元素进行累积操作，最终返回一个单一的结果。
+
+`reduce()` 方法的语法如下：
+
+```javascript
+array.reduce(callback, initialValue)
+```
+
+参数解释：
+- `callback`：一个回调函数，用于对数组中的每个元素执行操作。它可以接收四个参数：
+  - `accumulator`：累积器，保存回调函数的返回值，也就是上一次回调的结果。
+  - `currentValue`：当前元素的值。
+  - `currentIndex`：当前元素的索引（可选）。
+  - `array`：原始数组（可选）。
+  回调函数必须返回一个值，该值将在下一次回调时作为累积器的值。
+  
+- `initialValue`（可选）：作为初始累积器的值。如果没有提供初始值，则使用数组的第一个元素作为初始值，并从第二个元素开始迭代。
+
+使用 `reduce()` 方法时，它会按顺序遍历数组的每个元素，并将每个元素传递给回调函数进行处理，将处理结果作为下一次回调的输入，直到处理完所有元素并得到最终的累积结果。
+
+下面是一个使用 `reduce()` 方法计算数组元素之和的简单示例：
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // 输出 15
+```
+
+在上面的示例中，初始累积器的值设置为 0。在每次回调中，回调函数将累积器与当前元素相加，并返回结果作为下一次回调的累积器。最终得到数组元素之和 15。
+
+`reduce()` 方法还有其他用法，例如可以在回调函数中进行过滤、映射或其他复杂的操作来实现更多功能。它是一个非常强大和灵活的数组方法，在处理数组数据时非常有用。
 
 reduce是JavaScript的一个数组方法，用于将数组中的元素归纳为一个单独的值。reduce方法接收一个回调函数作为参数，该回调函数接收两个参数：累加器和当前元素。在每次迭代时，回调函数都会将当前元素与累加器作为参数，并返回一个新的累加器。最终，reduce方法会返回最后一次迭代后的累加器的值。下面是一个使用reduce方法的示例：
 
