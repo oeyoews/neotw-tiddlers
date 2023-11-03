@@ -1,10 +1,40 @@
 created: 20230528110216050
 creator: oeyoews
-modified: 20231103040754208
+modified: 20231103080122843
 modifier: Lenovo
 tags: JavaScript
 title: reduce
 type: text/vnd.tiddlywiki
+
+对一个数组进行求和，可以使用 JavaScript 的 `reduce()` 方法。该方法接受一个回调函数作为参数，该回调函数接受累加器和当前值作为参数，然后返回新的累加器值。
+
+下面是一个将数组中所有元素相加的示例代码：
+
+```javascript
+const arr = [1, 2, 3, 4, 5];
+
+const sum = arr.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // 输出 15
+```
+
+在这个例子中，我们先定义了一个数组 `arr`，它包含了一些数字。然后，我们使用 `reduce()` 方法来计算这些数字之和。我们将初始值设置为 0，并且将每个元素加到累加器上。最后，我们将计算得出的总和输出到控制台。
+
+你也可以将 `reduce()` 函数写成更简洁的形式：
+
+```javascript
+const arr = [1, 2, 3, 4, 5];
+
+const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(sum); // 输出 15
+```
+
+在这个例子中，我们省略了 `return` 语句，并将箭头函数缩写为一行。
+
+无论是哪种写法，`reduce()` 方法都是一个非常有用的数组方法，可以用于计算任何类型的累加器值，例如求和、求平均值等。
 
 `reduce()` 是 JavaScript 数组的一个高阶函数，用于对数组中的每个元素进行累积操作，最终返回一个单一的结果。
 
