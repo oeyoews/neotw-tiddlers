@@ -1,12 +1,12 @@
 created: 20231104094557000
 creator: Lenovo
-modified: 20231104094634277
+modified: 20231105121114522
 modifier: Lenovo
 tags: React
 title: shift-enter-newline
 type: text/vnd.tiddlywiki
 
-```
+```tsx
 function App() {
   const [text, setText] = useState("");
 

@@ -1,7 +1,7 @@
 created: 20230614013327497
 creator: oeyoews
 icon: private.png
-modified: 20231011065925868
+modified: 20231105101930734
 modifier: Lenovo
 page-icon: fluent-emoji:card-index-dividers
 tags: 
@@ -10,5 +10,5 @@ type: text/vnd.tiddlywiki
 
 <$echarts $tiddler="addon/tagpie.js" filter="[tag[books]]"/>
 
-<$cards filter='[tag[books]!sort[modified]]' standard=false/>
+<$cards filter='[tag[books]!sort[modified]]' standard=false cols=5/>
 
