@@ -1,5 +1,3 @@
-## use 用[](#undefined "Link for this heading")
-
 ### Canary 金丝雀
 
 The `use` Hook is currently only available in React’s canary and experimental channels. Learn more about [React’s release channels here](https://react.dev/community/versioning-policy#all-release-channels).`use` Hook 目前仅在 React 的 Canary 和实验频道中可用。在此处了解有关 React 发布渠道的更多信息。
@@ -9,24 +7,6 @@ The `use` Hook is currently only available in React’s canary and experimental 
 ```
 const value = use(resource);
 ```
-
-* [Reference  参考](#reference)
-  * [`use(resource)`](#use)
-
-* [Usage  用法](#usage)
-
-  * [Reading context with `use`读取 `use` 上下文](#reading-context-with-use)
-  * [Streaming data from the server to the client将数据从服务器流式传输到客户端](#streaming-data-from-server-to-client)
-  * [Dealing with rejected Promises处理被拒绝的 Promise](#dealing-with-rejected-promises)
-
-* [Troubleshooting  故障 排除](#troubleshooting)
-  * [“Suspense Exception: This is not a real error!”“悬念异常：这不是一个真正的错误！”](#suspense-exception-error)
-
-***
-
-## Reference  参考[](#reference "Link for Reference ")
-
-### `use(resource)` [](#use "Link for this heading")
 
 Call `use` in your component to read the value of a resource like a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) or [context](https://react.dev/learn/passing-data-deeply-with-context).调用 `use` 组件以读取资源的值，例如 Promise 或上下文。
 
