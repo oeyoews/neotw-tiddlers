@@ -1,7 +1,7 @@
 > if you want to use latest tiddlywiki, you can use this command, instead of `npm install tiddlywiki`
 
 ```shell
-npm install github:oeyoews/TiddlyWiki5#commitid
+npm install github:oeyoews/TiddlyWiki5#commitid // 或者直接使用github url
 ```
 
 :::bug
