@@ -1,0 +1,1 @@
+[ext[next.config.js_Options__serverComponentsExternalPackages___Next.js|https://nextjs.org/docs/app/api-reference/next-config-js/serverComponentsExternalPackages]]
