@@ -1,0 +1,11 @@
+created: 20231129104625147
+creator: Lenovo
+description: Prettified JSON
+extension: .json
+modified: 20231129105245779
+modifier: Lenovo
+tags: $:/tags/Exporter
+title: $:/core/templates/exporters/JsonFilePrettified
+type: text/vnd.tiddlywiki
+
+<$macrocall $name="jsontiddlers" filter=<<exportFilter>> $output="text/raw" spaces="2"/>
