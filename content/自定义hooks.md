@@ -47,3 +47,7 @@ function CounterComponent() {
 ```
 
 在这个例子中，`useCounter` 是一个自定义Hook，处理了计数的状态逻辑。`CounterComponent` 组件使用了这个Hook，并通过解构赋值获取计数值和操作函数。这样，计数逻辑可以在其他组件中被复用，而且它与组件的渲染逻辑是独立的。
+
+:::warning
+自定义 Hook 共享的是状态逻辑，而不是状态本身
+:::
