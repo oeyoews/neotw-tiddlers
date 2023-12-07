@@ -27,3 +27,23 @@ console.log(doubled); // 输出: [2, 4, 6, 8, 10]
 ```
 
 这种方式可以在将类数组对象或其他可迭代对象转换为数组时非常方便。
+
+使用 `Array.from()` 方法可以很方便地虚构一个数组。你可以通过传递一个可迭代对象或类数组对象来创建一个新的数组实例。下面是一个使用 `Array.from()` 方法虚构数组的示例：
+
+```javascript
+// 虚构一个包含 1 到 5 的数组
+const arr = Array.from({ length: 5 }, (_, index) => index + 1);
+console.log(arr); // 输出 [1, 2, 3, 4, 5]
+
+// 虚构一个包含 A 到 E 的数组
+const alphabet = Array.from({ length: 5 }, (_, index) => String.fromCharCode(65 + index));
+console.log(alphabet); // 输出 ["A", "B", "C", "D", "E"]
+
+// 虚构一个包含随机数的数组
+const randomArray = Array.from({ length: 5 }, () => Math.random());
+console.log(randomArray); // 输出包含 5 个随机数的数组
+```
+
+在上面的示例中，我们使用了 `Array.from()` 方法来创建了不同类型的数组。通过传递一个具有 `length` 属性的对象，我们可以指定数组的长度。然后，我们可以使用第二个参数 `mapFn` 来对数组中的每个元素进行处理，从而虚构出我们想要的数组。
+
+希望这个示例能够帮助你理解如何使用 `Array.from()` 方法来虚构数组。如果你有任何其他问题，请随时提问！
