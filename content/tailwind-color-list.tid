@@ -1,6 +1,6 @@
 created: 20231020100306711
 creator: Lenovo
-modified: 20231020102124526
+modified: 20231209063527361
 modifier: Lenovo
 tags: Tailwindcss
 title: tailwind-color-list
@@ -10,22 +10,23 @@ type: text/vnd.tiddlywiki
 
 \procedure numbers() 50 100 200 300 400 500 600 700 800 900 950
 
-
 \procedure classes()  p-2 capitalize rounded h-10 w-10
 
 \procedure main(number)
+<div class="">
 <$list filter="[enlist<colors>]" variable="color">
-<div>
-	<div class="font-bold capitalize my-1">
+<div class="">
+	<div class="my-2 text-center font-bold capitalize my-1">
 	<<color>> <br>
 	</div>
-	<div class="space-x-1">
+	<div class="space-x-2 mx-auto w-full flex-wrap text-center">
 	<$list filter="[enlist<numbers>]" variable="number">
 		<span class={{{ [<color>addprefix[bg-]addsuffix[-]addsuffix<number>addsuffix[ ]addsuffix<classes>] }}}><<number>></span>
 	</$list>
 	</div>
 </div>
 </$list>
+</div>
 \end
 
 <<main>>
