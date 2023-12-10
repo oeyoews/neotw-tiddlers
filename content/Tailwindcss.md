@@ -6,11 +6,4 @@
 tailwindcss 源代码是开源的, 但是构建 cdn 的相关步骤似乎没有
 :::
 
-<table class="">
-<$list filter="[tag[Tailwindcss]!sort[modified]]">
-<tr>
-<td class="p-[4px] bg-neutral-200 capitalize "> <$link to={{!!title}}><$view field="title"/></$link>
-</td>
-</tr>
-</$list>
-</table>
+{{||tagTableTemplate}}
