@@ -1,9 +1,9 @@
 caption: Recently added
 created: 20220828022145583
 creator: oeyoews
-list: personal-resume $:/core/templates/exporters/JsonFilePrettified TODO export-tiddlers.json $:/config/SyncPollingInterval $:/config/tiddlywiki-starter-kit/setting.json bookstatus.json hitokoto image-list.json links-gallery headerTemplate tagTableTemplate clock $:/language/Docs/Types/application/vnd.drawio fix-markdown-slash-gray-onmarkdown addon/tagpie.js fix-markdown-more-details startup-order.svg announcement how-to-use-tiddlywiki@oeyoews folded-ribbon/macro folded-ribbon/styles folded-ribbon/exam/left-flat folded-ribbon/exam/left folded-ribbon/exam/right-flat folded-ribbon/exam/right self-introduce $:/core/ui/EditTemplate/body/preview/output fix-conflict $:/config/FileSystemExtensions $:/config/SaverFilter $:/language/MissingTiddler/Hint neotw-stylesheet $:/themes/nico/notebook/ui/Sidebar/Sections 最近更新 $:/StaticBanner
+list: personal-resume $:/core/templates/exporters/JsonFilePrettified TODO export-tiddlers.json $:/config/SyncPollingInterval $:/config/tiddlywiki-starter-kit/setting.json bookstatus.json hitokoto image-list.json links-gallery headerTemplate tagTableTemplate clock $:/language/Docs/Types/application/vnd.drawio fix-markdown-slash-gray-onmarkdown addon/tagpie.js fix-markdown-more-details startup-order.svg announcement how-to-use-tiddlywiki@oeyoews folded-ribbon/macro folded-ribbon/styles folded-ribbon/exam/left-flat folded-ribbon/exam/left folded-ribbon/exam/right-flat folded-ribbon/exam/right self-introduce fix-conflict $:/config/FileSystemExtensions $:/config/SaverFilter $:/language/MissingTiddler/Hint neotw-stylesheet $:/themes/nico/notebook/ui/Sidebar/Sections 最近更新 $:/StaticBanner
 list-before: 
-modified: 20231201042809238
+modified: 20231217161445719
 modifier: Lenovo
 tags: $:/tags/Favorites/Folder
 title: $:/favorites/folders/recent
