@@ -4,6 +4,6 @@
 </div>
 
 <div class="hidden dark:inline">
-<$echarts $tiddler="addon/sevenday.js" $theme='dark' days=21/>
+<$echarts $tiddler="addon/sevenday.js" $theme='dark' days=31/>
 </div>
 </div>
