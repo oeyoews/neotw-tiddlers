@@ -9,6 +9,7 @@ Windows 更新致力于帮助减少碳排放.
 
 ## windows software
 
+* gifcam, screentogif
 * lx-music-desktop netease-music 3.0+
 * cloc
 * calibre
