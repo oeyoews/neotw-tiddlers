@@ -1,9 +1,9 @@
 created: 20231129104625147
-creator: Lenovo
+creator: oeyoews
 description: Prettified JSON
 extension: .json
 modified: 20231129105245779
-modifier: Lenovo
+modifier: oeyoews
 tags: $:/tags/Exporter
 title: $:/core/templates/exporters/JsonFilePrettified
 type: text/vnd.tiddlywiki

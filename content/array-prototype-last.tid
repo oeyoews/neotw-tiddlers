@@ -1,7 +1,7 @@
 created: 20230527161734029
 creator: oeyoews
 modified: 20231016103720078
-modifier: Lenovo
+modifier: oeyoews
 tags: JavaScript
 title: array-prototype-last
 type: text/vnd.tiddlywiki
@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
  * link: https://leetcode.cn/problems/array-prototype-last/
  * Order: 2619
  * Type: Javascript
- * Description: 
+ * Description:
  * 	Write code that enhances all arrays such that you can call the array.last() method on any array and it will return the last element. If there are no elements in the array, it should return -1.
  * 	请你编写一段代码实现一个数组方法，使任何数组都可以调用 array.last() 方法，这个方法将返回数组最后一个元素。如果数组中没有元素，则返回 -1 。
  */

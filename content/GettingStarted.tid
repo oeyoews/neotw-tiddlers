@@ -3,11 +3,11 @@ creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
 modified: 20231217170154695
-modifier: Lenovo
-page-cover: 
+modifier: oeyoews
+page-cover:
 page-icon: fluent-emoji-flat:waving-hand
 publish: public
-tags: 
+tags:
 title: GettingStarted
 type: text/vnd.tiddlywiki
 

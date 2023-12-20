@@ -1,7 +1,7 @@
 created: 20230528110216050
 creator: oeyoews
 modified: 20231103080122843
-modifier: Lenovo
+modifier: oeyoews
 tags: JavaScript
 title: reduce
 type: text/vnd.tiddlywiki
@@ -51,7 +51,7 @@ array.reduce(callback, initialValue)
   - `currentIndex`：当前元素的索引（可选）。
   - `array`：原始数组（可选）。
   回调函数必须返回一个值，该值将在下一次回调时作为累积器的值。
-  
+
 - `initialValue`（可选）：作为初始累积器的值。如果没有提供初始值，则使用数组的第一个元素作为初始值，并从第二个元素开始迭代。
 
 使用 `reduce()` 方法时，它会按顺序遍历数组的每个元素，并将每个元素传递给回调函数进行处理，将处理结果作为下一次回调的输入，直到处理完所有元素并得到最终的累积结果。

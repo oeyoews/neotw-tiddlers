@@ -1,8 +1,8 @@
 created: 20231017235829236
-creator: Lenovo
+creator: oeyoews
 modified: 20231020102620461
-modifier: Lenovo
-tags: 
+modifier: oeyoews
+tags:
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
@@ -13,7 +13,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[tag<currentTiddler>!sort[modified]!has[draft.of]limit[200]]">
 	<$list-template>
 <tr>
-<td class="p-2 bg-gray-200 capitalize dark:bg-black dark:text-white"> 
+<td class="p-2 bg-gray-200 capitalize dark:bg-black dark:text-white">
 		<$link />
 </td>
 </tr>

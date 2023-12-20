@@ -1,9 +1,9 @@
 caption: Select autocompletion-match on open
 created: 20231020055501318
-creator: Lenovo
+creator: oeyoews
 description: whether or not the first autocompletion match should be selected as soon as the autocompletion tooltip opens
 modified: 20231020055501318
-modifier: Lenovo
+modifier: oeyoews
 settings-template: $:/plugins/BTC/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/selectOnOpen
 type: text/vnd.tiddlywiki

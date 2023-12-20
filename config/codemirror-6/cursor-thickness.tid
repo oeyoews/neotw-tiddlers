@@ -1,9 +1,9 @@
 caption: Cursor thickness
 created: 20231020055449806
-creator: Lenovo
+creator: oeyoews
 description: The thickness of the cursor
 modified: 20231020055450036
-modifier: Lenovo
+modifier: oeyoews
 settings-template: $:/plugins/BTC/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/cursor-thickness
 type: text/vnd.tiddlywiki
