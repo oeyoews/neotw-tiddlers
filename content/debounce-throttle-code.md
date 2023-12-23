@@ -8,18 +8,18 @@
 
 ```js
 function debounceImmediate(fn, wait) {
-  let timer = null; // 定义计时器，初始值为null
+  let timer = null; // 定义计时器，初始值为 null
   return function (...args) {
-    // 返回一个函数，利用闭包来保存timer变量
+    // 返回一个函数，利用闭包来保存 timer 变量
     if (timer) {
-      // 如果timer存在，则说明函数还在等待执行
+      // 如果 timer 存在，则说明函数还在等待执行
       clearTimeout(timer); // 清除计时器
     } else {
-      // 如果timer不存在，则说明可以立即执行函数
+      // 如果 timer 不存在，则说明可以立即执行函数
       fn.apply(this, args); // 执行函数，并将上下文和参数传递进去
     }
     timer = setTimeout(() => {
-      // 设置计时器，在规定时间后将timer设为null
+      // 设置计时器，在规定时间后将 timer 设为 null
       timer = null;
     }, wait);
   };
@@ -49,14 +49,14 @@ function debounce(fn, wait) {
 
 ```js
 function throttleImmediate(fn, wait) {
-  let timer = null; // 定义计时器，初始值为null
+  let timer = null; // 定义计时器，初始值为 null
   return function (...args) {
-    // 返回一个函数，利用闭包来保存timer变量
+    // 返回一个函数，利用闭包来保存 timer 变量
     if (!timer) {
-      // 如果timer不存在，则说明可以立即执行函数
+      // 如果 timer 不存在，则说明可以立即执行函数
       fn.apply(this, args); // 执行函数，并将上下文和参数传递进去
       timer = setTimeout(() => {
-        // 设置计时器，在规定时间后将timer设为null
+        // 设置计时器，在规定时间后将 timer 设为 null
         timer = null;
       }, wait);
     }

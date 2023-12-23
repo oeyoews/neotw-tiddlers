@@ -1,5 +1,5 @@
 ```js
-// 注释方式和C很像，这是单行注释
+// 注释方式和 C 很像，这是单行注释
 /* 这是多行
    注释 */
 
@@ -17,7 +17,7 @@ doStuff()
 ```js
 ///////////////////////////////////
 
-// Javascript 只有一种数字类型(即 64位 IEEE 754 双精度浮点 double)。
+// Javascript 只有一种数字类型 (即 64 位 IEEE 754 双精度浮点 double)。
 // double 有 52 位表示尾数，足以精确存储大到 9✕10¹⁵ 的整数。
 3; // = 3
 1.5; // = 1.5
@@ -70,7 +70,7 @@ false;
 2 <= 2; // = true
 2 >= 2; // = true
 
-// 字符串用+连接
+// 字符串用 + 连接
 "Hello " + "world!"; // = "Hello world!"
 
 // 字符串也可以用 < 、> 来比较
@@ -88,7 +88,7 @@ null === undefined; // = false
 13 + !0; // 14
 "13" + !0; // '13true'
 
-// 你可以用`charAt`来得到字符串中的字符
+// 你可以用 `charAt` 来得到字符串中的字符
 "This is a string".charAt(0);  // = 'T'
 
 // ...或使用 `substring` 来获取更大的部分。
@@ -97,9 +97,9 @@ null === undefined; // = false
 // `length` 是一个属性，所以不要使用 ().
 "Hello".length; // = 5
 
-// 还有两个特殊的值：`null`和`undefined`
+// 还有两个特殊的值：`null` 和 `undefined`
 null;      // 用来表示刻意设置的空值
-undefined; // 用来表示还没有设置的值(尽管`undefined`自身实际是一个值)
+undefined; // 用来表示还没有设置的值 (尽管 `undefined` 自身实际是一个值)
 
 // false, null, undefined, NaN, 0 和 "" 都是假的；其他的都视作逻辑真
 // 注意 0 是逻辑假而  "0"是逻辑真，尽管 0 == "0"。
@@ -110,16 +110,16 @@ undefined; // 用来表示还没有设置的值(尽管`undefined`自身实际是
 ```js
 ///////////////////////////////////
 
-// 变量需要用`var`关键字声明。Javascript是动态类型语言，
-// 所以你无需指定类型。 赋值需要用 `=` 
+// 变量需要用 `var` 关键字声明。Javascript 是动态类型语言，
+// 所以你无需指定类型。赋值需要用 `=` 
 var someVar = 5;
 
-// 如果你在声明时没有加var关键字，你也不会得到错误...
+// 如果你在声明时没有加 var 关键字，你也不会得到错误...
 someOtherVar = 10;
 
 // ...但是此时这个变量就会在全局作用域被创建，而非你定义的当前作用域
 
-// 没有被赋值的变量都会被设置为undefined
+// 没有被赋值的变量都会被设置为 undefined
 var someThirdVar; // = undefined
 
 // 对变量进行数学运算有一些简写法：
@@ -134,7 +134,7 @@ someVar--; // 回到 100
 var myArray = ["Hello", 45, true];
 
 // 数组的元素可以用方括号下标来访问。
-// 数组的索引从0开始。
+// 数组的索引从 0 开始。
 myArray[1]; // = 45
 
 // 数组是可变的，并拥有变量 length。
@@ -144,10 +144,10 @@ myArray.length; // = 4
 // 在指定下标添加/修改
 myArray[3] = "Hello";
 
-// javascript中的对象相当于其他语言中的“字典”或“映射”：是键-值对的无序集合。
+// javascript 中的对象相当于其他语言中的“字典”或“映射”：是键 - 值对的无序集合。
 var myObj = {key1: "Hello", key2: "World"};
 
-// 键是字符串，但如果键本身是合法的js标识符，则引号并非是必须的。
+// 键是字符串，但如果键本身是合法的 js 标识符，则引号并非是必须的。
 // 值可以是任意类型。
 var myObj = {myKey: "myValue", "my other key": 4};
 
@@ -160,7 +160,7 @@ myObj.myKey; // = "myValue"
 // 对象是可变的；值也可以被更改或增加新的键
 myObj.myThirdKey = true;
 
-// 如果你想要获取一个还没有被定义的值，那么会返回undefined
+// 如果你想要获取一个还没有被定义的值，那么会返回 undefined
 myObj.myFourthKey; // = undefined
 ```
 
@@ -169,9 +169,9 @@ myObj.myFourthKey; // = undefined
 ```js
 ///////////////////////////////////
 
-// 本节介绍的语法与Java的语法几乎完全相同
+// 本节介绍的语法与 Java 的语法几乎完全相同
 
-// `if`语句和其他语言中一样。
+// `if` 语句和其他语言中一样。
 var count = 1;
 if (count == 3){
     // count 是 3 时执行
@@ -181,37 +181,37 @@ if (count == 3){
     // 其他情况下执行 
 }
 
-// while循环
+// while 循环
 while (true) {
     // 无限循环
 }
 
-// Do-while 和 While 循环很像 ，但前者会至少执行一次
+// Do-while 和 While 循环很像，但前者会至少执行一次
 var input;
 do {
     input = getInput();
 } while (!isValid(input))
 
-// `for`循环和C、Java中的一样：
+// `for` 循环和 C、Java 中的一样：
 // 初始化; 继续执行的条件; 迭代。
 for (var i = 0; i < 5; i++){
-    // 遍历5次
+    // 遍历 5 次
 }
 
-// && 是逻辑与, || 是逻辑或
+// && 是逻辑与，|| 是逻辑或
 if (house.size == "big" && house.colour == "blue"){
     house.contains = "bear";
 }
 if (colour == "red" || colour == "blue"){
-    // colour是red或者blue时执行
+    // colour 是 red 或者 blue 时执行
 }
 
 // && 和 || 是“短路”语句，它在设定初始化值时特别有用 
 var name = otherName || "default";
 
-// `switch`语句使用`===`检查相等性。
-// 在每一个case结束时使用 'break'
-// 否则其后的case语句也将被执行。 
+// `switch`语句使用 `===` 检查相等性。
+// 在每一个 case 结束时使用 'break'
+// 否则其后的 case 语句也将被执行。 
 grade = 'B';
 switch (grade) {
   case 'A':
@@ -234,15 +234,15 @@ switch (grade) {
 ```js
 ///////////////////////////////////
 
-// JavaScript 函数由`function`关键字定义
+// JavaScript 函数由 `function` 关键字定义
 function myFunction(thing){
     return thing.toUpperCase();
 }
 myFunction("foo"); // = "FOO"
 
-// 注意被返回的值必须开始于`return`关键字的那一行，
-// 否则由于自动的分号补齐，你将返回`undefined`。
-// 在使用Allman风格的时候要注意.
+// 注意被返回的值必须开始于 `return` 关键字的那一行，
+// 否则由于自动的分号补齐，你将返回 `undefined`。
+// 在使用 Allman 风格的时候要注意。
 function myFunction()
 {
     return // <- 分号自动插在这里
@@ -252,54 +252,54 @@ function myFunction()
 }
 myFunction(); // = undefined
 
-// javascript中函数是一等对象，所以函数也能够赋给一个变量，
+// javascript 中函数是一等对象，所以函数也能够赋给一个变量，
 // 并且被作为参数传递 —— 比如一个事件处理函数：
 function myFunction(){
-    // 这段代码将在5秒钟后被调用
+    // 这段代码将在 5 秒钟后被调用
 }
 setTimeout(myFunction, 5000);
-// 注意：setTimeout不是js语言的一部分，而是由浏览器和Node.js提供的。
+// 注意：setTimeout 不是 js 语言的一部分，而是由浏览器和 Node.js 提供的。
 
 // 函数对象甚至不需要声明名称 —— 你可以直接把一个函数定义写到另一个函数的参数中
 setTimeout(function(){
-    // 这段代码将在5秒钟后被调用
+    // 这段代码将在 5 秒钟后被调用
 }, 5000);
 
 // JavaScript 有函数作用域；函数有其自己的作用域而其他的代码块则没有。
 if (true){
     var i = 5;
 }
-i; // = 5 - 并非我们在其他语言中所期望得到的undefined
+i; // = 5 - 并非我们在其他语言中所期望得到的 undefined
 
 // 这就导致了人们经常使用的“立即执行匿名函数”的模式，
 // 这样可以避免一些临时变量扩散到全局作用域去。
 (function(){
     var temporary = 5;
     // 我们可以访问修改全局对象（"global object"）来访问全局作用域，
-    // 在web浏览器中是`window`这个对象。 
-    // 在其他环境如Node.js中这个对象的名字可能会不同。
+    // 在 web 浏览器中是 `window` 这个对象。 
+    // 在其他环境如 Node.js 中这个对象的名字可能会不同。
     window.permanent = 10;
 })();
-temporary; // 抛出引用异常ReferenceError
+temporary; // 抛出引用异常 ReferenceError
 permanent; // = 10
 
-// javascript最强大的功能之一就是闭包。
+// javascript 最强大的功能之一就是闭包。
 // 如果一个函数在另一个函数中定义，那么这个内部函数就拥有外部函数的所有变量的访问权，
 // 即使在外部函数结束之后。
 function sayHelloInFiveSeconds(name){
     var prompt = "Hello, " + name + "!";
     // 内部函数默认是放在局部作用域的，
-    // 就像是用`var`声明的。
+    // 就像是用 `var` 声明的。
     function inner(){
         alert(prompt);
     }
     setTimeout(inner, 5000);
-    // setTimeout是异步的，所以 sayHelloInFiveSeconds 函数会立即退出，
-    // 而 setTimeout 会在后面调用inner
-    // 然而，由于inner是由sayHelloInFiveSeconds“闭合包含”的，
-    // 所以inner在其最终被调用时仍然能够访问`prompt`变量。
+    // setTimeout 是异步的，所以 sayHelloInFiveSeconds 函数会立即退出，
+    // 而 setTimeout 会在后面调用 inner
+    // 然而，由于 inner 是由 sayHelloInFiveSeconds“闭合包含”的，
+    // 所以 inner 在其最终被调用时仍然能够访问 `prompt` 变量。
 }
-sayHelloInFiveSeconds("Adam"); // 会在5秒后弹出 "Hello, Adam!"
+sayHelloInFiveSeconds("Adam"); // 会在 5 秒后弹出 "Hello, Adam!"
 ```
 
 ## 对象、构造函数与原型
@@ -315,7 +315,7 @@ var myObj = {
 };
 myObj.myFunc(); // = "Hello world!"
 
-// 当对象中的函数被调用时，这个函数可以通过`this`关键字访问其依附的这个对象。
+// 当对象中的函数被调用时，这个函数可以通过 `this` 关键字访问其依附的这个对象。
 myObj = {
     myString: "Hello world!",
     myFunc: function(){
@@ -329,7 +329,7 @@ myObj.myFunc(); // = "Hello world!"
 var myFunc = myObj.myFunc;
 myFunc(); // = undefined
 
-// 相应的，一个函数也可以被指定为一个对象的方法，并且可以通过`this`访问
+// 相应的，一个函数也可以被指定为一个对象的方法，并且可以通过 `this` 访问
 // 这个对象的成员，即使在函数被定义时并没有依附在对象上。
 var myOtherFunc = function(){
     return this.myString.toUpperCase();
@@ -337,21 +337,21 @@ var myOtherFunc = function(){
 myObj.myOtherFunc = myOtherFunc;
 myObj.myOtherFunc(); // = "HELLO WORLD!"
 
-// 当我们通过`call`或者`apply`调用函数的时候，也可以为其指定一个执行上下文。
+// 当我们通过 `call`或者`apply` 调用函数的时候，也可以为其指定一个执行上下文。
 var anotherFunc = function(s){
     return this.myString + s;
 }
 anotherFunc.call(myObj, " And Hello Moon!"); // = "Hello World! And Hello Moon!"
 
-// `apply`函数几乎完全一样，只是要求一个array来传递参数列表。
+// `apply` 函数几乎完全一样，只是要求一个 array 来传递参数列表。
 anotherFunc.apply(myObj, [" And Hello Sun!"]); // = "Hello World! And Hello Sun!"
 
-// 当一个函数接受一系列参数，而你想传入一个array时特别有用。
+// 当一个函数接受一系列参数，而你想传入一个 array 时特别有用。
 Math.min(42, 6, 27); // = 6
 Math.min([42, 6, 27]); // = NaN (uh-oh!)
 Math.min.apply(Math, [42, 6, 27]); // = 6
 
-// 但是`call`和`apply`只是临时的。如果我们希望函数附着在对象上，可以使用`bind`。
+// 但是 `call`和`apply` 只是临时的。如果我们希望函数附着在对象上，可以使用`bind`。
 var boundFunc = anotherFunc.bind(myObj);
 boundFunc(" And Hello Saturn!"); // = "Hello World! And Hello Saturn!"
 
@@ -360,8 +360,8 @@ var product = function(a, b){ return a * b; }
 var doubler = product.bind(this, 2);
 doubler(8); // = 16
 
-// 当你通过`new`关键字调用一个函数时，就会创建一个对象，
-// 而且可以通过this关键字访问该函数。
+// 当你通过 `new` 关键字调用一个函数时，就会创建一个对象，
+// 而且可以通过 this 关键字访问该函数。
 // 设计为这样调用的函数就叫做构造函数。
 var MyConstructor = function(){
     this.myNumber = 5;
@@ -369,10 +369,10 @@ var MyConstructor = function(){
 myNewObj = new MyConstructor(); // = {myNumber: 5}
 myNewObj.myNumber; // = 5
 
-// 每一个js对象都有一个‘原型’。当你要访问一个实际对象中没有定义的一个属性时，
+// 每一个 js 对象都有一个‘原型’。当你要访问一个实际对象中没有定义的一个属性时，
 // 解释器就回去找这个对象的原型。
 
-// 一些JS实现会让你通过`__proto__`属性访问一个对象的原型。
+// 一些 JS 实现会让你通过 `__proto__` 属性访问一个对象的原型。
 // 这虽然对理解原型很有用，但是它并不是标准的一部分；
 // 我们后面会介绍使用原型的标准方式。
 var myObj = {
@@ -405,14 +405,14 @@ myObj.meaningOfLife; // = 43
 // 我们知道 `__proto__` 并非标准规定，实际上也没有标准办法来修改一个已存在对象的原型。
 // 然而，我们有两种方式为指定原型创建一个新的对象。
 
-// 第一种方式是 Object.create，这个方法是在最近才被添加到Js中的，
-// 因此并不是所有的JS实现都有这个方法
+// 第一种方式是 Object.create，这个方法是在最近才被添加到 Js 中的，
+// 因此并不是所有的 JS 实现都有这个方法
 var myObj = Object.create(myPrototype);
 myObj.meaningOfLife; // = 43
 
 // 第二种方式可以在任意版本中使用，不过必须通过构造函数。
-// 构造函数有一个属性prototype。但是它 *不是* 构造函数本身的原型；相反，
-// 是通过构造函数和new关键字创建的新对象的原型。
+// 构造函数有一个属性 prototype。但是它 *不是* 构造函数本身的原型；相反，
+// 是通过构造函数和 new 关键字创建的新对象的原型。
 MyConstructor.prototype = {
     myNumber: 5,
     getMyNumber: function(){
@@ -434,20 +434,20 @@ typeof myNumber; // = 'number'
 typeof myNumberObj; // = 'object'
 myNumber === myNumberObj; // = false
 if (0){
-    // 这段代码不会执行，因为0代表假
+    // 这段代码不会执行，因为 0 代表假
 }
 
 // 不过，包装类型和内置类型共享一个原型，
-// 所以你实际可以给内置类型也增加一些功能，例如对string：
+// 所以你实际可以给内置类型也增加一些功能，例如对 string：
 String.prototype.firstCharacter = function(){
     return this.charAt(0);
 }
 "abc".firstCharacter(); // = "a"
 
-// 这个技巧经常用在“代码填充”中，来为老版本的javascript子集增加新版本js的特性，
+// 这个技巧经常用在“代码填充”中，来为老版本的 javascript 子集增加新版本 js 的特性，
 // 这样就可以在老的浏览器中使用新功能了。
 
-// 比如，我们知道Object.create并没有在所有的版本中都实现，
+// 比如，我们知道 Object.create 并没有在所有的版本中都实现，
 // 但是我们仍然可以通过“代码填充”来实现兼容：
 if (Object.create === undefined){ // 如果存在则不覆盖
     Object.create = function(proto){

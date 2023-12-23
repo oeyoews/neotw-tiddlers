@@ -3,7 +3,7 @@
 :::
 
 :::warning
-tailwindcss 源代码是开源的, 但是构建 cdn 的相关步骤似乎没有
+tailwindcss 源代码是开源的，但是构建 cdn 的相关步骤似乎没有
 :::
 
 {{||tagTableTemplate}}

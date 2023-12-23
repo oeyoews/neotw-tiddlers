@@ -7,7 +7,7 @@
 在方法中，this 表示该方法所属的对象。
 如果单独使用，this 表示全局对象。
 在函数中，this 表示全局对象。
-在函数中，在严格模式下，this 是未定义的(undefined)。
+在函数中，在严格模式下，this 是未定义的 (undefined)。
 在事件中，this 表示接收事件的元素。
 类似 call() 和 apply() 方法可以将 this 引用到任何对象。
 
@@ -27,7 +27,7 @@ var person = {
 console.log(person.fullName()); // 输出 "John Doe"
 ```
 
-在这个例子中，我们定义了一个名为 person 的对象，该对象包含了 firstName、lastName 和 fullName 三个属性。fullName 属性是一个函数，用于返回 person 对象的完整姓名。当我们调用 person.fullName()方法时，this 关键字会指向 person 对象，因此函数中的 this.firstName 和 this.lastName 都会返回 person 对象的属性值。
+在这个例子中，我们定义了一个名为 person 的对象，该对象包含了 firstName、lastName 和 fullName 三个属性。fullName 属性是一个函数，用于返回 person 对象的完整姓名。当我们调用 person.fullName() 方法时，this 关键字会指向 person 对象，因此函数中的 this.firstName 和 this.lastName 都会返回 person 对象的属性值。
 
 当函数不作为对象的方法调用时，this 关键字会指向全局对象。例如：
 
@@ -39,7 +39,7 @@ function myFunction() {
 console.log(myFunction()); // 输出全局对象
 ```
 
-在这个例子中，我们定义了一个名为 myFunction 的函数，该函数没有被任何对象调用。当我们调用 myFunction()函数时，this 关键字会指向全局对象，因此函数中的 this 将返回全局对象。
+在这个例子中，我们定义了一个名为 myFunction 的函数，该函数没有被任何对象调用。当我们调用 myFunction() 函数时，this 关键字会指向全局对象，因此函数中的 this 将返回全局对象。
 
 除了作为方法调用和全局调用之外，this 关键字还可以用于构造函数和事件处理程序等场景。在构造函数中，this 关键字用于创建新的对象。例如：
 
@@ -74,7 +74,7 @@ document.getElementById("myButton").addEventListener("click", function() {
 </script>
 ```
 
-在这个例子中，我们使用 addEventListener()方法将一个 click 事件处理程序绑定到按钮元素上。当用户点击按钮时，该事件处理程序将被触发，此时 this 关键字将指向按钮元素，因此在函数中输出 this 将返回按钮元素。
+在这个例子中，我们使用 addEventListener() 方法将一个 click 事件处理程序绑定到按钮元素上。当用户点击按钮时，该事件处理程序将被触发，此时 this 关键字将指向按钮元素，因此在函数中输出 this 将返回按钮元素。
 
 需要注意的是，如果事件处理程序使用箭头函数定义，则 this 关键字将不指向当前元素，而是指向定义该函数时的执行上下文。例如：
 

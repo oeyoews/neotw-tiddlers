@@ -2,12 +2,12 @@ Data fetching is a core part of any application. This page goes through how you 
 
 There are four ways you can fetch data:有四种方法可以获取数据：
 
-1. [On the server, with `fetch`在服务器上，使用 `fetch`](#fetching-data-on-the-server-with-fetch)
-2. [On the server, with third-party libraries在服务器上，使用第三方库](#fetching-data-on-the-server-with-third-party-libraries)
-3. [On the client, via a Route Handler在客户端上，通过路由处理程序](#fetching-data-on-the-client-with-route-handlers)
+1. [On the server, with `fetch` 在服务器上，使用 `fetch`](#fetching-data-on-the-server-with-fetch)
+2. [On the server, with third-party libraries 在服务器上，使用第三方库](#fetching-data-on-the-server-with-third-party-libraries)
+3. [On the client, via a Route Handler 在客户端上，通过路由处理程序](#fetching-data-on-the-client-with-route-handlers)
 4. [On the client, with third-party libraries](#fetching-data-on-the-client-with-route-handlers).在客户端上，使用第三方库。
 
-## [Fetching Data on the Server with `fetch`在 `fetch` 服务器上获取数据](#fetching-data-on-the-server-with-fetch)
+## [Fetching Data on the Server with `fetch` 在 `fetch` 服务器上获取数据](#fetching-data-on-the-server-with-fetch)
 
 Next.js extends the native [`fetch` Web API](https://developer.mozilla.org/docs/Web/API/Fetch_API) to allow you to configure the [caching](#caching-data) and [revalidating](#revalidating-data) behavior for each fetch request on the server. React extends `fetch` to automatically [memoize](https://nextjs.org/docs/app/building-your-application/data-fetching/patterns#fetching-data-where-its-needed) fetch requests while rendering a React component tree.Next.js 扩展了本机 `fetch` Web API，允许您为服务器上的每个提取请求配置缓存和重新验证行为。React 扩展 `fetch` 为在渲染 React 组件树时自动记忆获取请求。
 
@@ -55,7 +55,7 @@ fetch('https://...', { cache: 'force-cache' })
 
 `fetch` requests that use the `POST` method are also automatically cached. Unless it's inside a [Route Handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) that uses the `POST` method, then it will not be cached.`fetch` 使用该 `POST` 方法的请求也会自动缓存。除非它位于使用该 `POST` 方法的路由处理程序中，否则它不会被缓存。
 
-> **What is the Data Cache?什么是数据缓存？**
+> **What is the Data Cache？什么是数据缓存？**
 >
 > The Data Cache is a persistent [HTTP cache](https://developer.mozilla.org/docs/Web/HTTP/Caching). Depending on your platform, the cache can scale automatically and be [shared across multiple regions](https://vercel.com/docs/infrastructure/data-cache).数据缓存是持久的 HTTP 缓存。根据您的平台，缓存可以自动扩展并在多个区域之间共享。
 >
@@ -90,7 +90,7 @@ Learn more about [time-based revalidation](https://nextjs.org/docs/app/building-
 
 #### [On-demand Revalidation 按需重新验证](#on-demand-revalidation)
 
-Data can be revalidated on-demand by path ([`revalidatePath`](https://nextjs.org/docs/app/api-reference/functions/revalidatePath)) or by cache tag ([`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag)) inside a [Server Action](https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations) or [Route Handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers).可以通过服务器操作或路由处理程序中的路径 （ ） 或缓存标记 （ `revalidatePath` `revalidateTag` ） 按需重新验证数据。
+Data can be revalidated on-demand by path ([`revalidatePath`](https://nextjs.org/docs/app/api-reference/functions/revalidatePath)) or by cache tag ([`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag)) inside a [Server Action](https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations) or [Route Handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers).可以通过服务器操作或路由处理程序中的路径（ ）或缓存标记（ `revalidatePath` `revalidateTag` ）按需重新验证数据。
 
 Next.js has a cache tagging system for invalidating `fetch` requests across routes.Next.js 有一个缓存标记系统，用于使 `fetch` 跨路由的请求无效。
 
@@ -121,11 +121,11 @@ export default async function action() {
 
 Learn more about [on-demand revalidation](https://nextjs.org/docs/app/building-your-application/caching#on-demand-revalidation).详细了解按需重新验证。
 
-#### [Error handling and revalidation错误处理和重新验证](#error-handling-and-revalidation)
+#### [Error handling and revalidation 错误处理和重新验证](#error-handling-and-revalidation)
 
 If an error is thrown while attempting to revalidate data, the last successfully generated data will continue to be served from the cache. On the next subsequent request, Next.js will retry revalidating the data.如果在尝试重新验证数据时引发错误，则将继续从缓存中提供上次成功生成的数据。在下一个后续请求中，Next.js 将重试重新验证数据。
 
-### [Opting out of Data Caching选择退出数据缓存](#opting-out-of-data-caching)
+### [Opting out of Data Caching 选择退出数据缓存](#opting-out-of-data-caching)
 
 `fetch` requests are **not** cached if:`fetch` 如果出现以下情况，则不会缓存请求：
 
@@ -137,7 +137,7 @@ If an error is thrown while attempting to revalidate data, the last successfully
 * The `fetchCache` route segment option is configured to skip cache by default.默认情况下， `fetchCache` 路由段选项配置为跳过缓存。
 * The `fetch` request uses `Authorization` or `Cookie` headers and there's an uncached request above it in the component tree.该 `fetch` 请求使用 `Authorization` 或 `Cookie` 标头，并且在组件树中其上方有一个未缓存的请求。
 
-#### [Individual `fetch` Requests个人 `fetch` 请求](#individual-fetch-requests)
+#### [Individual `fetch` Requests 个人 `fetch` 请求](#individual-fetch-requests)
 
 To opt out of caching for individual `fetch` requests, you can set the `cache` option in `fetch` to `'no-store'`. This will fetch data dynamically, on every request.要选择不对单个 `fetch` 请求进行缓存，可以将选项 `cache` `fetch` 设置为 `'no-store'` 。这将在每个请求上动态获取数据。
 
@@ -147,13 +147,13 @@ fetch('https://...', { cache: 'no-store' })
 
 View all the available `cache` options in the [`fetch` API reference](https://nextjs.org/docs/app/api-reference/functions/fetch).查看 `fetch` API 参考中的所有可用 `cache` 选项。
 
-#### [Multiple `fetch` Requests多个 `fetch` 请求](#multiple-fetch-requests)
+#### [Multiple `fetch` Requests 多个 `fetch` 请求](#multiple-fetch-requests)
 
 If you have multiple `fetch` requests in a route segment (e.g. a Layout or Page), you can configure the caching behavior of all data requests in the segment using the [Segment Config Options](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config).如果路由段（例如布局或页面）中有多个 `fetch` 请求，则可以使用段配置选项配置该段中所有数据请求的缓存行为。
 
 However, we recommend configuring the caching behavior of each `fetch` request individually. This gives you more granular control over the caching behavior.但是，我们建议单独配置每个 `fetch` 请求的缓存行为。这使您可以更精细地控制缓存行为。
 
-## [Fetching data on the Server with third-party libraries使用第三方库在服务器上获取数据](#fetching-data-on-the-server-with-third-party-libraries)
+## [Fetching data on the Server with third-party libraries 使用第三方库在服务器上获取数据](#fetching-data-on-the-server-with-third-party-libraries)
 
 In cases where you're using a third-party library that doesn't support or expose `fetch` (for example, a database, CMS, or ORM client), you can configure the caching and revalidating behavior of those requests using the [Route Segment Config Option](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config) and React's `cache` function.如果您使用的是不支持或公开 `fetch` 的第三方库（例如，数据库、CMS 或 ORM 客户端），您可以使用路由段配置选项和 React `cache` 的函数来配置这些请求的缓存和重新验证行为。
 
@@ -207,17 +207,17 @@ export default async function Page({
 }
 ```
 
-## [Fetching Data on the Client with Route Handlers使用路由处理程序在客户端上获取数据](#fetching-data-on-the-client-with-route-handlers)
+## [Fetching Data on the Client with Route Handlers 使用路由处理程序在客户端上获取数据](#fetching-data-on-the-client-with-route-handlers)
 
 If you need to fetch data in a client component, you can call a [Route Handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) from the client. Route Handlers execute on the server and return the data to the client. This is useful when you don't want to expose sensitive information to the client, such as API tokens.如果需要在客户端组件中获取数据，可以从客户端调用路由处理程序。路由处理程序在服务器上执行，并将数据返回给客户端。当您不想向客户端公开敏感信息（如 API 令牌）时，这很有用。
 
 See the [Route Handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) documentation for examples.有关示例，请参阅路由处理程序文档。
 
-> **Server Components and Route Handlers服务器组件和路由处理程序**
+> **Server Components and Route Handlers 服务器组件和路由处理程序**
 >
 > Since Server Components render on the server, you don't need to call a Route Handler from a Server Component to fetch data. Instead, you can fetch the data directly inside the Server Component.由于服务器组件在服务器上呈现，因此无需从服务器组件调用路由处理程序来获取数据。相反，您可以直接在服务器组件中获取数据。
 
-## [Fetching Data on the Client with third-party libraries使用第三方库在客户端上获取数据](#fetching-data-on-the-client-with-third-party-libraries)
+## [Fetching Data on the Client with third-party libraries 使用第三方库在客户端上获取数据](#fetching-data-on-the-client-with-third-party-libraries)
 
 You can also fetch data on the client using a third-party library such as [SWR](https://swr.vercel.app/) or [React Query](https://tanstack.com/query/latest). These libraries provide their own APIs for memoizing requests, caching, revalidating, and mutating data.您还可以使用第三方库（如 SWR 或 React Query）在客户端上获取数据。这些库提供了自己的 API，用于记忆请求、缓存、重新验证和更改数据。
 

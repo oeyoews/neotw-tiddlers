@@ -28,11 +28,11 @@ Object.defineProperty(obj, 'name', {
   enumerable: true
 });
 
-console.log(obj.name); // 输出: "John"
+console.log(obj.name); // 输出："John"
 obj.name = 'Jane'; // 不会改变属性的值，因为 writable 为 false
 
 for (let key in obj) {
-  console.log(key); // 输出: "name"
+  console.log(key); // 输出："name"
 }
 ```
 

@@ -8,7 +8,7 @@
 
 ![](https://developer.qcloudimg.com/http-save/yehe-9016259/e90fe07b25caa1fcb59f0a6de0333d89.png)
 
-而针对`React Hook`而言，除了那些让人眼花缭乱的**「内置hook」**。其实，它最大的魅力还是**「自定义hook」**。
+而针对`React Hook`而言，除了那些让人眼花缭乱的**「内置 hook」**。其实，它最大的魅力还是**「自定义 hook」**。
 
 所以，今天我们就来讲几个，我们平时开发中可能会用到的`自定义hook`。（文章内容可能有些长，请大家耐心观看，也可以先收藏后享用哦 😊）
 
@@ -26,9 +26,9 @@
 
 > ❝**「前置知识点」**，只是做一个概念的介绍，不会做深度解释。因为，这些概念在下面文章中会有出现，为了让行文更加的顺畅，所以将本该在文内的概念解释放到前面来。**「如果大家对这些概念熟悉，可以直接忽略」** 同时，由于阅读我文章的群体有很多，所以有些知识点可能**「我视之若珍宝，尔视只如草芥，弃之如敝履」**。以下知识点，请**「酌情使用」**。 ❞
 
-### **React 内置Hook**
+### **React 内置 Hook**
 
-以下是`React`提供的一些标准`内置Hooks`。你能相信，现在有`15`个之多，如果大家有需要，到时候也可以写一篇关于内置hook的文章。
+以下是`React`提供的一些标准`内置Hooks`。你能相信，现在有`15`个之多，如果大家有需要，到时候也可以写一篇关于内置 hook 的文章。
 
 如果想看更详细的解释可以移步官网
 
@@ -38,7 +38,7 @@
 
 ### **追根溯源**
 
-在考虑使用`Hooks`之前，首先要考虑原生JavaScript函数。
+在考虑使用`Hooks`之前，首先要考虑原生 JavaScript 函数。
 
 > ❝在`JavaScript`编程语言中，函数是可重用的代码逻辑，用于执行重复的任务。函数是**「可组合的」**，这意味着你可以**「在另一个函数中调用一个函数并使用其输出」**。 ❞
 
@@ -46,7 +46,7 @@
 
 ![](https://developer.qcloudimg.com/http-save/yehe-9016259/c9eaad4d9bca7710d66d4de841311cad.png)
 
-毫无疑问，`React`中的**「函数组件实际上就是普通的**`JavaScript`**函数」**！因此，**「如果函数具有组合性，React组件也可以具有组合性」**。这意味着我们可以像下面的图像所示，**「将一个或多个组件组合（使用）到另一个组件中」**：
+毫无疑问，`React`中的**「函数组件实际上就是普通的**`JavaScript`**函数」**！因此，**「如果函数具有组合性，React 组件也可以具有组合性」**。这意味着我们可以像下面的图像所示，**「将一个或多个组件组合（使用）到另一个组件中」**：
 
 ![](https://developer.qcloudimg.com/http-save/yehe-9016259/13c3e0f494b271b11c34bd148e34348f.png)
 
@@ -67,9 +67,9 @@
 
 通过`React Hooks`，我们可以将`状态逻辑`和`副作用`从函数组件中隔离出来。
 
-> ❝`Hooks`是**「JavaScript函数」**，通过将它们与组件隔离开来来**「管理状态行为和副作用」**。 ❞
+> ❝`Hooks`是**「JavaScript 函数」**，通过将它们与组件隔离开来来**「管理状态行为和副作用」**。 ❞
 
-因此，现在我们可以将所有`状态逻辑`隔离到Hooks中，并将它们用于组件中（因为Hooks本身也是函数，所以可以组合它们）。
+因此，现在我们可以将所有`状态逻辑`隔离到 Hooks 中，并将它们用于组件中（因为 Hooks 本身也是函数，所以可以组合它们）。
 
 ![](https://developer.qcloudimg.com/http-save/yehe-9016259/8a0de162d6ba83b37bafa382c4c62c3e.png)
 
@@ -79,7 +79,7 @@
 
 例如，用于获取数据并将数据管理在本地变量中的逻辑是有状态的。我们可能还希望在多个组件中重复使用获取数据的逻辑。
 
-以前，`状态逻辑`只能在类组件中使用生命周期方法来实现。但是，有了`React Hooks`，开发人员现在可以在函数组件中直接利用状态和其他React功能。
+以前，`状态逻辑`只能在类组件中使用生命周期方法来实现。但是，有了`React Hooks`，开发人员现在可以在函数组件中直接利用状态和其他 React 功能。
 
 `Hooks`提供了一种轻松地在多个组件之间重复使用有状态逻辑的方式，提高了代码的可重用性并减少了复杂性。它们使开发人员能够将复杂的组件拆分成更小、更易管理的部分，从而产生更清晰和更易维护的代码。
 
@@ -89,7 +89,7 @@
 
 ## **3. React 自定义 Hook**
 
-`React自定义Hooks`是**「可重复使用的函数」**，允许开发人员以可重复使用的方式抽象和封装复杂的逻辑,**「用于共享非可视逻辑的Hooks模式」**
+`React自定义Hooks`是**「可重复使用的函数」**，允许开发人员以可重复使用的方式抽象和封装复杂的逻辑，**「用于共享非可视逻辑的 Hooks 模式」**
 
 > ❝自定义`Hook`是通过组合现有的`React Hooks`或其他自定义`Hooks`来创建的。 ❞
 
@@ -97,13 +97,13 @@
 
 通过创建自定义`Hooks`，开发人员可以模块化和组织他们的代码，使其更易读、易维护和易测试。
 
-这些`Hooks`可以封装任何类型的逻辑，如API调用、表单处理、状态管理，甚至是抽象外部库。
+这些`Hooks`可以封装任何类型的逻辑，如 API 调用、表单处理、状态管理，甚至是抽象外部库。
 
 我们采用`Vite`构建一个`React-TS`版本的项目。（`yarn create vite my-vue-app --template react-ts`）
 
 并且在`src`文件下，新增`hooks`文件夹，以存储下面我们定义的`自定义hook`。然后我们通过配置`alias`可以在组件中随意引入。即`import xx from @hooks/xxx`
 
-前面我们讲过**「自定义Hooks是通过组合现有的React Hooks或其他自定义Hooks来创建的」**，所以下文中会有自定义hook的嵌套现象，大家在阅读的时候，需要甄别代码。（推荐大家还是自己弄一个小项目，自己实践一下）。
+前面我们讲过**「自定义 Hooks 是通过组合现有的 React Hooks 或其他自定义 Hooks 来创建的」**，所以下文中会有自定义 hook 的嵌套现象，大家在阅读的时候，需要甄别代码。（推荐大家还是自己弄一个小项目，自己实践一下）。
 
 还有一点，由于篇幅所限，下面的`hook`不做过多的解读。我们用了`ts`，想必通过直接阅读代码，也能比较清晰的了解代码含义和限制。
 
@@ -153,7 +153,7 @@ export default function useArray<T>(defaultValue: T[]): ArrayReturnType<T> {
 }
 ```
 
-`useArray`hook利用`React`的`useState`hook来初始化和管理数组状态。它返回一个带有以下函数的对象：
+`useArray`hook 利用`React`的`useState`hook 来初始化和管理数组状态。它返回一个带有以下函数的对象：
 
 * `push(element)`: 将指定的元素添加到数组中。
 * `filter(callback)`: 根据提供的回调函数对数组进行筛选，删除不满足条件的元素。
@@ -223,7 +223,7 @@ export default function useAsync<T>(
 
 #### **使用场景**
 
-无论我们是从API获取数据、执行计算还是处理表单提交，这个自定义钩子都简化了在`React`组件中**「管理异步操作」**。
+无论我们是从 API 获取数据、执行计算还是处理表单提交，这个自定义钩子都简化了在`React`组件中**「管理异步操作」**。
 
 ```
 import React from "react";
@@ -326,7 +326,7 @@ export default function EventListenerComponent() {
 }
 ```
 
-上面示例中,`useEventListener`利用这个钩子来跟踪用户按下的最后一个键。
+上面示例中，`useEventListener`利用这个钩子来跟踪用户按下的最后一个键。
 
 ***
 
@@ -413,7 +413,7 @@ export default function ClickOutsideComponent() {
 上面的情况，利用该钩子来切换弹窗的可见性。
 
 * 点击`button`时候，弹窗开启，将`open`状态设置为`true`
-* 当用户在弹窗外点击(排除`button`)时，提供的回调函数将`open`状态设置为`false`，关闭窗口。
+* 当用户在弹窗外点击 (排除`button`) 时，提供的回调函数将`open`状态设置为`false`，关闭窗口。
 
 ***
 
@@ -462,7 +462,7 @@ export default function useCookie<T>(
 * 如果`Cookie`存在，它将返回其值；
 * 否则，它将`Cookie`设置为提供的默认值。
 
-这个自定义钩子的一个主要优点是能够更新`Cookie`值。由`useCookie`返回的`updateCookie`函数允许我们修改`Cookie`的值。通过使用新值和**「可选的选项」**（如过期时间或路径）调用此函数，我们可以立即更新`Cookie`。此外，该钩子方便地更新状态，使我们的应用程序**「与修改后的Cookie保持同步」**。
+这个自定义钩子的一个主要优点是能够更新`Cookie`值。由`useCookie`返回的`updateCookie`函数允许我们修改`Cookie`的值。通过使用新值和**「可选的选项」**（如过期时间或路径）调用此函数，我们可以立即更新`Cookie`。此外，该钩子方便地更新状态，使我们的应用程序**「与修改后的 Cookie 保持同步」**。
 
 在需要删除`Cookie`的情况下，`deleteCookie`函数就派上用场了。只需调用此函数，它将从浏览器中删除指定的`Cookie`。该钩子会负责更新状态，确保我们的应用程序反映了`Cookie`的删除。
 
@@ -520,7 +520,7 @@ export default function useCopyToClipboard(): CopyToClipboardHookReturn {
 }
 ```
 
-在`React`中**「文本复制」**是一个常见并且繁琐的事情。五星上将，`麦克阿瑟`说，我们需要一个自定义hook - `useCopyToClipboard`来简化这个过程。
+在`React`中**「文本复制」**是一个常见并且繁琐的事情。五星上将，`麦克阿瑟`说，我们需要一个自定义 hook - `useCopyToClipboard`来简化这个过程。
 
 `useCopyToClipboard`钩子利用了`React`的`useState钩子`，以及`copy-to-clipboard`库，以实现其功能。通过调用这个自定义钩子，我们可以获得两个关键功能：`copyToClipboard`和相应的`状态变量`。
 
@@ -531,7 +531,7 @@ export default function useCopyToClipboard(): CopyToClipboardHookReturn {
 
 #### **使用场景**
 
-`useCopyToClipboard钩子`可以在各种情境中使用。它在需要复制文本，如URL、可分享内容或用户生成的数据的情况下特别有用。
+`useCopyToClipboard钩子`可以在各种情境中使用。它在需要复制文本，如 URL、可分享内容或用户生成的数据的情况下特别有用。
 
 ```
 import useCopyToClipboard from "@hooks/useCopyToClipboard";
@@ -716,7 +716,7 @@ export default function useDarkMode(): UseDarkModeReturn {
 
 这个自定义钩子结合了另外两个方便的钩子`useMediaQuery`和`useStorage`，以提供一个快速切换应用**「深色模式」**的功能。它自动检测用户的首选颜色方案，并将深色模式状态保留在浏览器的本地存储中。
 
-`useDarkMode钩子`在启用深色模式时**「动态更新HTML body的类」**，以应用`dark-mode`样式。这种方法确保了在所有组件中的一致性，而无需手动进行类的操作。
+`useDarkMode钩子`在启用深色模式时**「动态更新 HTML body 的类」**，以应用`dark-mode`样式。这种方法确保了在所有组件中的一致性，而无需手动进行类的操作。
 
 body.css
 
@@ -803,7 +803,7 @@ export default function useTimeout(callback: () => void, delay: number): Timeout
 
 #### **使用场景**
 
-`useTimeout 钩子`可以在需要定时操作的各种场景中使用。例如，在倒计时组件中,以轻松地实现在特定持续时间后重置的计时器。
+`useTimeout 钩子`可以在需要定时操作的各种场景中使用。例如，在倒计时组件中，以轻松地实现在特定持续时间后重置的计时器。
 
 ```
 import { useState } from "react";
@@ -867,7 +867,7 @@ export default function DebounceComponent() {
 }
 ```
 
-每当用户点击`数字+1`按钮时，计数状态会更新。但是，我们不会立即弹出计数值，而是使用`useDebounce`来防抖回调函数。只有在延迟1秒后，计数值才会弹出，有效地防止了在快速点击按钮时弹出过多的输出。
+每当用户点击`数字+1`按钮时，计数状态会更新。但是，我们不会立即弹出计数值，而是使用`useDebounce`来防抖回调函数。只有在延迟 1 秒后，计数值才会弹出，有效地防止了在快速点击按钮时弹出过多的输出。
 
 ***
 
@@ -927,7 +927,7 @@ export default function useRenderCount(): number {
 }
 ```
 
-`useRenderCount钩子`利用了React的`useEffect`和`useRef`钩子来**「计算渲染次数」**。每次渲染都会增加计数，为我们提供关于组件渲染频率的实时反馈。
+`useRenderCount钩子`利用了 React 的`useEffect`和`useRef`钩子来**「计算渲染次数」**。每次渲染都会增加计数，为我们提供关于组件渲染频率的实时反馈。
 
 它提供了一种清晰而简洁的方式来监视渲染行为，这对性能优化和调试非常重要。
 
@@ -1004,7 +1004,7 @@ export default function useDebugInformation(
 }
 ```
 
-在**「调试React组件时，获取有关渲染和属性更改的详细信息可以非常有用」**。此时`useDebugInformation`自定义钩子派上用场的地方。这个钩子为开发人员提供了有关其组件行为的宝贵见解，并有助于识别性能瓶颈或意外的渲染模式。
+在**「调试 React 组件时，获取有关渲染和属性更改的详细信息可以非常有用」**。此时`useDebugInformation`自定义钩子派上用场的地方。这个钩子为开发人员提供了有关其组件行为的宝贵见解，并有助于识别性能瓶颈或意外的渲染模式。
 
 `useDebugInformation`让我们可以获得大量的调试数据。该钩子跟踪**「渲染次数」**、**「更改的属性」**、**「自上次渲染以来的时间」**以及**「上次渲染的时间戳」**。这些全面的信息使我们能够更有效地分析组件行为，并在优化应用程序时做出明智的决策。
 
@@ -1099,15 +1099,15 @@ export default function useGeolocation(
 }
 ```
 
-`useGeolocation`钩子利用了React的`useState`和`useEffect`钩子来管理加载、错误和**「地理位置数据」**的状态。它接受一个可选的`options`参数，以自定义地理位置行为，允许我们根据特定需求微调准确性和其他设置。
+`useGeolocation`钩子利用了 React 的`useState`和`useEffect`钩子来管理加载、错误和**「地理位置数据」**的状态。它接受一个可选的`options`参数，以自定义地理位置行为，允许我们根据特定需求微调准确性和其他设置。
 
 该钩子自动处理加载状态，当获取地理位置数据时更新它，并在过程中出现任何问题时设置错误状态。
 
-`useGeolocation`钩子还包含了`Geolocation` API的`watchPosition`方法，它可以**「连续监视用户的位置」**。这在需要实时更新用户位置的情况下很有用，比如在跟踪应用程序或交互地图中。
+`useGeolocation`钩子还包含了`Geolocation` API 的`watchPosition`方法，它可以**「连续监视用户的位置」**。这在需要实时更新用户位置的情况下很有用，比如在跟踪应用程序或交互地图中。
 
 #### **使用场景**
 
-数据对象包含`纬度`和`经度`值，允许我们轻松地在UI上显示用户的位置。`加载变量`通知我们地理位置检索的当前状态，错误变量在适用时提供任何错误消息。
+数据对象包含`纬度`和`经度`值，允许我们轻松地在 UI 上显示用户的位置。`加载变量`通知我们地理位置检索的当前状态，错误变量在适用时提供任何错误消息。
 
 ```
 import useGeolocation from "@hooks/useGeolocation"
@@ -1147,7 +1147,7 @@ export default function useHover(ref: RefObject<HTMLElement>): boolean {
 }
 ```
 
-这个钩子利用了React的`useState`和`useEventListener`钩子，用于**「跟踪鼠标悬停状态」**。通过简单地将一个`ref`传递给`useHover`钩子，我们可以开始接收准确的鼠标悬停事件。该钩子监听`mouseover`和`mouseout`事件，并相应地更新悬停状态。
+这个钩子利用了 React 的`useState`和`useEventListener`钩子，用于**「跟踪鼠标悬停状态」**。通过简单地将一个`ref`传递给`useHover`钩子，我们可以开始接收准确的鼠标悬停事件。该钩子监听`mouseover`和`mouseout`事件，并相应地更新悬停状态。
 
 #### **使用场景**
 
@@ -1181,7 +1181,7 @@ export default function HoverComponent() {
 }
 ```
 
-通过将`useHover`钩子应用于`elementRef`，div的背景颜色在悬停状态下动态变为蓝色或红色。
+通过将`useHover`钩子应用于`elementRef`，div 的背景颜色在悬停状态下动态变为蓝色或红色。
 
 ***
 
@@ -1212,11 +1212,11 @@ export default function useLongPress(
 }
 ```
 
-通过利用这个钩子，开发人员可以轻松地在其React应用程序中的任何元素上定义**「长按操作」**。只需几行代码，这个钩子就会处理跟踪长按持续时间和触发相关回调函数。
+通过利用这个钩子，开发人员可以轻松地在其 React 应用程序中的任何元素上定义**「长按操作」**。只需几行代码，这个钩子就会处理跟踪长按持续时间和触发相关回调函数。
 
 #### **使用场景**
 
-无论我们正在开发触摸敏感的用户界面、实现上下文菜单或创建自定义手势，这个钩子都证明是一个有价值的工具。从移动应用到复杂的Web界面,都有用武之地。
+无论我们正在开发触摸敏感的用户界面、实现上下文菜单或创建自定义手势，这个钩子都证明是一个有价值的工具。从移动应用到复杂的 Web 界面，都有用武之地。
 
 ```
 import { useRef } from "react";
@@ -1313,13 +1313,13 @@ export default function useOnScreen(
 }
 ```
 
-`useOnScreen`钩子充分利用了`Intersection Observer` API的强大功能,只需简单地提供一个引用到我们想要监视的元素，`useOnScreen`会在该元素进入或离开视口时通知我们。
+`useOnScreen`钩子充分利用了`Intersection Observer` API 的强大功能，只需简单地提供一个引用到我们想要监视的元素，`useOnScreen`会在该元素进入或离开视口时通知我们。
 
 #### **使用场景**
 
-我们可以在我们希望触发动画、延迟加载图像或在用户滚动时加载额外内容的情况下，使用这个Hook。
+我们可以在我们希望触发动画、延迟加载图像或在用户滚动时加载额外内容的情况下，使用这个 Hook。
 
-要使用这个钩子，首先将其导入到我们的组件文件中。然后，使用`useRef`钩子创建一个引用，以定位所需的元素。将引用作为`useOnScreen`钩子的第一个参数传递,我们还可以提供一个可选的`rootMargin`值来调整可见阈值。
+要使用这个钩子，首先将其导入到我们的组件文件中。然后，使用`useRef`钩子创建一个引用，以定位所需的元素。将引用作为`useOnScreen`钩子的第一个参数传递，我们还可以提供一个可选的`rootMargin`值来调整可见阈值。
 
 ```
 import { useRef } from "react";
@@ -1407,7 +1407,7 @@ export default function useScript(url: string) {
 }
 ```
 
-`useScript`它具备**「异步处理脚本加载的能力」**。通过将脚本的`async`属性设置为`true`，确保它不会阻塞应用程序的渲染。特别是在处理较大的脚本或较慢的网络连接时,有很大用处。
+`useScript`它具备**「异步处理脚本加载的能力」**。通过将脚本的`async`属性设置为`true`，确保它不会阻塞应用程序的渲染。特别是在处理较大的脚本或较慢的网络连接时，有很大用处。
 
 #### **使用场景**
 
@@ -1426,7 +1426,7 @@ export default function ScriptComponent() {
 }
 ```
 
-注意：在使用处会有一个TS错误。我们需要在项目中弄一个index.d.ts然后需要对进行定义
+注意：在使用处会有一个 TS 错误。我们需要在项目中弄一个 index.d.ts 然后需要对进行定义
 
 ```
 declare interface Window {
@@ -1521,13 +1521,13 @@ function useStateWithHistory<T>(
 export default useStateWithHistory;
 ```
 
-#### **useStateWithHistory的优势**
+#### **useStateWithHistory 的优势**
 
 * 自动历史跟踪：`useStateWithHistory`自动跟踪我们设置的值，允许我们在需要时访问**「完整的历史记录」**。
 * 高效的内存使用：该钩子利用**「容量参数」**(支持动态传人)，确保历史记录不会无限增长。我们可以定义要保留的历史值的最大数量，防止过多的内存消耗。
 * 时间旅行功能：通过`back()`、`forward()`和`go()`函数，我们可以轻松地浏览记录的历史。在以前的状态之间来回切换，或直接**「跳到特定索引」**，实现强大的撤销/重做或逐步操作功能。
 
-#### **何时使用useStateWithHistory**
+#### **何时使用 useStateWithHistory**
 
 * 表单管理：通过提供一种简化处理表单输入的方式，可以跟踪更改，还原以前的值或重做修改，从而简化处理表单输入的过程。
 * 撤销/重做功能：轻松实现应用程序中的撤销/重做功能。跟踪状态更改，允许用户轻松地在其操作之间来回导航。
@@ -1590,9 +1590,9 @@ export default function useStateWithValidation<T>(
 }
 ```
 
-`useStateWithValidation`钩子结合了React的`useState`和`useCallback`钩子，它接受两个参数：
+`useStateWithValidation`钩子结合了 React 的`useState`和`useCallback`钩子，它接受两个参数：
 
-* 一个验证函数(用于确定当前状态是否被视为有效。)
+* 一个验证函数 (用于确定当前状态是否被视为有效。)
 * 一个初始值
 
 #### **使用场景**
@@ -1621,7 +1621,7 @@ export default function StateWithValidationComponent() {
 }
 ```
 
-在这个示例中，使用`useStateWithValidation`钩子来管理用户名的状态。验证函数检查用户名的长度是否大于5个字符，`isValid`变量反映了当前输入的有效性。
+在这个示例中，使用`useStateWithValidation`钩子来管理用户名的状态。验证函数检查用户名的长度是否大于 5 个字符，`isValid`变量反映了当前输入的有效性。
 
 ***
 
@@ -1863,7 +1863,7 @@ export const createDeepCompareEffect: CreateUpdateEffect =
 export default createDeepCompareEffect(useEffect);
 ```
 
-在React中管理依赖关系是一件很棘手的事情，尤其是在处理复杂的数据结构或嵌套对象时。为了解决默认`useEffect`钩子的限制，`useDeepCompareEffect`确保**「仅当依赖关系发生深层更改时才触发效果回调」**，它使用`lodash`的`isEqual`函数进行准确的比较。
+在 React 中管理依赖关系是一件很棘手的事情，尤其是在处理复杂的数据结构或嵌套对象时。为了解决默认`useEffect`钩子的限制，`useDeepCompareEffect`确保**「仅当依赖关系发生深层更改时才触发效果回调」**，它使用`lodash`的`isEqual`函数进行准确的比较。
 
 它能够防止不必要的重新渲染。通过在当前依赖项和先前依赖项之间执行深层比较，该钩子智能地确定是否应触发效果，从而在`浅层比较`无法胜任的情况下实现了性能优化。
 

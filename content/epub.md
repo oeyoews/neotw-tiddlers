@@ -14,6 +14,6 @@ EPUB 已成为出版行业的标准格式，使得作者、出版商和读者更
 
 * Calibre(linux)
 * Foliate(linux)
-* Apple books 阅读(ios)
+* Apple books 阅读 (ios)
 * google play books(support pc, 不是很流畅)
-* 微信读书支持导入书籍, 不过排版不太行
+* 微信读书支持导入书籍，不过排版不太行

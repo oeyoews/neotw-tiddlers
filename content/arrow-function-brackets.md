@@ -4,7 +4,7 @@
 
 ```javascript
 const add = (a, b) => a + b;
-console.log(add(1, 2)); // 输出: 3
+console.log(add(1, 2)); // 输出：3
 ```
 
 上述示例中，箭头函数 `add` 的函数体只有一条语句 `a + b`，因此可以省略大括号 `{}`。这样，函数会直接返回表达式 `a + b` 的结果。在调用 `add(1, 2)` 时，输出结果为 `3`。
@@ -16,7 +16,7 @@ const multiply = (a, b) => {
   const result = a * b;
   return result;
 };
-console.log(multiply(2, 3)); // 输出: 6
+console.log(multiply(2, 3)); // 输出：6
 ```
 
 上述示例中，箭头函数 `multiply` 的函数体有两条语句：定义变量 `result` 和返回 `result`。这时就需要使用大括号 `{}` 将这两条语句包裹起来，并使用 `return` 关键字明确地返回 `result` 的值。在调用 `multiply(2, 3)` 时，输出结果为 `6`。

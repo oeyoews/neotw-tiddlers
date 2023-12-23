@@ -13,7 +13,7 @@ myButton.addEventListener('click', function(event) {
   const clientX = event.clientX;
   const clientY = event.clientY;
   
-  console.log('按钮ID：', buttonId);
+  console.log('按钮 ID：', buttonId);
   console.log('事件类型：', eventType);
   console.log('鼠标点击位置：', clientX, clientY);
 });

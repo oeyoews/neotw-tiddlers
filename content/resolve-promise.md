@@ -6,7 +6,7 @@
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
-  // 一些异步操作，最终成功后调用resolve
+  // 一些异步操作，最终成功后调用 resolve
   setTimeout(() => {
     resolve("成功的结果");
   }, 1000);

@@ -51,7 +51,7 @@
 
 ##  IME
 
-> 使用 fcitx5-im（with pacman)无效？？？ 需要分开装
+> 使用 fcitx5-im（with pacman) 无效？？？需要分开装
 
 - fcitx5-im
  -  manjaro-asian-input-support-fcitx5

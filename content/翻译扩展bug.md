@@ -1,1 +1,1 @@
-github 的to top 元素如果没有滚动在顶部, 会一直闪烁
+github 的 to top 元素如果没有滚动在顶部，会一直闪烁

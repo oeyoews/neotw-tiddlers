@@ -22,11 +22,11 @@ const numbers = [1, 2, 3, 4, 5];
 
 // 查找第一个大于 3 的数
 const result = numbers.find((num) => num > 3);
-console.log(result); // 输出: 4
+console.log(result); // 输出：4
 
 // 查找第一个索引为偶数的数
 const evenIndexNum = numbers.find((num, index) => index % 2 === 0);
-console.log(evenIndexNum); // 输出: 1
+console.log(evenIndexNum); // 输出：1
 
 // 在对象数组中查找 name 属性为 "Alice" 的对象
 const users = [
@@ -35,7 +35,7 @@ const users = [
   { name: "Charlie", age: 35 },
 ];
 const user = users.find((user) => user.name === "Alice");
-console.log(user); // 输出: { name: "Alice", age: 25 }
+console.log(user); // 输出：{ name: "Alice", age: 25 }
 ```
 
 `find()` 方法在找到符合条件的元素后会停止搜索，不会继续遍历整个数组。如果需要查找所有满足条件的元素，可以使用 `filter()` 方法。

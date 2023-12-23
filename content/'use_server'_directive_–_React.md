@@ -8,12 +8,12 @@
 
   * [`'use server'`](#use-server)
   * [Security considerations  安全注意事项](#security)
-  * [Serializable arguments and return values可序列化参数和返回值](#serializable-parameters-and-return-values)
+  * [Serializable arguments and return values 可序列化参数和返回值](#serializable-parameters-and-return-values)
 
 * [Usage  用法](#usage)
 
-  * [Server Actions in forms表单中的服务器操作](#server-actions-in-forms)
-  * [Calling a Server Action outside of `<form>`在 `<form>` 外部调用服务器操作](#calling-a-server-action-outside-of-form)
+  * [Server Actions in forms 表单中的服务器操作](#server-actions-in-forms)
+  * [Calling a Server Action outside of `<form>` 在 `<form>` 外部调用服务器操作](#calling-a-server-action-outside-of-form)
 
 ***
 
@@ -66,7 +66,7 @@ To prevent sending sensitive data from a Server Action, there are experimental t
 
 See [experimental\_taintUniqueValue](https://react.dev/reference/react/experimental_taintUniqueValue) and [experimental\_taintObjectReference](https://react.dev/reference/react/experimental_taintObjectReference).请参阅 experimental\_taintUniqueValue 和 experimental\_taintObjectReference。
 
-### Serializable arguments and return values可序列化参数和返回值[](#serializable-parameters-and-return-values "Link for Serializable arguments and return values ")
+### Serializable arguments and return values 可序列化参数和返回值[](#serializable-parameters-and-return-values "Link for Serializable arguments and return values ")
 
 As client code calls the Server Action over the network, any arguments passed will need to be serializable.当客户端代码通过网络调用服务器操作时，传递的任何参数都需要是可序列化的。
 
@@ -84,7 +84,7 @@ Here are supported types for Server Action arguments:以下是服务器操作参
   * [null 零](https://developer.mozilla.org/en-US/docs/Glossary/Null)
   * [symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), only symbols registered in the global Symbol registry via [`Symbol.for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/for)符号，仅通过 `Symbol.for`
 
-* Iterables containing serializable values包含可序列化值的可迭代对象
+* Iterables containing serializable values 包含可序列化值的可迭代对象
 
   <!-- -->
 
@@ -98,16 +98,16 @@ Here are supported types for Server Action arguments:以下是服务器操作参
 
 * [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData) instances FormData 实例
 
-* Plain [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object): those created with [object initializers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), with serializable properties普通对象：使用对象初始值设定项创建的对象，具有可序列化属性的对象
+* Plain [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object): those created with [object initializers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), with serializable properties 普通对象：使用对象初始值设定项创建的对象，具有可序列化属性的对象
 
-* Functions that are Server Actions作为服务器操作的函数
+* Functions that are Server Actions 作为服务器操作的函数
 
 * [Promises 承诺](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 Notably, these are not supported:值得注意的是，不支持以下各项：
 
 * React elements, or [JSX](https://react.dev/learn/writing-markup-with-jsx) React 元素或 JSX
-* Functions, including component functions or any other function that is not a Server Action函数，包括组件函数或不是服务器操作的任何其他函数
+* Functions, including component functions or any other function that is not a Server Action 函数，包括组件函数或不是服务器操作的任何其他函数
 * [Classes 类](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 * Objects that are instances of any class (other than the built-ins mentioned) or objects with [a null prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)作为任何类（上述内置函数除外）的实例的对象或具有 null 原型的对象
 * Symbols not registered globally, ex. `Symbol('my new symbol')`未在全球范围内注册的符号，例如。 `Symbol('my new symbol')`
@@ -116,7 +116,7 @@ Supported serializable return values are the same as [serializable props](https:
 
 ## Usage  用法[](#usage "Link for Usage ")
 
-### Server Actions in forms表单中的服务器操作[](#server-actions-in-forms "Link for Server Actions in forms ")
+### Server Actions in forms 表单中的服务器操作[](#server-actions-in-forms "Link for Server Actions in forms ")
 
 The most common use case of Server Actions will be calling server functions that mutate data. On the browser, the [HTML form element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) is the traditional approach for a user to submit a mutation. With React Server Components, React introduces first-class support for Server Actions in [forms](https://react.dev/reference/react-dom/components/form).服务器操作最常见的用例是调用更改数据的服务器函数。在浏览器上，HTML 表单元素是用户提交变更的传统方法。在 React Server Components 中，React 引入了对表单中服务器操作的一流支持。
 
@@ -167,7 +167,7 @@ In this example `requestUsername` is a Server Action passed to a `<form>`. When 
 
 By passing a Server Action to the form `action`, React can [progressively enhance](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) the form. This means that forms can be submitted before the JavaScript bundle is loaded.通过将 Server Action 传递给表单，React 可以逐步增强表单 `action` 。这意味着可以在加载 JavaScript 包之前提交表单。
 
-#### Handling return values in forms处理表单中的返回值[](#handling-return-values "Link for Handling return values in forms ")
+#### Handling return values in forms 处理表单中的返回值[](#handling-return-values "Link for Handling return values in forms ")
 
 In the username request form, there might be the chance that a username is not available. `requestUsername` should tell us if it fails or not.在用户名请求表单中，用户名可能不可用。 `requestUsername` 应该告诉我们它是否失败。
 

@@ -37,9 +37,9 @@ I  # 同上   same vim
 
 dD   # 彻底删除
 
-  on/ob   根据文件名进行排序(natural/basename)
+  on/ob   根据文件名进行排序 (natural/basename)
   oc      根据改变时间进行排序 (Change Time 文件的权限组别和文件自身数据被修改的时间)
-  os      根据文件大小进行排序(Size)
+  os      根据文件大小进行排序 (Size)
 ot      根据后缀名进行排序 (Type)
 
   oa      根据访问时间进行排序 (Access Time 访问文件自身数据的时间)

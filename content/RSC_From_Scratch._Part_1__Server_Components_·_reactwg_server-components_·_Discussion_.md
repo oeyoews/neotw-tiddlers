@@ -1,13 +1,13 @@
 ## RSC From Scratch. Part 1: Server ComponentsRSC 从头开始。第 1 部分：服务器组件
 
-In this technical deep dive, we'll implement a very simplified version of [React Server Components](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md) (RSC) from scratch.在这个技术深入探讨中，我们将从头开始实现一个非常简化的 React 服务器组件 （RSC） 版本。\
+In this technical deep dive, we'll implement a very simplified version of [React Server Components](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md) (RSC) from scratch.在这个技术深入探讨中，我们将从头开始实现一个非常简化的 React 服务器组件（RSC）版本。\
 This deep dive will be published in several parts:本深入探讨将分几个部分发布：
 
-* **Part 1: Server Components** (this page)第 1 部分：服务器组件（本页）
+* **Part 1: Server Components** (this page) 第 1 部分：服务器组件（本页）
 * Part 2: Client Components *(not written yet)*第 2 部分：客户端组件（尚未编写）
 * Part 3: TBD *(not written yet)*第 3 部分：待定（尚未编写）
 
-## Seriously, this is a deep dive!说真的，这是一个深入的潜水！
+## Seriously, this is a deep dive! 说真的，这是一个深入的潜水！
 
 This deep dive doesn't explain the benefits of React Server Components, how to implement an app using RSC, or how to implement a framework using them. Instead, it walks you through the process of "inventing" them on your own from scratch.本深入探讨没有解释 React Server 组件的好处，如何使用 RSC 实现应用程序，或者如何使用它们实现框架。相反，它会引导您从头开始自行“发明”它们的过程。
 
@@ -21,7 +21,7 @@ We will note future optimization opportunities in the text, but we will strongly
 
 ## Let’s jump back in time...让我们回到过去......
 
-Suppose that you woke up one morning and found out it's 2003 again. Web development is still in its infancy. Let's say you want to create a personal blog website that shows content from text files on your server. In PHP, it could look like this:假设你有一天早上醒来，发现又是 2003 年。Web 开发仍处于起步阶段。假设您要创建一个个人博客网站，以显示服务器上文本文件中的内容。在PHP中，它可能看起来像这样：
+Suppose that you woke up one morning and found out it's 2003 again. Web development is still in its infancy. Let's say you want to create a personal blog website that shows content from text files on your server. In PHP, it could look like this:假设你有一天早上醒来，发现又是 2003 年。Web 开发仍处于起步阶段。假设您要创建一个个人博客网站，以显示服务器上文本文件中的内容。在 PHP 中，它可能看起来像这样：
 
 ```
 <?php
@@ -48,7 +48,7 @@ Suppose that you woke up one morning and found out it's 2003 again. Web developm
 </html>
 ```
 
-*(We're going to pretend that tags like `<nav>`, `<article>`, and `<footer>` existed back then to keep the HTML easy to read.)（我们将假设像 、 `<article>` 和 `<footer>` 这样的 `<nav>` 标签在当时就存在，以保持 HTML 易于阅读。*
+*(We're going to pretend that tags like `<nav>`, `<article>`, and `<footer>` existed back then to keep the HTML easy to read.)（我们将假设像、 `<article>` 和 `<footer>` 这样的 `<nav>` 标签在当时就存在，以保持 HTML 易于阅读。*
 
 When you open `http://locahost:3000/hello-world` in your browser, this PHP script returns an HTML page with the blog post from `./posts/hello-world.txt`. An equivalent Node.js script written using the today's Node.js APIs might look like this:当您在浏览器中打开 `http://locahost:3000/hello-world` 时，此 PHP 脚本将返回一个 HTML 页面，其中包含来自 `./posts/hello-world.txt` 的博客文章。使用当今的 Node.js API 编写的等效 Node.js 脚本可能如下所示：
 
@@ -91,9 +91,9 @@ function sendHTML(res, html) {
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/nostalgic-platform-kvog0r?file=%2Fserver.js)**
 
-Imagine that you could take a CD-ROM with a working Node.js engine back to 2003, and you could run this code on the server. If you wanted to bring a React-flavored paradigm to that world, what features would you add, and in what order?想象一下，您可以将带有正常工作的 Node.js 引擎的 CD-ROM 带回 2003 年，并且可以在服务器上运行此代码。如果你想给这个世界带来一个 React 风格的范式，你会添加什么功能，以什么顺序？
+Imagine that you could take a CD-ROM with a working Node.js engine back to 2003, and you could run this code on the server. If you wanted to bring a React-flavored paradigm to that world, what features would you add, and in what order？想象一下，您可以将带有正常工作的 Node.js 引擎的 CD-ROM 带回 2003 年，并且可以在服务器上运行此代码。如果你想给这个世界带来一个 React 风格的范式，你会添加什么功能，以什么顺序？
 
-## Step 1: Let's invent JSX第 1 步：让我们发明 JSX
+## Step 1: Let's invent JSX 第 1 步：让我们发明 JSX
 
 The first thing that's not ideal about the code above is direct string manipulation. Notice you've had to call `escapeHtml(postContent)` to ensure that you don't accidentally treat content from a text file as HTML.上面代码不理想的第一件事是直接字符串操作。请注意，您必须进行调用 `escapeHtml(postContent)` 以确保不会意外地将文本文件中的内容视为 HTML。
 
@@ -193,7 +193,7 @@ Under the hood, JSX produces a tree of objects that look like this:在后台，J
 }
 ```
 
-However, in the end what you need to send to the browser is HTML — not a JSON tree. (At least, for now!)但是，最终您需要发送到浏览器的是 HTML，而不是 JSON 树。（至少，现在是这样！
+However, in the end what you need to send to the browser is HTML — not a JSON tree. (At least, for now!) 但是，最终您需要发送到浏览器的是 HTML，而不是 JSON 树。（至少，现在是这样！
 
 Let's write a function that turns your JSX to an HTML string. To do this, we'll need to specify how different types of nodes (a string, a number, an array, or a JSX node with children) should turn into pieces of HTML:让我们编写一个函数，将 JSX 转换为 HTML 字符串。为此，我们需要指定不同类型的节点（字符串、数字、数组或带有子节点的 JSX 节点）应该如何转换为 HTML 片段：
 
@@ -232,11 +232,11 @@ function renderJSXToHTML(jsx) {
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/recursing-kepler-yw7dlx?file=%2Fserver.js)**
 
-Give this a try and see the HTML being rendered and served!试一试，看看 HTML 的呈现和提供！
+Give this a try and see the HTML being rendered and served! 试一试，看看 HTML 的呈现和提供！
 
 Turning JSX into an HTML string is usually known as "Server-Side Rendering" (SSR). **It is important note that RSC and SSR are two very different things (that tend to be used together).** In this guide, we're *starting* from SSR because it's a natural first thing you might try to do in a server environment. However, this is only the first step, and you will see significant differences later on.将 JSX 转换为 HTML 字符串通常称为“服务器端渲染”（SSR）。需要注意的是，RSC 和 SSR 是两个截然不同的东西（倾向于一起使用）。在本指南中，我们将从 SSR 开始，因为这是您在服务器环境中尝试做的第一件事。但是，这只是第一步，稍后您将看到显着差异。
 
-## Step 2: Let's invent components第 2 步：让我们发明组件
+## Step 2: Let's invent components 第 2 步：让我们发明组件
 
 After JSX, the next feature you'll probably want is components. Regardless of whether your code runs on the client or on the server, it makes sense to split the UI apart into different pieces, give them names, and pass information to them by props.在 JSX 之后，您可能想要的下一个功能是组件。无论您的代码是在客户端还是在服务器上运行，将 UI 拆分为不同的部分，为它们命名，并通过 props 将信息传递给它们都是有意义的。
 
@@ -301,7 +301,7 @@ If you try to run this code without any changes to your `renderJSXToHTML` implem
 </function BlogPostPage({postContent,author}) {...}>
 ```
 
-The problem is that our `renderJSXToHTML` function (which turns JSX into HTML) assumes that `jsx.type` is always a string with the HTML tag name (such as `"html"`, `"footer"`, or `"p"`):问题是我们的 `renderJSXToHTML` 函数（将 JSX 转换为 HTML）假设它 `jsx.type` 始终是带有 HTML 标记名称的字符串（例如 `"html"` ， `"footer"` ， 或 `"p"` ）：
+The problem is that our `renderJSXToHTML` function (which turns JSX into HTML) assumes that `jsx.type` is always a string with the HTML tag name (such as `"html"`, `"footer"`, or `"p"`):问题是我们的 `renderJSXToHTML` 函数（将 JSX 转换为 HTML）假设它 `jsx.type` 始终是带有 HTML 标记名称的字符串（例如 `"html"` ， `"footer"` ，或 `"p"` ）：
 
 ```
 if (jsx.$$typeof === Symbol.for("react.element")) {
@@ -333,13 +333,13 @@ if (jsx.$$typeof === Symbol.for("react.element")) {
 }
 ```
 
-Now, if you encounter a JSX element like `<BlogPostPage author="Jae Doe" />` while generating HTML, you will *call* `BlogPostPage` as a function, passing `{ author: "Jae Doe" }` to that function. That function will return some more JSX. And you already know how to deal with JSX — you pass it back to `renderJSXToHTML` which continues generating HTML from it.现在，如果你遇到一个JSX元素，比如 `<BlogPostPage author="Jae Doe" />` 在生成HTML时，你将作为一个函数调用 `BlogPostPage` ，传递给 `{ author: "Jae Doe" }` 该函数。该函数将返回更多的 JSX。而且你已经知道如何处理 JSX 了——你把它传回给 `renderJSXToHTML` JSX，继续从中生成 HTML。
+Now, if you encounter a JSX element like `<BlogPostPage author="Jae Doe" />` while generating HTML, you will *call* `BlogPostPage` as a function, passing `{ author: "Jae Doe" }` to that function. That function will return some more JSX. And you already know how to deal with JSX — you pass it back to `renderJSXToHTML` which continues generating HTML from it.现在，如果你遇到一个 JSX 元素，比如 `<BlogPostPage author="Jae Doe" />` 在生成 HTML 时，你将作为一个函数调用 `BlogPostPage` ，传递给 `{ author: "Jae Doe" }` 该函数。该函数将返回更多的 JSX。而且你已经知道如何处理 JSX 了——你把它传回给 `renderJSXToHTML` JSX，继续从中生成 HTML。
 
 This change alone is enough to add support for components and passing props. Check it out:仅此更改就足以添加对组件和传递道具的支持。一探究竟：
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/thirsty-frost-8oug3o?file=%2Fserver.js)**
 
-## Step 3: Let's add some routing第 3 步：让我们添加一些路由
+## Step 3: Let's add some routing 第 3 步：让我们添加一些路由
 
 Now that we've got basic support for components working, it would be nice to add a few more pages to the blog.现在我们已经有了对组件工作的基本支持，最好在博客中添加更多页面。
 
@@ -468,7 +468,7 @@ Now you can navigate around the blog. However, the code is getting a bit verbose
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/trusting-turing-bi5vjr?file=%2Fserver.js)**
 
-## Step 4: Let's invent async components第 4 步：让我们发明异步组件
+## Step 4: Let's invent async components 第 4 步：让我们发明异步组件
 
 You might have noticed that this part of the `BlogIndexPage` and `BlogPostPage` components looks exactly the same:您可能已经注意到， `BlogIndexPage` 和 `BlogPostPage` 组件的这一部分看起来完全相同：
 
@@ -493,11 +493,11 @@ function Post({ slug, content }) { // Someone needs to pass down the `content` p
 
 Currently, the logic for loading `content` for posts is duplicated between [here](https://codesandbox.io/p/sandbox/trusting-turing-bi5vjr?file=%2Fserver.js%3A24%2C1-28%2C7) and [here](https://codesandbox.io/p/sandbox/trusting-turing-bi5vjr?file=%2Fserver.js%3A33%2C1-36%2C9). We load it outside of the component hierarchy because the `readFile` API is asynchronous — so we can't use it directly in the component tree. *(Let's ignore that `fs` APIs have synchronous versions—this could've been a read from a database, or a call to some async third-party library.)*目前，加载帖子 `content` 的逻辑在 here 和 here 之间是重复的。我们将其加载到组件层次结构之外，因为 API 是异步的 `readFile` ，因此我们不能直接在组件树中使用它。（让我们忽略 API 具有同步版本， `fs` 这可能是从数据库中读取的，也可能是对某个异步第三方库的调用。
 
-Or can we?... 或者我们可以吗?...
+Or can we?... 或者我们可以吗？...
 
 If you are used to client-side React, you might be used to the idea that you can't call an API like `fs.readFile` from a component. Even with traditional React SSR (server rendering), your existing intuition might tell you that each of your components needs to *also* be able to run in the browser — and so a server-only API like `fs.readFile` would not work.如果你习惯了客户端 React，你可能会习惯于你不能像从组件中调用 API 一样 `fs.readFile` 。即使使用传统的 React SSR（服务器渲染），你现有的直觉也可能会告诉你，你的每个组件也需要能够在浏览器中运行——因此，像这样的 `fs.readFile` 纯服务器 API 是行不通的。
 
-But if you tried to explain this to someone in 2003, they would find this limitation rather odd. You can't `fs.readFile`, really?但是，如果你试图在2003年向某人解释这一点，他们会发现这个限制相当奇怪。你不能 `fs.readFile` ，真的吗？
+But if you tried to explain this to someone in 2003, they would find this limitation rather odd. You can't `fs.readFile`, really？但是，如果你试图在 2003 年向某人解释这一点，他们会发现这个限制相当奇怪。你不能 `fs.readFile` ，真的吗？
 
 Recall that we're approaching everything from the first principles. For now, we are *only* targeting the server environment, so we don't need to limit our components to code that runs in the browser. It is also perfectly fine for a component to be asynchronous, since the server can just wait with emitting HTML for it until its data has loaded and is ready to display.回想一下，我们正在从第一原则开始处理一切。目前，我们只针对服务器环境，因此我们不需要将组件限制为在浏览器中运行的代码。组件异步也是完全可以的，因为服务器可以等待发出 HTML 直到其数据加载并准备好显示。
 
@@ -573,7 +573,7 @@ createServer(async (req, res) => {
 }).listen(8080);
 ```
 
-But wait, we need to *actually* make `async`/`await` work inside components first. How do we do this?但是等等，我们需要首先在组件内部实际制造 `async` / `await` 工作。我们是怎么做到的？
+But wait, we need to *actually* make `async`/`await` work inside components first. How do we do this？但是等等，我们需要首先在组件内部实际制造 `async` / `await` 工作。我们是怎么做到的？
 
 Let's find the place in our `renderJSXToHTML` implementation where we call the component function:让我们在 `renderJSXToHTML` 实现中找到调用组件函数的位置：
 
@@ -610,7 +610,7 @@ Notice how, in the new code, there is no special logic to "prepare" all the file
 
 > Note that this implementation is not ideal because each `await` is "blocking". For example, we can't even *start* sending the HTML until *all* of it has been generated. Ideally, we'd want to *stream* the server payload as it's being generated. This is more complex, and we won't do it in this part of the walkthrough — for now we'll just focus on the data flow. However, it's important to note that we can add streaming later without any changes to the components themselves. Each component only uses `await` to wait for its own *data* (which is unavoidable), but parent components don't need to `await` their children — even when children are `async`. This is why React can stream parent components' output before their children finish rendering.请注意，这种实现并不理想，因为每个 `await` 实现都是“阻塞”的。例如，在生成所有 HTML 之前，我们甚至无法开始发送 HTML。理想情况下，我们希望在生成服务器有效负载时对其进行流式传输。这更复杂，我们不会在演练的这一部分中执行此操作 - 现在我们只关注数据流。但是，需要注意的是，我们可以稍后添加流式处理，而无需对组件本身进行任何更改。每个组件仅用于 `await` 等待自己的数据（这是不可避免的），但父组件不需要 `await` 其子组件 - 即使子组件是 `async` .这就是为什么 React 可以在父组件完成渲染之前流式传输父组件的输出。
 
-## Step 5: Let's preserve state on navigation步骤 5：让我们在导航上保留状态
+## Step 5: Let's preserve state on navigation 步骤 5：让我们在导航上保留状态
 
 So far, our server can only render a route to an HTML string:到目前为止，我们的服务器只能将路由呈现为 HTML 字符串：
 
@@ -649,7 +649,7 @@ We're going to fix this in three steps:我们将分三个步骤解决此问题�
 2. Teach our server to serve JSX over the wire instead of HTML for subsequent navigations.教我们的服务器通过网络而不是 HTML 提供 JSX 以供后续导航。
 3. Teach the client to apply JSX updates without destroying the DOM (hint: we'll use React for that part).教客户端在不破坏 DOM 的情况下应用 JSX 更新（提示：我们将在该部分使用 React）。
 
-### Step 5.1: Let's intercept navigations步骤 5.1：让我们拦截导航
+### Step 5.1: Let's intercept navigations 步骤 5.1：让我们拦截导航
 
 We're gonna need some client-side logic, so we'll add a `<script>` tag for a new file called `client.js`. In this file, we'll override the default behavior for navigations within the site so that they call our own function called `navigate`:我们将需要一些客户端逻辑，因此我们将 `<script>` 为名为 `client.js` .在此文件中，我们将覆盖网站内导航的默认行为，以便它们调用我们自己的函数，称为 `navigate` ：
 
@@ -712,7 +712,7 @@ async function navigate(pathname) {
 
 This code isn't quite production-ready (for example, it doesn't change `document.title` or announce route changes), but it shows that we can successfully override the browser navigation behavior. Currently, we're fetching the HTML for the next route, so the `<input>` state still gets lost. In the next step, we're going to teach our server to serve JSX instead of HTML for navigations. 👀此代码还不完全可用于生产环境（例如，它不会更改或宣布路由更改 `document.title` ），但它表明我们可以成功覆盖浏览器导航行为。目前，我们正在获取下一条路由的 HTML，因此 `<input>` 状态仍然会丢失。在下一步中，我们将教我们的服务器提供 JSX 而不是 HTML 进行导航。👀
 
-### Step 5.2: Let's send JSX over the wire第 5.2 步：让我们通过网络发送 JSX
+### Step 5.2: Let's send JSX over the wire 第 5.2 步：让我们通过网络发送 JSX
 
 Remember our earlier peek at the object tree that JSX produces:还记得我们之前对 JSX 生成的对象树的了解：
 
@@ -786,7 +786,7 @@ async function navigate(pathname) {
 }
 ```
 
-That's not very useful — we were hoping to get a JSX tree like `<html>...</html>`. What went wrong?这并不是很有用——我们希望得到一个像 `<html>...</html>` .哪里出了问题？
+That's not very useful — we were hoping to get a JSX tree like `<html>...</html>`. What went wrong？这并不是很有用——我们希望得到一个像 `<html>...</html>` .哪里出了问题？
 
 Initially, our JSX looks like this:最初，我们的 JSX 如下所示：
 
@@ -847,7 +847,7 @@ Now, *that* is the kind of tree that we can pass to `JSON.stringify` and send to
 
 Let's write a function called `renderJSXToClientJSX`. It will take a piece of JSX as an argument, and it will attempt to "resolve" its server-only parts (by calling the corresponding components) until we're only left with JSX that the client can understand.让我们编写一个名为 `renderJSXToClientJSX` .它将把一段 JSX 作为参数，并尝试“解析”其仅限服务器的部分（通过调用相应的组件），直到我们只剩下客户端可以理解的 JSX。
 
-Structurally, this function is similar to `renderJSXToHTML`, but instead of HTML, it traverses and returns objects:从结构上讲，此函数类似于 ，但它遍历并返回对象 `renderJSXToHTML` ，而不是 HTML：
+Structurally, this function is similar to `renderJSXToHTML`, but instead of HTML, it traverses and returns objects:从结构上讲，此函数类似于，但它遍历并返回对象 `renderJSXToHTML` ，而不是 HTML：
 
 ```
 async function renderJSXToClientJSX(jsx) {
@@ -908,11 +908,11 @@ async function sendJSX(res, jsx) {
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/competent-dawn-grmx8d?file=%2Fserver.js%3A1%2C1)**
 
-Now clicking on a link shows an alert with a tree that looks similar to HTML — which means we're ready to try diffing it!现在，单击链接会显示一个警报，其中包含一个类似于 HTML 的树——这意味着我们已准备好尝试区分它！
+Now clicking on a link shows an alert with a tree that looks similar to HTML — which means we're ready to try diffing it! 现在，单击链接会显示一个警报，其中包含一个类似于 HTML 的树——这意味着我们已准备好尝试区分它！
 
 > Note: For now, our goal is to get something working, but there's a lot left to be desired in the implementation. The format itself is very verbose and repetitive, so the real RSC uses a more compact format. As with HTML generation earlier, it's bad that the entire response is being `await`ed at once. Ideally, we want to be able to stream JSX in chunks as they become available, and piece them together on the client. It's also unfortunate that we're resending parts of the shared layout (like `<html>` and `<nav>`) when we know for a fact that they have not changed. While it's important to have the *ability* to refresh the entire screen in-place, navigations within a single layout should not ideally refetch that layout by default. **A production-ready RSC implementation doesn't suffer from these flaws, but we will embrace them for now to keep the code easier to digest.**注意：目前，我们的目标是让一些东西正常工作，但在实现中还有很多不足之处。格式本身非常冗长和重复，因此真正的 RSC 使用更紧凑的格式。与之前的 HTML 生成一样，整个响应同时被 `await` 编辑是很糟糕的。理想情况下，我们希望能够在 JSX 可用时将它们分块流式传输，并在客户端上将它们拼凑在一起。同样不幸的是，当我们知道共享布局的某些部分（如 `<html>` 和 `<nav>` ）没有更改时，我们却重新发送了它们。虽然能够就地刷新整个屏幕很重要，但默认情况下，单个布局中的导航不应理想地重新提取该布局。生产就绪的 RSC 实现不会受到这些缺陷的影响，但我们现在将接受它们，以使代码更易于理解。
 
-### Step 5.3: Let's apply JSX updates on the client步骤 5.3：让我们在客户端上应用 JSX 更新
+### Step 5.3: Let's apply JSX updates on the client 步骤 5.3：让我们在客户端上应用 JSX 更新
 
 Strictly saying, we don't have to use React to diff JSX. So far, our JSX nodes *only* contain built-in browser components like `<nav>`, `<footer>`. You could start with a library that doesn't have a concept of client-side components at all, and use it to diff and apply the JSX updates. However, we'll want to allow rich interactivity later on, so we will be using React from the start.严格来说，我们不必使用 React 来区分 JSX。到目前为止，我们的 JSX 节点只包含内置的浏览器组件，如 `<nav>` 、 `<footer>` 。你可以从一个完全没有客户端组件概念的库开始，并使用它来区分和应用 JSX 更新。但是，我们希望稍后允许丰富的交互性，因此我们将从一开始就使用 React。
 
@@ -959,7 +959,7 @@ This will achieve what we wanted — it will update the DOM in the same way Reac
 
 Now let's figure out how to implement these two functions.现在让我们弄清楚如何实现这两个功能。
 
-#### Step 5.3.1: Let's fetch JSX from the server步骤 5.3.1： 让我们从服务器获取 JSX
+#### Step 5.3.1: Let's fetch JSX from the server 步骤 5.3.1：让我们从服务器获取 JSX
 
 We'll start with `fetchClientJSX` because it is easier to implement.我们将从 `fetchClientJSX` 它开始，因为它更容易实现。
 
@@ -1063,11 +1063,11 @@ function parseJSX(key, value) {
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/silly-silence-v7lq4p?file=%2Fclient.js%3A1%2C1)**
 
-Now you can navigate between the pages again — but the updates are fetched as JSX and applied on the client!现在，您可以再次在页面之间导航 - 但更新是作为 JSX 获取并应用于客户端的！
+Now you can navigate between the pages again — but the updates are fetched as JSX and applied on the client! 现在，您可以再次在页面之间导航 - 但更新是作为 JSX 获取并应用于客户端的！
 
 If you type into the input and then click a link, you'll notice the `<input>` state is preserved on all navigations except the very first one. This is because we haven't told React what the initial JSX for the page is, and so it can't attach to the server HTML properly.如果在输入中键入内容，然后单击链接，则会注意到 `<input>` 除第一个导航之外的所有导航都保留了该状态。这是因为我们没有告诉 React 页面的初始 JSX 是什么，因此它无法正确附加到服务器 HTML。
 
-#### Step 5.3.2: Let's inline the initial JSX into the HTML步骤 5.3.2：让我们将初始 JSX 内联到 HTML 中
+#### Step 5.3.2: Let's inline the initial JSX into the HTML 步骤 5.3.2：让我们将初始 JSX 内联到 HTML 中
 
 We still have this bit of code:我们仍然有这一段代码：
 
@@ -1079,7 +1079,7 @@ function getInitialClientJSX() {
 }
 ```
 
-We need to hydrate the root with the initial client JSX, but where do we get that JSX on the client?我们需要使用初始客户端 JSX 来激活根目录，但是我们从哪里获得客户端上的 JSX？
+We need to hydrate the root with the initial client JSX, but where do we get that JSX on the client？我们需要使用初始客户端 JSX 来激活根目录，但是我们从哪里获得客户端上的 JSX？
 
 Our page is server-rendered to HTML; however, for further navigations we need to tell React what the initial JSX for the page was. In some cases, it might be possible to partially reconstruct from the HTML, but not always—especially when we start adding interactive features in the next part of this series. We also don't want to *fetch* it since it would create an unnecessary waterfall.我们的页面是服务器呈现为 HTML 的;但是，对于进一步的导航，我们需要告诉 React 页面的初始 JSX 是什么。在某些情况下，也许可以从 HTML 进行部分重建，但并非总是如此，尤其是当我们在本系列的下一部分开始添加交互式功能时。我们也不想获取它，因为它会产生不必要的瀑布。
 
@@ -1125,11 +1125,11 @@ That's the goal we originally set out to accomplish! Of course, preserving the s
 
 > Note: Although a real RSC implementation *does* encode the JSX in the HTML payload, there are a few important differences. A production-ready RSC setup sends JSX chunks as they're being produced instead of a single large blob at the end. When React loads, hydration can start immediately—React starts traversing the tree using the JSX chunks that are already available instead of waiting for all of them to arrive. RSC also lets you mark some components as *Client* components, which means they *still* get SSR'd into HTML, but their code *is* included in the bundle. For Client components, only JSON of their props gets serialized. In the future, React may add extra mechanisms to deduplicate content between HTML and the embedded payload.注意：尽管真正的 RSC 实现确实在 HTML 有效负载中对 JSX 进行编码，但还是存在一些重要的区别。生产就绪的 RSC 设置会在生成 JSX 块时发送它们，而不是在最后发送单个大 blob。当 React 加载时，冻结可以立即开始——React 开始使用已经可用的 JSX 块遍历树，而不是等待所有块到达。RSC 还允许您将某些组件标记为客户端组件，这意味着它们仍将 SSR 转换为 HTML，但它们的代码包含在捆绑包中。对于客户端组件，仅序列化其 props 的 JSON。将来，React 可能会添加额外的机制来删除 HTML 和嵌入式有效负载之间的重复内容。
 
-## Step 6: Let's clean things up第 6 步：让我们清理一下
+## Step 6: Let's clean things up 第 6 步：让我们清理一下
 
 Now that our code actually *works*, we're going to move the architecture a tiny bit closer to the real RSC. We're still not going to implement complex mechanisms like streaming yet, but we'll fix a few flaws and prepare for the next wave of features.现在我们的代码已经真正工作了，我们将把架构稍微靠近真正的 RSC。我们仍然不打算实现像流媒体这样的复杂机制，但我们将修复一些缺陷，并为下一波功能做好准备。
 
-### Step 6.1: Let's avoid duplicating work步骤 6.1：避免重复工作
+### Step 6.1: Let's avoid duplicating work 步骤 6.1：避免重复工作
 
 Have another look at [how we're producing the initial HTML](https://codesandbox.io/p/sandbox/vigorous-lichterman-i30pi4?file=%2Fserver.js%3A118%2C1-119%2C53):再看看我们是如何生成初始 HTML 的：
 
@@ -1169,7 +1169,7 @@ Now components are only called once per request, as they should be.现在，每�
 
 **[Open this example in a sandbox.在沙盒中打开此示例。](https://codesandbox.io/p/sandbox/serverless-morning-ith5fg?file=%2Fserver.js)**
 
-### Step 6.2: Let's use React to render HTML步骤 6.2：让我们使用 React 来渲染 HTML
+### Step 6.2: Let's use React to render HTML 步骤 6.2：让我们使用 React 来渲染 HTML
 
 Initially, we needed a custom `renderJSXToHTML` implementation so that we could control how it executes our components. For example, we've need to add support for `async` functions to it. But now that we pass a precomputed client JSX tree to it, there is no point to maintaining a custom implementation. Let's delete it, and use React's built-in [`renderToString`](https://react.dev/reference/react-dom/server/renderToString) instead:最初，我们需要一个自定义 `renderJSXToHTML` 实现，以便我们可以控制它如何执行我们的组件。例如，我们需要向它添加对 `async` 函数的支持。但是现在我们向它传递了一个预先计算的客户端 JSX 树，维护自定义实现就没有意义了。让我们删除它，改用 React 的内置： `renderToString`
 
@@ -1188,13 +1188,13 @@ async function sendHTML(res, jsx) {
 
 Notice a parallel with the client code. Even though we've implemented new features (like `async` components), we're still able to use existing React APIs like `renderToString` or `hydrateRoot`. It's just that the way we use them is different.请注意与客户端代码的并行。即使我们已经实现了新功能（如 `async` 组件），我们仍然能够使用现有的 React API，例如 `renderToString` 或 `hydrateRoot` 。只是我们使用它们的方式不同。
 
-In a traditional server-rendered React app, you'd call `renderToString` and `hydrateRoot` with your root `<App />` component. But in our approach, we first evaluate the "server" JSX tree using `renderJSXToClientJSX`, and pass its *output* to the React APIs.在传统的服务器渲染的 React 应用中，你可以使用根 `<App />` 组件调用 `renderToString` and `hydrateRoot` 。但是在我们的方法中，我们首先使用 `renderJSXToClientJSX` 评估 “服务器” JSX 树，并将其输出传递给 React API。
+In a traditional server-rendered React app, you'd call `renderToString` and `hydrateRoot` with your root `<App />` component. But in our approach, we first evaluate the "server" JSX tree using `renderJSXToClientJSX`, and pass its *output* to the React APIs.在传统的服务器渲染的 React 应用中，你可以使用根 `<App />` 组件调用 `renderToString` and `hydrateRoot` 。但是在我们的方法中，我们首先使用 `renderJSXToClientJSX` 评估“服务器”JSX 树，并将其输出传递给 React API。
 
 In a traditional server-rendered React app, components execute in the same way *both* on the server and the client. But in our approach, components like `Router`, `BlogIndexPage` and `Footer` are effectively server-*only* (at least, for now).在传统的服务器渲染的 React 应用中，组件在服务器和客户端上的执行方式相同。但是在我们的方法中，像 和 `BlogIndexPage` `Footer` 这样的 `Router` 组件实际上是仅限服务器的（至少目前是这样）。
 
 As far as `renderToString` and `hydrateRoot` are concerned, it's pretty much as if `Router`, `BlogIndexPage` and `Footer` have never existed in the first place. By then, they have already "melted away" from the tree, leaving behind only their output.就 `renderToString` 和 `hydrateRoot` 而言，它几乎就像 `Router` 一样， `BlogIndexPage` `Footer` 并且从一开始就不存在。到那时，它们已经从树上“融化”了，只留下了它们的输出。
 
-### Step 6.3: Let's split the server in two步骤 6.3：让我们将服务器一分为二
+### Step 6.3: Let's split the server in two 步骤 6.3：让我们将服务器一分为二
 
 In the previous step, we've decoupled running components from generating HTML:在上一步中，我们已将正在运行的组件与生成 HTML 分离：
 
@@ -1304,7 +1304,7 @@ We're going to keep this separation between RSC and "the rest of the world" (SSR
 
 ## Recap 回顾
 
-And we're done for today!今天就到此为止了！
+And we're done for today! 今天就到此为止了！
 
 It might seem like we've written a lot of code, but we really haven't:看起来我们已经写了很多代码，但我们实际上没有：
 
@@ -1334,13 +1334,13 @@ If reading through this post wasn't enough to satisfy your curiosity, why not pl
 Here's a few ideas for things you can try:以下是您可以尝试的一些想法：
 
 * Add a random background color to the `<body>` of the page, and add a transition on the background color. When you navigate between the pages, you should see the background color animating.向 `<body>` 页面添加随机背景色，并在背景色上添加过渡。当您在页面之间导航时，您应该会看到背景颜色的动画效果。
-* Implement support for [fragments (`<>`)](https://react.dev/reference/react/Fragment) in the RSC renderer. This should only take a couple of lines of code, but you need to figure out where to place them and what they should do.在 RSC 渲染器中实现对片段 （ `<>` ） 的支持。这应该只需要几行代码，但你需要弄清楚把它们放在哪里以及它们应该做什么。
-* Once you do that, change the blog to format the blog posts as Markdown using the `<Markdown>` component from `react-markdown`. Yes, our existing code should be able to handle that!完成此操作后，使用 中的 `<Markdown>` 组件将博客更改为 `react-markdown` Markdown 格式。是的，我们现有的代码应该能够处理这个问题！
+* Implement support for [fragments (`<>`)](https://react.dev/reference/react/Fragment) in the RSC renderer. This should only take a couple of lines of code, but you need to figure out where to place them and what they should do.在 RSC 渲染器中实现对片段（ `<>` ）的支持。这应该只需要几行代码，但你需要弄清楚把它们放在哪里以及它们应该做什么。
+* Once you do that, change the blog to format the blog posts as Markdown using the `<Markdown>` component from `react-markdown`. Yes, our existing code should be able to handle that! 完成此操作后，使用 中的 `<Markdown>` 组件将博客更改为 `react-markdown` Markdown 格式。是的，我们现有的代码应该能够处理这个问题！
 * The `react-markdown` component supports specifying custom implementations for different tags. For example, you can make your own `Image` component and pass it as `<Markdown components={{ img: Image }}>`. Write an `Image` component that measures the image dimensions (you can use some npm package for that) and automatically emits `width` and `height`.该 `react-markdown` 组件支持为不同的标签指定自定义实现。例如，您可以创建自己的 `Image` 组件并将其作为 `<Markdown components={{ img: Image }}>` .编写一个 `Image` 测量图像尺寸的组件（您可以使用一些 npm 包来实现）并自动发出 `width` 和 `height` .
 * Add a comment section to each blog post. Keep comments stored in a JSON file on the disk. You will need to use `<form>` to submit the comments. As an extra challenge, extend the logic in `client.js` to intercept form submissions and prevent reloading the page. Instead, after the form submits, refetch the page JSX so that the comment list updates in-place.为每篇博文添加评论部分。将注释存储在磁盘上的 JSON 文件中。您将需要用于 `<form>` 提交评论。作为额外的挑战，扩展逻辑以 `client.js` 拦截表单提交并防止重新加载页面。相反，在表单提交后，重新获取页面 JSX，以便注释列表就地更新。
 * Pressing the Back button currently always refetches fresh JSX. Change the logic in `client.js` so that Back/Forward navigation reuses previously cached responses, but clicking a link always fetches a fresh response. This would ensure that pressing Back and Forward always feels instant, similar to how the browser treats full-page navigations.按下 Back 按钮当前总是会重新获取新的 JSX。更改中的 `client.js` 逻辑，以便“后退/前进”导航重用以前缓存的响应，但单击链接始终会获取新的响应。这将确保按“后退”和“前进”始终感觉即时，类似于浏览器处理整页导航的方式。
-* When you navigate between two different blog posts, their *entire* JSX gets diffed. But this doesn't always make sense — conceptually, these are two *different* posts. For example, if you start typing a comment on one of them, but then press a link, you don't want that comment to be preserved just because the input is in the same location. Can you think of a way to solve this? (Hint: You might want to teach the `Router` component to treat different pages with different URLs as different components by wrapping the `{page}` with something. Then you'd need to ensure this "something" doesn't get lost over the wire.)当您在两篇不同的博客文章之间导航时，它们的整个 JSX 会有所不同。但这并不总是有意义的——从概念上讲，这是两个不同的帖子。例如，如果您开始在其中一个上键入注释，但随后按下链接，则不希望仅仅因为输入位于同一位置而保留该注释。你能想出解决这个问题的方法吗？（提示：您可能希望通过 `{page}` 用 something 包装来教组件将具有不同 URL 的不同页面视为不同的 `Router` 组件。然后，您需要确保这个“东西”不会通过电线丢失。
+* When you navigate between two different blog posts, their *entire* JSX gets diffed. But this doesn't always make sense — conceptually, these are two *different* posts. For example, if you start typing a comment on one of them, but then press a link, you don't want that comment to be preserved just because the input is in the same location. Can you think of a way to solve this? (Hint: You might want to teach the `Router` component to treat different pages with different URLs as different components by wrapping the `{page}` with something. Then you'd need to ensure this "something" doesn't get lost over the wire.) 当您在两篇不同的博客文章之间导航时，它们的整个 JSX 会有所不同。但这并不总是有意义的——从概念上讲，这是两个不同的帖子。例如，如果您开始在其中一个上键入注释，但随后按下链接，则不希望仅仅因为输入位于同一位置而保留该注释。你能想出解决这个问题的方法吗？（提示：您可能希望通过 `{page}` 用 something 包装来教组件将具有不同 URL 的不同页面视为不同的 `Router` 组件。然后，您需要确保这个“东西”不会通过电线丢失。
 * The format to which we serialize JSX is currently very repetitive. Do you have any ideas on how to make it more compact? You can check a production-ready RSC framework like Next.js App Router, or our [official non-framework RSC demo](https://github.com/reactjs/server-components-demo) for inspiration. Even without implementing streaming, it would be nice to at least represent the JSX elements in a more compact way.我们序列化 JSX 的格式目前非常重复。你对如何让它更紧凑有什么想法吗？您可以查看生产就绪的 RSC 框架，如 Next.js App Router，或我们的官方非框架 RSC 演示以获取灵感。即使没有实现流式处理，至少以更紧凑的方式表示 JSX 元素也很好。
-* Imagine you wanted to add support for Client Components to this code. How would you do it? Where would you start?假设您希望向此代码添加对客户端组件的支持。你会怎么做？你会从哪里开始？
+* Imagine you wanted to add support for Client Components to this code. How would you do it? Where would you start？假设您希望向此代码添加对客户端组件的支持。你会怎么做？你会从哪里开始？
 
 Have fun! 玩得愉快！

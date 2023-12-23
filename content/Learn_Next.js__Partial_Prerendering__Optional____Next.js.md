@@ -2,13 +2,13 @@
 
 In this chapter... 在本章中...
 
-Here are the topics we’ll cover以下是我们将涵盖的主题
+Here are the topics we’ll cover 以下是我们将涵盖的主题
 
 What Partial Prerendering is.什么是局部预渲染。
 
 How Partial Prerendering works.局部预渲染的工作原理。
 
-## [Combining Static and Dynamic Content结合静态和动态内容](#combining-static-and-dynamic-content)
+## [Combining Static and Dynamic Content 结合静态和动态内容](#combining-static-and-dynamic-content)
 
 Currently, if you call a [dynamic function](https://nextjs.org/docs/app/building-your-application/routing/route-handlers#dynamic-functions) inside your route (e.g. `noStore()`, `cookies()`, etc), your whole route becomes dynamic.目前，如果你在路由中调用一个动态函数（例如 `noStore()` ，、 `cookies()` 等），你的整个路由就会变成动态的。
 
@@ -16,11 +16,11 @@ This aligns with how most web apps are built today, you either choose between st
 
 However, most routes are not fully static or dynamic. You may have a route that has both static and dynamic content. For example, let's say you have a social media feed, the posts would be static, but the likes for the post would be dynamic. Or an ecommerce site, where the product details are static, but the user's cart is dynamic.但是，大多数路由不是完全静态或动态的。您可能有一个同时包含静态和动态内容的路由。例如，假设您有一个社交媒体提要，帖子将是静态的，但帖子的点赞将是动态的。或者一个电子商务网站，其中产品详细信息是静态的，但用户的购物车是动态的。
 
-Going back to your dashboard page, what components would you consider static vs. dynamic?回到您的仪表板页面，您认为哪些组件是静态的，哪些是动态的？
+Going back to your dashboard page, what components would you consider static vs. dynamic？回到您的仪表板页面，您认为哪些组件是静态的，哪些是动态的？
 
 Once you're ready, click the button below to see how we would split the dashboard route:准备就绪后，单击下面的按钮，查看我们将如何拆分仪表板路由：
 
-## [What is Partial Prerendering?什么是局部预渲染？](#what-is-partial-prerendering)
+## [What is Partial Prerendering？什么是局部预渲染？](#what-is-partial-prerendering)
 
 In Next.js 14, there is a preview of a new rendering model called **Partial Prerendering**. Partial Prerendering is an experimental feature that allows you to render a route with a static loading shell, while keeping some parts dynamic. In other words, you can isolate the dynamic parts of a route. For example:在 Next.js 14 中，有一个名为“部分预渲染”的新渲染模型的预览。部分预渲染是一项实验性功能，它允许您使用静态加载 shell 渲染路由，同时保持某些部分的动态状态。换言之，您可以隔离路由的动态部分。例如：
 
@@ -36,13 +36,13 @@ This is different from how your application behaves today, where entire routes a
 
 Partial Prerendering combines ultra-quick static edge delivery with fully dynamic capabilities and we believe it has the potential to [become the default rendering model for web applications](https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model), bringing together the best of static site generation and dynamic delivery.部分预渲染将超快速的静态边缘交付与完全动态的功能相结合，我们相信它有可能成为 Web 应用程序的默认渲染模型，将静态站点生成和动态交付的最佳功能结合在一起。
 
-### It’s time to take a quiz!是时候做个测验了！
+### It’s time to take a quiz! 是时候做个测验了！
 
 Test your knowledge and see what you’ve just learned.测试你的知识，看看你刚刚学到了什么。
 
-What are the holes in the context of Partial Prerendering?部分预渲染的上下文中有哪些漏洞？
+What are the holes in the context of Partial Prerendering？部分预渲染的上下文中有哪些漏洞？
 
-## [How does Partial Prerendering work?局部预渲染是如何工作的？](#how-does-partial-prerendering-work)
+## [How does Partial Prerendering work？局部预渲染是如何工作的？](#how-does-partial-prerendering-work)
 
 Partial Prerendering leverages React's [Concurrent APIs](https://react.dev/blog/2021/12/17/react-conf-2021-recap#react-18-and-concurrent-features) and uses [Suspense](https://react.dev/reference/react/Suspense) to defer rendering parts of your application until some condition is met (e.g. data is loaded).部分预渲染利用 React 的并发 API，并使用 Suspense 延迟渲染应用程序的部分，直到满足某些条件（例如加载数据）。
 

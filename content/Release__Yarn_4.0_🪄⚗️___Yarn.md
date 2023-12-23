@@ -29,7 +29,7 @@ Yarn attempts to protect you from common attacks, and this is pushed even furthe
 * It will validate the resolutions stored in the lockfile are consistent with what the ranges could resolve to.它将验证存储在锁定文件中的分辨率是否与范围可以解析的内容一致。
 * It will validate that the package metadata stored in the lockfile are consistent the remote registry metadata.它将验证存储在锁文件中的包元数据是否与远程注册表元数据一致。
 
-Together, those checks will prevent any attacker from surreptitiously modifying your lockfiles when making PRs to your project using Yarn (<https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/>).总之，这些检查将防止任何攻击者在使用 Yarn （https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/） 为您的项目制作 PR 时偷偷修改您的锁文件。
+Together, those checks will prevent any attacker from surreptitiously modifying your lockfiles when making PRs to your project using Yarn (<https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/>).总之，这些检查将防止任何攻击者在使用 Yarn（https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/）为您的项目制作 PR 时偷偷修改您的锁文件。
 
 tip 提示
 

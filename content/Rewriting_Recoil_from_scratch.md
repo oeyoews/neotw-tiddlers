@@ -1,6 +1,6 @@
 Recoil is a slick new React library written by some people at Facebook that work on a tool called ["Comparison View."](https://www.youtube.com/watch?v=_ISAA_Jt9kI) It came about because of ergonomics and [performance issues with context](https://github.com/facebook/react/issues/14620) and `useState`. It's a very clever library, and almost everyone will find a use for it - check out this [explainer video](https://www.youtube.com/watch?v=_ISAA_Jt9kI) if you want to learn more.Recoil 是一个漂亮的新 React 库，由 Facebook 的一些人编写，他们使用一个名为“比较视图”的工具。它的出现是因为人体工程学和上下文和 `useState` 性能问题。这是一个非常聪明的库，几乎每个人都会发现它的用途 - 如果您想了解更多信息，请查看此解释器视频。
 
-At first I was really taken aback by the talk of graph theory and the wondrous magic that Recoil performs, but after a while I started to see that maybe it's not that special after all. Here's my shot at implementing something similar!起初，我真的被图论和 Recoil 执行的奇妙魔术吓了一跳，但过了一段时间，我开始发现它可能毕竟没有那么特别。这是我实现类似东西的镜头！
+At first I was really taken aback by the talk of graph theory and the wondrous magic that Recoil performs, but after a while I started to see that maybe it's not that special after all. Here's my shot at implementing something similar! 起初，我真的被图论和 Recoil 执行的奇妙魔术吓了一跳，但过了一段时间，我开始发现它可能毕竟没有那么特别。这是我实现类似东西的镜头！
 
 Before I get started, please note that the way I've implemented my Recoil clone is completely different to how the actual Recoil is implemented. Don't assume anything about Recoil from this.在开始之前，请注意，我实现 Recoil 克隆的方式与实际 Recoil 的实现方式完全不同。不要从中假设任何关于 Recoil 的事情。
 
@@ -22,11 +22,11 @@ Finally I update the `update` method to emit the new values whenever the state i
 
 Phew! 唷！
 
-It's time to write the atom up into our React components. To do this, I've created a hook called `useCoiledValue`. ([sound familiar?](https://recoiljs.org/docs/api-reference/core/useRecoilValue/))是时候将原子写入我们的 React 组件了。为此，我创建了一个名为 `useCoiledValue` .（听起来很熟悉？
+It's time to write the atom up into our React components. To do this, I've created a hook called `useCoiledValue`. ([sound familiar?](https://recoiljs.org/docs/api-reference/core/useRecoilValue/)) 是时候将原子写入我们的 React 组件了。为此，我创建了一个名为 `useCoiledValue` .（听起来很熟悉？
 
 This hook returns the current state of an atom, and listens and re-renders whenever the value changes. Whenever the hook is unmounted, it disconnects the listener.此钩子返回原子的当前状态，并在值更改时侦听并重新呈现。每当钩子被卸载时，它都会断开侦听器的连接。
 
-One thing that's a little weird here is the `updateState` hook. By performing a set state with a new object reference (`{}`), React will re-render the component. This is a little bit of a hack, but it's an easy way to make sure the component re-renders.这里有点奇怪的一件事是 `updateState` 钩子。通过使用新的对象引用 （ `{}` ） 执行设置状态，React 将重新渲染组件。这有点小问题，但它是确保组件重新渲染的简单方法。
+One thing that's a little weird here is the `updateState` hook. By performing a set state with a new object reference (`{}`), React will re-render the component. This is a little bit of a hack, but it's an easy way to make sure the component re-renders.这里有点奇怪的一件事是 `updateState` 钩子。通过使用新的对象引用（ `{}` ）执行设置状态，React 将重新渲染组件。这有点小问题，但它是确保组件重新渲染的简单方法。
 
 Next I've added a `useCoiledState` method. This has a very similar API to `useState` - it gives you the current value of the state and allows you to set a new one.接下来，我添加了一个 `useCoiledState` 方法。这与 API 非常相似 `useState` - 它为您提供状态的当前值，并允许您设置新的值。
 
@@ -50,7 +50,7 @@ In our case, I'm going to rename the `get` method to be called `generator`. I'm 
 
 In code, we can capture this `generate` method with the following type signature.在代码中，我们可以使用以下类型签名来捕获此 `generate` 方法。
 
-For those unfamilar with Typescript, it's a function that takes a context object (`GeneratorContext`) as a parameter and returns some value `T`. This return value is what becomes the internal state of the selector.对于那些不熟悉 Typescript 的人来说，它是一个将上下文对象 （ `GeneratorContext` ） 作为参数并返回一些值 `T` 的函数。此返回值将成为选择器的内部状态。
+For those unfamilar with Typescript, it's a function that takes a context object (`GeneratorContext`) as a parameter and returns some value `T`. This return value is what becomes the internal state of the selector.对于那些不熟悉 Typescript 的人来说，它是一个将上下文对象（ `GeneratorContext` ）作为参数并返回一些值 `T` 的函数。此返回值将成为选择器的内部状态。
 
 What does the `GeneratorContext` object do?`GeneratorContext` 物体有什么作用？
 
@@ -68,7 +68,7 @@ This selector is only good for generating state once. In order to react to chang
 
 To do this, let's update the `getDep` method to subscribe to the dependencies and call the `updateSelector` method. To make sure the selector only updates once per change, let's keep track of the deps using a `Set`.为此，让我们更新方法以订阅依赖项并调用该 `getDep` `updateSelector` 方法。为确保选择器每次更改仅更新一次，让我们使用 `Set` .
 
-The `updateSelector` method is very similar to the constructor in the previous example. It creates the `GeneratorContext`, runs the `generate` method and then uses the `update` method from the `Stateful` base class.该 `updateSelector` 方法与上一示例中的构造函数非常相似。它创建 ，运行该 `generate` 方法 `GeneratorContext` ，然后使用基类中 `update` `Stateful` 的方法。
+The `updateSelector` method is very similar to the constructor in the previous example. It creates the `GeneratorContext`, runs the `generate` method and then uses the `update` method from the `Stateful` base class.该 `updateSelector` 方法与上一示例中的构造函数非常相似。它创建，运行该 `generate` 方法 `GeneratorContext` ，然后使用基类中 `update` `Stateful` 的方法。
 
 Almost done! Recoil has some helper functions for creating atoms and selectors. Since most JavaScript devs consider classes evil, they'll help mask our atrocities.快完成了！Recoil 有一些用于创建原子和选择器的辅助函数。由于大多数 JavaScript 开发人员认为类是邪恶的，因此它们将有助于掩盖我们的暴行。
 
@@ -80,7 +80,7 @@ Oh, remember that `useCoiledValue` hook from before? Let's update that to accept
 
 That's it! We've done it! 🎉就是这样！我们做到了！🎉
 
-Give yourself a pat on your back!拍拍自己的背！
+Give yourself a pat on your back! 拍拍自己的背！
 
 Finished? 完成？
 
@@ -104,4 +104,4 @@ Other than that, hopefully I've shown you that you don't always have to look to 
 
 ***
 
-After writing this post I was shown the [jotai](https://github.com/react-spring/jotai) library. It's for a very similar feature set to my clone and supports async!写完这篇文章后，我看到了jotai图书馆。它的功能集与我的克隆非常相似，并支持异步！
+After writing this post I was shown the [jotai](https://github.com/react-spring/jotai) library. It's for a very similar feature set to my clone and supports async! 写完这篇文章后，我看到了 jotai 图书馆。它的功能集与我的克隆非常相似，并支持异步！

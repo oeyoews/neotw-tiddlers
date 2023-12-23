@@ -1,1 +1,1 @@
-* gh-page 浏览器缓存更像是服务端缓存, 并且 assign domain, 很慢, 建议使用 vercel
+* gh-page 浏览器缓存更像是服务端缓存，并且 assign domain, 很慢，建议使用 vercel

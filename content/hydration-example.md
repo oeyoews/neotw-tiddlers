@@ -10,7 +10,7 @@ export const Random = () => {
 };
 ```
 
-当这个Random 组件放在server 组件上时, 就会出现Hydration 错误, 因为client 组件, 也会在server, 执行一遍, 然后再client 执行一遍, 解决办法就是使用pure components. 或者使用useeffect.
+当这个 Random 组件放在 server 组件上时，就会出现 Hydration 错误，因为 client 组件，也会在 server, 执行一遍，然后再 client 执行一遍，解决办法就是使用 pure components. 或者使用 useeffect.
 
 ```tsx
 'use client';
@@ -23,4 +23,4 @@ export const Random = ({ num }: { num: number }) => {
 };
 ```
 
-数据使用props传递, 直接在server渲染时指定固定的随机值.
+数据使用 props 传递，直接在 server 渲染时指定固定的随机值。

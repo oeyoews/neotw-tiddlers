@@ -16,7 +16,7 @@ const CanvasQRCode: React.FC<CanvasQRCodeProps> = ({ value }) => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // 清空canvas
+    // 清空 canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // 生成二维码

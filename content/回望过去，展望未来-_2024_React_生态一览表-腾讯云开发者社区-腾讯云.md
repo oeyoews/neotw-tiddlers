@@ -4,7 +4,7 @@
 
 ## **前言**
 
-`React` 最初是由 `Facebook`（`Meta`） 内部开发的，然后于 `2013 年 5 月 29 日`在 `Facebook` 的 F8 开发者会议上首次公开宣布，并**「于同一天开源发布」**。不知不觉中，`React`已经开源 10 年了。
+`React` 最初是由 `Facebook`（`Meta`）内部开发的，然后于 `2013 年 5 月 29 日`在 `Facebook` 的 F8 开发者会议上首次公开宣布，并**「于同一天开源发布」**。不知不觉中，`React`已经开源 10 年了。
 
 也不知道，大家是在何时接触的`React`的。我是大学（`2016年`）开始就关注`React`。当时，国内**「前后端分离技术」**都还没这么流行，(大部分公司都是`JSP`一把梭哈)。之前的`职业前端`更多的被戏称为**「切图仔」**。无非就是切切图和写样式，别笑。老前端真的会切图的。而且`PS`玩的贼溜。甚至当时有一个职业就是`CSS工程师`，他啥都不干，只负责页面样式的书写。
 
@@ -81,9 +81,9 @@ export default App;
 
 回想过去，一个古老`React`项目拿都是老三件
 
-* 组件库(`Antd`)
-* 状态管理(`Redux`)
-* 路由(`React Router`)
+* 组件库 (`Antd`)
+* 状态管理 (`Redux`)
+* 路由 (`React Router`)
 
 当时，我就是照着观看了几天的这几个的官方文档，入职到京东金融。毫不夸张的说，当时你要是能说出`React`的类组件的生命周期运行顺序，`Redux`的数据流向，还有`React Router`的配置处理，就可以找到一个工作。
 
@@ -143,7 +143,7 @@ export default App;
 
 假设现在有一个要求，要实现一个抛硬币的功能，当在`A页面`渲染时执行一些逻辑以模拟硬币的翻转！有一半的时间组件应该渲染为`正面`，另一半的时间应该渲染为`反面`。
 
-同时，这个组件在原有功能的基础上，还会被其他页面(`B`)调用，通过传人`showLabels`字段来显示`正面`和`反面`的字样，并且还有通过传人`showButton`来控制是否显示`Button`并用于触发硬币翻转。
+同时，这个组件在原有功能的基础上，还会被其他页面 (`B`) 调用，通过传人`showLabels`字段来显示`正面`和`反面`的字样，并且还有通过传人`showButton`来控制是否显示`Button`并用于触发硬币翻转。
 
 也就是在原有页面 A 中，我们是不传入`showLabels`,结果就是页面不会显示`正面`和`反面`的字样，但是在页面 B 中，我们传入了`showLabels`字段，会显示对应的字样。
 
@@ -234,7 +234,7 @@ export default CoinFlip;
 </CoinFlip>
 ```
 
-在`B页面`，我们可以直接按照我们想要显示的页面结构来搭建页面。而不需要考虑(`showLabels/showButton`)
+在`B页面`，我们可以直接按照我们想要显示的页面结构来搭建页面。而不需要考虑 (`showLabels/showButton`)
 
 ```
 <CoinFlip>
@@ -280,7 +280,7 @@ export default CoinFlip;
 
 ![](https://developer.qcloudimg.com/http-save/yehe-9016259/1572fc94fc80a3a8ea503fb488e21f2e.png)
 
-由于`Next.js`是自带的路由系统，在npmtrends\[1]中无法显现。
+由于`Next.js`是自带的路由系统，在 npmtrends\[1]中无法显现。
 
 * React Router\[2]：`React Router`仍然是处理 `React` 应用中路由的**「第一选择」**。凭借其丰富的文档和积极的社区，它继续是我们应用中声明性路由的可靠选择。
 * React Query\[3]：在 `2023` 年的普及基础上，`Tanstack` 的 `React Query` 将进一步增强数据获取和状态管理。它简化了在 `React` 应用中管理、缓存和同步数据的过程。
@@ -315,7 +315,7 @@ Redux Toolkit\[5] 是建立在 `Redux` 之上的全面状态管理库，`Redux` 
 
 Zustand\[6] 是一款轻量级和灵活的状态管理库，专为**「较小的项目」**或喜欢更简单解决方案的开发人员设计。它简化了状态管理，无需复杂的设置和概念。
 
-当然，还有`recoil/jotai`等,这里可以参考之前的[React-全局状态管理的群魔乱舞](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg3NjU2OTE1Mw%3D%3D%26mid%3D2247485562%26idx%3D1%26sn%3Df38cad7b25f7f94990722e8e66ed67bb%26scene%3D21%23wechat_redirect\&source=article\&objectId=2357811)
+当然，还有`recoil/jotai`等，这里可以参考之前的[React-全局状态管理的群魔乱舞](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzg3NjU2OTE1Mw%3D%3D%26mid%3D2247485562%26idx%3D1%26sn%3Df38cad7b25f7f94990722e8e66ed67bb%26scene%3D21%23wechat_redirect\&source=article\&objectId=2357811)
 
 在上面的内容中，我们没有涉及`Redux`，其实我刚开始接触的就是`Redux`，但是在后面的使用中，慢慢的发现它的**「样板代码」**太多，有一段时间差不多变成了，为了使用而使用，导致项目中的代码变得臃肿，而且还不够优雅。
 
@@ -331,7 +331,7 @@ Zustand\[6] 是一款轻量级和灵活的状态管理库，专为**「较小的
 
 ![](https://developer.qcloudimg.com/http-save/yehe-9016259/1ea61d513dc7a2e8bc5e97890f47dea2.png)
 
-### **1. TanStack Query（React Query）**
+### **1. TanStack Query (React Query)**
 
 `TanStack Query` 是用于处理应用程序中服务器状态的强大而灵活的状态管理库。它允许我们轻松地获取、缓存和更新来自服务器的数据。该库提供了自动缓存、高效的数据获取以及自定义 API 端点的功能。它非常适合需要实时数据更新和高效数据同步的应用程序，是管理服务器状态的绝佳选择。
 
@@ -343,7 +343,7 @@ RTK Query\[7] 是 `Redux Toolkit` 生态系统的一部分，提供了全面的�
 
 ## **5. 表单处理**
 
-想必作为一个功能完善的前端应用，处理表单是大家绕不开的一座大山。如果给你一个类似的功能需求，想必第一时间想到的是利用**「组件库」**(`antd/arco`)来完成此项任务。(`组件库`我们后面会单讲)
+想必作为一个功能完善的前端应用，处理表单是大家绕不开的一座大山。如果给你一个类似的功能需求，想必第一时间想到的是利用**「组件库」**(`antd/arco`) 来完成此项任务。(`组件库`我们后面会单讲)
 
 但是，如果表单过于复杂或者由于某些原因无法使用组件库，那你就需要手搓`from`了。
 
@@ -400,7 +400,7 @@ Playwright\[12] 是一个**「端到端测试框架」**，支持多种浏览器
 
 `CSS`作为**「表现层」**，是一个页面锦上添花的存在。
 
-由于`CSS`语言的自身特点(凌乱且不好进行管理)，导致一些项目中由于不合理使用，到时乱像丛生。
+由于`CSS`语言的自身特点 (凌乱且不好进行管理)，导致一些项目中由于不合理使用，到时乱像丛生。
 
 天下苦`CSS`久矣。于是，奋起反抗。出现了很多优秀的方案。
 
@@ -439,7 +439,7 @@ Ant Design\[16] 是一个用于构建企业级 `React` 应用程序的综合设�
 
 ### **2. Arco Design**
 
-Arco Design\[17] 字节跳动出品的企业级设计系统。 它有`Vue`和`React`的版本。
+Arco Design\[17] 字节跳动出品的企业级设计系统。它有`Vue`和`React`的版本。
 
 #### **3. Material-UI**
 
@@ -498,7 +498,7 @@ DaisyUI\[22] 是 `Tailwind CSS` 的扩展，带来了额外的组件和工具，
 
 这种`Table`的复杂程度，已经远远超出一般**「组件库」**中的`Table`的能力范围，想要实现相关的内容，我们可能利用原生`from`进行`cell/row`的数据拼接，简单的内容还是可以胜任的。但是，如果中间的操作多且繁琐，就是页面的搭建和逻辑的处理，都让人望尘莫及。
 
-如果，真有相关的需求，我们可以使用TanStack Table\[29]。这是一个**「无头 UI 库」**，可以让我们在各种框架中构建强大的表格和数据网格，如 `TS/JS`、`React`、`Vue`、`Solid` 和 `Svelte`，同时保留对标记和样式的控制
+如果，真有相关的需求，我们可以使用 TanStack Table\[29]。这是一个**「无头 UI 库」**，可以让我们在各种框架中构建强大的表格和数据网格，如 `TS/JS`、`React`、`Vue`、`Solid` 和 `Svelte`，同时保留对标记和样式的控制
 
 ***
 
@@ -726,7 +726,7 @@ function getNestedTranslation(
 
 \[31]
 
-**React-Intl（Format.js）: https://formatjs.io/docs/react-intl/**
+**React-Intl (Format.js): https://formatjs.io/docs/react-intl/**
 
 \[32]
 

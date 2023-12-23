@@ -1,4 +1,4 @@
-The special file `loading.js` helps you create meaningful Loading UI with [React Suspense](https://react.dev/reference/react/Suspense). With this convention, you can show an [instant loading state](#instant-loading-states) from the server while the content of a route segment loads. The new content is automatically swapped in once rendering is complete.这个特殊的文件 `loading.js` 可以帮助你使用React Suspense创建有意义的加载UI。使用此约定，您可以在加载路由段的内容时显示来自服务器的即时加载状态。渲染完成后，新内容将自动交换。
+The special file `loading.js` helps you create meaningful Loading UI with [React Suspense](https://react.dev/reference/react/Suspense). With this convention, you can show an [instant loading state](#instant-loading-states) from the server while the content of a route segment loads. The new content is automatically swapped in once rendering is complete.这个特殊的文件 `loading.js` 可以帮助你使用 React Suspense 创建有意义的加载 UI。使用此约定，您可以在加载路由段的内容时显示来自服务器的即时加载状态。渲染完成后，新内容将自动交换。
 
 ![Loading UI](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Floading-ui.png\&w=3840\&q=75\&dpl=dpl_6jgZkA1aPHMzMLgPhXqA9RmLmMXZ)![Loading UI](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Floading-ui.png\&w=3840\&q=75\&dpl=dpl_6jgZkA1aPHMzMLgPhXqA9RmLmMXZ)
 
@@ -37,7 +37,7 @@ In addition to `loading.js`, you can also manually create Suspense Boundaries fo
 
 ### [What is Streaming? 什么是流媒体？](#what-is-streaming)
 
-To learn how Streaming works in React and Next.js, it's helpful to understand **Server-Side Rendering (SSR)** and its limitations.要了解流式处理在 React 和 Next.js 中的工作原理，了解服务器端渲染 （SSR） 及其限制会很有帮助。
+To learn how Streaming works in React and Next.js, it's helpful to understand **Server-Side Rendering (SSR)** and its limitations.要了解流式处理在 React 和 Next.js 中的工作原理，了解服务器端渲染（SSR）及其限制会很有帮助。
 
 With SSR, there's a series of steps that need to be completed before a user can see and interact with a page:使用 SSR，需要完成一系列步骤，然后用户才能查看页面并与之交互：
 
@@ -67,7 +67,7 @@ Streaming works well with React's component model because each component can be 
 
 ![Chart showing Server Rendering with Streaming](https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fserver-rendering-with-streaming-chart.png\&w=3840\&q=75\&dpl=dpl_6jgZkA1aPHMzMLgPhXqA9RmLmMXZ)![Chart showing Server Rendering with Streaming](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fserver-rendering-with-streaming-chart.png\&w=3840\&q=75\&dpl=dpl_6jgZkA1aPHMzMLgPhXqA9RmLmMXZ)
 
-Streaming is particularly beneficial when you want to prevent long data requests from blocking the page from rendering as it can reduce the [Time To First Byte (TTFB)](https://web.dev/ttfb/) and [First Contentful Paint (FCP)](https://web.dev/first-contentful-paint/). It also helps improve [Time to Interactive (TTI)](https://developer.chrome.com/en/docs/lighthouse/performance/interactive/), especially on slower devices.当您希望防止长数据请求阻止页面呈现时，流式处理特别有用，因为它可以减少第一个字节的时间 （TTFB） 和首次内容绘制 （FCP）。它还有助于缩短交互时间 （TTI），尤其是在速度较慢的设备上。
+Streaming is particularly beneficial when you want to prevent long data requests from blocking the page from rendering as it can reduce the [Time To First Byte (TTFB)](https://web.dev/ttfb/) and [First Contentful Paint (FCP)](https://web.dev/first-contentful-paint/). It also helps improve [Time to Interactive (TTI)](https://developer.chrome.com/en/docs/lighthouse/performance/interactive/), especially on slower devices.当您希望防止长数据请求阻止页面呈现时，流式处理特别有用，因为它可以减少第一个字节的时间（TTFB）和首次内容绘制（FCP）。它还有助于缩短交互时间（TTI），尤其是在速度较慢的设备上。
 
 ### [Example 例](#example)
 

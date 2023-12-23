@@ -1,1 +1,1 @@
-vercel 的 cron 如果成为正式版就是付费的功能, 而且 cron 只是支持 serverless, 不同于 github actions 的定时触发更新
+vercel 的 cron 如果成为正式版就是付费的功能，而且 cron 只是支持 serverless, 不同于 github actions 的定时触发更新

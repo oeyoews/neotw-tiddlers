@@ -1,6 +1,6 @@
-如果 form 里面有 disable, 则 form 的 submit 全部不能用, 使用 readonly 代替
+如果 form 里面有 disable, 则 form 的 submit 全部不能用，使用 readonly 代替
 
-如果给 button 加一个 listener, 你会发现, 回车的时候, button 的点击事件也被触发了(仅仅只会触发第一个捕获到的 submit 事件 btn1)
+如果给 button 加一个 listener, 你会发现，回车的时候，button 的点击事件也被触发了 (仅仅只会触发第一个捕获到的 submit 事件 btn1)
 
 ```html
 <!DOCTYPE html>

@@ -108,7 +108,7 @@ function App() {
 }
 ```
 
-I have imported `createBrowserRouter`, `createRoutesFromElement`, `RouterProvider`.我已经导入 `createBrowserRouter` 了 、 、 `createRoutesFromElement` `RouterProvider` 。\
+I have imported `createBrowserRouter`, `createRoutesFromElement`, `RouterProvider`.我已经导入 `createBrowserRouter` 了、 、 `createRoutesFromElement` `RouterProvider` 。\
 Then, initialize a variable named `browserRoutes` to serve as that object that should be rendered. Noticed that I called the `createRoutesFromElements` function inside of the `createBrowserRouter` function. This was because I want to parse or convert the Routes to an object and the `createRoutesFromElements` as the name implies can help me do that. Then lastly the `RouterProvider` was returned with the value of the new `browserRouter`. Let's take a look at what we would have done without using the createRoutesFromElements function.然后，初始化一个名为 `browserRoutes` 作为应呈现的对象的变量。注意到我在函数内部调用了 `createRoutesFromElements` `createBrowserRouter` 函数。这是因为我想解析或将路由转换为对象，顾名思义 `createRoutesFromElements` 可以帮助我做到这一点。然后最后返回新的 `RouterProvider` `browserRouter` .让我们来看看如果不使用 createRoutesFromElements 函数，我们会做什么。
 
 ```plain
@@ -226,9 +226,9 @@ export default HomeComponent
 ```
 
 **Wow! 😲.. 哇！😲..**\
-Now see how we have just cleaned up the HomeComponent :)现在看看我们刚刚如何清理主页组件:)\
+Now see how we have just cleaned up the HomeComponent :) 现在看看我们刚刚如何清理主页组件:)\
 Noticed we got rid of the guard clause that checks if the data is null.请注意，我们删除了检查数据是否为空的 guard 子句。\
-This is because react-router makes it load the data as soon as the url/path is active. So, it Makes the necessary requests even before the **Component is Mounted**. Yes!这是因为 react-router 让它在 url/path 处于活动状态时立即加载数据。因此，它甚至在挂载组件之前就发出了必要的请求。是的！
+This is because react-router makes it load the data as soon as the url/path is active. So, it Makes the necessary requests even before the **Component is Mounted**. Yes! 这是因为 react-router 让它在 url/path 处于活动状态时立即加载数据。因此，它甚至在挂载组件之前就发出了必要的请求。是的！
 
 We are only making provisions for the happy path. What if we pass a non-existing endpoint? If that’s the case, don’t panic as react-router also allow us to pass components to another prop called `errorElement` .我们只是在为快乐的道路做准备。如果我们传递一个不存在的端点怎么办？如果是这种情况，请不要惊慌，因为 react-router 还允许我们将组件传递给另一个名为 `errorElement` .\
 This is specifically for Errors just as we use `ErrorBoundaries`. Let's see how this works in the snippet below 这是专门针对错误的，就像我们使用 `ErrorBoundaries` .让我们在下面的代码片段中看看它是如何工作的

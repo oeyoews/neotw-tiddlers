@@ -1,6 +1,6 @@
 > 本文作者：[江水](https://link.juejin.cn/?target=https%3A%2F%2Fwww.zhihu.com%2Fpeople%2Fli-quan-wei-41 "https://www.zhihu.com/people/li-quan-wei-41")
 
-背景: `Recoil` 是 `Facebook` 推出的一款专门针对`React`应用的状态管理库，在一定程度上代表了目前的一种发展趋势，在使用时觉得一些理念很先进，能极大地满足作为一个前端开发者的数据需求，本文对 `Recoil` 的这些特性做一个梳理。
+背景：`Recoil` 是 `Facebook` 推出的一款专门针对`React`应用的状态管理库，在一定程度上代表了目前的一种发展趋势，在使用时觉得一些理念很先进，能极大地满足作为一个前端开发者的数据需求，本文对 `Recoil` 的这些特性做一个梳理。
 
 根据官网的介绍，`Recoil` 的数据定义了一个有向图 (directed graph)，状态的变更是通过改变图的根节点 (atom)，再通过纯函数 (selector) 流向 `React` 组件。
 
@@ -38,7 +38,7 @@ const lastNameAtom = atom({
 });
 ```
 
-使用时通过 `useRecoilState` 这个 hooks 获取状态，可以看到它和 `useState` 很像，所以可以很轻松地将传统的React状态迁移到 `Recoil` 中。
+使用时通过 `useRecoilState` 这个 hooks 获取状态，可以看到它和 `useState` 很像，所以可以很轻松地将传统的 React 状态迁移到 `Recoil` 中。
 
 ```
  function UserProfile() {
@@ -92,7 +92,7 @@ const nameSelector({
 });
 ```
 
-值得一提的是，**selector支持从网络异步获取数据，这里才是有趣的开始，也是和其他状态管理的最大的不同，Recoil的状态不仅是纯状态，也可以是来自网络的状态**。
+值得一提的是，**selector 支持从网络异步获取数据，这里才是有趣的开始，也是和其他状态管理的最大的不同，Recoil 的状态不仅是纯状态，也可以是来自网络的状态**。
 
 ```
 const userSelector = selector({
@@ -219,7 +219,7 @@ function LocalUserStatus() {
 
 这里在组件层是不关心数据从哪来的， `Recoil` 会自动按需请求数据。
 
-相比之下，后者的代码就简洁许多(Render-as-You-Fetch)，而且背后并没有发明新的概念，用到的都是 `React` 原生的特性，这个特性就是 `Suspense`。
+相比之下，后者的代码就简洁许多 (Render-as-You-Fetch)，而且背后并没有发明新的概念，用到的都是 `React` 原生的特性，这个特性就是 `Suspense`。
 
 如果使用了一个异步的 `atom` 或 `selector` ，则外层需要一个 `Suspense` 处理网络未返回时的 `loading` 状态。也可以套一层 `ReactErrorBoundary` 处理网络异常的情况。
 
@@ -251,17 +251,17 @@ function App() {
 
 通过把通用的 `Loading` 和 `Error` 逻辑剥离出去，使得一般组件内的条件分支减少 66%，首次渲染即是数据准备完成的状态，减少了额外的处理逻辑以及 hooks 过早初始化问题。
 
-![屏幕录制2022-09-22 14.18.33.gif](https://p5.music.126.net/obj/LSnCvQ4FwpzDoBQ/288041617669/b0b5/95a3/20f6/6218fb472cfcd61185a187f5431d0f1a.gif)
+![屏幕录制 2022-09-22 14.18.33.gif](https://p5.music.126.net/obj/LSnCvQ4FwpzDoBQ/288041617669/b0b5/95a3/20f6/6218fb472cfcd61185a187f5431d0f1a.gif)
 
-> hooks 过早初始化问题可参考拙文: [Recoil 这个状态管理库，用起来可能是最爽的](https://link.juejin.cn/?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F528844615 "https://zhuanlan.zhihu.com/p/528844615")
+> hooks 过早初始化问题可参考拙文：[Recoil 这个状态管理库，用起来可能是最爽的](https://link.juejin.cn/?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F528844615 "https://zhuanlan.zhihu.com/p/528844615")
 
 ***
 
-### useRecoilValueLoadable(state) 读取数据，但返回的是个Loadable
+### useRecoilValueLoadable(state) 读取数据，但返回的是个 Loadable
 
 和 `useRecoilValue` 不同，`useRecoilValueLoadable` 不需要外层 `Suspense` ，相当于将边界情况交给用户处理。
 
-`Loadable` 的对象结构如下: ![Pasted image 20220919182920.png](https://p5.music.126.net/obj/LSnCvQ4FwpzDoBQ/288041617673/6017/8637/ea8d/d57bfacc149bf68135e4dbafc799aca3.png) 它的作用就是我们能够获取到当前数据是 `loading`, 还是已经 `hasValue`, 手动处理这些状态，适合灵活处理页面渲染的场景。
+`Loadable` 的对象结构如下：![Pasted image 20220919182920.png](https://p5.music.126.net/obj/LSnCvQ4FwpzDoBQ/288041617673/6017/8637/ea8d/d57bfacc149bf68135e4dbafc799aca3.png) 它的作用就是我们能够获取到当前数据是 `loading`, 还是已经 `hasValue`, 手动处理这些状态，适合灵活处理页面渲染的场景。
 
 ```
 const userLoadable = useRecoilValueLoadable(userSelector);
@@ -353,9 +353,9 @@ function TimeMachine() {
 }
 ```
 
-## 不使用 async-await也能实现异步转同步代码
+## 不使用 async-await 也能实现异步转同步代码
 
-在 `React` 的世界里一直存在着一种很奇怪的代码技巧，这种技巧能够不利用 `generator` 或者 `async` 就能达到异步转同步的功能，在了解 `Recoil` 的一些用法时我也留意到这种现象，很有意思，这里介绍下： 假如 `userSelector` 是一个需要从网络中获取的状态，对其的读取可视作一个异步操作，但是在写 `selector` 时我们可以以一种同步的方式来写。
+在 `React` 的世界里一直存在着一种很奇怪的代码技巧，这种技巧能够不利用 `generator` 或者 `async` 就能达到异步转同步的功能，在了解 `Recoil` 的一些用法时我也留意到这种现象，很有意思，这里介绍下：假如 `userSelector` 是一个需要从网络中获取的状态，对其的读取可视作一个异步操作，但是在写 `selector` 时我们可以以一种同步的方式来写。
 
 ```
 const userNameSeletor = selector({
@@ -377,7 +377,7 @@ function UserProfile() {
 }
 ```
 
-在组件中使用时是利用了外层的 `Suspense` 执行，在上述的 `get` 回调中内部也隐式地使用了相似手段，当发生异步时 `get` 方法会将`Promise`当成异常抛出，当异步结束时再重新执行这个函数，所以这个函数本身会执行两次，有点黑魔法的感觉，这也同样要求我们在此时应该保证`get`是一个纯函数。如果一个 `selector` 的 `get` 回调中存在网络请求，那就不再是一个纯函数，此时需要保证：**网络请求是在所有异步selector执行之后调用**。
+在组件中使用时是利用了外层的 `Suspense` 执行，在上述的 `get` 回调中内部也隐式地使用了相似手段，当发生异步时 `get` 方法会将`Promise`当成异常抛出，当异步结束时再重新执行这个函数，所以这个函数本身会执行两次，有点黑魔法的感觉，这也同样要求我们在此时应该保证`get`是一个纯函数。如果一个 `selector` 的 `get` 回调中存在网络请求，那就不再是一个纯函数，此时需要保证：**网络请求是在所有异步 selector 执行之后调用**。
 
 ```
 // 正确的用法
@@ -409,9 +409,9 @@ const nameSelector = selector({
 
 ## 最后，关于代码直觉，心智负担
 
-最近很多人会讨论一个库是否适合引入时会说到这两个词，在对一个库不了解的情况下我们很容易就说出“这个库太复杂了”，“要记忆的api太多了” 这类的话。在 `Recoil` 的世界里如果我们接受了 `atom`, `selector` ，那么 `atomFamily`, `selectorFamily` 也很容易理解。由于已经习惯了 `useState` 那么 `useRecoilValue`, `useSetRecoilValue` 也很容易接受， 都很符合 hooks 的直觉。
+最近很多人会讨论一个库是否适合引入时会说到这两个词，在对一个库不了解的情况下我们很容易就说出“这个库太复杂了”，“要记忆的 api 太多了”这类的话。在 `Recoil` 的世界里如果我们接受了 `atom`, `selector` ，那么 `atomFamily`, `selectorFamily` 也很容易理解。由于已经习惯了 `useState` 那么 `useRecoilValue`, `useSetRecoilValue` 也很容易接受，都很符合 hooks 的直觉。
 
-`Recoil` 的 api 和 `react` 自身的 `useState`, `useCallback`, `Suspense` 是概念一致的, 二者的使用反而会加深对 `react` 框架本身的理解，一脉相承，没有引入其他的编程概念，api虽多但心智负担并不大。举个反例，如果在 `react` 中使用 `observable` 类型的状态管理，我可能会思考 `useEffect` 在一些场景是否能够按预期工作，虽然某些特性使用起来很舒服，但却加深了心智负担。
+`Recoil` 的 api 和 `react` 自身的 `useState`, `useCallback`, `Suspense` 是概念一致的，二者的使用反而会加深对 `react` 框架本身的理解，一脉相承，没有引入其他的编程概念，api 虽多但心智负担并不大。举个反例，如果在 `react` 中使用 `observable` 类型的状态管理，我可能会思考 `useEffect` 在一些场景是否能够按预期工作，虽然某些特性使用起来很舒服，但却加深了心智负担。
 
 如果有误还望指正。
 

@@ -8,9 +8,9 @@
 
 ```html
 <div class="flex flex-col">
-  <div>元素1</div>
-  <div>元素2</div>
-  <div>元素3</div>
+  <div>元素 1</div>
+  <div>元素 2</div>
+  <div>元素 3</div>
 </div>
 ```
 

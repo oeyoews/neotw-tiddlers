@@ -10,11 +10,11 @@
 以下是一个简单示例，演示如何在两个页面之间共享数据：
 
 ```plain
-// 页面1
+// 页面 1
 // 存储数据
 localStorage.setItem('name', '张三');
 
-// 页面2
+// 页面 2
 // 获取数据
 const name = localStorage.getItem('name');
 console.log(name); // 输出：'张三'

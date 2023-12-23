@@ -28,7 +28,7 @@ const theme = use(ThemeContext);
 
 Unlike all other React Hooks, `use` can be called within loops and conditional statements like `if`. Like other React Hooks, the function that calls `use` must be a Component or Hook.与所有其他 React Hook 不同，可以在循环和条件语句中调用， `use` 例如 `if` .与其他 React Hook 一样，调用 `use` 的函数必须是 Component 或 Hook。
 
-When called with a Promise, the `use` Hook integrates with [`Suspense`](https://react.dev/reference/react/Suspense) and [error boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary). The component calling `use` *suspends* while the Promise passed to `use` is pending. If the component that calls `use` is wrapped in a Suspense boundary, the fallback will be displayed. Once the Promise is resolved, the Suspense fallback is replaced by the rendered components using the data returned by the `use` Hook. If the Promise passed to `use` is rejected, the fallback of the nearest Error Boundary will be displayed.当使用 Promise 调用时， `use` Hook 会与 `Suspense` 和 错误边界集成。当传递给的 Promise `use` 处于挂起状态时，调用 `use` 的组件将挂起。如果调用 `use` 的组件包装在 Suspense 边界中，则将显示回退。 一旦 Promise 被解析，Suspense 回退将替换为使用 Hook 返回 `use` 的数据呈现的组件。如果传递给的 Promise `use` 被拒绝，则将显示最近的错误边界的回退。
+When called with a Promise, the `use` Hook integrates with [`Suspense`](https://react.dev/reference/react/Suspense) and [error boundaries](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary). The component calling `use` *suspends* while the Promise passed to `use` is pending. If the component that calls `use` is wrapped in a Suspense boundary, the fallback will be displayed. Once the Promise is resolved, the Suspense fallback is replaced by the rendered components using the data returned by the `use` Hook. If the Promise passed to `use` is rejected, the fallback of the nearest Error Boundary will be displayed.当使用 Promise 调用时， `use` Hook 会与 `Suspense` 和 错误边界集成。当传递给的 Promise `use` 处于挂起状态时，调用 `use` 的组件将挂起。如果调用 `use` 的组件包装在 Suspense 边界中，则将显示回退。一旦 Promise 被解析，Suspense 回退将替换为使用 Hook 返回 `use` 的数据呈现的组件。如果传递给的 Promise `use` 被拒绝，则将显示最近的错误边界的回退。
 
 [See more examples below. 请参阅下面的更多示例。](#usage)
 
@@ -44,7 +44,7 @@ The `use` Hook returns the value that was read from the resource like the resolv
 
 * The `use` Hook must be called inside a Component or a Hook.`use` Hook 必须在 Component 或 Hook 中调用。
 * When fetching data in a [Server Component](https://react.dev/reference/react/use-server), prefer `async` and `await` over `use`. `async` and `await` pick up rendering from the point where `await` was invoked, whereas `use` re-renders the component after the data is resolved.在服务器组件中获取数据时，首选 `async` `use` 和 `await` over 。 `async` 并从 `await` 调用点 `await` 开始渲染，而 `use` 在解析数据后重新渲染组件。
-* Prefer creating Promises in [Server Components](https://react.dev/reference/react/use-server) and passing them to [Client Components](https://react.dev/reference/react/use-client) over creating Promises in Client Components. Promises created in Client Components are recreated on every render. Promises passed from a Server Component to a Client Component are stable across re-renders. [See this example](#streaming-data-from-server-to-client).与在客户端组件中创建 Promise相比，更喜欢在服务器组件中创建 Promise 并将其传递给客户端组件。在客户端组件中创建的 Promise 将在每次渲染时重新创建。从服务器组件传递到客户端组件的 promise 在重新呈现时是稳定的。请参阅此示例。
+* Prefer creating Promises in [Server Components](https://react.dev/reference/react/use-server) and passing them to [Client Components](https://react.dev/reference/react/use-client) over creating Promises in Client Components. Promises created in Client Components are recreated on every render. Promises passed from a Server Component to a Client Component are stable across re-renders. [See this example](#streaming-data-from-server-to-client).与在客户端组件中创建 Promise 相比，更喜欢在服务器组件中创建 Promise 并将其传递给客户端组件。在客户端组件中创建的 Promise 将在每次渲染时重新创建。从服务器组件传递到客户端组件的 promise 在重新呈现时是稳定的。请参阅此示例。
 
 ***
 
@@ -134,7 +134,7 @@ return false;
 
 Like `useContext`, `use(context)` always looks for the closest context provider *above* the component that calls it. It searches upwards and **does not** consider context providers in the component from which you’re calling `use(context)`.Like `useContext` ， `use(context)` 始终在调用它的组件上方查找最接近的上下文提供程序。它向上搜索，并且不考虑您从中调用 `use(context)` 的组件中的上下文提供程序。
 
-### Streaming data from the server to the client将数据从服务器流式传输到客户端[](#streaming-data-from-server-to-client "Link for Streaming data from the server to the client ")
+### Streaming data from the server to the client 将数据从服务器流式传输到客户端[](#streaming-data-from-server-to-client "Link for Streaming data from the server to the client ")
 
 Data can be streamed from the server to the client by passing a Promise as a prop from a Server Component to a Client Component.通过将 Promise 作为 prop 从服务器组件传递到客户端组件，可以将数据从服务器流式传输到客户端。
 
@@ -199,7 +199,7 @@ Because `Message` is wrapped in [`Suspense`](https://react.dev/reference/react/S
 
 When passing a Promise from a Server Component to a Client Component, its resolved value must be serializable to pass between server and client. Data types like functions aren’t serializable and cannot be the resolved value of such a Promise.将 Promise 从服务器组件传递到客户端组件时，其解析值必须可序列化才能在服务器和客户端之间传递。函数等数据类型不可序列化，不能是此类 Promise 的解析值。
 
-##### Deep Dive 深潜#### Should I resolve a Promise in a Server or Client Component?我应该在服务器或客户端组件中解析 Promise 吗？[](#resolve-promise-in-server-or-client-component "Link for Should I resolve a Promise in a Server or Client Component? ")
+##### Deep Dive 深潜#### Should I resolve a Promise in a Server or Client Component？我应该在服务器或客户端组件中解析 Promise 吗？[](#resolve-promise-in-server-or-client-component "Link for Should I resolve a Promise in a Server or Client Component? ")
 
 A Promise can be passed from a Server Component to a Client Component and resolved in the Client Component with the `use` Hook. You can also resolve the Promise in a Server Component with `await` and pass the required data to the Client Component as a prop.Promise 可以从服务器组件传递到客户端组件，并使用 Hook 在客户端组件 `use` 中解析。您还可以使用 `await` Promise 解析服务器组件中的 Promise，并将所需的数据作为 prop 传递给客户端组件。
 
@@ -218,18 +218,18 @@ return <Message messageContent={messageContent} />
 
 But using `await` in a [Server Component](https://react.dev/reference/react/components#server-components) will block its rendering until the `await` statement is finished. Passing a Promise from a Server Component to a Client Component prevents the Promise from blocking the rendering of the Server Component.但是在服务器组件中使用 `await` 将阻止其呈现， `await` 直到语句完成。将 Promise 从服务器组件传递到客户端组件可防止 Promise 阻止服务器组件的呈现。
 
-### Dealing with rejected Promises处理被拒绝的 Promise[](#dealing-with-rejected-promises "Link for Dealing with rejected Promises ")
+### Dealing with rejected Promises 处理被拒绝的 Promise[](#dealing-with-rejected-promises "Link for Dealing with rejected Promises ")
 
 In some cases a Promise passed to `use` could be rejected. You can handle rejected Promises by either:在某些情况下，传递给的 Promise `use` 可能会被拒绝。您可以通过以下任一方式处理被拒绝的 Promise：
 
 1. [Displaying an error to users with error boundary.向具有错误边界的用户显示错误。](#displaying-an-error-to-users-with-error-boundary)
-2. [Providing an alternative value with `Promise.catch`提供 `Promise.catch` 替代价值](#providing-an-alternative-value-with-promise-catch)
+2. [Providing an alternative value with `Promise.catch` 提供 `Promise.catch` 替代价值](#providing-an-alternative-value-with-promise-catch)
 
 ### Pitfall 陷阱
 
 `use` cannot be called in a try-catch block. Instead of a try-catch block [wrap your component in an Error Boundary](#displaying-an-error-to-users-with-error-boundary), or [provide an alternative value to use with the Promise’s `.catch` method](#providing-an-alternative-value-with-promise-catch).`use` 不能在 try-catch 块中调用。不要使用 try-catch 块，而是将组件包装在 Error Boundary 中，或者提供一个替代值以用于 Promise `.catch` 的方法。
 
-#### Displaying an error to users with a error boundary向具有错误边界的用户显示错误[](#displaying-an-error-to-users-with-error-boundary "Link for Displaying an error to users with a error boundary ")
+#### Displaying an error to users with a error boundary 向具有错误边界的用户显示错误[](#displaying-an-error-to-users-with-error-boundary "Link for Displaying an error to users with a error boundary ")
 
 If you’d like to display an error to your users when a Promise is rejected, you can use an [error boundary](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary). To use an error boundary, wrap the component where you are calling the `use` Hook in an error boundary. If the Promise passed to `use` is rejected the fallback for the error boundary will be displayed.如果您希望在 Promise 被拒绝时向用户显示错误，则可以使用错误边界。要使用错误边界，请将调用 `use` Hook 的组件包装在错误边界中。如果传递给的 Promise `use` 被拒绝，则会显示错误边界的回退。
 
@@ -320,4 +320,4 @@ const message = use(messagePromise);
 // ...
 ```
 
-[Previous 以前Hooks 钩](https://react.dev/reference/react/hooks)[Next 下一个useCallback 使用回调](https://react.dev/reference/react/useCallback)
+[Previous 以前 Hooks 钩](https://react.dev/reference/react/hooks)[Next 下一个 useCallback 使用回调](https://react.dev/reference/react/useCallback)

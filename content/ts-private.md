@@ -9,7 +9,7 @@ class Test {
 }
 ```
 
-private 声明的变量参数,会自动保存为类的成员变量,无需手动赋值绑定
+private 声明的变量参数，会自动保存为类的成员变量，无需手动赋值绑定
 
 在 TypeScript 中，`private`、`public` 和 `protected` 是用来限定类成员（属性和方法）的访问权限的修饰符。它们有以下含义：
 

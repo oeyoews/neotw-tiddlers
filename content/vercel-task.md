@@ -1,1 +1,1 @@
-vercel 如果遇到连续提交好几个 commit,仅仅执行最后一次 task
+vercel 如果遇到连续提交好几个 commit，仅仅执行最后一次 task

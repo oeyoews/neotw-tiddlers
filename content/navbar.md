@@ -7,9 +7,9 @@
     </a>
   </div>
   <div class="flex">
-    <a href="#" class="text-gray-300 mx-2 hover:text-white">链接1</a>
-    <a href="#" class="text-gray-300 mx-2 hover:text-white">链接2</a>
-    <a href="#" class="text-gray-300 mx-2 hover:text-white">链接3</a>
+    <a href="#" class="text-gray-300 mx-2 hover:text-white">链接 1</a>
+    <a href="#" class="text-gray-300 mx-2 hover:text-white">链接 2</a>
+    <a href="#" class="text-gray-300 mx-2 hover:text-white">链接 3</a>
   </div>
 </nav>
 

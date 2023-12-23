@@ -1,1 +1,1 @@
-docker latest 标签只是一个普通的标签, 不会自动更新
+docker latest 标签只是一个普通的标签，不会自动更新

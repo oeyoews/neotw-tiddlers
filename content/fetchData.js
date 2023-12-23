@@ -17,7 +17,7 @@ const fetchData = async () => {
       const views = viewsTd.textContent.trim();
 
       // Output the views
-      console.log("neotw 的访问量:", views);
+      console.log("neotw 的访问量：", views);
     } else {
       console.log('未找到 "neotw" 的信息');
     }

@@ -25,7 +25,7 @@ export const useStore = create((set, get) => ({
 }))
 ```
 
-### 读取store hooks [​](#读取store-hooks)
+### 读取 store hooks [​](#读取store-hooks)
 
 在任何地方使用这个 hook，不需要 provider。组件会在你选择的状态变化时重新渲染。
 
@@ -121,7 +121,7 @@ const dispatch = useStore(state => state.dispatch)
 dispatch({ type: types.insert, payload: { content: 'mock redux' } })
 ```
 
-*到此为止，已经可以简单使用 zustand了*。
+*到此为止，已经可以简单使用 zustand 了*。
 
 ### 多状态 [​](#多状态)
 
@@ -205,9 +205,9 @@ useStore()
 
 插叙
 
-如果想要学习一下 `rollup` 打包 和 `swc` 的话也可以看看 `zustand` 源码库，它里面也有使用到，而且都比较简单，容易入门。 swc 是基于 `Rust` 实现的编译工具，它可以实现 `babel` 的功能和 `typescript` 编译，并且速度更快。同时它也推出 `swcpack` 打包工具，但目前问题还是比较多，更多只是用来代替 `babel`。
+如果想要学习一下 `rollup` 打包 和 `swc` 的话也可以看看 `zustand` 源码库，它里面也有使用到，而且都比较简单，容易入门。swc 是基于 `Rust` 实现的编译工具，它可以实现 `babel` 的功能和 `typescript` 编译，并且速度更快。同时它也推出 `swcpack` 打包工具，但目前问题还是比较多，更多只是用来代替 `babel`。
 
-**zustand** 的源码主要是涉及 `src/react.ts` 和 `src/vanilla.ts` 这两个文件。 中间件的源代码放在 `src/middleware`，有兴趣可以阅读一下，在一 part 不会讲它。😬 zustand 也提供了丰富的测试文件 `tests`，可以很方便的进行调试。
+**zustand** 的源码主要是涉及 `src/react.ts` 和 `src/vanilla.ts` 这两个文件。中间件的源代码放在 `src/middleware`，有兴趣可以阅读一下，在一 part 不会讲它。😬 zustand 也提供了丰富的测试文件 `tests`，可以很方便的进行调试。
 
 **回到正题**：zustand 状态管理库主要思想就是利用 [发布订阅模式](https://www.leezhian.com/web/design/observer.html) 和 `use-sync-external-store` (本质是 `React.useSyncExternalStore` 的单独一个包，用于正确订阅储存中的值，解决并发渲染导致的 Tearing 问题，即 `React concurrent`)
 
@@ -280,9 +280,9 @@ export const useStore = createStoreImpl((set, get) => ({
 
 至此，在 **没有 React 情况下使用** 的功能已经完成，主要的 `listener` 是通过 `subscribe` 进行绑定的，然而在 `React` 下是如何触发更新的呢？
 
-🤔 如何在react 中正确的订阅外部储存的值？**主要就是利用到 `useSyncExternalStoreWithSelector`**，它是 `useSyncExternalStore` 指定选择器优化版。
+🤔 如何在 react 中正确的订阅外部储存的值？**主要就是利用到 `useSyncExternalStoreWithSelector`**，它是 `useSyncExternalStore` 指定选择器优化版。
 
-> [React 18 - 了解 useSyncExternalStore](https://andyyou.github.io/2022/01/05/use-sync-external-store-with-solving-problem/) 我们都知道 React Fiber 调度是在 16版本后采用的，它将复杂任务进行分片，优先调度高优先级，调度过程中可以挂起、恢复、终止。因此会进行并发渲染，就导致了一个问题，比如有 A、B、C三个节点，都是渲染同一个外部存储 state，但渲染完 A 时，React 暂停了当前任务调度，将外部存储 state 修改了，当 React 恢复渲染的时候，B、C都渲染为新值，而A依旧是旧值。 React 为了解决这个问题加入了 `useMutableSource`，后面重新设计为 `useSyncExternaStore`。
+> [React 18 - 了解 useSyncExternalStore](https://andyyou.github.io/2022/01/05/use-sync-external-store-with-solving-problem/) 我们都知道 React Fiber 调度是在 16 版本后采用的，它将复杂任务进行分片，优先调度高优先级，调度过程中可以挂起、恢复、终止。因此会进行并发渲染，就导致了一个问题，比如有 A、B、C 三个节点，都是渲染同一个外部存储 state，但渲染完 A 时，React 暂停了当前任务调度，将外部存储 state 修改了，当 React 恢复渲染的时候，B、C 都渲染为新值，而 A 依旧是旧值。React 为了解决这个问题加入了 `useMutableSource`，后面重新设计为 `useSyncExternaStore`。
 
 ✏️ 先使用一个简单的案例，理解 `useSyncExternaStore`，`store` 设计很简单，重点在 `useStore`。
 
@@ -381,7 +381,7 @@ export function useStore(
 
 **zustand 的核心代码告一段落了，这个库代码量不多，设计简单，但不可否认是一个优秀状态管理解决方案**。
 
-最后这段只是简单的导出 `create` 函数，用于理解整个流程。 将 `createStoreImpl` 的返回值与 `useStore` 的建立函数合并 构成 `createImpl`(完整 `create` 函数) 的返回值。
+最后这段只是简单的导出 `create` 函数，用于理解整个流程。将 `createStoreImpl` 的返回值与 `useStore` 的建立函数合并 构成 `createImpl`(完整 `create` 函数) 的返回值。
 
 javascript
 

@@ -1,4 +1,4 @@
-October 28, 2023 (1mo ago)2023年10月28日 （1个月前）
+October 28, 2023 (1mo ago)2023 年 10 月 28 日（1 个月前）
 
 <!--$-->
 
@@ -6,9 +6,9 @@ October 28, 2023 (1mo ago)2023年10月28日 （1个月前）
 
 <!--/$-->
 
-Kent C. Dodds recently published a new article [Why I Won't Use Next.js](https://www.epicweb.dev/why-i-wont-use-nextjs).Kent C. Dodds最近发表了一篇新文章《为什么我不会使用Next.js》。
+Kent C. Dodds recently published a new article [Why I Won't Use Next.js](https://www.epicweb.dev/why-i-wont-use-nextjs).Kent C. Dodds 最近发表了一篇新文章《为什么我不会使用 Next.js》。
 
-In the post, Kent shares his opinions on why he's recommending using Remix instead of Next.js. I wanted to share my thoughts on the post and make the case that:在这篇文章中，Kent分享了他为什么建议使用Remix而不是Next.js的观点。我想分享我对这篇文章的看法，并说明：
+In the post, Kent shares his opinions on why he's recommending using Remix instead of Next.js. I wanted to share my thoughts on the post and make the case that:在这篇文章中，Kent 分享了他为什么建议使用 Remix 而不是 Next.js 的观点。我想分享我对这篇文章的看法，并说明：
 
 * Learning Next.js helps you learn [the web platform](#the-web-platform)学习 Next.js 可帮助您学习 Web 平台
 * All Next.js features work [self-hosted](#independence)所有 Next.js 功能都自托管工作
@@ -22,15 +22,15 @@ In the post, Kent shares his opinions on why he's recommending using Remix inste
 
 Kent is an incredible member of the React community. I've learned a lot from him over the years (especially his material on testing) and this blog actually uses a library he created, `mdx-bundler`, so thank you.Kent 是 React 社区中一位了不起的成员。这些年来，我从他那里学到了很多东西（尤其是他关于测试的材料），这个博客实际上使用了他创建的库， `mdx-bundler` 所以谢谢。
 
-Excited to go on with [@leeerob](https://twitter.com/leeerob) for the keynote at [@reactathon](https://twitter.com/reactathon) in person! Catch the live stream right now!很高兴能亲自@leeerob@reactathon的主题演讲！立即观看直播！
+Excited to go on with [@leeerob](https://twitter.com/leeerob) for the keynote at [@reactathon](https://twitter.com/reactathon) in person! Catch the live stream right now! 很高兴能亲自@leeerob@reactathon 的主题演讲！立即观看直播！
 
-If you're new here, I'm Lee. I work on Next.js. I've also made some courses about using Next.js before I joined Vercel.如果你是新来的，我是李。我在Next.js上工作。在我加入 Vercel 之前，我还制作了一些关于使用 Next.js 的课程。
+If you're new here, I'm Lee. I work on Next.js. I've also made some courses about using Next.js before I joined Vercel.如果你是新来的，我是李。我在 Next.js 上工作。在我加入 Vercel 之前，我还制作了一些关于使用 Next.js 的课程。
 
-Both Kent and I are passionate about the tools that we use. As Kent shared in his post:Kent和我都对我们使用的工具充满热情。正如肯特在他的帖子中分享的那样：
+Both Kent and I are passionate about the tools that we use. As Kent shared in his post:Kent 和我都对我们使用的工具充满热情。正如肯特在他的帖子中分享的那样：
 
-> As Next.js is a very popular alternative to Remix, people ask me why I chose Remix instead of Next.js for the framework I teach on EpicWeb.dev. These people are probably facing one of those scenarios I mentioned. So this post is for those people.由于 Next.js 是 Remix 的一个非常流行的替代品，人们问我为什么选择 Remix 而不是 Next.js因为我在 EpicWeb.dev 上教授的框架。这些人可能正面临我提到的其中一种情况。所以这篇文章是为这些人准备的。
+> As Next.js is a very popular alternative to Remix, people ask me why I chose Remix instead of Next.js for the framework I teach on EpicWeb.dev. These people are probably facing one of those scenarios I mentioned. So this post is for those people.由于 Next.js 是 Remix 的一个非常流行的替代品，人们问我为什么选择 Remix 而不是 Next.js 因为我在 EpicWeb.dev 上教授的框架。这些人可能正面临我提到的其中一种情况。所以这篇文章是为这些人准备的。
 
-Similarly, I'm often asked about my opinions on Next.js versus other frameworks. This post is for the folks in the Next.js community who are wondering about some of the points Kent brings up.同样，我经常被问到我对Next.js与其他框架的看法。这篇文章是为Next.js社区中想知道Kent提出的一些观点的人准备的。
+Similarly, I'm often asked about my opinions on Next.js versus other frameworks. This post is for the folks in the Next.js community who are wondering about some of the points Kent brings up.同样，我经常被问到我对 Next.js 与其他框架的看法。这篇文章是为 Next.js 社区中想知道 Kent 提出的一些观点的人准备的。
 
 ## [](#the-web-platform)The Web Platform 网络平台
 
@@ -44,7 +44,7 @@ Kent talks about how he prefers tools that give access to the underlying primiti
 
 > Where Next.js has utilities to allow you to interact with the request, headers, cookies, etc, Remix exposes those APIs directly to you through its `loader`s and `action`s. In Remix, these functions accept a `Request` and return a `Response`. If you need to understand how to return JSON with some set headers, you go to MDN (the de facto standard web platform documentation) rather than the Remix docs.Next.js 具有允许您与请求、标头、cookie 等交互的实用程序，而 Remix 通过其 s 和 `loader` `action` s 直接向您公开这些 API。在 Remix 中，这些函数接受 a `Request` 并返回 `Response` .如果你需要了解如何返回带有一些设置标头的 JSON，你可以转到 MDN（事实上的标准 Web 平台文档）而不是 Remix 文档。
 
-This is absolutely true for the Next.js Pages Router. However, a lot has changed since then. Let me explain.对于Next.js页面路由器来说，这是绝对正确的。然而，从那时起，很多事情都发生了变化。让我解释一下。
+This is absolutely true for the Next.js Pages Router. However, a lot has changed since then. Let me explain.对于 Next.js 页面路由器来说，这是绝对正确的。然而，从那时起，很多事情都发生了变化。让我解释一下。
 
 ### [](#nextjs-pages-router)Next.js Pages Router 下一页 .js 页面路由器
 
@@ -60,7 +60,7 @@ export default function handler(req, res) {
 
 API Routes and the ejected server still work today. But frameworks must evolve over time based on community feedback, how the ecosystem moves, and new functionality available in the web platform.API 路由和弹出的服务器今天仍然有效。但是，框架必须根据社区反馈、生态系统的移动方式以及 Web 平台中可用的新功能随着时间的推移而发展。
 
-That's why Next.js 12, released in 2021, introduced [Middleware](https://nextjs.org/blog/next-12#introducing-middleware), which is built on the Web `Request`, `Response`, and `fetch`. It didn't make sense to build new APIs that weren't embracing the now standardized web APIs. Note: this was the same year Remix v1 was released. We agree!这就是为什么 2021 年发布的 Next.js 12 引入了基于 Web `Request` 、 `Response` 和 `fetch` 的中间件。构建不包含现在标准化的 Web API 的新 API 是没有意义的。注意：这是 Remix v1 发布的同一年。我们同意！
+That's why Next.js 12, released in 2021, introduced [Middleware](https://nextjs.org/blog/next-12#introducing-middleware), which is built on the Web `Request`, `Response`, and `fetch`. It didn't make sense to build new APIs that weren't embracing the now standardized web APIs. Note: this was the same year Remix v1 was released. We agree! 这就是为什么 2021 年发布的 Next.js 12 引入了基于 Web `Request` 、 `Response` 和 `fetch` 的中间件。构建不包含现在标准化的 Web API 的新 API 是没有意义的。注意：这是 Remix v1 发布的同一年。我们同意！
 
 ### [](#nextjs-app-router)Next.js App Router 下一个 .js 应用路由器
 
@@ -68,11 +68,11 @@ I mentioned evolution, right? Kent mentions in the post:我提到了进化，对
 
 > I've been an outsider to the Next.js framework for years. It's been a long time since I shipped something with Next.js myself.多年来，我一直是 Next.js 框架的局外人。我已经很久没有自己用 Next.js 发布过东西了。
 
-Totally fair. There's only so many hours in the day for family, work, and fun. So I don't expect Kent (or anyone really) to have kept up with the chronology of Next.js here like I have. But let me explain further about where we're headed.完全公平。一天中只有那么多时间用于家庭、工作和娱乐。所以我不指望肯特（或任何人）像我一样跟上Next.js的年表。但让我进一步解释一下我们的前进方向。
+Totally fair. There's only so many hours in the day for family, work, and fun. So I don't expect Kent (or anyone really) to have kept up with the chronology of Next.js here like I have. But let me explain further about where we're headed.完全公平。一天中只有那么多时间用于家庭、工作和娱乐。所以我不指望肯特（或任何人）像我一样跟上 Next.js 的年表。但让我进一步解释一下我们的前进方向。
 
 After 6 years of feedback, Next.js 13 introduced a new foundation for the framework with the App Router. The Pages Router didn't go anywhere, but again, the framework must evolve with the times.经过 6 年的反馈，Next.js 13 通过应用路由器为框架引入了新的基础。Pages Router 没有去任何地方，但同样，框架必须与时俱进。
 
-If you were designing a new framework, how would you handle reading values from the incoming request, like cookies, or headers? And how would you allow developers to write custom API endpoints?如果您正在设计一个新框架，您将如何处理从传入请求中读取值，例如 cookie 或标头？您将如何允许开发人员编写自定义 API 端点？
+If you were designing a new framework, how would you handle reading values from the incoming request, like cookies, or headers? And how would you allow developers to write custom API endpoints？如果您正在设计一个新框架，您将如何处理从传入请求中读取值，例如 cookie 或标头？您将如何允许开发人员编写自定义 API 端点？
 
 Well, you'd use the standard web APIs, of course. Going back to Kent's feedback:当然，你会使用标准的 Web API。回到 Kent 的反馈：
 
@@ -95,7 +95,7 @@ So you're designing this framework. You want to use web standard APIs. And you a
 
 > To boil that down to a principle, I would say that instead of wrapping the platform APIs, Testing Library exposed the platform APIs.为了将其归结为一个原则，我想说的是，测试库不是包装平台 API，而是公开了平台 API。
 
-We agree. But why couldn't we have both?我们同意。但为什么我们不能两者兼而有之呢？
+We agree. But why couldn't we have both？我们同意。但为什么我们不能两者兼而有之呢？
 
 In the Next.js App Router, let's say you want to create an arbitrary API endpoint. These are now called [Route Handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers). Here's what they look like:在 Next.js 应用路由器中，假设您要创建任意 API 终结点。这些现在称为路由处理程序。以下是它们的样子：
 
@@ -108,7 +108,7 @@ export async function GET(request: Request) {
 }
 ```
 
-Route Handlers accept a web `Request` and produce a web `Response`. But what about cookies, headers, and more?路由处理程序接受 Web 并生成 Web `Request` `Response` 。但是 Cookie、标题等呢？
+Route Handlers accept a web `Request` and produce a web `Response`. But what about cookies, headers, and more？路由处理程序接受 Web 并生成 Web `Request` `Response` 。但是 Cookie、标题等呢？
 
 Since you have access to the web APIs directly, you can browse MDN and reuse all of the knowledge you've learned from Next.js. Also, ChatGPT is *really* good at creating these APIs.由于您可以直接访问 Web API，因此您可以浏览 MDN 并重用您从 Next.js 学到的所有知识。此外，ChatGPT 非常擅长创建这些 API。
 
@@ -149,7 +149,7 @@ export function serverAction() {
 }
 ```
 
-I strongly agree with Kent. I can't imagine new web frameworks being released that don't embrace web APIs. That's why Remix, SvelteKit, Nuxt, Solid, Astro, Next.js, and many more are doing this.我非常同意肯特的观点。我无法想象发布的新 Web 框架不包含 Web API。这就是为什么Remix，SvelteKit，Nuxt，Solid，Astro，Next.js等等都在这样做。
+I strongly agree with Kent. I can't imagine new web frameworks being released that don't embrace web APIs. That's why Remix, SvelteKit, Nuxt, Solid, Astro, Next.js, and many more are doing this.我非常同意肯特的观点。我无法想象发布的新 Web 框架不包含 Web API。这就是为什么 Remix，SvelteKit，Nuxt，Solid，Astro，Next.js 等等都在这样做。
 
 ## [](#independence)Independence 独立
 
@@ -161,29 +161,29 @@ The maintainers of OpenNext are building a platform for easily deploying serverl
 
 Kent then says: 肯特接着说：
 
-> OpenNext exists because Next.js is difficult to deploy anywhere but Vercel. I appreciate the company's incentives to make their own hosting offering as attractive as possible, but it's evident that this incentive has deprioritized making Next.js easy to deploy anywhere.OpenNext 之所以存在，是因为 Next.js 很难部署在除 Vercel 之外的任何地方。我很欣赏该公司的激励措施，使他们自己的托管产品尽可能有吸引力，但很明显，这种激励措施已经降低了使Next.js易于在任何地方部署的优先级。
+> OpenNext exists because Next.js is difficult to deploy anywhere but Vercel. I appreciate the company's incentives to make their own hosting offering as attractive as possible, but it's evident that this incentive has deprioritized making Next.js easy to deploy anywhere.OpenNext 之所以存在，是因为 Next.js 很难部署在除 Vercel 之外的任何地方。我很欣赏该公司的激励措施，使他们自己的托管产品尽可能有吸引力，但很明显，这种激励措施已经降低了使 Next.js 易于在任何地方部署的优先级。
 
 We're always looking to improve self-hosting Next.js. For example, I made a [video](https://www.youtube.com/watch?v=Pd2tVxhFnO4) and [example](https://github.com/vercel/next.js/tree/canary/examples/with-docker) showing how to deploy with Docker to whichever service you prefer.我们一直在寻求改进自托管 Next.js。例如，我制作了一个视频和示例，展示了如何使用 Docker 部署到您喜欢的任何服务。
 
 `next start` is how Walmart, TikTok, ChatGPT, Starbucks, Target, Doordash, and many others self-host Next.js.`next start` 是沃尔玛、TikTok、ChatGPT、星巴克、塔吉特、Doordash 和许多其他公司自行托管 Next.js 的方式。
 
-Now you might be thinking: but Lee, that's not what Kent is talking about. He's talking about *serverless* platforms. Why wouldn't Next.js build first-party adapters for every deployment target?现在你可能会想：但是李，这不是肯特在说的。他谈论的是无服务器平台。为什么 Next.js 不为每个部署目标构建第一方适配器？
+Now you might be thinking: but Lee, that's not what Kent is talking about. He's talking about *serverless* platforms. Why wouldn't Next.js build first-party adapters for every deployment target？现在你可能会想：但是李，这不是肯特在说的。他谈论的是无服务器平台。为什么 Next.js 不为每个部署目标构建第一方适配器？
 
-### [](#open-source-and-framework-boundaries)Open Source and Framework Boundaries开源和框架边界
+### [](#open-source-and-framework-boundaries)Open Source and Framework Boundaries 开源和框架边界
 
 From my post earlier this year on [funding open source](https://leerob.io/blog/funding-open-source):从我今年早些时候关于资助开源的帖子中：
 
 > Developers don't want walled gardens. They want the freedom to eject and self-host. It's about control. This is why all Next.js features work self-hosted. Vercel provides [infrastructure](https://vercel.com/enterprise) and a [workflow](https://vercel.com/workflow) on top of Next.js. You can [host Next.js elsewhere](https://nextjs.org/docs/deployment#self-hosting), if you want.开发商不想要围墙花园。他们想要弹出和自我托管的自由。这是关于控制。这就是为什么所有 Next.js 功能都是自托管工作的原因。Vercel 在 Next.js 之上提供基础设施和工作流。如果需要，可以在其他地方托管 Next.js。
 >
-> I'm a fan of the model Next.js uses. It's clear how it's funded (through Vercel) and the incentive is aligned (I want to deploy Next.js at some point, maybe I will [try Vercel](https://vercel.com/templates/next.js)). It's a similar story for Svelte. You want to deploy SvelteKit, maybe you'll [try Vercel](https://vercel.com/templates/svelte).我是Next.js使用的模型的粉丝。很明显它是如何资助的（通过Vercel），激励是一致的（我想在某个时候部署Next.js，也许我会尝试Vercel）。对于Svelte来说，这是一个类似的故事。你想部署 SvelteKit，也许你会尝试 Vercel。
+> I'm a fan of the model Next.js uses. It's clear how it's funded (through Vercel) and the incentive is aligned (I want to deploy Next.js at some point, maybe I will [try Vercel](https://vercel.com/templates/next.js)). It's a similar story for Svelte. You want to deploy SvelteKit, maybe you'll [try Vercel](https://vercel.com/templates/svelte).我是 Next.js 使用的模型的粉丝。很明显它是如何资助的（通过 Vercel），激励是一致的（我想在某个时候部署 Next.js，也许我会尝试 Vercel）。对于 Svelte 来说，这是一个类似的故事。你想部署 SvelteKit，也许你会尝试 Vercel。
 
-Vercel, the maintainers of Next.js who invest heavily in its [research and development](https://twitter.com/dan_abramov/status/1654688751342301184), are focused on maintaining and building a default deployment output for Next.js. We aren't doing adapters, although I love this for other frameworks.Vercel是Next.js的维护者，他们在研发方面投入了大量资金，专注于维护和构建Next.js的默认部署输出。我们不是在做适配器，尽管我喜欢其他框架。
+Vercel, the maintainers of Next.js who invest heavily in its [research and development](https://twitter.com/dan_abramov/status/1654688751342301184), are focused on maintaining and building a default deployment output for Next.js. We aren't doing adapters, although I love this for other frameworks.Vercel 是 Next.js 的维护者，他们在研发方面投入了大量资金，专注于维护和构建 Next.js 的默认部署输出。我们不是在做适配器，尽管我喜欢其他框架。
 
 Next.js has over 850,000 monthly active developers. And those developers expect things to work well, to have bugs fixed quickly, for new features to be released, for us to respond to their questions in a timely manner, and more.Next.js 每月有超过 850,000 名活跃开发人员。这些开发人员希望事情运行良好，快速修复错误，发布新功能，我们及时回答他们的问题，等等。
 
-I keep hearing how hosting Next.js yourself as a nodejs application is a huge pain, and I have no idea where this is coming from. What's difficult? Containerizing it? Creating a deploy pipeline? If you said yes to either, then you likely have trouble hosting \*any\* app yourself.我一直听说将Next.js自己作为nodejs应用程序托管是一个巨大的痛苦，我不知道这是从哪里来的。 有什么难的？容器化？正在创建部署管道？如果您对其中任何一个都说“是”，那么您可能自己无法托管\*任何\*应用程序。
+I keep hearing how hosting Next.js yourself as a nodejs application is a huge pain, and I have no idea where this is coming from. What's difficult? Containerizing it? Creating a deploy pipeline? If you said yes to either, then you likely have trouble hosting \*any\* app yourself.我一直听说将 Next.js 自己作为 nodejs 应用程序托管是一个巨大的痛苦，我不知道这是从哪里来的。有什么难的？容器化？正在创建部署管道？如果您对其中任何一个都说“是”，那么您可能自己无法托管\*任何\*应用程序。
 
-I get asked about this a lot (especially since the launch of Epic Web), so I've written it down. Here's why I won't use Next.js: epicweb.dev/why-i-wont-use…我经常被问到这个问题（尤其是自从 Epic Web 推出以来），所以我把它写下来了。 这就是为什么我不会使用 Next.js： epicweb.dev/why-i-wont-use......
+I get asked about this a lot (especially since the launch of Epic Web), so I've written it down. Here's why I won't use Next.js: epicweb.dev/why-i-wont-use…我经常被问到这个问题（尤其是自从 Epic Web 推出以来），所以我把它写下来了。这就是为什么我不会使用 Next.js：epicweb.dev/why-i-wont-use......
 
 We want the default build output of Next.js to work well when self hosting, and also well on Vercel. And guess what? They're the same output. Well, almost. Let me clarify.我们希望 Next.js 的默认构建输出在自托管时运行良好，并且在 Vercel 上也能运行良好。你猜怎么着？它们是相同的输出。嗯，差不多。让我澄清一下。
 
@@ -193,7 +193,7 @@ This output format powers Next.js, as well as Remix, SvelteKit, and many other f
 
 We'll soon be making the default output of Next.js match the Build Output API directly, without the intermediate step. We agree with the importance of keeping these pieces open and accessible, which is why we even open sourced the intermediate step.我们很快就会使 Next.js 的默认输出直接与生成输出 API 匹配，而无需中间步骤。我们同意保持这些部分开放和可访问的重要性，这就是为什么我们甚至开源了中间步骤。
 
-### [](#pricing-correlation-or-causation)Pricing: Correlation or causation?定价：相关性还是因果关系？
+### [](#pricing-correlation-or-causation)Pricing: Correlation or causation？定价：相关性还是因果关系？
 
 Kent mentions: Kent 提到：
 
@@ -209,7 +209,7 @@ Unfortunately, this sentiment does not equal causation.不幸的是，这种情�
 
 [dev\_bogdan 回复@dev\_bogdan](https://twitter.com/dev_bogdan/status/1649132186472263680)
 
-Only exposing a full route refresh seems like a ploy on Vercel's part to needlessly re-render SC's --> Increased compute --> $$$ :) I worry about that a bit with NextJS, actually. That NextJS technical approaches may optimize for their profit when deployed there.仅公开完整的路由刷新似乎是 Vercel 的策略，以不必要地重新渲染 SC 的 --> 增加计算 --> $$$ :) 实际上，我对NextJS有点担心。NextJS技术方法在部署在那里时可能会优化其利润。
+Only exposing a full route refresh seems like a ploy on Vercel's part to needlessly re-render SC's --> Increased compute --> $$$ :) I worry about that a bit with NextJS, actually. That NextJS technical approaches may optimize for their profit when deployed there.仅公开完整的路由刷新似乎是 Vercel 的策略，以不必要地重新渲染 SC 的 --> 增加计算 --> $$$ :) 实际上，我对 NextJS 有点担心。NextJS 技术方法在部署在那里时可能会优化其利润。
 
 [Replying to @](https://twitter.com/matt_kruse/status/1649141645844049939)
 
@@ -227,7 +227,7 @@ it’s the other way around. Next has rewritten their entire framework under the
 
 while Vercel obviously has incentives to take best advantage of React’s abilities and architectural model, the idea of designing a worse API so that Vercel could make a profit sounds both repulsive and shortsighted. i can vouch for everyone involved in App Router design.虽然 Vercel 显然有动力充分利用 React 的能力和架构模型，但设计一个更糟糕的 API 以便 Vercel 能够获利的想法听起来既令人反感又短视。我可以为参与 App Router 设计的每个人担保。
 
-If you want to self-host, all Next.js features will work. So, why would someone choose [Vercel for Next.js](https://vercel.com/docs/frameworks/nextjs), then? The same reason they'd choose it for Astro, SvelteKit, or even Remix.如果要自托管，所有 Next.js 功能都可以使用。那么，为什么有人会选择Vercel作为Next.js呢？他们为 Astro、SvelteKit 甚至 Remix 选择它的原因相同。
+If you want to self-host, all Next.js features will work. So, why would someone choose [Vercel for Next.js](https://vercel.com/docs/frameworks/nextjs), then? The same reason they'd choose it for Astro, SvelteKit, or even Remix.如果要自托管，所有 Next.js 功能都可以使用。那么，为什么有人会选择 Vercel 作为 Next.js 呢？他们为 Astro、SvelteKit 甚至 Remix 选择它的原因相同。
 
 If you don't want to worry about infrastructure, Vercel takes care of that for you (plus some other stuff, but that's besides the point). And thanks to [framework defined infra](https://vercel.com/blog/framework-defined-infrastructure), you're not writing a bunch of CDK code or bespoke infra-as-code solutions. You're writing Next.js code that's open and portable to any server, on any platform.如果您不想担心基础设施，Vercel 会为您处理（以及其他一些事情，但这不是重点）。多亏了框架定义的基础设施，您不必编写一堆 CDK 代码或定制的基础设施即代码解决方案。您正在编写 Next.js 代码，这些代码可以开放并移植到任何平台上的任何服务器。
 
@@ -237,7 +237,7 @@ Next.js is like Kubernetes, and Vercel is like [Google Kubernetes Engine](https:
 
 Kent mentions: Kent 提到：
 
-> I know for myself, it seems like Vercel is trying to blur the lines between what is Next.js and what is React. There is a lot of confusion for people on what is React and what is Next.js, especially with regard to the server components and server actions features.我自己知道，Vercel似乎试图模糊Next.js和React之间的界限。对于什么是React和什么是Next.js，人们有很多困惑，特别是在服务器组件和服务器操作功能方面。
+> I know for myself, it seems like Vercel is trying to blur the lines between what is Next.js and what is React. There is a lot of confusion for people on what is React and what is Next.js, especially with regard to the server components and server actions features.我自己知道，Vercel 似乎试图模糊 Next.js 和 React 之间的界限。对于什么是 React 和什么是 Next.js，人们有很多困惑，特别是在服务器组件和服务器操作功能方面。
 
 Definitely not intentional.绝对不是故意的。
 
@@ -251,7 +251,7 @@ We'll keep improving here and making the boundaries more clear.我们将在这�
 
 ## [](#stability)Stability 稳定性
 
-Kent mentions some concerns about the stability of Next.js, specifically:Kent提到了一些关于Next.js稳定性的担忧，特别是：
+Kent mentions some concerns about the stability of Next.js, specifically:Kent 提到了一些关于 Next.js 稳定性的担忧，特别是：
 
 > So Next.js is building into itself a canary feature, calling it stable, and then sending it off to all your users effectively turning your app into the sentinel species.因此，Next.js 正在构建一个金丝雀功能，称其为稳定版，然后将其发送给所有用户，从而有效地将您的应用程序转变为哨兵物种。
 
@@ -265,9 +265,9 @@ The App Router rollout has had bumps. Some bugs, things that didn't work, and pl
 
 This is on me. Not React. And our messaging to the community could have been better. There's a lot more I wanted to say about this, which is what we shared in the [2023 Next.js Conf Keynote](https://youtu.be/8q2q_820Sx4?t=1385).这是在我身上。不做出反应。我们向社区传达的信息本来可以更好。关于这一点，我想说的还有很多，这就是我们在 2023 年 Next.js Conf 主题演讲中分享的内容。
 
-In short, performance and reliability are still a major focus for Next.js. Kent goes on to mention:简而言之，性能和可靠性仍然是Next.js的主要关注点。Kent 接着提到：
+In short, performance and reliability are still a major focus for Next.js. Kent goes on to mention:简而言之，性能和可靠性仍然是 Next.js 的主要关注点。Kent 接着提到：
 
-> Yes, React Server Components are very cool and I look forward to being able to use them when they're production ready是的，React 服务器组件非常酷，我期待能够在它们准备好生产时使用它们
+> Yes, React Server Components are very cool and I look forward to being able to use them when they're production ready 是的，React 服务器组件非常酷，我期待能够在它们准备好生产时使用它们
 
 React Server Components are ready. There's now [thousands of the top sites on the web](https://twitter.com/leeerob/status/1700202503034515779) using Server Components in production. The experience getting there could have been better, but they're in production.React 服务器组件已准备就绪。现在，网络上有数以千计的顶级站点在生产中使用服务器组件。到达那里的体验本来可以更好，但它们正在生产中。
 
@@ -283,7 +283,7 @@ In Next.js 14, for example, if you want to opt-out of caching, you would use [`n
 
 Kent mentions: Kent 提到：
 
-> I keep hearing from people they're finding Next.js is getting overly complex.我不断听到人们发现Next.js变得过于复杂。
+> I keep hearing from people they're finding Next.js is getting overly complex.我不断听到人们发现 Next.js 变得过于复杂。
 
 The App Router is a very different model from the Pages Router. It's almost like a new framework. This was one of the many reasons why we needed to ensure you could [incrementally adopt](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration) this new router, and that the existing router and foundation would be stable and maintained for many releases in the future.应用程序路由器与页面路由器的模型截然不同。这几乎就像一个新框架。这是我们需要确保您可以逐步采用这种新路由器的众多原因之一，并且现有的路由器和基础将在未来的许多版本中保持稳定和维护。
 
@@ -299,43 +299,43 @@ We publish major versions when a Node.js version is no longer supported (i.e. wh
 
 We also care deeply about backwards compatibility. The core APIs from day one still work today.我们也非常关心向后兼容性。从第一天起的核心 API 今天仍然有效。
 
-7 years ago today [vercel.com/blog/next](https://vercel.com/blog/next) A walk down memory lane 🧵 The pictured code still works without change…7年前的今天 vercel.com/blog/next 走在记忆的小路🧵上 图中的代码仍然可以正常工作，无需更改...
+7 years ago today [vercel.com/blog/next](https://vercel.com/blog/next) A walk down memory lane 🧵 The pictured code still works without change…7 年前的今天 vercel.com/blog/next 走在记忆的小路🧵上 图中的代码仍然可以正常工作，无需更改...
 
 Kent shares: Kent 分享：
 
-> Earlier this year, the Remix team shared their plans for getting version 2 features released as an opt-in part of version 1 using a strategy called “future flags”.今年早些时候，Remix 团队分享了他们的计划，即使用一种称为“未来标志”的策略将版本 2 功能作为版本 1 的选择加入部分发布。
+> Earlier this year, the Remix team shared their plans for getting version 2 features released as an opt-in part of version 1 using a strategy called“future flags”.今年早些时候，Remix 团队分享了他们的计划，即使用一种称为“未来标志”的策略将版本 2 功能作为版本 1 的选择加入部分发布。
 
 I love this. We have a similar process in Next.js with experimental flags. We've also done future flags before in [previous releases](https://nextjs.org/blog/next-10-1#3x-faster-refresh). Their [future flags](https://remix.run/blog/future-flags) blog post mentioned is worth reading.我喜欢这个。我们在 Next.js 中有一个类似的过程，带有实验性标志。在以前的版本中，我们也做过未来的标志。他们提到的未来旗帜博客文章值得一读。
 
-## [](#remix-vs-nextjs-for-ecommerce)Remix vs. Next.js for EcommerceRemix vs. Next.js电子商务
+## [](#remix-vs-nextjs-for-ecommerce)Remix vs. Next.js for EcommerceRemix vs. Next.js 电子商务
 
-Kent mentions an older blog post the Remix team wrote comparing with Next.js:Kent提到了Remix团队写的一篇较旧的博客文章，与Next.js进行了比较：
+Kent mentions an older blog post the Remix team wrote comparing with Next.js:Kent 提到了 Remix 团队写的一篇较旧的博客文章，与 Next.js 进行了比较：
 
-> When the Remix team rewrote the Next.js ecommerce demo to answer the “**[Remix vs Next.js](https://remix.run/blog/remix-vs-next)**” question, it demonstrated really well that Remix resulted in a better user experience with much less code (which is an important input in user experience).当 Remix 团队重写 Next.js 电子商务演示以回答“Remix vs Next.js”问题时，它很好地证明了 Remix 以更少的代码带来了更好的用户体验（这是用户体验中的重要输入）。
+> When the Remix team rewrote the Next.js ecommerce demo to answer the “**[Remix vs Next.js](https://remix.run/blog/remix-vs-next)**”question, it demonstrated really well that Remix resulted in a better user experience with much less code (which is an important input in user experience).当 Remix 团队重写 Next.js 电子商务演示以回答“Remix vs Next.js”问题时，它很好地证明了 Remix 以更少的代码带来了更好的用户体验（这是用户体验中的重要输入）。
 
-I'm thankful for the Remix team pushing us to improve Next.js Commerce. The Pages Router version needed some work.我很感谢Remix团队推动我们改进Next.js Commerce。Pages Router 版本需要一些工作。
+I'm thankful for the Remix team pushing us to improve Next.js Commerce. The Pages Router version needed some work.我很感谢 Remix 团队推动我们改进 Next.js Commerce。Pages Router 版本需要一些工作。
 
-I'd recommend [re-reading their original blog post](https://remix.run/blog/remix-vs-next) and then viewing the [codebase for Next.js Commerce](https://github.com/vercel/commerce) and [updated demo](https://demo.vercel.store/) so you can [make your own assessment](https://twitter.com/championswimmer/status/1683875753681911816). I wanted to include a link to the Remix demo, but it [appears to be down](https://remix-ecommerce.fly.dev/).我建议重新阅读他们的原始博客文章，然后查看Next.js Commerce的代码库和更新的演示，以便您可以进行自己的评估。我想包含一个指向 Remix 演示的链接，但它似乎已关闭。
+I'd recommend [re-reading their original blog post](https://remix.run/blog/remix-vs-next) and then viewing the [codebase for Next.js Commerce](https://github.com/vercel/commerce) and [updated demo](https://demo.vercel.store/) so you can [make your own assessment](https://twitter.com/championswimmer/status/1683875753681911816). I wanted to include a link to the Remix demo, but it [appears to be down](https://remix-ecommerce.fly.dev/).我建议重新阅读他们的原始博客文章，然后查看 Next.js Commerce 的代码库和更新的演示，以便您可以进行自己的评估。我想包含一个指向 Remix 演示的链接，但它似乎已关闭。
 
 > I think it's worth making another comparison. Remix has also learned some new tricks since that article was written, like out-of-order streaming.我认为值得再做一次比较。自那篇文章撰写以来，Remix 还学到了一些新技巧，比如乱序流媒体。
 
-The Next.js App Router [has out-of-order streaming as well](https://gal.hagever.com/posts/out-of-order-streaming-from-scratch), it's fantastic. It's worked [very well](https://twitter.com/rauchg/status/1687591561377525760) for [Next.js Commerce](https://demo.vercel.store/).Next.js 应用程序路由器也有无序流媒体，这太棒了。它对Next.js Commerce非常有效。
+The Next.js App Router [has out-of-order streaming as well](https://gal.hagever.com/posts/out-of-order-streaming-from-scratch), it's fantastic. It's worked [very well](https://twitter.com/rauchg/status/1687591561377525760) for [Next.js Commerce](https://demo.vercel.store/).Next.js 应用程序路由器也有无序流媒体，这太棒了。它对 Next.js Commerce 非常有效。
 
 ## [](#conclusion)Conclusion 结论
 
 Phew, that turned out to be a long one. As Kent mentions:呸，原来是很长的。正如 Kent 所提到的：
 
-> I feel like both are highly capable frameworks我觉得两者都是功能强大的框架
+> I feel like both are highly capable frameworks 我觉得两者都是功能强大的框架
 
 We agree. You can make great web experiences with both.我们同意。您可以使用两者获得出色的 Web 体验。
 
 While I spent most of the post referencing points from Kent, I'd like to end with general reasons why I love using Next.js:虽然我在文章中的大部分时间都引用了肯特的观点，但我想以我喜欢使用 Next.js 的一般原因来结束：
 
-* I never need to write separate backends for projects I want to create. I can build my entire project with Next.js.我永远不需要为我想创建的项目编写单独的后端。我可以用Next.js构建我的整个项目。
+* I never need to write separate backends for projects I want to create. I can build my entire project with Next.js.我永远不需要为我想创建的项目编写单独的后端。我可以用 Next.js 构建我的整个项目。
 * I never have to worry about bundler, compiler, or frontend infrastructure. I get to focus on making great products through React components. And I'm able to use the latest React features, which I personally find to have a great developer experience.我从来不用担心打包器、编译器或前端基础设施。我开始专注于通过 React 组件制作出色的产品。而且我能够使用最新的 React 功能，我个人认为这些功能具有出色的开发人员体验。
-* I am able to update to the latest versions of Next.js and things continue to improve. Performance gets faster and new features get added. The iteration velocity is high. If there are changes, codemods and upgrade guides are provided.我能够更新到最新版本的Next.js，并且情况继续改善。性能更快，并添加了新功能。迭代速度高。如果有更改，则提供 codemod 和升级指南。
+* I am able to update to the latest versions of Next.js and things continue to improve. Performance gets faster and new features get added. The iteration velocity is high. If there are changes, codemods and upgrade guides are provided.我能够更新到最新版本的 Next.js，并且情况继续改善。性能更快，并添加了新功能。迭代速度高。如果有更改，则提供 codemod 和升级指南。
 * Next.js provides a bunch of components that help me keep my site fast. [Images](https://nextjs.org/docs/app/building-your-application/optimizing/images), [fonts](https://nextjs.org/docs/app/building-your-application/optimizing/fonts), [scripts](https://nextjs.org/docs/app/building-your-application/optimizing/scripts), and now even [properly loading third-parties](https://nextjs.org/docs/app/building-your-application/optimizing/third-party-libraries).Next.js 提供了一堆组件来帮助我保持网站快速。图像、字体、脚本，现在甚至可以正确加载第三方。
 
 I was using Next.js before I joined Vercel, and will likely continue to after Vercel as well. I hope my work in the Next.js community can help push the web forward.在加入 Vercel 之前，我一直在使用 Next.js，在加入 Vercel 之后，我也可能会继续使用。我希望我在 Next.js 社区的工作可以帮助推动网络向前发展。
 
-Hopefully this post helped share some insight into how Next.js has been evolving and where we see the framework heading in the future.希望这篇文章有助于分享一些关于Next.js如何发展以及我们看到框架未来的发展方向的见解。
+Hopefully this post helped share some insight into how Next.js has been evolving and where we see the framework heading in the future.希望这篇文章有助于分享一些关于 Next.js 如何发展以及我们看到框架未来的发展方向的见解。

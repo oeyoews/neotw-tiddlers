@@ -74,7 +74,7 @@ test3();
 ```
 
 最终输出 111、222，代码的执行顺序如下：\
-执行 test3()，执行 test1()，遇到 promise，阻塞代码，此时 test2()不执行，运行 test1()，等待 2s，输出 111，运行 resolve()，执行 test2()，等待 1s，输出 222。
+执行 test3()，执行 test1()，遇到 promise，阻塞代码，此时 test2() 不执行，运行 test1()，等待 2s，输出 111，运行 resolve()，执行 test2()，等待 1s，输出 222。
 
 参考链接：[理解 JavaScript 的 async/await](https://segmentfault.com/a/1190000007535316)
 

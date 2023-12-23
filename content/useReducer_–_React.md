@@ -15,18 +15,18 @@ const [state, dispatch] = useReducer(reducer, initialArg, init?)
 
 * [Usage  用法](#usage)
 
-  * [Adding a reducer to a component向组件添加减速器](#adding-a-reducer-to-a-component)
-  * [Writing the reducer function编写 reducer 函数](#writing-the-reducer-function)
-  * [Avoiding recreating the initial state避免重新创建初始状态](#avoiding-recreating-the-initial-state)
+  * [Adding a reducer to a component 向组件添加减速器](#adding-a-reducer-to-a-component)
+  * [Writing the reducer function 编写 reducer 函数](#writing-the-reducer-function)
+  * [Avoiding recreating the initial state 避免重新创建初始状态](#avoiding-recreating-the-initial-state)
 
 * [Troubleshooting  故障 排除](#troubleshooting)
 
-  * [I’ve dispatched an action, but logging gives me the old state value我已经调度了一个操作，但日志记录给了我旧的状态值](#ive-dispatched-an-action-but-logging-gives-me-the-old-state-value)
-  * [I’ve dispatched an action, but the screen doesn’t update我已调度操作，但屏幕没有更新](#ive-dispatched-an-action-but-the-screen-doesnt-update)
-  * [A part of my reducer state becomes undefined after dispatching我的 reducer 状态的一部分在调度后变得未定义](#a-part-of-my-reducer-state-becomes-undefined-after-dispatching)
-  * [My entire reducer state becomes undefined after dispatching调度后，我的整个 reducer 状态变得未定义](#my-entire-reducer-state-becomes-undefined-after-dispatching)
+  * [I’ve dispatched an action, but logging gives me the old state value 我已经调度了一个操作，但日志记录给了我旧的状态值](#ive-dispatched-an-action-but-logging-gives-me-the-old-state-value)
+  * [I’ve dispatched an action, but the screen doesn’t update 我已调度操作，但屏幕没有更新](#ive-dispatched-an-action-but-the-screen-doesnt-update)
+  * [A part of my reducer state becomes undefined after dispatching 我的 reducer 状态的一部分在调度后变得未定义](#a-part-of-my-reducer-state-becomes-undefined-after-dispatching)
+  * [My entire reducer state becomes undefined after dispatching 调度后，我的整个 reducer 状态变得未定义](#my-entire-reducer-state-becomes-undefined-after-dispatching)
   * [I’m getting an error: “Too many re-renders”我收到错误：“重新渲染太多”](#im-getting-an-error-too-many-re-renders)
-  * [My reducer or initializer function runs twice我的 reducer 或 initializer 函数运行了两次](#my-reducer-or-initializer-function-runs-twice)
+  * [My reducer or initializer function runs twice 我的 reducer 或 initializer 函数运行了两次](#my-reducer-or-initializer-function-runs-twice)
 
 ***
 
@@ -127,7 +127,7 @@ React will set the next state to the result of calling the `reducer` function yo
 
 ## Usage  用法[](#usage "Link for Usage ")
 
-### Adding a reducer to a component向组件添加减速器[](#adding-a-reducer-to-a-component "Link for Adding a reducer to a component ")
+### Adding a reducer to a component 向组件添加减速器[](#adding-a-reducer-to-a-component "Link for Adding a reducer to a component ")
 
 Call `useReducer` at the top level of your component to manage state with a [reducer.](https://react.dev/learn/extracting-state-logic-into-a-reducer)在组件的顶层调用 `useReducer` ，以使用 reducer 管理状态。
 
@@ -184,7 +184,7 @@ React will pass the current state and the action to your reducer function. Your 
 
 ***
 
-### Writing the reducer function编写 reducer 函数[](#writing-the-reducer-function "Link for Writing the reducer function ")
+### Writing the reducer function 编写 reducer 函数[](#writing-the-reducer-function "Link for Writing the reducer function ")
 
 A reducer function is declared like this:reducer 函数是这样声明的：
 
@@ -375,7 +375,7 @@ Read [updating objects in state](https://react.dev/learn/updating-objects-in-sta
 
 ***
 
-### Avoiding recreating the initial state避免重新创建初始状态[](#avoiding-recreating-the-initial-state "Link for Avoiding recreating the initial state ")
+### Avoiding recreating the initial state 避免重新创建初始状态[](#avoiding-recreating-the-initial-state "Link for Avoiding recreating the initial state ")
 
 React saves the initial state once and ignores it on the next renders.React 保存一次初始状态，并在下一次渲染时忽略它。
 
@@ -429,7 +429,7 @@ const [state, dispatch] = useReducer(reducer, username, createInitialState);
 
 <!--/$-->
 
-Notice that you’re passing `createInitialState`, which is the *function itself*, and not `createInitialState()`, which is the result of calling it. This way, the initial state does not get re-created after initialization.请注意，您传递 `createInitialState` 的是 ，这是函数本身，而不是 `createInitialState()` ，这是调用它的结果。这样，初始化后不会重新创建初始状态。
+Notice that you’re passing `createInitialState`, which is the *function itself*, and not `createInitialState()`, which is the result of calling it. This way, the initial state does not get re-created after initialization.请注意，您传递 `createInitialState` 的是，这是函数本身，而不是 `createInitialState()` ，这是调用它的结果。这样，初始化后不会重新创建初始状态。
 
 In the above example, `createInitialState` takes a `username` argument. If your initializer doesn’t need any information to compute the initial state, you may pass `null` as the second argument to `useReducer`.在上面的例子中， `createInitialState` 采用一个 `username` 参数。如果初始值设定项不需要任何信息来计算初始状态，则可以将第二个参数传递给 `null` `useReducer` 。
 
@@ -437,7 +437,7 @@ In the above example, `createInitialState` takes a `username` argument. If your 
 
 ## Troubleshooting  故障 排除[](#troubleshooting "Link for Troubleshooting ")
 
-### I’ve dispatched an action, but logging gives me the old state value我已经调度了一个操作，但日志记录给了我旧的状态值[](#ive-dispatched-an-action-but-logging-gives-me-the-old-state-value "Link for I’ve dispatched an action, but logging gives me the old state value ")
+### I’ve dispatched an action, but logging gives me the old state value 我已经调度了一个操作，但日志记录给了我旧的状态值[](#ive-dispatched-an-action-but-logging-gives-me-the-old-state-value "Link for I’ve dispatched an action, but logging gives me the old state value ")
 
 Calling the `dispatch` function **does not change state in the running code**:调用该 `dispatch` 函数不会更改运行代码中的状态：
 
@@ -496,7 +496,7 @@ console.log(nextState); // { age: 43 }
 
 ***
 
-### I’ve dispatched an action, but the screen doesn’t update我已调度操作，但屏幕没有更新[](#ive-dispatched-an-action-but-the-screen-doesnt-update "Link for I’ve dispatched an action, but the screen doesn’t update ")
+### I’ve dispatched an action, but the screen doesn’t update 我已调度操作，但屏幕没有更新[](#ive-dispatched-an-action-but-the-screen-doesnt-update "Link for I’ve dispatched an action, but the screen doesn’t update ")
 
 React will **ignore your update if the next state is equal to the previous state,** as determined by an [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) comparison. This usually happens when you change an object or an array in state directly:如果下一个状态等于前一个状态，React 将忽略你的更新，这是通过 `Object.is` 比较确定的。当您直接更改处于状态的对象或数组时，通常会发生这种情况：
 
@@ -616,7 +616,7 @@ name: action.nextName
 
 ***
 
-### A part of my reducer state becomes undefined after dispatching我的 reducer 状态的一部分在调度后变得未定义[](#a-part-of-my-reducer-state-becomes-undefined-after-dispatching "Link for A part of my reducer state becomes undefined after dispatching ")
+### A part of my reducer state becomes undefined after dispatching 我的 reducer 状态的一部分在调度后变得未定义[](#a-part-of-my-reducer-state-becomes-undefined-after-dispatching "Link for A part of my reducer state becomes undefined after dispatching ")
 
 Make sure that every `case` branch **copies all of the existing fields** when returning the new state:确保每个 `case` 分支在返回新状态时都复制所有现有字段：
 
@@ -656,9 +656,9 @@ Without `...state` above, the returned next state would only contain the `age` f
 
 ***
 
-### My entire reducer state becomes undefined after dispatching调度后，我的整个 reducer 状态变得未定义[](#my-entire-reducer-state-becomes-undefined-after-dispatching "Link for My entire reducer state becomes undefined after dispatching ")
+### My entire reducer state becomes undefined after dispatching 调度后，我的整个 reducer 状态变得未定义[](#my-entire-reducer-state-becomes-undefined-after-dispatching "Link for My entire reducer state becomes undefined after dispatching ")
 
-If your state unexpectedly becomes `undefined`, you’re likely forgetting to `return` state in one of the cases, or your action type doesn’t match any of the `case` statements. To find why, throw an error outside the `switch`:如果状态意外变 `undefined` 为 ，则可能在其中一种情况下忘记声明 `return` ，或者操作类型与任何 `case` 语句都不匹配。要找出原因，请在 `switch` ：
+If your state unexpectedly becomes `undefined`, you’re likely forgetting to `return` state in one of the cases, or your action type doesn’t match any of the `case` statements. To find why, throw an error outside the `switch`:如果状态意外变 `undefined` 为，则可能在其中一种情况下忘记声明 `return` ，或者操作类型与任何 `case` 语句都不匹配。要找出原因，请在 `switch` ：
 
 <!--$-->
 
@@ -704,7 +704,7 @@ You can also use a static type checker like TypeScript to catch such mistakes.�
 
 ### I’m getting an error: “Too many re-renders”我收到错误：“重新渲染太多”[](#im-getting-an-error-too-many-re-renders "Link for I’m getting an error: “Too many re-renders” ")
 
-You might get an error that says: `Too many re-renders. React limits the number of renders to prevent an infinite loop.` Typically, this means that you’re unconditionally dispatching an action *during render*, so your component enters a loop: render, dispatch (which causes a render), render, dispatch (which causes a render), and so on. Very often, this is caused by a mistake in specifying an event handler:您可能会收到以下错误： 通常，这意味着您在渲染期间无条件调度操作，因此您的组件会进入一个循环： `Too many re-renders. React limits the number of renders to prevent an infinite loop.` 渲染、调度（导致渲染）、渲染、调度（导致渲染）等。很多时候，这是由指定事件处理程序时的错误引起的：
+You might get an error that says: `Too many re-renders. React limits the number of renders to prevent an infinite loop.` Typically, this means that you’re unconditionally dispatching an action *during render*, so your component enters a loop: render, dispatch (which causes a render), render, dispatch (which causes a render), and so on. Very often, this is caused by a mistake in specifying an event handler:您可能会收到以下错误：通常，这意味着您在渲染期间无条件调度操作，因此您的组件会进入一个循环： `Too many re-renders. React limits the number of renders to prevent an infinite loop.` 渲染、调度（导致渲染）、渲染、调度（导致渲染）等。很多时候，这是由指定事件处理程序时的错误引起的：
 
 <!--$-->
 
@@ -733,7 +733,7 @@ If you can’t find the cause of this error, click on the arrow next to the erro
 
 ***
 
-### My reducer or initializer function runs twice我的 reducer 或 initializer 函数运行了两次[](#my-reducer-or-initializer-function-runs-twice "Link for My reducer or initializer function runs twice ")
+### My reducer or initializer function runs twice 我的 reducer 或 initializer 函数运行了两次[](#my-reducer-or-initializer-function-runs-twice "Link for My reducer or initializer function runs twice ")
 
 In [Strict Mode](https://react.dev/reference/react/StrictMode), React will call your reducer and initializer functions twice. This shouldn’t break your code.在严格模式下，React 将调用你的 reducer 和 initializer 函数两次。这不应该破坏你的代码。
 

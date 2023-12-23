@@ -11,4 +11,4 @@
      console.log(obj.hasOwnProperty('toString')); // false，因为 toString 是继承的属性
      ```
 
-hasOwn 是es2022, chatgpt(gpt 3.5) 无法回答这个问题
+hasOwn 是 es2022, chatgpt(gpt 3.5) 无法回答这个问题

@@ -19,11 +19,11 @@
 
 * [Usage  用法](#usage)
 
-  * [Enabling Strict Mode for entire app为整个应用启用严格模式](#enabling-strict-mode-for-entire-app)
-  * [Enabling Strict Mode for a part of the app为应用的一部分启用严格模式](#enabling-strict-mode-for-a-part-of-the-app)
-  * [Fixing bugs found by double rendering in development修复开发中双重渲染发现的错误](#fixing-bugs-found-by-double-rendering-in-development)
-  * [Fixing bugs found by re-running Effects in development修复在开发中重新运行效果时发现的错误](#fixing-bugs-found-by-re-running-effects-in-development)
-  * [Fixing deprecation warnings enabled by Strict Mode修复严格模式启用的弃用警告](#fixing-deprecation-warnings-enabled-by-strict-mode)
+  * [Enabling Strict Mode for entire app 为整个应用启用严格模式](#enabling-strict-mode-for-entire-app)
+  * [Enabling Strict Mode for a part of the app 为应用的一部分启用严格模式](#enabling-strict-mode-for-a-part-of-the-app)
+  * [Fixing bugs found by double rendering in development 修复开发中双重渲染发现的错误](#fixing-bugs-found-by-double-rendering-in-development)
+  * [Fixing bugs found by re-running Effects in development 修复在开发中重新运行效果时发现的错误](#fixing-bugs-found-by-re-running-effects-in-development)
+  * [Fixing deprecation warnings enabled by Strict Mode 修复严格模式启用的弃用警告](#fixing-deprecation-warnings-enabled-by-strict-mode)
 
 ***
 
@@ -82,7 +82,7 @@ Strict Mode enables the following development-only behaviors:严格模式支持�
 
 ## Usage  用法[](#usage "Link for Usage ")
 
-### Enabling Strict Mode for entire app为整个应用启用严格模式[](#enabling-strict-mode-for-entire-app "Link for Enabling Strict Mode for entire app ")
+### Enabling Strict Mode for entire app 为整个应用启用严格模式[](#enabling-strict-mode-for-entire-app "Link for Enabling Strict Mode for entire app ")
 
 Strict Mode enables extra development-only checks for the entire component tree inside the `<StrictMode>` component. These checks help you find common bugs in your components early in the development process.严格模式允许对组件内的整个 `<StrictMode>` 组件树进行额外的仅开发检查。这些检查可帮助您在开发过程的早期发现组件中的常见错误。
 
@@ -133,7 +133,7 @@ Strict Mode enables the following checks in development:严格模式在开发中
 
 ***
 
-### Enabling Strict Mode for a part of the app为应用的一部分启用严格模式[](#enabling-strict-mode-for-a-part-of-the-app "Link for Enabling Strict Mode for a part of the app ")
+### Enabling Strict Mode for a part of the app 为应用的一部分启用严格模式[](#enabling-strict-mode-for-a-part-of-the-app "Link for Enabling Strict Mode for a part of the app ")
 
 You can also enable Strict Mode for any part of your application:您还可以为应用程序的任何部分启用严格模式：
 
@@ -191,21 +191,21 @@ In this example, Strict Mode checks will not run against the `Header` and `Foote
 
 ***
 
-### Fixing bugs found by double rendering in development修复开发中双重渲染发现的错误[](#fixing-bugs-found-by-double-rendering-in-development "Link for Fixing bugs found by double rendering in development ")
+### Fixing bugs found by double rendering in development 修复开发中双重渲染发现的错误[](#fixing-bugs-found-by-double-rendering-in-development "Link for Fixing bugs found by double rendering in development ")
 
 [React assumes that every component you write is a pure function.](https://react.dev/learn/keeping-components-pure) This means that React components you write must always return the same JSX given the same inputs (props, state, and context).React 假设你编写的每个组件都是一个纯函数。这意味着你编写的 React 组件必须始终返回相同的 JSX，给定相同的输入（props、state 和 context）。
 
 Components breaking this rule behave unpredictably and cause bugs. To help you find accidentally impure code, Strict Mode calls some of your functions (only the ones that should be pure) **twice in development.** This includes:违反此规则的组件行为不可预测，并导致错误。为了帮助您发现意外的不纯代码，严格模式在开发过程中会调用某些函数（仅那些应该是纯函数的函数）两次。这包括：
 
-* Your component function body (only top-level logic, so this doesn’t include code inside event handlers)组件函数体（仅顶层逻辑，因此不包括事件处理程序中的代码）
+* Your component function body (only top-level logic, so this doesn’t include code inside event handlers) 组件函数体（仅顶层逻辑，因此不包括事件处理程序中的代码）
 * Functions that you pass to [`useState`](https://react.dev/reference/react/useState), [`set` functions](https://react.dev/reference/react/useState#setstate), [`useMemo`](https://react.dev/reference/react/useMemo), or [`useReducer`](https://react.dev/reference/react/useReducer)传递给 `useState` 、 `set` 函数或 `useMemo` `useReducer`
-* Some class component methods like [`constructor`](https://react.dev/reference/react/Component#constructor), [`render`](https://react.dev/reference/react/Component#render), [`shouldComponentUpdate`](https://react.dev/reference/react/Component#shouldcomponentupdate) ([see the whole list](https://reactjs.org/docs/strict-mode.html#detecting-unexpected-side-effects))一些类组件方法，如 `constructor` ， ， `render` `shouldComponentUpdate` （ 查看完整列表）
+* Some class component methods like [`constructor`](https://react.dev/reference/react/Component#constructor), [`render`](https://react.dev/reference/react/Component#render), [`shouldComponentUpdate`](https://react.dev/reference/react/Component#shouldcomponentupdate) ([see the whole list](https://reactjs.org/docs/strict-mode.html#detecting-unexpected-side-effects)) 一些类组件方法，如 `constructor` ， ， `render` `shouldComponentUpdate` （查看完整列表）
 
 If a function is pure, running it twice does not change its behavior because a pure function produces the same result every time. However, if a function is impure (for example, it mutates the data it receives), running it twice tends to be noticeable (that’s what makes it impure!) This helps you spot and fix the bug early.如果一个函数是纯函数，则运行它两次不会改变其行为，因为纯函数每次都会产生相同的结果。但是，如果一个函数是不纯的（例如，它改变了它接收到的数据），那么运行它两次往往会很明显（这就是它不纯的原因！这有助于您及早发现并修复错误。
 
 **Here is an example to illustrate how double rendering in Strict Mode helps you find bugs early.下面是一个示例，用于说明严格模式下的双重渲染如何帮助您及早发现错误。**
 
-This `StoryTray` component takes an array of `stories` and adds one last “Create Story” item at the end:该 `StoryTray` 组件采用一个数组， `stories` 并在末尾添加最后一个“创建故事”项：
+This `StoryTray` component takes an array of `stories` and adds one last“Create Story”item at the end:该 `StoryTray` 组件采用一个数组， `stories` 并在末尾添加最后一个“创建故事”项：
 
 <!--$-->
 
@@ -264,7 +264,7 @@ If you have [React DevTools](https://react.dev/learn/react-developer-tools) inst
 
 ***
 
-### Fixing bugs found by re-running Effects in development修复在开发中重新运行效果时发现的错误[](#fixing-bugs-found-by-re-running-effects-in-development "Link for Fixing bugs found by re-running Effects in development ")
+### Fixing bugs found by re-running Effects in development 修复在开发中重新运行效果时发现的错误[](#fixing-bugs-found-by-re-running-effects-in-development "Link for Fixing bugs found by re-running Effects in development ")
 
 Strict Mode can also help find bugs in [Effects.](https://react.dev/learn/synchronizing-with-effects)严格模式还可以帮助查找效果中的错误。
 
@@ -282,7 +282,7 @@ Consider this example that connects a component to a chat:请考虑以下将组�
 
 There is an issue with this code, but it might not be immediately clear.此代码存在问题，但可能不会立即清楚。
 
-To make the issue more obvious, let’s implement a feature. In the example below, `roomId` is not hardcoded. Instead, the user can select the `roomId` that they want to connect to from a dropdown. Click “Open chat” and then select different chat rooms one by one. Keep track of the number of active connections in the console:为了使问题更加明显，让我们实现一个功能。在下面的示例中， `roomId` 未进行硬编码。相反，用户可以从下拉列表中选择要连接到的。 `roomId` 单击“打开聊天”，然后逐个选择不同的聊天室。跟踪控制台中的活动连接数：
+To make the issue more obvious, let’s implement a feature. In the example below, `roomId` is not hardcoded. Instead, the user can select the `roomId` that they want to connect to from a dropdown. Click“Open chat”and then select different chat rooms one by one. Keep track of the number of active connections in the console:为了使问题更加明显，让我们实现一个功能。在下面的示例中， `roomId` 未进行硬编码。相反，用户可以从下拉列表中选择要连接到的。 `roomId` 单击“打开聊天”，然后逐个选择不同的聊天室。跟踪控制台中的活动连接数：
 
 <!--$-->
 
@@ -310,7 +310,7 @@ return () => connection.disconnect();
 
 <!--/$-->
 
-Now that your Effect “cleans up” after itself and destroys the outdated connections, the leak is solved. However, notice that the problem did not become visible until you’ve added more features (the select box).现在，您的效果器会自行“清理”并破坏过时的连接，泄漏问题就解决了。但是，请注意，在添加更多功能（选择框）之前，问题不会变得可见。
+Now that your Effect“cleans up”after itself and destroys the outdated connections, the leak is solved. However, notice that the problem did not become visible until you’ve added more features (the select box).现在，您的效果器会自行“清理”并破坏过时的连接，泄漏问题就解决了。但是，请注意，在添加更多功能（选择框）之前，问题不会变得可见。
 
 **In the original example, the bug wasn’t obvious. Now let’s wrap the original (buggy) code in `<StrictMode>`:在原始示例中，该错误并不明显。现在让我们将原始（错误）代码包装在： `<StrictMode>`**
 
@@ -318,7 +318,7 @@ Now that your Effect “cleans up” after itself and destroys the outdated conn
 
 <!--/$-->
 
-**With Strict Mode, you immediately see that there is a problem** (the number of active connections jumps to 2). Strict Mode runs an extra setup+cleanup cycle for every Effect. This Effect has no cleanup logic, so it creates an extra connection but doesn’t destroy it. This is a hint that you’re missing a cleanup function.使用严格模式时，您会立即看到存在问题（活动连接数跳到 2）。严格模式为每个效果运行额外的设置+清理周期。此效果没有清理逻辑，因此它会创建一个额外的连接，但不会破坏它。这暗示您缺少清理功能。
+**With Strict Mode, you immediately see that there is a problem** (the number of active connections jumps to 2). Strict Mode runs an extra setup+cleanup cycle for every Effect. This Effect has no cleanup logic, so it creates an extra connection but doesn’t destroy it. This is a hint that you’re missing a cleanup function.使用严格模式时，您会立即看到存在问题（活动连接数跳到 2）。严格模式为每个效果运行额外的设置 + 清理周期。此效果没有清理逻辑，因此它会创建一个额外的连接，但不会破坏它。这暗示您缺少清理功能。
 
 Strict Mode lets you notice such mistakes early in the process. When you fix your Effect by adding a cleanup function in Strict Mode, you *also* fix many possible future production bugs like the select box from before:严格模式可让您在流程的早期注意到此类错误。当您通过在严格模式下添加清理功能来修复效果时，您还会修复许多未来可能的生产错误，例如之前的选择框：
 
@@ -334,13 +334,13 @@ Without Strict Mode, it was easy to miss that your Effect needed cleanup. By run
 
 ***
 
-### Fixing deprecation warnings enabled by Strict Mode修复严格模式启用的弃用警告[](#fixing-deprecation-warnings-enabled-by-strict-mode "Link for Fixing deprecation warnings enabled by Strict Mode ")
+### Fixing deprecation warnings enabled by Strict Mode 修复严格模式启用的弃用警告[](#fixing-deprecation-warnings-enabled-by-strict-mode "Link for Fixing deprecation warnings enabled by Strict Mode ")
 
 React warns if some component anywhere inside a `<StrictMode>` tree uses one of these deprecated APIs:如果 `<StrictMode>` 树中任何位置的某个组件使用这些已弃用的 API 之一，React 会发出警告：
 
 * [`findDOMNode`](https://react.dev/reference/react-dom/findDOMNode). [See alternatives.](https://reactjs.org/docs/strict-mode.html#warning-about-deprecated-finddomnode-usage)`findDOMNode` 。查看替代项。
 * `UNSAFE_` class lifecycle methods like [`UNSAFE_componentWillMount`](https://react.dev/reference/react/Component#unsafe_componentwillmount). [See alternatives.](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#migrating-from-legacy-lifecycles)`UNSAFE_` 类生命周期方法，如 `UNSAFE_componentWillMount` .查看替代项。
-* Legacy context ([`childContextTypes`](https://react.dev/reference/react/Component#static-childcontexttypes), [`contextTypes`](https://react.dev/reference/react/Component#static-contexttypes), and [`getChildContext`](https://react.dev/reference/react/Component#getchildcontext)). [See alternatives.](https://react.dev/reference/react/createContext)旧上下文 （ `childContextTypes` 、 `contextTypes` 和 `getChildContext` ）。查看替代项。
-* Legacy string refs ([`this.refs`](https://react.dev/reference/react/Component#refs)). [See alternatives.](https://reactjs.org/docs/strict-mode.html#warning-about-legacy-string-ref-api-usage)旧字符串引用 （ `this.refs` ）。查看替代项。
+* Legacy context ([`childContextTypes`](https://react.dev/reference/react/Component#static-childcontexttypes), [`contextTypes`](https://react.dev/reference/react/Component#static-contexttypes), and [`getChildContext`](https://react.dev/reference/react/Component#getchildcontext)). [See alternatives.](https://react.dev/reference/react/createContext)旧上下文（ `childContextTypes` 、 `contextTypes` 和 `getChildContext` ）。查看替代项。
+* Legacy string refs ([`this.refs`](https://react.dev/reference/react/Component#refs)). [See alternatives.](https://reactjs.org/docs/strict-mode.html#warning-about-legacy-string-ref-api-usage)旧字符串引用（ `this.refs` ）。查看替代项。
 
 These APIs are primarily used in older [class components](https://react.dev/reference/react/Component) so they rarely appear in modern apps.这些 API 主要用于较旧的类组件中，因此它们很少出现在现代应用中。

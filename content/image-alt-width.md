@@ -1,1 +1,1 @@
-img 设置alt 为空时, 如果src 无效, 整个image 元素的widget 就是0, 所以会看不到,图片加载失败的样子, 但是如果设置了width, 就可以看到
+img 设置 alt 为空时，如果 src 无效，整个 image 元素的 widget 就是 0, 所以会看不到，图片加载失败的样子，但是如果设置了 width, 就可以看到

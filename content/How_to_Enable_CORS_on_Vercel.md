@@ -59,7 +59,7 @@ An example of how to enable CORS using Node.js Serverless Functions deployed on 
 
 The `allowCors` function acts as a wrapper, enabling CORS for the Serverless Function passed to it. This is a common pattern when using middleware in Serverless Functions and can be applied to multiple scenarios.该 `allowCors` 函数充当包装器，为传递给它的无服务器函数启用 CORS。这是在 Serverless Functions 中使用中间件时的常见模式，可以应用于多个场景。
 
-## [Enabling CORS in a Next.js App在 Next.js 应用中启用 CORS](#enabling-cors-in-a-next.js-app)
+## [Enabling CORS in a Next.js App 在 Next.js 应用中启用 CORS](#enabling-cors-in-a-next.js-app)
 
 In the `next.config.js` file, a "headers" function can be created:在 `next.config.js` 文件中，可以创建一个“headers”函数：
 
@@ -101,7 +101,7 @@ An example of how to enable CORS using Next.js routing configuration.如何使�
 
 The `headers()` function allows you to define paths associated with a set of headers. It can be useful to allow CORS in multiple routes.该 `headers()` 函数允许您定义与一组标头关联的路径。在多个路由中允许 CORS 可能很有用。
 
-## [Enabling CORS using `vercel.json`使用 `vercel.json` ](#enabling-cors-using-vercel.json)
+## [Enabling CORS using `vercel.json` 使用 `vercel.json` ](#enabling-cors-using-vercel.json)
 
 If you are not using Next.js, you can still enable headers in multiple paths by using the [Vercel configuration](https://vercel.com/docs/configuration#project/headers) file.如果您没有使用 Next.js，您仍然可以使用 Vercel 配置文件在多个路径中启用标头。
 

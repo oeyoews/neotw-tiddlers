@@ -9,15 +9,15 @@
 
 ***
 
-A little over four years ago, Rich Harris released [Virtual DOM is pure overhead (opens in a new tab)](https://svelte.dev/blog/virtual-dom-is-pure-overhead)四年多前，Rich Harris 发布了 Virtual DOM is pure overhead, analyzing the performance of traditional virtual DOM manipulation.[\[0\]](#0)，分析了传统虚拟DOM操作的性能。 \[0]
+A little over four years ago, Rich Harris released [Virtual DOM is pure overhead (opens in a new tab)](https://svelte.dev/blog/virtual-dom-is-pure-overhead)四年多前，Rich Harris 发布了 Virtual DOM is pure overhead, analyzing the performance of traditional virtual DOM manipulation.[\[0\]](#0)，分析了传统虚拟 DOM 操作的性能。 \[0]
 
-> \[0] "you've probably heard the phrase 'the virtual DOM is fast', often said to mean that it's faster than the real DOM. It's a surprisingly resilient meme" - Harris, 2018\[0] “你可能听说过'虚拟DOM很快'这句话，通常说它比真正的DOM快。这是一个令人惊讶的弹性模因“——哈里斯，2018 年
+> \[0] "you've probably heard the phrase 'the virtual DOM is fast', often said to mean that it's faster than the real DOM. It's a surprisingly resilient meme" - Harris, 2018\[0] “你可能听说过'虚拟 DOM 很快'这句话，通常说它比真正的 DOM 快。这是一个令人惊讶的弹性模因“——哈里斯，2018 年
 
 In his article "Virtual DOM is pure overhead," Rich Harris argues that the virtual DOM, a widely praised feature of frameworks like React, is not as efficient as many developers believe. He goes on to critique the way it works and presents an alternative approach.Rich Harris 在他的文章“虚拟 DOM 是纯粹的开销”中认为，虚拟 DOM 是 React 等框架的一个广受赞誉的特性，并不像许多开发人员认为的那样高效。他继续批评了它的工作方式，并提出了另一种方法。
 
 But what followed years after was the emergence of a new meme: that the virtual DOM **is pure overhead**. The meme became so resilient that it turned the "no virtual DOM" framework movement from an iconoclastic subgroup to a fully fledged crusade.但几年后，出现了一种新的模因：虚拟 DOM 纯粹是开销。这个模因变得如此有弹性，以至于它把“无虚拟 DOM”框架运动从一个反传统的子群体变成了一个成熟的十字军东征。
 
-Thus, the virtual DOM was relegated to the "annoying cousin nobody likes but has to invite to family gatherings" status. It became necessary evil, a performance tax that we had to pay for the convenience of declarative UIs.因此，虚拟 DOM 被降级为“没人喜欢但必须邀请参加家庭聚会的烦人表弟”状态。它变成了必要的邪恶，为了声明式UI的便利性，我们必须支付性能税。
+Thus, the virtual DOM was relegated to the "annoying cousin nobody likes but has to invite to family gatherings" status. It became necessary evil, a performance tax that we had to pay for the convenience of declarative UIs.因此，虚拟 DOM 被降级为“没人喜欢但必须邀请参加家庭聚会的烦人表弟”状态。它变成了必要的邪恶，为了声明式 UI 的便利性，我们必须支付性能税。
 
 Until now. 直到现在。
 
@@ -41,7 +41,7 @@ In the previous example, you can see that diffing depends on the size of the tre
 
 With newer frameworks like Svelte, the virtual DOM isn't even used because of the performance overhead. Instead, Svelte uses a technique called "dirty checking" to determine what has changed. Fine-grained reactivity frameworks like SolidJS take this a step further by pinpointing exactly what has changed and updating only that part of the DOM.对于像 Svelte 这样的较新框架，由于性能开销，甚至不使用虚拟 DOM。相反，Svelte 使用一种称为“脏检查”的技术来确定发生了什么变化。像 SolidJS 这样的细粒度响应式框架更进一步，精确地指出了哪些变化并仅更新 DOM 的那部分。
 
-## The Block Virtual DOM块虚拟 DOM[](#the-block-virtual-dom)
+## The Block Virtual DOM 块虚拟 DOM[](#the-block-virtual-dom)
 
 In 2022, [Blockdom (opens in a new tab)](https://github.com/ged-odoo/blockdom) 2022 年，Blockdom was released. Taking a fundamentally different approach, Blockdom introduced the idea of a "block virtual DOM."被释放。Blockdom 采用了一种根本不同的方法，引入了“块虚拟 DOM”的概念。
 
@@ -62,7 +62,7 @@ Let's take a look at a simple counter example and how it would be handled with M
 
 ### Static Analysis 静态分析[](#static-analysis)
 
-The static analysis step can occur at compile time or the first thing at runtime, depending on whether you use Million.js' experimental compiler or not.静态分析步骤可以在编译时发生，也可以在运行时首先发生，这取决于你是否使用Million.js的实验性编译器。
+The static analysis step can occur at compile time or the first thing at runtime, depending on whether you use Million.js' experimental compiler or not.静态分析步骤可以在编译时发生，也可以在运行时首先发生，这取决于你是否使用 Million.js 的实验性编译器。
 
 This step is responsible for extracting dynamic parts of the virtual DOM into the Edit Map.此步骤负责将虚拟 DOM 的动态部分提取到编辑映射中。
 
@@ -76,7 +76,7 @@ Instead of diffing by element, we can just diff \`prop1\` and \`prop2\`. Since b
 
 You can see that the dirty checking example takes much less computation than the diffing step. This is because the dirty checking step is only concerned with the state, not the virtual DOM, as each virtual node might need many levels of recursion to determine if it has changed, state just needs a shallow equality check.您可以看到，脏检查示例比差异步骤花费的计算量少得多。这是因为脏检查步骤只与状态有关，而不与虚拟 DOM 有关，因为每个虚拟节点可能需要许多级别的递归来确定它是否已更改，状态只需要一个浅层的相等性检查。
 
-## Is this technique effective?这种技术有效吗？[](#is-this-technique-effective)
+## Is this technique effective？这种技术有效吗？[](#is-this-technique-effective)
 
 **Yes, but it's not a silver bullet.** [(View latest benchmark) (opens in a new tab)](https://krausest.github.io/js-framework-benchmark/2023/table_chrome_112.0.5615.49.html)是的，但这不是灵丹妙药。（查看最新基准）
 
@@ -84,9 +84,9 @@ Million.js sports pretty high performance and is able to outperform React in the
 
 The JavaScript Framework Benchmark is a benchmark that tests the performance of frameworks by rendering a large table of rows and columns. The benchmark is designed to test the performance of highly unrealistic performance tests (like adding/replacing 1000 rows), and is not necessarily representative of real world applications.JavaScript 框架基准测试是一个基准测试，它通过呈现一个包含行和列的大型表来测试框架的性能。该基准测试旨在测试高度不切实际的性能测试（如添加/替换 1000 行）的性能，并不一定代表实际应用程序。
 
-So where can Million.js or the block virtual DOM be used?那么Million.js或块虚拟DOM可以在哪里使用呢？
+So where can Million.js or the block virtual DOM be used？那么 Million.js 或块虚拟 DOM 可以在哪里使用呢？
 
-### Lots of static content with little dynamic content静态内容多，动态内容少[](#lots-of-static-content-with-little-dynamic-content)
+### Lots of static content with little dynamic content 静态内容多，动态内容少[](#lots-of-static-content-with-little-dynamic-content)
 
 Block virtual DOM is best used when there is a lot of static content with little dynamic content. The biggest advantage the block virtual DOM has is that it doesn't need to think about the static parts of the virtual DOM, so if it can skip over a lot of static content, it can be very fast.当静态内容较多而动态内容很少时，最好使用块虚拟 DOM。块虚拟 DOM 最大的优点是它不需要考虑虚拟 DOM 的静态部分，所以如果它能跳过很多静态内容，它可以非常快。
 
@@ -94,7 +94,7 @@ For example, the block virtual DOM would be much faster than the regular virtual
 
 But you may not see much difference between the block virtual DOM and the regular virtual DOM if you have a lot of dynamic content:但是，如果你有很多动态内容，你可能看不到块虚拟 DOM 和常规虚拟 DOM 之间的太大区别：
 
-If you're building an admin dashboard, or a website of components with lots of static content, the block virtual DOM might be a good fit for you. But if you're building a website where the computation it takes to diff the data is significantly greater than the computation it takes to diff the virtual DOM, you might not see much of a difference.如果您正在构建一个管理仪表板，或者一个包含大量静态内容的组件网站，那么块虚拟 DOM 可能非常适合您。但是，如果你正在构建一个网站，其中差异数据所需的计算量明显大于差异虚拟DOM所需的计算量，那么你可能不会看到太大的差异。
+If you're building an admin dashboard, or a website of components with lots of static content, the block virtual DOM might be a good fit for you. But if you're building a website where the computation it takes to diff the data is significantly greater than the computation it takes to diff the virtual DOM, you might not see much of a difference.如果您正在构建一个管理仪表板，或者一个包含大量静态内容的组件网站，那么块虚拟 DOM 可能非常适合您。但是，如果你正在构建一个网站，其中差异数据所需的计算量明显大于差异虚拟 DOM 所需的计算量，那么你可能不会看到太大的差异。
 
 For example, this component would be a **bad** candidate for the block virtual DOM, since there are more data values to diff than there are virtual DOM nodes:例如，对于块虚拟 DOM 来说，这个组件将不是一个糟糕的候选者，因为要比较的数据值比虚拟 DOM 节点多：
 
@@ -128,8 +128,8 @@ That said, I'm excited to see what the future holds for it. Are you too? ([Go bu
 
 ### Acknowledgements 确认[](#acknowledgements)
 
-* [Seb Lorber 塞布·洛伯 (opens in a new tab)](https://twitter.com/sebastienlorber) for suggesting this post idea提出这个帖子的想法
-* [Jesse Pense 杰西·彭斯 (opens in a new tab)](https://twitter.com/JessePence5) for helping read and edit the post帮助阅读和编辑帖子
+* [Seb Lorber 塞布·洛伯 (opens in a new tab)](https://twitter.com/sebastienlorber) for suggesting this post idea 提出这个帖子的想法
+* [Jesse Pense 杰西·彭斯 (opens in a new tab)](https://twitter.com/JessePence5) for helping read and edit the post 帮助阅读和编辑帖子
 * [Dan Jutan 丹·菊潭 (opens in a new tab)](https://twitter.com/jutanium) for making the [fastest investment of 2023 (opens in a new tab)](https://twitter.com/jutanium/status/1652907080330665984)进行 2023 年最快的投资
 * [Rich Harris 里奇·哈里斯 (opens in a new tab)](https://twitter.com/Rich_Harris)'s "Virtual DOM is pure overhead"的“虚拟 DOM 是纯粹的开销”
 * [Dan Abramov 丹·阿布拉莫夫 (opens in a new tab)](https://twitter.com/dan_abramov)'s "React as a UI runtime"的“React as a UI runtime”

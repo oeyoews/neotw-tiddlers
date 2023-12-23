@@ -14,7 +14,7 @@
 
 FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框架，使用 Python 3.8+ 并基于标准的 Python 类型提示。
 
-关键特性:
+关键特性：
 
 * **快速**：可与 **NodeJS** 和 **Go** 并肩的极高性能（归功于 Starlette 和 Pydantic）。[最快的 Python web 框架之一](#_11)。
 
@@ -105,7 +105,7 @@ FastAPI 站在以下巨人的肩膀之上：
 
 ### 创建[¶](#_5 "Permanent link")
 
-* 创建一个 `main.py` 文件并写入以下内容:
+* 创建一个 `main.py` 文件并写入以下内容：
 
 ```
 from typing import Union
@@ -163,7 +163,7 @@ INFO: Application startup complete.[restart ↻](#)
 
 关于 `uvicorn main:app --reload` 命令......
 
-`uvicorn main:app` 命令含义如下:
+`uvicorn main:app` 命令含义如下：
 
 * `main`：`main.py` 文件（一个 Python "模块"）。
 * `app`：在 `main.py` 文件中通过 `app = FastAPI()` 创建的对象。
@@ -302,7 +302,7 @@ def update_item(item_id: int, item: Item):
 
 * 转换 输出的数据：转换 Python 数据类型为供网络传输的 JSON 数据：
 
-  * 转换 Python 基础类型 （`str`、 `int`、 `float`、 `bool`、 `list` 等）
+  * 转换 Python 基础类型（`str`、 `int`、 `float`、 `bool`、 `list` 等）
   * `datetime` 对象
   * `UUID` 对象
   * 数据库模型
@@ -329,9 +329,9 @@ def update_item(item_id: int, item: Item):
 
 * 对于访问 `/items/{item_id}` 的 `PUT` 请求，将请求体读取为 JSON 并：
 
-  * 检查是否有必需属性 `name` 并且值为 `str` 类型 。
+  * 检查是否有必需属性 `name` 并且值为 `str` 类型。
   * 检查是否有必需属性 `price` 并且值为 `float` 类型。
-  * 检查是否有可选属性 `is_offer`， 如果有的话值应该为 `bool` 类型。
+  * 检查是否有可选属性 `is_offer`，如果有的话值应该为 `bool` 类型。
   * 以上过程对于多层嵌套的 JSON 对象同样也会执行
 
 * 自动对 JSON 进行转换或转换成 JSON。
@@ -371,7 +371,7 @@ def update_item(item_id: int, item: Item):
 
 [教程 - 用户指南](https://fastapi.tiangolo.com/tutorial/) 中有包含更多特性的更完整示例。
 
-**剧透警告**： 教程 - 用户指南中的内容有：
+**剧透警告**：教程 - 用户指南中的内容有：
 
 * 对来自不同地方的参数进行声明，如：**请求头**、**cookies**、**form 表单**以及**上传的文件**。
 

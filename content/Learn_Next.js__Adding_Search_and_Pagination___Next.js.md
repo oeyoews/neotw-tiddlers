@@ -2,7 +2,7 @@ In the previous chapter, you improved your dashboard's initial loading performan
 
 In this chapter... 在本章中...
 
-Here are the topics we’ll cover以下是我们将涵盖的主题
+Here are the topics we’ll cover 以下是我们将涵盖的主题
 
 Learn how to use the Next.js APIs: `searchParams`, `usePathname`, and `useRouter`.[🔄  ❓]()
 
@@ -50,7 +50,7 @@ Spend some time familiarizing yourself with the page and the components you'll b
 
 Your search functionality will span the client and the server. When a user searches for an invoice on the client, the URL params will be updated, data will be fetched on the server, and the table will re-render on the server with the new data.搜索功能将跨越客户端和服务器。当用户在客户端上搜索发票时，URL 参数将更新，数据将在服务器上获取，并且表将使用新数据在服务器上重新呈现。
 
-## [Why use URL search params?为什么要使用 URL 搜索参数？](#why-use-url-search-params)
+## [Why use URL search params？为什么要使用 URL 搜索参数？](#why-use-url-search-params)
 
 As mentioned above, you'll be using URL search params to manage the search state. This pattern may be new if you're used to doing it with client side state.如上所述，您将使用 URL 搜索参数来管理搜索状态。如果您习惯于使用客户端状态，则此模式可能是新的。
 
@@ -60,11 +60,11 @@ There are a couple of benefits of implementing search with URL params:使用 URL
 * **Server-Side Rendering and Initial Load**: URL parameters can be directly consumed on the server to render the initial state, making it easier to handle server rendering.服务端渲染和初始加载：可以直接在服务器上使用 URL 参数来渲染初始状态，使处理服务器渲染更加容易。
 * **Analytics and Tracking**: Having search queries and filters directly in the URL makes it easier to track user behavior without requiring additional client-side logic.分析和跟踪：直接在 URL 中使用搜索查询和过滤器可以更轻松地跟踪用户行为，而无需额外的客户端逻辑。
 
-## [Adding the search functionality添加搜索功能](#adding-the-search-functionality)
+## [Adding the search functionality 添加搜索功能](#adding-the-search-functionality)
 
 These are the Next.js client hooks that you'll use to implement the search functionality:以下是用于实现搜索功能的 Next.js 客户端挂钩：
 
-* **`useSearchParams`**- Allows you to access the parameters of the current URL. For example, the search params for this URL `/dashboard/invoices?page=1&query=pending` would look like this: `{page: '1', query: 'pending'}`.`useSearchParams` - 允许您访问当前URL的参数。例如，此 URL `/dashboard/invoices?page=1&query=pending` 的搜索参数如下所示： `{page: '1', query: 'pending'}` .
+* **`useSearchParams`**- Allows you to access the parameters of the current URL. For example, the search params for this URL `/dashboard/invoices?page=1&query=pending` would look like this: `{page: '1', query: 'pending'}`.`useSearchParams` - 允许您访问当前 URL 的参数。例如，此 URL `/dashboard/invoices?page=1&query=pending` 的搜索参数如下所示： `{page: '1', query: 'pending'}` .
 * **`usePathname`** - Lets you read the current URL's pathname. For example, for the route `/dashboard/invoices`, `usePathname` would return `'/dashboard/invoices'`.`usePathname` - 允许您读取当前 URL 的路径名。例如，对于路由 `/dashboard/invoices` ， `usePathname` 将返回 `'/dashboard/invoices'` 。
 * **`useRouter`** - Enables navigation between routes within client components programmatically. There are [multiple methods](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter) you can use.`useRouter` - 以编程方式在客户端组件内的路由之间启用导航。您可以使用多种方法。
 
@@ -77,7 +77,7 @@ Here's a quick overview of the implementation steps:以下是实施步骤的快�
 
 ### [1. Capture the user's input1. 捕获用户的输入](#1-capture-the-users-input)
 
-Go into the `<Search>` Component (`/app/ui/search.tsx`), and you'll notice:进入 `<Search>` 组件 （ `/app/ui/search.tsx` ），您会注意到：
+Go into the `<Search>` Component (`/app/ui/search.tsx`), and you'll notice:进入 `<Search>` 组件（ `/app/ui/search.tsx` ），您会注意到：
 
 * `"use client"` - This is a Client Component, which means you can use event listeners and hooks.`"use client"` - 这是一个客户端组件，这意味着您可以使用事件侦听器和钩子。
 * `<input>` - This is the search input.`<input>` - 这是搜索输入。
@@ -215,7 +215,7 @@ Here's a breakdown of what's happening:以下是正在发生的事情的细分�
 
 ### [3. Keeping the URL and input in sync3. 保持 URL 和输入同步](#3-keeping-the-url-and-input-in-sync)
 
-To ensure the input field is in sync with the URL and will be populated when sharing, you can pass a `defaultValue` to input by reading from `searchParams`:为确保输入字段与 URL 同步并在共享时填充，您可以通过从以下 `searchParams` 位置读取 ： `defaultValue`
+To ensure the input field is in sync with the URL and will be populated when sharing, you can pass a `defaultValue` to input by reading from `searchParams`:为确保输入字段与 URL 同步并在共享时填充，您可以通过从以下 `searchParams` 位置读取： `defaultValue`
 
 ```
 <input
@@ -300,7 +300,7 @@ export default async function InvoicesTable({
 
 With these changes in place, go ahead and test it out. If you search for a term, you'll update the URL, which will send a new request to the server, data will be fetched on the server, and only the invoices that match your query will be returned.完成这些更改后，请继续进行测试。如果搜索某个字词，则会更新 URL，该 URL 将向服务器发送新请求，将在服务器上提取数据，并且仅返回与您的查询匹配的发票。
 
-> **When to use the `useSearchParams()` hook vs. the `searchParams` prop?什么时候使用 `useSearchParams()` 钩子和 `searchParams` 道具？**
+> **When to use the `useSearchParams()` hook vs. the `searchParams` prop？什么时候使用 `useSearchParams()` 钩子和 `searchParams` 道具？**
 >
 > You might have noticed you used two different ways to extract search params. Whether you use one or the other depends on whether you're working on the client or the server.您可能已经注意到，您使用了两种不同的方法来提取搜索参数。是使用一个还是另一个取决于您是在客户端上还是在服务器上工作。
 >
@@ -309,7 +309,7 @@ With these changes in place, go ahead and test it out. If you search for a term,
 >
 > As a general rule, if you want to read the params from the client, use the `useSearchParams()` hook as this avoids having to go back to the server.作为一般规则，如果要从客户端读取参数，请使用 `useSearchParams()` 钩子，因为这样可以避免返回服务器。
 
-### [Best practice: Debouncing最佳实践：去抖动](#best-practice-debouncing)
+### [Best practice: Debouncing 最佳实践：去抖动](#best-practice-debouncing)
 
 Congratulations! You've implemented search with Next.js! But there's something you can do to optimize it.祝贺！您已使用 Next.js 实现了搜索！但是你可以做一些事情来优化它。
 
@@ -329,7 +329,7 @@ function handleSearch(term: string) {
 }
 ```
 
-Then type "Emil" into your search bar and check the console in dev tools. What is happening?然后在搜索栏中输入“Emil”，并在开发工具中检查控制台。发生了什么事情？
+Then type "Emil" into your search bar and check the console in dev tools. What is happening？然后在搜索栏中输入“Emil”，并在开发工具中检查控制台。发生了什么事情？
 
 ```
 Searching... E
@@ -378,11 +378,11 @@ Now type in your search bar again, and open the console in dev tools. You should
 
 By debouncing, you can reduce the number of requests sent to your database, thus saving resources.通过去抖动，可以减少发送到数据库的请求数，从而节省资源。
 
-### It’s time to take a quiz!是时候做个测验了！
+### It’s time to take a quiz! 是时候做个测验了！
 
 Test your knowledge and see what you’ve just learned.测试你的知识，看看你刚刚学到了什么。
 
-What problem does debouncing solve in the search feature?去抖动在搜索功能中解决了什么问题？
+What problem does debouncing solve in the search feature？去抖动在搜索功能中解决了什么问题？
 
 After introducing the search feature, you'll notice the table displays only 6 invoices at a time. This is because the `fetchFilteredInvoices()` function in `data.ts` returns a maximum of 6 invoices per page.引入搜索功能后，您会注意到该表一次仅显示 6 张发票。这是因为 中的 `fetchFilteredInvoices()` `data.ts` 函数每页最多返回 6 张发票。
 

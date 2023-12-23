@@ -12,7 +12,7 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order.
 你可以按任意顺序返回答案。
 
-算法的时间复杂度为O(n)，其中n为数组中元素的个数。使用哈希表来存储元素和下标的对应关系; 
+算法的时间复杂度为 O(n)，其中 n 为数组中元素的个数。使用哈希表来存储元素和下标的对应关系; 
 **/
 
 // soulation 1

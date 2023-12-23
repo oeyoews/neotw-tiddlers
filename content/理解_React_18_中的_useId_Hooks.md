@@ -1,10 +1,10 @@
-持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第1天，[点击查看活动详情](https://juejin.cn/post/7147654075599978532 "https://juejin.cn/post/7147654075599978532")
+持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第 1 天，[点击查看活动详情](https://juejin.cn/post/7147654075599978532 "https://juejin.cn/post/7147654075599978532")
 
 React 18 带有许多特性，例如自动批处理、并发和新的 Hooks。
 
 这些 Hooks 通常都有非常明确的使用目的，比如 useTransition 用于处理 React 中的转换；useSyncExternalStore 用来读取外部数据源。
 
-本文将深入探讨 useId ，它的用途以及一些其他方案的对比。
+本文将深入探讨 useId，它的用途以及一些其他方案的对比。
 
 ## 同构：useId 和 random、uuid
 

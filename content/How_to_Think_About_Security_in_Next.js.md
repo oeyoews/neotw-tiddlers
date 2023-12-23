@@ -101,7 +101,7 @@ export async function Page({ params: { slug } }) {
 
 Secret keys can be stored in environment variables but only the data access layer should access `process.env` in this approach.密钥可以存储在环境变量中，但在此方法中，只有数据访问层才能访问 `process.env` 。
 
-### [Component Level Data Access组件级数据访问](#component-level-data-access)
+### [Component Level Data Access 组件级数据访问](#component-level-data-access)
 
 Another approach is to just put your database queries directly in your Server Components. This approach is only appropriate for rapid iteration and prototyping. E.g. for a small product with a small team where everyone is aware of the risks and how to watch for them.另一种方法是将数据库查询直接放在服务器组件中。此方法仅适用于快速迭代和原型设计。例如，对于一个小团队的小型产品，每个人都知道风险以及如何观察它们。
 
@@ -222,9 +222,9 @@ By default, environment variables are only available on the Server. By conventio
 
 For initial load Next.js will run both the Server Components and the Client Components on the server to produce HTML.对于初始加载，Next.js 将在服务器上同时运行服务器组件和客户端组件以生成 HTML。
 
-Server Components (RSC) execute in a separate module system from the Client Components to avoid accidentally exposing information between the two modules.服务器组件 （RSC） 在与客户端组件不同的模块系统中执行，以避免意外暴露两个模块之间的信息。
+Server Components (RSC) execute in a separate module system from the Client Components to avoid accidentally exposing information between the two modules.服务器组件（RSC）在与客户端组件不同的模块系统中执行，以避免意外暴露两个模块之间的信息。
 
-Client Components that render through Server-side Rendering (SSR) should be considered as the same security policy as the browser client. It should not gain access to any privileged data or private APIs. It's highly discouraged to use hacks to try to circumvent this protection (such as stashing data on the global object). The principle is that this code should be able to execute the same on the server as the client. In alignment with secure by default practices, Next.js will fail the build if `server-only` modules are imported from a Client Component.通过服务器端呈现 （SSR） 呈现的客户端组件应被视为与浏览器客户端相同的安全策略。它不应访问任何特权数据或私有 API。强烈建议不要使用黑客来尝试规避这种保护（例如在全局对象上存储数据）。原则是，此代码应该能够在服务器上执行与客户端相同的代码。根据默认安全的做法，如果 `server-only` 从客户端组件导入模块，Next.js 将无法生成。
+Client Components that render through Server-side Rendering (SSR) should be considered as the same security policy as the browser client. It should not gain access to any privileged data or private APIs. It's highly discouraged to use hacks to try to circumvent this protection (such as stashing data on the global object). The principle is that this code should be able to execute the same on the server as the client. In alignment with secure by default practices, Next.js will fail the build if `server-only` modules are imported from a Client Component.通过服务器端呈现（SSR）呈现的客户端组件应被视为与浏览器客户端相同的安全策略。它不应访问任何特权数据或私有 API。强烈建议不要使用黑客来尝试规避这种保护（例如在全局对象上存储数据）。原则是，此代码应该能够在服务器上执行与客户端相同的代码。根据默认安全的做法，如果 `server-only` 从客户端组件导入模块，Next.js 将无法生成。
 
 ## [Read 读](#read)
 

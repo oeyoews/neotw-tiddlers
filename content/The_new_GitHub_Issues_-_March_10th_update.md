@@ -1,6 +1,6 @@
-March 10, 2022 3月 10， 2022
+March 10, 2022 3 月 10，2022
 
-Today, we are sharing new updates to the projects (Beta) experience, including updated repository filters and custom charts for project insights. We are also sharing a preview of issues closed reasons coming soon across GitHub.今天，我们将分享项目 （Beta） 体验的新更新，包括更新的存储库筛选器和用于项目见解的自定义图表。我们还将在 GitHub 上分享即将推出的问题已关闭原因的预览。
+Today, we are sharing new updates to the projects (Beta) experience, including updated repository filters and custom charts for project insights. We are also sharing a preview of issues closed reasons coming soon across GitHub.今天，我们将分享项目（Beta）体验的新更新，包括更新的存储库筛选器和用于项目见解的自定义图表。我们还将在 GitHub 上分享即将推出的问题已关闭原因的预览。
 
 ### 🗂 Index page filtering🗂 索引页筛选[](#🗂-index-page-filtering)
 
@@ -39,7 +39,7 @@ Today we are starting to roll out a preview of issue closed reasons to a small g
 
 ![close issue reasons](https://i0.wp.com/user-images.githubusercontent.com/7584089/157632176-7cdae1f3-7a81-4f36-9f92-5b5c153e6f56.png?w=510\&ssl=1)
 
-### ✨ Bug fixes & improvements✨ Bug修复和改进[](#✨-bug-fixes--improvements)
+### ✨ Bug fixes & improvements✨ Bug 修复和改进[](#✨-bug-fixes--improvements)
 
 Other changes include:  其他更改包括：
 
@@ -51,6 +51,6 @@ Other changes include:  其他更改包括：
 
 See how to use GitHub for project planning with [GitHub Issues](http://github.com/features/issues), check out what's on the [roadmap](https://github.com/orgs/github/projects/4247/views/7), and learn more in the [docs](https://docs.github.com/en/issues).了解如何通过 GitHub Issues 使用 GitHub 进行项目规划，查看路线图上的内容，并在文档中了解更多信息。
 
-## Subscribe to The GitHub Insider订阅 GitHub Insider
+## Subscribe to The GitHub Insider 订阅 GitHub Insider
 
 Discover tips, technical guides, and best practices in our monthly newsletter for developers.在我们面向开发人员的月度时事通讯中发现提示、技术指南和最佳实践。

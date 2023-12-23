@@ -1,6 +1,6 @@
 * https://typestrong.org/ts-node/docs/paths/
 
-ts-node 需要特殊配置， baseurl
+ts-node 需要特殊配置，baseurl
 
 > bun 直接运行 ts, 不需要这些坑
 

@@ -26,9 +26,9 @@ DOM 事件，也是有一个流程的。从事件触发开始到事件响应是�
 
 ```html
 <div id="container">
-  <button id="btn1">按钮1</button>
-  <button id="btn2">按钮2</button>
-  <button id="btn3">按钮3</button>
+  <button id="btn1">按钮 1</button>
+  <button id="btn2">按钮 2</button>
+  <button id="btn3">按钮 3</button>
 </div>
 ```
 
@@ -50,9 +50,9 @@ container.addEventListener('click', function(event) {
 
 ```html
 <ul id="list">
-  <li>列表项1</li>
-  <li>列表项2</li>
-  <li>列表项3</li>
+  <li>列表项 1</li>
+  <li>列表项 2</li>
+  <li>列表项 3</li>
 </ul>
 ```
 

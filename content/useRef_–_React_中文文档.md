@@ -48,7 +48,7 @@ const inputRef = useRef(null);
 
 #### 返回值 [](#returns "Link for 返回值 ")
 
-`useRef` 返回一个只有一个属性的对象:
+`useRef` 返回一个只有一个属性的对象：
 
 * `current`：初始值为传递的 `initialValue`。之后可以将其设置为其他值。如果将 ref 对象作为一个 JSX 节点的 `ref` 属性传递给 React，React 将为它设置 `current` 属性。
 
@@ -132,7 +132,7 @@ clearInterval(intervalId);
 
 #### Examples of referencing a value with useRef[](#examples-value "Link for Examples of referencing a value with useRef")
 
-#### 第 1 个示例 共 2 个挑战:点击计数器 [](#click-counter "Link for this heading")
+#### 第 1 个示例 共 2 个挑战：点击计数器 [](#click-counter "Link for this heading")
 
 这个组件使用 ref 记录按钮被点击的次数。注意，在这里使用 ref 而不是 state 是可以的，因为点击次数只在事件处理程序中被读取和写入。
 
@@ -268,7 +268,7 @@ inputRef.current.focus();
 
 #### Examples of manipulating the DOM with useRef[](#examples-dom "Link for Examples of manipulating the DOM with useRef")
 
-#### 第 1 个示例 共 4 个挑战:聚焦文字输入框 [](#focusing-a-text-input "Link for this heading")
+#### 第 1 个示例 共 4 个挑战：聚焦文字输入框 [](#focusing-a-text-input "Link for this heading")
 
 在这个示例中，点击按钮将会聚焦输入框：
 
@@ -441,4 +441,4 @@ export default MyInput;
 
 阅读 [访问另一个组件的 DOM 节点](https://zh-hans.react.dev/learn/manipulating-the-dom-with-refs#accessing-another-components-dom-nodes) 以了解更多信息。
 
-[上一页useReducer](https://zh-hans.react.dev/reference/react/useReducer)[下一页useState](https://zh-hans.react.dev/reference/react/useState)
+[上一页 useReducer](https://zh-hans.react.dev/reference/react/useReducer)[下一页 useState](https://zh-hans.react.dev/reference/react/useState)

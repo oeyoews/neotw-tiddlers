@@ -2,7 +2,7 @@
 
 ```javascript
 canvas.toBlob(function(blob) {
-  // 在这里处理生成的Blob对象
+  // 在这里处理生成的 Blob 对象
 }, 'image/png');
 ```
 
@@ -10,7 +10,7 @@ canvas.toBlob(function(blob) {
 
 ```javascript
 var dataURL = canvas.toDataURL('image/png');
-// 在这里使用生成的Data URL
+// 在这里使用生成的 Data URL
 ```
 
 3. `new Blob()`: 这是 JavaScript 中的构造函数，用于创建 Blob 对象。Blob 对象可以包含任意类型的数据，例如图像、音频、视频等。`new Blob()`接受一个数组作为参数，数组中的每个元素是要包含在 Blob 中的数据块。示例代码如下：
@@ -18,5 +18,5 @@ var dataURL = canvas.toDataURL('image/png');
 ```javascript
 var data = ['Hello, world!'];
 var blob = new Blob(data, { type: 'text/plain' });
-// 在这里使用生成的Blob对象
+// 在这里使用生成的 Blob 对象
 ```

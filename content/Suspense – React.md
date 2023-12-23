@@ -15,17 +15,17 @@
 
 * [Usage  用法](#usage)
 
-  * [Displaying a fallback while content is loading在加载内容时显示回退](#displaying-a-fallback-while-content-is-loading)
-  * [Revealing content together at once一次一起显示内容](#revealing-content-together-at-once)
-  * [Revealing nested content as it loads在加载嵌套内容时显示嵌套内容](#revealing-nested-content-as-it-loads)
-  * [Showing stale content while fresh content is loading在加载新内容时显示陈旧内容](#showing-stale-content-while-fresh-content-is-loading)
-  * [Preventing already revealed content from hiding防止已泄露的内容被隐藏](#preventing-already-revealed-content-from-hiding)
-  * [Indicating that a transition is happening表示正在发生转换](#indicating-that-a-transition-is-happening)
-  * [Resetting Suspense boundaries on navigation重置导航上的悬念边界](#resetting-suspense-boundaries-on-navigation)
-  * [Providing a fallback for server errors and client-only content为服务器错误和仅限客户端的内容提供回退](#providing-a-fallback-for-server-errors-and-client-only-content)
+  * [Displaying a fallback while content is loading 在加载内容时显示回退](#displaying-a-fallback-while-content-is-loading)
+  * [Revealing content together at once 一次一起显示内容](#revealing-content-together-at-once)
+  * [Revealing nested content as it loads 在加载嵌套内容时显示嵌套内容](#revealing-nested-content-as-it-loads)
+  * [Showing stale content while fresh content is loading 在加载新内容时显示陈旧内容](#showing-stale-content-while-fresh-content-is-loading)
+  * [Preventing already revealed content from hiding 防止已泄露的内容被隐藏](#preventing-already-revealed-content-from-hiding)
+  * [Indicating that a transition is happening 表示正在发生转换](#indicating-that-a-transition-is-happening)
+  * [Resetting Suspense boundaries on navigation 重置导航上的悬念边界](#resetting-suspense-boundaries-on-navigation)
+  * [Providing a fallback for server errors and client-only content 为服务器错误和仅限客户端的内容提供回退](#providing-a-fallback-for-server-errors-and-client-only-content)
 
 * [Troubleshooting  故障 排除](#troubleshooting)
-  * [How do I prevent the UI from being replaced by a fallback during an update?如何防止 UI 在更新期间被回退替换？](#preventing-unwanted-fallbacks)
+  * [How do I prevent the UI from being replaced by a fallback during an update？如何防止 UI 在更新期间被回退替换？](#preventing-unwanted-fallbacks)
 
 ***
 
@@ -49,7 +49,7 @@
 
 ## Usage  用法[](#usage "Link for Usage ")
 
-### Displaying a fallback while content is loading在加载内容时显示回退[](#displaying-a-fallback-while-content-is-loading "Link for Displaying a fallback while content is loading ")
+### Displaying a fallback while content is loading 在加载内容时显示回退[](#displaying-a-fallback-while-content-is-loading "Link for Displaying a fallback while content is loading ")
 
 You can wrap any part of your application with a Suspense boundary:您可以使用悬念边界包装应用程序的任何部分：
 
@@ -83,7 +83,7 @@ Suspense-enabled data fetching without the use of an opinionated framework is no
 
 ***
 
-### Revealing content together at once一次一起显示内容[](#revealing-content-together-at-once "Link for Revealing content together at once ")
+### Revealing content together at once 一次一起显示内容[](#revealing-content-together-at-once "Link for Revealing content together at once ")
 
 By default, the whole tree inside Suspense is treated as a single unit. For example, even if *only one* of these components suspends waiting for some data, *all* of them together will be replaced by the loading indicator:默认情况下，Suspense 中的整个树被视为一个单元。例如，即使这些组件中只有一个挂起等待某些数据，它们也会一起被加载指示器替换：
 
@@ -108,7 +108,7 @@ By default, the whole tree inside Suspense is treated as a single unit. For exam
 
 Then, after all of them are ready to be displayed, they will all appear together at once.然后，在它们都准备好显示后，它们将同时一起出现。
 
-In the example below, both `Biography` and `Albums` fetch some data. However, because they are grouped under a single Suspense boundary, these components always “pop in” together at the same time.在下面的示例中，两者都 `Biography` `Albums` 获取了一些数据。但是，由于它们被分组到单个悬念边界下，因此这些组件总是同时“弹出”在一起。
+In the example below, both `Biography` and `Albums` fetch some data. However, because they are grouped under a single Suspense boundary, these components always“pop in”together at the same time.在下面的示例中，两者都 `Biography` `Albums` 获取了一些数据。但是，由于它们被分组到单个悬念边界下，因此这些组件总是同时“弹出”在一起。
 
 Components that load data don’t have to be direct children of the Suspense boundary. For example, you can move `Biography` and `Albums` into a new `Details` component. This doesn’t change the behavior. `Biography` and `Albums` share the same closest parent Suspense boundary, so their reveal is coordinated together.加载数据的组件不必是 Suspense 边界的直接子级。例如，您可以移动 `Biography` 并 `Albums` 进入新 `Details` 组件。这不会改变行为。 `Biography` 并 `Albums` 共享相同的最接近的父级悬念边界，因此它们的揭示是协调在一起的。
 
@@ -154,7 +154,7 @@ return (
 
 ***
 
-### Revealing nested content as it loads在加载嵌套内容时显示嵌套内容[](#revealing-nested-content-as-it-loads "Link for Revealing nested content as it loads ")
+### Revealing nested content as it loads 在加载嵌套内容时显示嵌套内容[](#revealing-nested-content-as-it-loads "Link for Revealing nested content as it loads ")
 
 When a component suspends, the closest parent Suspense component shows the fallback. This lets you nest multiple Suspense components to create a loading sequence. Each Suspense boundary’s fallback will be filled in as the next level of content becomes available. For example, you can give the album list its own fallback:当组件挂起时，最接近的父 Suspense 组件会显示回退。这使您可以嵌套多个 Suspense 组件以创建加载序列。随着下一级别内容的可用，每个悬念边界的回退都将被填充。例如，您可以为专辑列表提供自己的回退：
 
@@ -192,13 +192,13 @@ The sequence will be: 顺序将是：
 3. If `Albums` hasn’t loaded yet, `AlbumsGlimmer` is shown in place of `Albums` and its parent `Panel`.如果 `Albums` 尚未加载， `AlbumsGlimmer` 则显示代替 `Albums` 和 其父级 `Panel` 。
 4. Finally, once `Albums` finishes loading, it replaces `AlbumsGlimmer`.最后，一旦 `Albums` 完成加载，它将替换 `AlbumsGlimmer` .
 
-Suspense boundaries let you coordinate which parts of your UI should always “pop in” together at the same time, and which parts should progressively reveal more content in a sequence of loading states. You can add, move, or delete Suspense boundaries in any place in the tree without affecting the rest of your app’s behavior.通过悬念边界，可以协调 UI 的哪些部分应始终同时“弹出”在一起，以及哪些部分应在加载状态序列中逐步显示更多内容。您可以在树中的任意位置添加、移动或删除 Suspense 边界，而不会影响应用的其余行为。
+Suspense boundaries let you coordinate which parts of your UI should always“pop in”together at the same time, and which parts should progressively reveal more content in a sequence of loading states. You can add, move, or delete Suspense boundaries in any place in the tree without affecting the rest of your app’s behavior.通过悬念边界，可以协调 UI 的哪些部分应始终同时“弹出”在一起，以及哪些部分应在加载状态序列中逐步显示更多内容。您可以在树中的任意位置添加、移动或删除 Suspense 边界，而不会影响应用的其余行为。
 
 Don’t put a Suspense boundary around every component. Suspense boundaries should not be more granular than the loading sequence that you want the user to experience. If you work with a designer, ask them where the loading states should be placed—it’s likely that they’ve already included them in their design wireframes.不要在每个组件周围设置悬念边界。悬念边界不应比您希望用户体验的加载顺序更精细。如果您与设计人员合作，请询问他们应该将加载状态放置在何处，因为他们可能已经将它们包含在设计线框图中。
 
 ***
 
-### Showing stale content while fresh content is loading在加载新内容时显示陈旧内容[](#showing-stale-content-while-fresh-content-is-loading "Link for Showing stale content while fresh content is loading ")
+### Showing stale content while fresh content is loading 在加载新内容时显示陈旧内容[](#showing-stale-content-while-fresh-content-is-loading "Link for Showing stale content while fresh content is loading ")
 
 In this example, the `SearchResults` component suspends while fetching the search results. Type `"a"`, wait for the results, and then edit it to `"ab"`. The results for `"a"` will get replaced by the loading fallback.在此示例中 `SearchResults` ，组件在获取搜索结果时挂起。键入 `"a"` ，等待结果，然后将其编辑为 `"ab"` 。的结果 `"a"` 将被加载回退所取代。
 
@@ -274,11 +274,11 @@ Enter `"a"` in the example below, wait for the results to load, and then edit th
 
 ### Note 注意
 
-Both deferred values and [transitions](#preventing-already-revealed-content-from-hiding) let you avoid showing Suspense fallback in favor of inline indicators. Transitions mark the whole update as non-urgent so they are typically used by frameworks and router libraries for navigation. Deferred values, on the other hand, are mostly useful in application code where you want to mark a part of UI as non-urgent and let it “lag behind” the rest of the UI.延迟值和转换都允许您避免显示 Suspense 回退，而支持内联指标。转换将整个更新标记为非紧急更新，因此框架和路由器库通常使用它们进行导航。另一方面，延迟值在应用程序代码中非常有用，在这些代码中，您希望将 UI 的一部分标记为非紧急，并让它“滞后”于 UI 的其余部分。
+Both deferred values and [transitions](#preventing-already-revealed-content-from-hiding) let you avoid showing Suspense fallback in favor of inline indicators. Transitions mark the whole update as non-urgent so they are typically used by frameworks and router libraries for navigation. Deferred values, on the other hand, are mostly useful in application code where you want to mark a part of UI as non-urgent and let it“lag behind”the rest of the UI.延迟值和转换都允许您避免显示 Suspense 回退，而支持内联指标。转换将整个更新标记为非紧急更新，因此框架和路由器库通常使用它们进行导航。另一方面，延迟值在应用程序代码中非常有用，在这些代码中，您希望将 UI 的一部分标记为非紧急，并让它“滞后”于 UI 的其余部分。
 
 ***
 
-### Preventing already revealed content from hiding防止已泄露的内容被隐藏[](#preventing-already-revealed-content-from-hiding "Link for Preventing already revealed content from hiding ")
+### Preventing already revealed content from hiding 防止已泄露的内容被隐藏[](#preventing-already-revealed-content-from-hiding "Link for Preventing already revealed content from hiding ")
 
 When a component suspends, the closest parent Suspense boundary switches to showing the fallback. This can lead to a jarring user experience if it was already displaying some content. Try pressing this button:当组件挂起时，最接近的父级 Suspense 边界将切换为显示回退。如果它已经显示某些内容，这可能会导致不和谐的用户体验。尝试按下此按钮：
 
@@ -321,13 +321,13 @@ Suspense-enabled routers are expected to wrap the navigation updates into transi
 
 ***
 
-### Indicating that a transition is happening表示正在发生转换[](#indicating-that-a-transition-is-happening "Link for Indicating that a transition is happening ")
+### Indicating that a transition is happening 表示正在发生转换[](#indicating-that-a-transition-is-happening "Link for Indicating that a transition is happening ")
 
 In the above example, once you click the button, there is no visual indication that a navigation is in progress. To add an indicator, you can replace [`startTransition`](https://react.dev/reference/react/startTransition) with [`useTransition`](https://react.dev/reference/react/useTransition) which gives you a boolean `isPending` value. In the example below, it’s used to change the website header styling while a transition is happening:在上面的示例中，单击该按钮后，没有视觉指示正在进行导航。要添加指标，您可以将其 `useTransition` 替换为 `startTransition` 它为您提供一个布尔 `isPending` 值。在下面的示例中，它用于在进行转换时更改网站标题样式：
 
 ***
 
-### Resetting Suspense boundaries on navigation重置导航上的悬念边界[](#resetting-suspense-boundaries-on-navigation "Link for Resetting Suspense boundaries on navigation ")
+### Resetting Suspense boundaries on navigation 重置导航上的悬念边界[](#resetting-suspense-boundaries-on-navigation "Link for Resetting Suspense boundaries on navigation ")
 
 During a transition, React will avoid hiding already revealed content. However, if you navigate to a route with different parameters, you might want to tell React it is *different* content. You can express this with a `key`:在过渡期间，React 将避免隐藏已经显示的内容。但是，如果你导航到具有不同参数的路由，你可能想告诉 React 它是不同的内容。你可以用一个 `key` 来表达这一点：
 
@@ -337,11 +337,11 @@ During a transition, React will avoid hiding already revealed content. However, 
 
 Imagine you’re navigating within a user’s profile page, and something suspends. If that update is wrapped in a transition, it will not trigger the fallback for already visible content. That’s the expected behavior.想象一下，您正在用户的个人资料页面中导航，并且某些内容被挂起。如果该更新包装在过渡中，则不会触发已可见内容的回退。这是预期的行为。
 
-However, now imagine you’re navigating between two different user profiles. In that case, it makes sense to show the fallback. For example, one user’s timeline is *different content* from another user’s timeline. By specifying a `key`, you ensure that React treats different users’ profiles as different components, and resets the Suspense boundaries during navigation. Suspense-integrated routers should do this automatically.但是，现在假设您正在两个不同的用户配置文件之间导航。在这种情况下，显示回退是有意义的。例如，一个用户的时间线与另一个用户的时间线的内容不同。通过指定 `key` ，可以确保 React 将不同用户的配置文件视为不同的组件，并在导航过程中重置悬念边界。悬念集成路由器应自动执行此操作。
+However, now imagine you’re navigating between two different user profiles. In that case, it makes sense to show the fallback. For example, one user’s timeline is *different content* from another user’s timeline. By specifying a `key`, you ensure that React treats different users’profiles as different components, and resets the Suspense boundaries during navigation. Suspense-integrated routers should do this automatically.但是，现在假设您正在两个不同的用户配置文件之间导航。在这种情况下，显示回退是有意义的。例如，一个用户的时间线与另一个用户的时间线的内容不同。通过指定 `key` ，可以确保 React 将不同用户的配置文件视为不同的组件，并在导航过程中重置悬念边界。悬念集成路由器应自动执行此操作。
 
 ***
 
-### Providing a fallback for server errors and client-only content为服务器错误和仅限客户端的内容提供回退[](#providing-a-fallback-for-server-errors-and-client-only-content "Link for Providing a fallback for server errors and client-only content ")
+### Providing a fallback for server errors and client-only content 为服务器错误和仅限客户端的内容提供回退[](#providing-a-fallback-for-server-errors-and-client-only-content "Link for Providing a fallback for server errors and client-only content ")
 
 If you use one of the [streaming server rendering APIs](https://react.dev/reference/react-dom/server) (or a framework that relies on them), React will also use your `<Suspense>` boundaries to handle errors on the server. If a component throws an error on the server, React will not abort the server render. Instead, it will find the closest `<Suspense>` component above it and include its fallback (such as a spinner) into the generated server HTML. The user will see a spinner at first.如果你使用其中一个流服务器渲染 API（或依赖于它们的框架），React 也会使用你的 `<Suspense>` 边界来处理服务器上的错误。如果一个组件在服务器上抛出错误，React 不会中止服务器渲染。相反，它将在其上方找到最接近 `<Suspense>` 的组件，并将其回退（例如微调器）包含在生成的服务器 HTML 中。用户首先会看到一个微调器。
 
@@ -383,7 +383,7 @@ The server HTML will include the loading indicator. It will be replaced by the `
 
 ## Troubleshooting  故障 排除[](#troubleshooting "Link for Troubleshooting ")
 
-### How do I prevent the UI from being replaced by a fallback during an update?如何防止 UI 在更新期间被回退替换？[](#preventing-unwanted-fallbacks "Link for How do I prevent the UI from being replaced by a fallback during an update? ")
+### How do I prevent the UI from being replaced by a fallback during an update？如何防止 UI 在更新期间被回退替换？[](#preventing-unwanted-fallbacks "Link for How do I prevent the UI from being replaced by a fallback during an update? ")
 
 Replacing visible UI with a fallback creates a jarring user experience. This can happen when an update causes a component to suspend, and the nearest Suspense boundary is already showing content to the user.将可见 UI 替换为回退会造成不和谐的用户体验。当更新导致组件挂起，并且最近的 Suspense 边界已向用户显示内容时，可能会发生这种情况。
 
@@ -410,6 +410,6 @@ setCurrentPage(currentPage + 1);
 
 This will avoid hiding existing content. However, any newly rendered `Suspense` boundaries will still immediately display fallbacks to avoid blocking the UI and let the user see the content as it becomes available.这将避免隐藏现有内容。但是，任何新呈现 `Suspense` 的边界仍将立即显示回退，以避免阻塞 UI，并让用户在内容可用时查看内容。
 
-**React will only prevent unwanted fallbacks during non-urgent updates**. It will not delay a render if it’s the result of an urgent update. You must opt in with an API like [`startTransition`](https://react.dev/reference/react/startTransition) or [`useDeferredValue`](https://react.dev/reference/react/useDeferredValue).React 只会在非紧急更新期间防止不必要的回退。如果渲染是紧急更新的结果，则不会延迟渲染。您必须使用 API 选择加入 `useDeferredValue` ，例如 `startTransition` 或 。
+**React will only prevent unwanted fallbacks during non-urgent updates**. It will not delay a render if it’s the result of an urgent update. You must opt in with an API like [`startTransition`](https://react.dev/reference/react/startTransition) or [`useDeferredValue`](https://react.dev/reference/react/useDeferredValue).React 只会在非紧急更新期间防止不必要的回退。如果渲染是紧急更新的结果，则不会延迟渲染。您必须使用 API 选择加入 `useDeferredValue` ，例如 `startTransition` 或。
 
 If your router is integrated with Suspense, it should wrap its updates into [`startTransition`](https://react.dev/reference/react/startTransition) automatically.如果您的路由器与 Suspense 集成，它应该会自动将其更新打包。 `startTransition`

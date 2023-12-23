@@ -8,7 +8,7 @@
 
    这将生成一个名为`myfile.js`的 JavaScript 文件。
 
-2. **ts-node**：这是一个 Node.js 运行时(TypeScript)的工具。它允许你直接运行 TypeScript 文件，而不需要事先编译成 JavaScript。你可以使用以下命令运行 TypeScript 文件：
+2. **ts-node**：这是一个 Node.js 运行时 (TypeScript) 的工具。它允许你直接运行 TypeScript 文件，而不需要事先编译成 JavaScript。你可以使用以下命令运行 TypeScript 文件：
 
    ```plain
    ts-node myfile.ts

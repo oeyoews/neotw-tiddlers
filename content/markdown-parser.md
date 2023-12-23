@@ -1,1 +1,1 @@
-markdown 本身为了简化，支持的功能不多，但是在不同的规范下写出的扩展，可以让 markdown 功能相对较多，因此也就出现了每个 markdown 编辑器支持不同程度的上的扩展，比如 mermaid，markdown 自然是不带 mermaid 解析的，代码块高亮一般是有 highlight.js 实现的，与此同时也在一定程度上导致 markdown 有一定的割裂，并且在一定程度上依赖相关的 app，就像 edge chrome， firefox 一样， 每个浏览器都对各种特性有着自己的兼容度，并没有完全统一，因此造成了开发者要不断进行浏览器兼容的工作，很是让人头疼
+markdown 本身为了简化，支持的功能不多，但是在不同的规范下写出的扩展，可以让 markdown 功能相对较多，因此也就出现了每个 markdown 编辑器支持不同程度的上的扩展，比如 mermaid，markdown 自然是不带 mermaid 解析的，代码块高亮一般是有 highlight.js 实现的，与此同时也在一定程度上导致 markdown 有一定的割裂，并且在一定程度上依赖相关的 app，就像 edge chrome，firefox 一样，每个浏览器都对各种特性有着自己的兼容度，并没有完全统一，因此造成了开发者要不断进行浏览器兼容的工作，很是让人头疼

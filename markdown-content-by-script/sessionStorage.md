@@ -32,7 +32,7 @@ sessionStorage 是会话存储，只能在同一个浏览器窗口（或者标�
 
     <script>
       function saveData() {
-        // 获取用户输入的数据并保存到sessionStorage中
+        // 获取用户输入的数据并保存到 sessionStorage 中
         const name = document.getElementById("name").value;
         const age = document.getElementById("age").value;
 
@@ -44,7 +44,7 @@ sessionStorage 是会话存储，只能在同一个浏览器窗口（或者标�
       }
 
       function clearData() {
-        // 清除sessionStorage中的数据
+        // 清除 sessionStorage 中的数据
         sessionStorage.removeItem("name");
         sessionStorage.removeItem("age");
 
@@ -53,7 +53,7 @@ sessionStorage 是会话存储，只能在同一个浏览器窗口（或者标�
       }
 
       function updateSavedData() {
-        // 从sessionStorage中获取已保存的数据并更新页面上的文本内容
+        // 从 sessionStorage 中获取已保存的数据并更新页面上的文本内容
         const name = sessionStorage.getItem("name");
         const age = sessionStorage.getItem("age");
 

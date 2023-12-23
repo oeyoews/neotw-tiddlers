@@ -1,6 +1,6 @@
 ## [Introduction]()
 
-So, here's something that makes me feel old: React celebrated its 10th birthday this year!所以，这里有一件让我觉得自己老了的事情：React 今年庆祝了它的 10 岁生日！
+So, here's something that makes me feel old: React celebrated its 10th birthday this year! 所以，这里有一件让我觉得自己老了的事情：React 今年庆祝了它的 10 岁生日！
 
 In the decade since React was first introduced to a bewildered dev community, it’s gone through several evolutions. The React team has not been shy when it comes to radical changes: if they discover a better solution to a problem, they'll run with it.自从 React 首次被引入一个困惑的开发社区以来的十年里，它经历了几次演变。React 团队在进行彻底的改变时并不害羞：如果他们发现了更好的问题解决方案，他们就会顺其自然。
 
@@ -10,13 +10,13 @@ There's been *so much friggin’ confusion* about this online. Lots of folks hav
 
 I've been doing a lot of experimentation with React Server Components, and I've answered a lot of my own questions. I have to admit, I'm *way* more excited about this stuff than I expected to be. *It's really cool!*我一直在用 React Server 组件做了很多实验，我回答了很多我自己的问题。我不得不承认，我对这些东西比我预期的要兴奋得多。真的很酷！
 
-So, my goal today is to help demystify this stuff for you, to answer a lot of the questions you might have about React Server Components!所以，我今天的目标是帮助你揭开这些东西的神秘面纱，回答你可能对 React Server 组件提出的很多问题！
+So, my goal today is to help demystify this stuff for you, to answer a lot of the questions you might have about React Server Components! 所以，我今天的目标是帮助你揭开这些东西的神秘面纱，回答你可能对 React Server 组件提出的很多问题！
 
-## [Link to this heading](#a-quick-primer-on-server-side-rendering-1)A quick primer on Server Side Rendering服务器端渲染快速入门
+## [Link to this heading](#a-quick-primer-on-server-side-rendering-1)A quick primer on Server Side Rendering 服务器端渲染快速入门
 
-To put React Server Components in context, it's helpful to understand how Server Side Rendering (SSR) works. If you're already familiar with SSR, feel free to skip to the next heading!要将 React 服务器组件置于上下文中，了解服务器端渲染 （SSR） 的工作原理会很有帮助。如果您已经熟悉 SSR，请随时跳到下一个标题！
+To put React Server Components in context, it's helpful to understand how Server Side Rendering (SSR) works. If you're already familiar with SSR, feel free to skip to the next heading! 要将 React 服务器组件置于上下文中，了解服务器端渲染（SSR）的工作原理会很有帮助。如果您已经熟悉 SSR，请随时跳到下一个标题！
 
-When I first started using React in 2015, most React setups used a “client-side” rendering strategy. The user would receive an HTML file that looked like this:当我在 2015 年第一次开始使用 React 时，大多数 React 设置都使用“客户端”渲染策略。用户将收到如下所示的 HTML 文件：
+When I first started using React in 2015, most React setups used a“client-side”rendering strategy. The user would receive an HTML file that looked like this:当我在 2015 年第一次开始使用 React 时，大多数 React 设置都使用“客户端”渲染策略。用户将收到如下所示的 HTML 文件：
 
 ```
 ```
@@ -33,9 +33,9 @@ That HTML file will still include the `<script>` tag, since we still need React 
 
 I like the way React core team member Dan Abramov explains this:我喜欢 React 核心团队成员 Dan Abramov 解释这一点的方式：
 
-> Hydration is like watering the “dry” HTML with the “water” of interactivity and event handlers.水化就像用交互性和事件处理程序的“水”浇灌“干燥”的 HTML。
+> Hydration is like watering the“dry”HTML with the“water”of interactivity and event handlers.水化就像用交互性和事件处理程序的“水”浇灌“干燥”的 HTML。
 
-Once the JS bundle has been downloaded, React will quickly run through our entire application, building up a virtual sketch of the UI, and “fitting” it to the real DOM, attaching event handlers, firing off any effects, and so on.一旦 JS 包被下载，React 将快速运行我们的整个应用程序，构建一个 UI 的虚拟草图，并将其“拟合”到真实的 DOM 中，附加事件处理程序，触发任何效果，等等。
+Once the JS bundle has been downloaded, React will quickly run through our entire application, building up a virtual sketch of the UI, and“fitting”it to the real DOM, attaching event handlers, firing off any effects, and so on.一旦 JS 包被下载，React 将快速运行我们的整个应用程序，构建一个 UI 的虚拟草图，并将其“拟合”到真实的 DOM 中，附加事件处理程序，触发任何效果，等等。
 
 And so, that's SSR in a nutshell. A server generates the initial HTML so that users don't have to stare at an empty white page while the JS bundles are downloaded and parsed. Client-side React then picks up where server-side React left off, adopting the DOM and sprinkling in the interactivity.简而言之，这就是 SSR。服务器生成初始 HTML，这样用户在下载和解析 JS 包时就不必盯着空白页。然后，客户端 React 从服务器端 React 中断的地方开始，采用 DOM 并加入交互性。
 
@@ -57,7 +57,7 @@ Server 服务器
 
 Client 客户
 
-Download JavaScript下载 JavaScript的
+Download JavaScript 下载 JavaScript 的
 
 This is a data visualization which shows a sequence of events between client and server. Each event is represented here as a list item.
 
@@ -144,7 +144,7 @@ This is a data visualization which shows a sequence of events between client and
 
 <!--/$-->
 
-This first graph shows the flow using a Client Side Rendering (CSR) strategy. It starts with the client receiving an HTML file. This file doesn't have any content, but it does have one or more `<script>` tags.第一张图显示了使用客户端渲染 （CSR） 策略的流程。它从客户端接收 HTML 文件开始。此文件没有任何内容，但具有一个或多个 `<script>` 标记。
+This first graph shows the flow using a Client Side Rendering (CSR) strategy. It starts with the client receiving an HTML file. This file doesn't have any content, but it does have one or more `<script>` tags.第一张图显示了使用客户端渲染（CSR）策略的流程。它从客户端接收 HTML 文件开始。此文件没有任何内容，但具有一个或多个 `<script>` 标记。
 
 Once the JS has been downloaded and parsed, our React app will boot up, creating a bunch of DOM nodes and populating the UI. At first, though, we don't have any of the actual *data*, so we can only render the shell (the header, the footer, the general layout) with a loading state.下载并解析 JS 后，我们的 React 应用程序将启动，创建一堆 DOM 节点并填充 UI。不过，起初我们没有任何实际数据，因此我们只能呈现具有加载状态的 shell（页眉、页脚、总体布局）。
 
@@ -160,7 +160,7 @@ Server 服务器
 
 Client 客户
 
-Download JavaScript下载 JavaScript的
+Download JavaScript 下载 JavaScript 的
 
 This is a data visualization which shows a sequence of events between client and server. Each event is represented here as a list item.
 
@@ -273,7 +273,7 @@ Server 服务器
 
 Client 客户
 
-Download JavaScript下载 JavaScript的
+Download JavaScript 下载 JavaScript 的
 
 This is a data visualization which shows a sequence of events between client and server. Each event is represented here as a list item.
 
@@ -369,7 +369,7 @@ Each of these flags represents a commonly-used web performance metric. Here's th
 
 3. **Content Paint** — The page now includes the stuff the user cares about. We've pulled the data from the database and rendered it in the UI. This is sometimes called LCP (Largest Contentful Paint).内容绘制 — 页面现在包含用户关心的内容。我们已从数据库中提取数据，并在 UI 中呈现数据。这有时称为 LCP（最大内容绘制）。
 
-By doing the initial render on the server, we're able to get that initial “shell” drawn more quickly. This can make the loading experience feel a bit faster, since it provides a sense of progress, that things are happening.通过在服务器上进行初始渲染，我们能够更快地绘制初始“shell”。这可以使加载体验感觉更快一些，因为它提供了一种进步感，事情正在发生。
+By doing the initial render on the server, we're able to get that initial“shell”drawn more quickly. This can make the loading experience feel a bit faster, since it provides a sense of progress, that things are happening.通过在服务器上进行初始渲染，我们能够更快地绘制初始“shell”。这可以使加载体验感觉更快一些，因为它提供了一种进步感，事情正在发生。
 
 And, in some situations, this *will* be a meaningful improvement. For example, maybe the user is only waiting for the header to load so that they can click a navigation link.而且，在某些情况下，这将是一个有意义的改进。例如，用户可能只是在等待标题加载，以便他们可以单击导航链接。
 
@@ -383,7 +383,7 @@ Server 服务器
 
 Client
 
-Download JavaScript下载 JavaScript的
+Download JavaScript 下载 JavaScript 的
 
 This is a data visualization which shows a sequence of events between client and server. Each event is represented here as a list item.
 
@@ -456,20 +456,20 @@ This is a data visualization which shows a sequence of events between client and
 
 Instead of bouncing back and forth between the client and server, we do our database query as part of the initial request, sending the fully-populated UI straight to the user.我们不是在客户端和服务器之间来回跳动，而是在初始请求中执行数据库查询，将完全填充的 UI 直接发送给用户。
 
-But hm, how exactly would we do this?但是，嗯，我们到底该怎么做呢？
+But hm, how exactly would we do this？但是，嗯，我们到底该怎么做呢？
 
 In order for this to work, we'd need to be able to give React a chunk of code that it runs *exclusively* on the server, to do the database query. But that hasn't been an option with React… even with Server Side Rendering, all of our components render on *both* the server and the client.为了实现这一点，我们需要能够给 React 一个专门在服务器上运行的代码块来执行数据库查询。但这并不是 React 的一个选项......即使使用服务器端渲染，我们所有的组件也会在服务器和客户端上渲染。
 
-**The ecosystem has come up with lots of solutions to this problem.** Meta-frameworks? like Next.js and Gatsby have created their own way to run code exclusively on the server.生态系统已经为这个问题提出了许多解决方案。元框架？像Next一样，.js和Gatsby已经创建了自己的方式，以专门在服务器上运行代码。
+**The ecosystem has come up with lots of solutions to this problem.** Meta-frameworks? like Next.js and Gatsby have created their own way to run code exclusively on the server.生态系统已经为这个问题提出了许多解决方案。元框架？像 Next 一样，.js 和 Gatsby 已经创建了自己的方式，以专门在服务器上运行代码。
 
-For example, here's what this looked like using Next.js (using the legacy “Pages” router):例如，以下是使用 Next.js（使用旧版“页面”路由器）的样子：
+For example, here's what this looked like using Next.js (using the legacy“Pages”router):例如，以下是使用 Next.js（使用旧版“页面”路由器）的样子：
 
 ```
 ```
 
 **Let's break this down:** when the server receives a request, the `getServerSideProps` function is called. It returns a `props` object. Those props are then funneled into the component, which is rendered first on the server, and then hydrated on the client.让我们分解一下：当服务器收到请求时，会调用该 `getServerSideProps` 函数。它返回一个 `props` 对象。然后，这些道具被汇集到组件中，该组件首先在服务器上呈现，然后在客户端上冻结。
 
-The clever thing here is that `getServerSideProps` doesn't re-run on the client. In fact, this function isn't even included in our JavaScript bundles!这里聪明的做法是不会 `getServerSideProps` 在客户端上重新运行。事实上，这个函数甚至没有包含在我们的 JavaScript 包中！
+The clever thing here is that `getServerSideProps` doesn't re-run on the client. In fact, this function isn't even included in our JavaScript bundles! 这里聪明的做法是不会 `getServerSideProps` 在客户端上重新运行。事实上，这个函数甚至没有包含在我们的 JavaScript 包中！
 
 This approach was *super* ahead of its time. Honestly, it's pretty friggin’ great. But there *are* some downsides with this:这种方法非常超前。老实说，这真是太棒了。但这有一些缺点：
 
@@ -483,14 +483,14 @@ For years, the React team has been quietly tinkering on this problem, trying to 
 
 ## [Link to this heading](#introduction-to-react-server-components-3)Introduction to React Server ComponentsReact Server 组件简介
 
-At a high level, *React Server Components* is the name for a brand-new paradigm. In this new world, we can create components that run *exclusively on the server*. This allows us to do things like write database queries right inside our React components!在高层次上，React Server Components 是一个全新范式的名称。在这个新世界中，我们可以创建专门在服务器上运行的组件。这允许我们直接在 React 组件中执行诸如编写数据库查询之类的操作！
+At a high level, *React Server Components* is the name for a brand-new paradigm. In this new world, we can create components that run *exclusively on the server*. This allows us to do things like write database queries right inside our React components! 在高层次上，React Server Components 是一个全新范式的名称。在这个新世界中，我们可以创建专门在服务器上运行的组件。这允许我们直接在 React 组件中执行诸如编写数据库查询之类的操作！
 
-Here's a quick example of a “Server Component”:下面是“服务器组件”的简单示例：
+Here's a quick example of a“Server Component”:下面是“服务器组件”的简单示例：
 
 ```
 ```
 
-As someone who has been using React for many years, this code looked *absolutely wild* to me at first. 😅作为一个使用React多年的人，这段代码一开始对我来说绝对是疯狂的。😅
+As someone who has been using React for many years, this code looked *absolutely wild* to me at first. 😅作为一个使用 React 多年的人，这段代码一开始对我来说绝对是疯狂的。😅
 
 “But wait!”, my instincts screamed. “Function components can't be asynchronous! And we're not allowed to have side effects directly in the render like that!”“等等！”，我的直觉尖叫起来。“函数组件不能是异步的！而且我们不能像这样直接在渲染中出现副作用！
 
@@ -498,9 +498,9 @@ As someone who has been using React for many years, this code looked *absolutely
 
 This means that a *big chunk* of React's API is incompatible with Server Components. For example, we can't use state, because state can change, but Server Components can't re-render. And we can't use effects because effects only run *after* the render, on the client, and Server Components never make it to the client.这意味着 React 的 API 中有很大一部分与服务器组件不兼容。例如，我们不能使用状态，因为状态可以更改，但服务器组件不能重新呈现。我们不能使用效果，因为效果只在渲染后在客户端上运行，而服务器组件永远不会到达客户端。
 
-It also means that we have a bit more flexibility when it comes to the rules. For example, in traditional React, we need to put side effects inside a `useEffect` callback or an event handler or something, so that they don't repeat on every render. But if the component only runs *once*, we don't have to worry about that!这也意味着我们在规则方面有更多的灵活性。例如，在传统的 React 中，我们需要将副作用放在 `useEffect` 回调或事件处理程序或其他东西中，这样它们就不会在每次渲染时重复出现。但是，如果组件只运行一次，我们不必担心！
+It also means that we have a bit more flexibility when it comes to the rules. For example, in traditional React, we need to put side effects inside a `useEffect` callback or an event handler or something, so that they don't repeat on every render. But if the component only runs *once*, we don't have to worry about that! 这也意味着我们在规则方面有更多的灵活性。例如，在传统的 React 中，我们需要将副作用放在 `useEffect` 回调或事件处理程序或其他东西中，这样它们就不会在每次渲染时重复出现。但是，如果组件只运行一次，我们不必担心！
 
-Server Components *themselves* are surprisingly straightforward, but the “React Server Components” paradigm is significantly more complex. This is because we *still have* regular ol’ components, and the way they fit together can be pretty confusing.服务器组件本身出奇的简单，但“React 服务器组件”范式要复杂得多。这是因为我们仍然有常规的组件，它们组合在一起的方式可能非常令人困惑。
+Server Components *themselves* are surprisingly straightforward, but the “React Server Components” paradigm is significantly more complex. This is because we *still have* regular ol’components, and the way they fit together can be pretty confusing.服务器组件本身出奇的简单，但“React 服务器组件”范式要复杂得多。这是因为我们仍然有常规的组件，它们组合在一起的方式可能非常令人困惑。
 
 In this new paradigm, the “traditional” React components we're familiar with are called *Client Components*. I'll be honest, I don't love this name. 😅在这个新范式中，我们熟悉的“传统”React 组件称为客户端组件。老实说，我不喜欢这个名字。😅
 
@@ -526,13 +526,13 @@ Unfortunately, React Server Components doesn't work like that.不幸的是，Rea
 
 My understanding is that React Server Components needs to be tightly integrated with a bunch of stuff outside of React, things like the bundler, the server, and the router.我的理解是，React 服务器组件需要与 React 之外的一堆东西紧密集成，比如打包器、服务器和路由器。
 
-As I write this, there's only one way to start using React Server Components, and that's with Next.js 13.4+, using their brand-new re-architected “App Router”.在我写这篇文章的时候，只有一种方法可以开始使用React服务器组件，那就是Next.js 13.4+，使用他们全新的重新架构的“应用程序路由器”。
+As I write this, there's only one way to start using React Server Components, and that's with Next.js 13.4+, using their brand-new re-architected“App Router”.在我写这篇文章的时候，只有一种方法可以开始使用 React 服务器组件，那就是 Next.js 13.4+，使用他们全新的重新架构的“应用程序路由器”。
 
 Hopefully in the future, more React-based frameworks will start to incorporate React Server Components. It feels awkward that a core React feature is only available in one particular tool! The React docs has a [“Bleeding-edge frameworks” section](https://react.dev/learn/start-a-new-react-project#bleeding-edge-react-frameworks) where they list the frameworks that support React Server Components; I plan on checking this page from time to time, to see if any new options become available.希望在未来，更多基于 React 的框架将开始包含 React 服务器组件。核心 React 功能仅在一个特定工具中可用，这感觉很尴尬！React 文档有一个“前沿框架”部分，其中列出了支持 React 服务器组件的框架;我计划不时检查此页面，看看是否有任何新选项可用。
 
-### [Link to this heading](#specifying-client-components-5)Specifying client components指定客户端组件
+### [Link to this heading](#specifying-client-components-5)Specifying client components 指定客户端组件
 
-In this new “React Server Components” paradigm, **all components are assumed to be Server Components by default.** We have to “opt in” for Client Components.在这个新的“React 服务器组件”范式中，默认情况下，所有组件都假定为服务器组件。我们必须“选择加入”客户端组件。
+In this new “React Server Components” paradigm, **all components are assumed to be Server Components by default.** We have to“opt in”for Client Components.在这个新的“React 服务器组件”范式中，默认情况下，所有组件都假定为服务器组件。我们必须“选择加入”客户端组件。
 
 We do this by specifying a brand-new *directive*:为此，我们指定了一个全新的指令：
 
@@ -541,7 +541,7 @@ We do this by specifying a brand-new *directive*:为此，我们指定了一个�
 
 That standalone string at the top, `'use client'`, is how we signal to React that the component(s) in this file are Client Components, that they should be included in our JS bundles so that they can re-render on the client.顶部的独立字符串 `'use client'` ，是我们向 React 发出信号的方式，表明此文件中的组件是客户端组件，它们应该包含在我们的 JS 包中，以便它们可以在客户端上重新渲染。
 
-This might *seem* like an incredibly odd way to specify the type of component we're creating, but there is a precedent for this sort of thing: the ["use strict"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive that opts into “Strict Mode” in JavaScript.这似乎是一种非常奇怪的方式来指定我们正在创建的组件类型，但这种事情有一个先例：在 JavaScript 中选择进入“严格模式”的“使用严格”指令。
+This might *seem* like an incredibly odd way to specify the type of component we're creating, but there is a precedent for this sort of thing: the ["use strict"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive that opts into“Strict Mode”in JavaScript.这似乎是一种非常奇怪的方式来指定我们正在创建的组件类型，但这种事情有一个先例：在 JavaScript 中选择进入“严格模式”的“使用严格”指令。
 
 We don't specify the `'use server'` directive in our Server Components; in the React Server Components paradigm, components are treated as Server Components by default. In fact, `'use server'` is used for Server Actions, a totally different feature that is beyond the scope of this blog post.我们没有在服务器组件中指定该 `'use server'` 指令;在 React Server 组件范式中，组件默认被视为服务器组件。事实上，它用于服务器操作，这是一个完全不同的功能， `'use server'` 超出了这篇博文的范围。
 
@@ -559,7 +559,7 @@ Let's suppose that in the initial Server Side Render, `hits` was equal to `0`. T
 ```
 ```
 
-But what happens if the value of `hits` changes? Suppose it's a state variable, and it changes from `0` to `1`. `HitCounter` would need to re-render, but it *can't* re-render, because it's a Server Component!但是，如果价值 `hits` 发生变化会发生什么？假设它是一个状态变量，它从 `0` 更改为 `1` 。 `HitCounter` 需要重新渲染，但它不能重新渲染，因为它是一个服务器组件！
+But what happens if the value of `hits` changes? Suppose it's a state variable, and it changes from `0` to `1`. `HitCounter` would need to re-render, but it *can't* re-render, because it's a Server Component! 但是，如果价值 `hits` 发生变化会发生什么？假设它是一个状态变量，它从 `0` 更改为 `1` 。 `HitCounter` 需要重新渲染，但它不能重新渲染，因为它是一个服务器组件！
 
 **The thing is, Server Components don't really make sense in isolation.** We have to zoom out, to take a more holistic view, to consider the structure of our application.问题是，服务器组件在孤立的情况下并没有真正的意义。我们必须缩小范围，以更全面地看待问题，考虑应用程序的结构。
 
@@ -616,9 +616,9 @@ Back in `Homepage`, we use this new component like so:回到 `Homepage` ，我�
 ```
 ```
 
-We can remove the `'use client'` directive from `Homepage` because it no longer uses state, or any other client-side React features. This means that `Header` and `MainContent` won't be implicitly converted to Client Components anymore!我们可以从 `Homepage` 中删除该 `'use client'` 指令，因为它不再使用状态或任何其他客户端 React 功能。这意味着 `Header` ，并且 `MainContent` 不会再隐式转换为客户端组件！
+We can remove the `'use client'` directive from `Homepage` because it no longer uses state, or any other client-side React features. This means that `Header` and `MainContent` won't be implicitly converted to Client Components anymore! 我们可以从 `Homepage` 中删除该 `'use client'` 指令，因为它不再使用状态或任何其他客户端 React 功能。这意味着 `Header` ，并且 `MainContent` 不会再隐式转换为客户端组件！
 
-**But wait a second.** `ColorProvider`, a Client Component, is a *parent* to `Header` and `MainContent`. Either way, it's still higher in the tree, right?但是等一下。 `ColorProvider` ，客户端组件是 `Header` 和 `MainContent` 的父级。无论哪种方式，它在树上仍然更高，对吧？
+**But wait a second.** `ColorProvider`, a Client Component, is a *parent* to `Header` and `MainContent`. Either way, it's still higher in the tree, right？但是等一下。 `ColorProvider` ，客户端组件是 `Header` 和 `MainContent` 的父级。无论哪种方式，它在树上仍然更高，对吧？
 
 When it comes to client boundaries, though, the parent/child relationship doesn't matter. `Homepage` is the one importing and rendering `Header` and `MainContent`. This means that `Homepage` decides *what the props are* for these components.但是，当涉及到客户边界时，父/子关系并不重要。 `Homepage` 是导入和渲染 `Header` 的那个，并且 `MainContent` .这意味着这 `Homepage` 决定了这些组件的道具是什么。
 
@@ -626,11 +626,11 @@ Remember, the problem we're trying to solve is that Server Components can't re-r
 
 **This is brain-bending stuff.** Even after years of React experience, I still find this very confusing 😅. It took a fair bit of practice to develop an intuition for this.这是令人费解的东西。即使经过多年的 React 经验，我仍然觉得这很令人困惑😅。这需要相当多的练习来培养这种直觉。
 
-To be more precise, the `'use client'` directive works at the file / module level. Any modules *imported* in a Client Component file must be Client Components as well. When the bundler bundles up our code, it'll follow these imports, after all!更准确地说，该 `'use client'` 指令在文件/模块级别工作。在客户端组件文件中导入的任何模块也必须是客户端组件。毕竟，当打包器捆绑我们的代码时，它会遵循这些导入！
+To be more precise, the `'use client'` directive works at the file / module level. Any modules *imported* in a Client Component file must be Client Components as well. When the bundler bundles up our code, it'll follow these imports, after all! 更准确地说，该 `'use client'` 指令在文件/模块级别工作。在客户端组件文件中导入的任何模块也必须是客户端组件。毕竟，当打包器捆绑我们的代码时，它会遵循这些导入！
 
 ## [Link to this heading](#peeking-under-the-hood-8)Peeking under the hood 窥视引擎盖下
 
-Let's look at this at a bit of a lower level. When we use a Server Component, what does the output look like? What actually gets generated?让我们从较低的层面来看这个问题。当我们使用服务器组件时，输出是什么样的？实际生成了什么？
+Let's look at this at a bit of a lower level. When we use a Server Component, what does the output look like? What actually gets generated？让我们从较低的层面来看这个问题。当我们使用服务器组件时，输出是什么样的？实际生成了什么？
 
 Let's start with a super-simple React application:让我们从一个超级简单的 React 应用程序开始：
 
@@ -644,7 +644,7 @@ When we visit this app in the browser, we'll receive an HTML document which look
 ```
 ```
 
-We see that our HTML document includes the UI generated by our React application, the “Hello world!” paragraph. This is thanks to Server Side Rendering, and isn't directly attributable to React Server Components.我们看到我们的 HTML 文档包含由 React 应用程序生成的 UI，即“Hello world！”段落。这要归功于服务器端渲染，而不是直接归因于 React 服务器组件。
+We see that our HTML document includes the UI generated by our React application, the“Hello world!”paragraph. This is thanks to Server Side Rendering, and isn't directly attributable to React Server Components.我们看到我们的 HTML 文档包含由 React 应用程序生成的 UI，即“Hello world！”段落。这要归功于服务器端渲染，而不是直接归因于 React 服务器组件。
 
 Below that, we have a `<script>` tag that loads up our JS bundle. This bundle includes the dependencies like React, as well as any Client Components used in our application. And since our `Homepage` component is a Server Component, the code for that component is *not* included in this bundle.在它下面，我们有一个 `<script>` 标签来加载我们的 JS 包。这个捆绑包包括像 React 这样的依赖项，以及我们应用程序中使用的任何客户端组件。由于我们的 `Homepage` 组件是服务器组件，因此该组件的代码不包含在此捆绑包中。
 
@@ -679,7 +679,7 @@ Server 服务器
 
 Client 客户
 
-Download JavaScript下载 JavaScript的
+Download JavaScript 下载 JavaScript 的
 
 This is a data visualization which shows a sequence of events between client and server. Each event is represented here as a list item.
 
@@ -750,11 +750,11 @@ This is a data visualization which shows a sequence of events between client and
 
 <!--/$-->
 
-This is maybe the least exciting thing to me, though. Honestly, most Next.js apps are *already* fast enough when it comes to “Page Interactive” timing.不过，这对我来说可能是最不令人兴奋的事情。老实说，大多数Next.js应用程序在“页面交互”计时方面已经足够快了。
+This is maybe the least exciting thing to me, though. Honestly, most Next.js apps are *already* fast enough when it comes to“Page Interactive”timing.不过，这对我来说可能是最不令人兴奋的事情。老实说，大多数 Next.js 应用程序在“页面交互”计时方面已经足够快了。
 
 If you follow semantic HTML principles, most of your app should work even before React has hydrated. Links can be followed, forms can be submitted, accordions can be expanded and collapsed (using `<details>` and `<summary>`). For most projects, it's fine if it takes a few seconds for React to hydrate.如果你遵循语义 HTML 原则，你的大部分应用程序应该在 React 完成之前就已经工作了。可以跟踪链接，可以提交表单，可以展开和折叠手风琴（使用 `<details>` 和 `<summary>` ）。对于大多数项目来说，如果 React 需要几秒钟的时间来补充水分，那也没关系。
 
-**But here's something I find really cool:** we no longer have to make the same compromises, in terms of features vs. bundle size!但我觉得有一点真的很酷：我们不再需要在功能与捆绑包大小方面做出同样的妥协！
+**But here's something I find really cool:** we no longer have to make the same compromises, in terms of features vs. bundle size! 但我觉得有一点真的很酷：我们不再需要在功能与捆绑包大小方面做出同样的妥协！
 
 For example, most technical blogs require some sort of syntax highlighting library. On this blog, I use Prism. The code snippets look like this:例如，大多数技术博客都需要某种语法高亮库。在这个博客上，我使用 Prism。代码片段如下所示：
 
@@ -773,11 +773,11 @@ This is the sort of thing that gets me excited about React Server Components. Th
 
 It's not just about performance and UX either. After working with RSC for a while, I've come to really appreciate how easy-breezy Server Components are. We never have to worry about dependency arrays, stale closures, memoization, or any of the other complex stuff caused by *things changing.*这不仅仅是关于性能和用户体验。在与 RSC 合作了一段时间后，我开始真正体会到服务器组件是多么简单易用。我们永远不必担心依赖数组、过时的闭包、记忆或任何其他由事物变化引起的复杂问题。
 
-Ultimately, it's still very early days. React Server Components only emerged from beta a couple of months ago! I'm really excited to see how things evolve over the next couple of years, as the community continues to innovate new solutions like Bright, taking advantage of this new paradigm. It's an exciting time to be a React developer!归根结底，现在还为时过早。React Server Components 几个月前才从 beta 版中出现！我真的很高兴看到未来几年事情的发展，因为社区继续创新像 Bright 这样的新解决方案，利用这种新范式。成为 React 开发人员是一个激动人心的时刻！
+Ultimately, it's still very early days. React Server Components only emerged from beta a couple of months ago! I'm really excited to see how things evolve over the next couple of years, as the community continues to innovate new solutions like Bright, taking advantage of this new paradigm. It's an exciting time to be a React developer! 归根结底，现在还为时过早。React Server Components 几个月前才从 beta 版中出现！我真的很高兴看到未来几年事情的发展，因为社区继续创新像 Bright 这样的新解决方案，利用这种新范式。成为 React 开发人员是一个激动人心的时刻！
 
 ## [Link to this heading](#the-full-picture-10)The full picture 全貌
 
-React Server Components is an exciting development, but it's actually only one part of the “Modern React” puzzle.React Server Components 是一个令人兴奋的发展，但它实际上只是“现代 React”拼图的一部分。
+React Server Components is an exciting development, but it's actually only one part of the“Modern React”puzzle.React Server Components 是一个令人兴奋的发展，但它实际上只是“现代 React”拼图的一部分。
 
 Things get *really* interesting when we combine React Server Components with Suspense and the new Streaming SSR architecture. It allows us to do *wild* stuff like this:当我们将 React Server 组件与 Suspense 和新的流式 SSR 架构相结合时，事情变得非常有趣。它允许我们做这样的事情：
 
@@ -912,6 +912,6 @@ I have the feeling that building in React is about to get even cooler. 😄我�
 
 ### Last Updated 最后更新
 
-September 19th, 2023 九月19th，2023
+September 19th, 2023 九月 19th，2023
 
 ### Hits 打

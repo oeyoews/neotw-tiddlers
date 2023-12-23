@@ -82,7 +82,7 @@
           return predefinedAnswers[userMessage];
         }
 
-        return "🧊 不好意思,我还没有想好啦。";
+        return "🧊 不好意思，我还没有想好啦。";
       }
     </script>
   </body>

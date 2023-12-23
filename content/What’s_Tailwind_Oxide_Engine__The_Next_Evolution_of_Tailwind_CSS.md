@@ -12,12 +12,12 @@ Building on this foundation, [Adam Wathan](https://adamwathan.me/) and [Tailwind
 
 · [Will Oxide break my app?](#a2f7)·氧化物会破坏我的应用程序吗？\
 · [What is Tailwind Oxide Engine?](#bf00)·什么是顺风氧化物发动机？\
-∘ [1) Unified toolchain](#3ed8)∘ 1） 统一工具链\
-∘ [2) Oxide under the hood — ⚡ ️Lightning CSS](#16ba)∘ 2） 引擎盖下的氧化物 — ⚡ ️闪电 CSS\
-∘ [3) Simplified Configuration](#ec3c)∘ 3） 简化配置\
+∘ [1) Unified toolchain](#3ed8)∘ 1）统一工具链\
+∘ [2) Oxide under the hood — ⚡ ️Lightning CSS](#16ba)∘ 2）引擎盖下的氧化物 — ⚡ ️闪电 CSS\
+∘ [3) Simplified Configuration](#ec3c)∘ 3）简化配置\
 · [Conclusion — The Impact of the Oxide Engine on Tailwind](#c318)·结论 — 氧化物发动机对顺风的影响
 
-## **Will Oxide break my app?氧化物会破坏我的应用程序吗？**
+## **Will Oxide break my app？氧化物会破坏我的应用程序吗？**
 
 Short answer: No, it will not.简短的回答：不，它不会。
 
@@ -25,15 +25,15 @@ First of all, Oxide is not some new paradigm shift in how developers write Tailw
 
 It’s also worth mentioning that all these changes should be **backwards compatible** since that’s the team’s goal.还值得一提的是，所有这些更改都应该向后兼容，因为这是团队的目标。
 
-## **What is Tailwind Oxide Engine?什么是顺风氧化物发动机？**
+## **What is Tailwind Oxide Engine？什么是顺风氧化物发动机？**
 
 As mentioned earlier, Oxide is designed to unify the toolchain, boost performance, and streamline configuration.如前所述，Oxide 旨在统一工具链、提高性能并简化配置。
 
 So let’s start with the toolchain first.因此，让我们先从工具链开始。
 
-## 1) Unified toolchain 1） 统一工具链
+## 1) Unified toolchain 1）统一工具链
 
-The term “toolchain” refers to the set of software development tools used in combination to complete complex tasks.术语“工具链”是指组合用于完成复杂任务的一组软件开发工具。
+The term“toolchain”refers to the set of software development tools used in combination to complete complex tasks.术语“工具链”是指组合用于完成复杂任务的一组软件开发工具。
 
 In the context of Tailwind CSS, the toolchain includes dependencies like:在 Tailwind CSS 的上下文中，工具链包括以下依赖项：
 
@@ -46,7 +46,7 @@ But that means developers have to manage these dependencies and everything that 
 
 In essence, Oxide integrates these functionalities by incorporating the logic of these separate tools into its own codebase. This allows Oxide to provide the same functionalities as these tools without requiring them as separate dependencies.从本质上讲，Oxide 将这些独立工具的逻辑合并到自己的代码库中来集成这些功能。这允许 Oxide 提供与这些工具相同的功能，而无需将它们作为单独的依赖项。
 
-## 2) Oxide under the hood — ⚡ ️Lightning CSS2） 引擎盖下的氧化物 — ⚡ ️闪电 CSS
+## 2) Oxide under the hood — ⚡ ️Lightning CSS2）引擎盖下的氧化物 — ⚡ ️闪电 CSS
 
 Now let’s look at how Oxide improves Tailwind’s performance.现在让我们看看 Oxide 如何提高 Tailwind 的性能。
 
@@ -66,7 +66,7 @@ In addition, Lightning CSS supports CSS modules, which locally scope classes, id
 
 Look at [**Lightning CSS**](https://lightningcss.dev/docs.html) docs if you want to learn more.如果您想了解更多信息，请查看 Lightning CSS 文档。
 
-## 3) Simplified Configuration3） 简化配置
+## 3) Simplified Configuration3）简化配置
 
 Right now, there are two config files that developers need to manage, and that’s `tailwind.config.js` and `postcss.config.js`.现在，开发人员需要管理两个配置文件，那就是 `tailwind.config.js` 和 `postcss.config.js` 。
 
@@ -78,7 +78,7 @@ Let’s quickly look at app.css first since we will come back to it again a litt
 
 **— app.css — 应用.css**
 
-In the app.css file you need to use directives like `@tailwind base;`, `@tailwind components;`, and `@tailwind utilities;` to import different parts of Tailwind CSS into your project.在 app.css 文件中，您需要使用 、 `@tailwind components;` 等 `@tailwind base;` 指令，并将 `@tailwind utilities;` Tailwind CSS 的不同部分导入到项目中。
+In the app.css file you need to use directives like `@tailwind base;`, `@tailwind components;`, and `@tailwind utilities;` to import different parts of Tailwind CSS into your project.在 app.css 文件中，您需要使用、 `@tailwind components;` 等 `@tailwind base;` 指令，并将 `@tailwind utilities;` Tailwind CSS 的不同部分导入到项目中。
 
 ```plain
  
@@ -135,7 +135,7 @@ The answer to this is **automatic content detection**.答案是自动内容检�
 
 Since the engine is rewritten in Rust, it can do more work and way faster than it was possible before.由于引擎是用 Rust 重写的，它可以做更多的工作，并且比以前更快。
 
-The team came up with some “smart algorithms” that can make educated guesses about where files are located based on existing files, their locations, and the extensions used.该团队提出了一些“智能算法”，可以根据现有文件、文件的位置和使用的扩展名对文件的位置进行有根据的猜测。
+The team came up with some“smart algorithms”that can make educated guesses about where files are located based on existing files, their locations, and the extensions used.该团队提出了一些“智能算法”，可以根据现有文件、文件的位置和使用的扩展名对文件的位置进行有根据的猜测。
 
 That means you can get rid of the content array completely.这意味着您可以完全摆脱内容数组。
 

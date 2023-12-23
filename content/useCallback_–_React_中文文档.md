@@ -20,7 +20,7 @@ const cachedFn = useCallback(fn, dependencies)
 
 * [疑难解答](#troubleshooting)
 
-  * [我的组件每一次渲染时, `useCallback` 都返回了完全不同的函数](#every-time-my-component-renders-usecallback-returns-a-different-function)
+  * [我的组件每一次渲染时，`useCallback` 都返回了完全不同的函数](#every-time-my-component-renders-usecallback-returns-a-different-function)
   * [我需要在循环中为每一个列表项调用 `useCallback` 函数，但是这不被允许](#i-need-to-call-usememo-for-each-list-item-in-a-loop-but-its-not-allowed)
 
 ***
@@ -72,7 +72,7 @@ orderDetails,
 
 在初次渲染时，`useCallback` 返回你已经传入的 `fn` 函数
 
-在之后的渲染中, 如果依赖没有改变，`useCallback` 返回上一次渲染中缓存的 `fn` 函数；否则返回这一次渲染传入的 `fn`。
+在之后的渲染中，如果依赖没有改变，`useCallback` 返回上一次渲染中缓存的 `fn` 函数；否则返回这一次渲染传入的 `fn`。
 
 #### 注意 [](#caveats "Link for 注意 ")
 
@@ -164,7 +164,7 @@ return (
 
 注意，切换 `theme` props 后会让应用停滞一小会，但如果将 `<ShippingForm />` 从 JSX 中移除，应用将反应迅速。这就提示尽力优化 `ShippingForm` 组件将会很有用。
 
-**默认情况下，当一个组件重新渲染时， React 将递归渲染它的所有子组件**，因此每当因 `theme` 更改时而 `ProductPage` 组件重新渲染时，`ShippingForm` 组件也会重新渲染。这对于不需要大量计算去重新渲染的组件来说影响很小。但如果你发现某次重新渲染很慢，你可以将 `ShippingForm` 组件包裹在 [`memo`](https://zh-hans.react.dev/reference/react/memo) 中。如果 props 和上一次渲染时相同，那么 `ShippingForm` 组件将跳过重新渲染。
+**默认情况下，当一个组件重新渲染时，React 将递归渲染它的所有子组件**，因此每当因 `theme` 更改时而 `ProductPage` 组件重新渲染时，`ShippingForm` 组件也会重新渲染。这对于不需要大量计算去重新渲染的组件来说影响很小。但如果你发现某次重新渲染很慢，你可以将 `ShippingForm` 组件包裹在 [`memo`](https://zh-hans.react.dev/reference/react/memo) 中。如果 props 和上一次渲染时相同，那么 `ShippingForm` 组件将跳过重新渲染。
 
 <!--$-->
 
@@ -395,7 +395,7 @@ return useMemo(() => fn, dependencies);
 
 请注意，`useCallback` 不会阻止创建函数。你总是在创建一个函数（这很好！），但是如果没有任何东西改变，React 会忽略它并返回缓存的函数。
 
-**在实践中, 你可以通过遵循一些原则来减少许多不必要的记忆化**：
+**在实践中，你可以通过遵循一些原则来减少许多不必要的记忆化**：
 
 1. 当一个组件在视觉上包装其他组件时，让它 [接受 JSX 作为子元素](https://zh-hans.react.dev/learn/passing-props-to-a-component#passing-jsx-as-children)。随后，如果包装组件更新自己的 state，React 知道它的子组件不需要重新渲染。
 2. 建议使用 state 并且不要 [提升状态](https://zh-hans.react.dev/learn/sharing-state-between-components) 超过必要的程度。不要将表单和项是否悬停等短暂状态保存在树的顶部或全局状态库中。
@@ -723,7 +723,7 @@ goBack,
 
 ## 疑难解答 [](#troubleshooting "Link for 疑难解答 ")
 
-### 我的组件每一次渲染时, `useCallback` 都返回了完全不同的函数 [](#every-time-my-component-renders-usecallback-returns-a-different-function "Link for this heading")
+### 我的组件每一次渲染时，`useCallback` 都返回了完全不同的函数 [](#every-time-my-component-renders-usecallback-returns-a-different-function "Link for this heading")
 
 确保你已经将依赖数组指定为第二个参数！
 
@@ -1001,4 +1001,4 @@ return (
 
 <!--/$-->
 
-[上一页use](https://zh-hans.react.dev/reference/react/use)[下一页useContext](https://zh-hans.react.dev/reference/react/useContext)
+[上一页 use](https://zh-hans.react.dev/reference/react/use)[下一页 useContext](https://zh-hans.react.dev/reference/react/useContext)

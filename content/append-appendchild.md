@@ -16,8 +16,8 @@
    - 示例代码：
      ```javascript
      const parent = document.getElementById('parent'); // 获取父节点
-     const child1 = document.createElement('div'); // 创建子节点1（div）
-     const child2 = document.createElement('span'); // 创建子节点2（span）
+     const child1 = document.createElement('div'); // 创建子节点 1（div）
+     const child2 = document.createElement('span'); // 创建子节点 2（span）
      parent.append(child1, child2); // 将多个子节点添加到父节点中
      ```
 

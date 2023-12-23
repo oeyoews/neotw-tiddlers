@@ -2,7 +2,7 @@
 
 相反，onKeyDown 事件在用户按下任何键时都会触发，包括 "Enter" 键。因此，如果您希望在用户按下键盘上的 "Enter" 键时触发某些事件，最好使用 onKeyDown 事件来处理它。
 
-`onKeyPress` 已被废弃，不建议使用。在React中，推荐使用 `onKeyDown` 处理键盘事件。
+`onKeyPress` 已被废弃，不建议使用。在 React 中，推荐使用 `onKeyDown` 处理键盘事件。
 
 在 `onKeyDown` 事件处理函数中，您可以通过检查 `event.key` 属性来获得用户按下的键盘键。与 `onKeyPress` 不同，即使用户按下非打印字符（如 "Shift"、"Ctrl"、"Alt" 和 "Enter"），`onKeyDown` 也会触发。
 

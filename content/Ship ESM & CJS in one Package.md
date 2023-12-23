@@ -5,7 +5,7 @@
 
 * [Bundling  捆绑](#bundling)
 
-  * [tsup  TSUP的](#tsup)
+  * [tsup  TSUP 的](#tsup)
 
   * [unbuild  取消构建](#unbuild)
 
@@ -21,9 +21,9 @@
 ## ESM & CJS  ESM 和 CJS
 
 * ESM - [ECMAScript modules](https://nodejs.org/api/esm.html) ESM - ECMAScript 模块
-* CJS - [CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules) CJS - 通用JS
+* CJS - [CommonJS](https://nodejs.org/api/modules.html#modules-commonjs-modules) CJS - 通用 JS
 
-In the past decade, due to the lack of a standard module system of JavaScript, CommonJS (a.k.a the `require('xxx')` and `module.exports` syntax) has been the way how Node.js and NPM packages work. Until 2015, when ECMAScript modules finally show up as the standard solution, the community start migrating to native ESM gradually.在过去的十年中，由于缺乏标准的JavaScript模块系统，CommonJS（又名和语法）一直是Node.js `require('xxx')` 和 `module.exports` NPM包的工作方式。直到 2015 年，当 ECMAScript 模块最终成为标准解决方案时，社区开始逐步迁移到原生 ESM。
+In the past decade, due to the lack of a standard module system of JavaScript, CommonJS (a.k.a the `require('xxx')` and `module.exports` syntax) has been the way how Node.js and NPM packages work. Until 2015, when ECMAScript modules finally show up as the standard solution, the community start migrating to native ESM gradually.在过去的十年中，由于缺乏标准的 JavaScript 模块系统，CommonJS（又名和语法）一直是 Node.js `require('xxx')` 和 `module.exports` NPM 包的工作方式。直到 2015 年，当 ECMAScript 模块最终成为标准解决方案时，社区开始逐步迁移到原生 ESM。
 
 ```
 // CJS
@@ -47,7 +47,7 @@ The overall migration of the ecosystem is still in progress, for most library au
 
 ## Compatibility  兼容性
 
-If ESM is the better and the future, why don’t we all move to ESM then? Even though Node.js is smart enough to allow CJS and ESM packages to work together, the main blocker is that **you can’t use ESM packages in CJS**.如果ESM是更好的和未来的，那么我们为什么不都转向ESM呢？尽管 Node.js 足够智能，允许 CJS 和 ESM 包协同工作，但主要的障碍是您不能在 CJS 中使用 ESM 包。
+If ESM is the better and the future, why don’t we all move to ESM then? Even though Node.js is smart enough to allow CJS and ESM packages to work together, the main blocker is that **you can’t use ESM packages in CJS**.如果 ESM 是更好的和未来的，那么我们为什么不都转向 ESM 呢？尽管 Node.js 足够智能，允许 CJS 和 ESM 包协同工作，但主要的障碍是您不能在 CJS 中使用 ESM 包。
 
 If you do: 如果您这样做：
 
@@ -56,7 +56,7 @@ If you do: 如果您这样做：
 const pkg = require('esm-only-package')
 ```
 
-you will receive the following error您将收到以下错误
+you will receive the following error 您将收到以下错误
 
 ```
 Error [ERR_REQUIRE_ESM]: require() of ES Module esm-only-package not supported.
@@ -104,9 +104,9 @@ So now we have two copies of code with slightly different module syntax to maint
 * [`tsup`](#tsup)
 * [`unbuild`](#unbuild)
 
-### tsup  TSUP的
+### tsup  TSUP 的
 
-[`tsup`](https://github.com/egoist/tsup) by [@egoist](https://github.com/egoist) is one of my most used tools. The features zero-config building for TypeScript project. The usage is like:`tsup` by @egoist是我最常用的工具之一。特点是 TypeScript 项目的零配置构建。用法如下：
+[`tsup`](https://github.com/egoist/tsup) by [@egoist](https://github.com/egoist) is one of my most used tools. The features zero-config building for TypeScript project. The usage is like:`tsup` by @egoist 是我最常用的工具之一。特点是 TypeScript 项目的零配置构建。用法如下：
 
 ```
 $ tsup src/index.ts
@@ -149,7 +149,7 @@ Here is my go-to template of `package.json` using `tsup`:这是我 `package.json
 
 If we say `tsup` is a minimal bundler for TypeScript, [`unbuild`](https://github.com/unjs/unbuild) by the [@unjs org](https://github.com/unjs) is a more generalized, customizable and yet powerful. `unbuild` is being used to bundle Nuxt 3 and it’s sub packages.如果我们说 `tsup` 是 TypeScript 的最小打包器， `unbuild` 那么 @unjs 组织是一个更通用、可定制且功能更强大的组织。 `unbuild` 用于捆绑 Nuxt 3 及其子包。
 
-To use it, we create `build.config.ts` file in the root为了使用它，我们在根目录中创建 `build.config.ts` 文件
+To use it, we create `build.config.ts` file in the root 为了使用它，我们在根目录中创建 `build.config.ts` 文件
 
 ```
 // build.config.ts
@@ -173,13 +173,13 @@ $ unbuild
 
 #### Stubbing  存根
 
-This is one of the most incredible things that I have found when I first looked into [Nuxt 3’s codebase](https://github.com/nuxt/framework). `unbuild` introduced a new idea called Stubbing. Instead of firing up a watcher to re-trigger the bundling every time you made changes to the source code, the stubbing in `unbuild` (so call Passive watcher) does not require you are have another process for that at all. By calling the following command **only once**:这是我第一次研究Nuxt 3的代码库时发现的最不可思议的事情之一。 `unbuild` 引入了一个名为Stubbing的新想法。每次对源代码进行更改时，都不会启动观察器来重新触发捆绑，而是存 `unbuild` 根（因此称为被动观察器）根本不需要您有另一个过程。通过仅调用以下命令一次：
+This is one of the most incredible things that I have found when I first looked into [Nuxt 3’s codebase](https://github.com/nuxt/framework). `unbuild` introduced a new idea called Stubbing. Instead of firing up a watcher to re-trigger the bundling every time you made changes to the source code, the stubbing in `unbuild` (so call Passive watcher) does not require you are have another process for that at all. By calling the following command **only once**:这是我第一次研究 Nuxt 3 的代码库时发现的最不可思议的事情之一。 `unbuild` 引入了一个名为 Stubbing 的新想法。每次对源代码进行更改时，都不会启动观察器来重新触发捆绑，而是存 `unbuild` 根（因此称为被动观察器）根本不需要您有另一个过程。通过仅调用以下命令一次：
 
 ```
 $ unbuild --stub
 ```
 
-You are able to play and test out with your library with the up-to-date code!您可以使用最新的代码使用您的库进行游戏和测试！
+You are able to play and test out with your library with the up-to-date code! 您可以使用最新的代码使用您的库进行游戏和测试！
 
 Want to know the magic? After running the stubbing command, you can check out the generated distribution files:想知道它的魔力吗？运行 stubbing 命令后，您可以签出生成的分发文件：
 
@@ -195,11 +195,11 @@ export default jiti(null, { interopDefault: true })('/Users/antfu/unbuild-test/s
 module.exports = require('jiti')(null, { interopDefault: true })('/Users/antfu/unbuild-test/src/index')
 ```
 
-Instead of the distribution of your code bundle, the dist files are now redirecting to your source code with a wrap of [`jiti`](https://github.com/unjs/jiti) - another treasure hidden in the [@unjs](https://github.com/unjs) org. `jiti` provides the runtime support of TypeScript, ESM for Node by transpiling the modules on the fly. Since it directly goes to your source files, there won’t be a misalignment between your source code and bundle dist - thus there is no watcher process needed! This is a huge DX bump for library authors, if you still not getting it, you shall definitely grab it down and play with it yourself.dist 文件现在不是分发您的代码包，而是重定向到您的源代码，并包装 `jiti` - 隐藏在 @unjs 组织中的另一个宝藏。 通过动态转译模块来提供 TypeScript 的运行时支持，ESM for Node。 `jiti` 由于它直接转到您的源文件，因此您的源代码和 bundle dist 之间不会出现错位 - 因此不需要观察程序进程！对于图书馆作者来说，这是一个巨大的DX颠簸，如果你仍然没有得到它，你一定要抓住它自己玩它。
+Instead of the distribution of your code bundle, the dist files are now redirecting to your source code with a wrap of [`jiti`](https://github.com/unjs/jiti) - another treasure hidden in the [@unjs](https://github.com/unjs) org. `jiti` provides the runtime support of TypeScript, ESM for Node by transpiling the modules on the fly. Since it directly goes to your source files, there won’t be a misalignment between your source code and bundle dist - thus there is no watcher process needed! This is a huge DX bump for library authors, if you still not getting it, you shall definitely grab it down and play with it yourself.dist 文件现在不是分发您的代码包，而是重定向到您的源代码，并包装 `jiti` - 隐藏在 @unjs 组织中的另一个宝藏。通过动态转译模块来提供 TypeScript 的运行时支持，ESM for Node。 `jiti` 由于它直接转到您的源文件，因此您的源代码和 bundle dist 之间不会出现错位 - 因此不需要观察程序进程！对于图书馆作者来说，这是一个巨大的 DX 颠簸，如果你仍然没有得到它，你一定要抓住它自己玩它。
 
 #### Bundleless Build  无捆绑构建
 
-Powered by [`mkdist`](https://github.com/unjs/mkdist) - another [@unjs](https://github.com/unjs) package - `unbuild` also handles static assets and file-to-file transpiling. Bundleless build allows you to keep the structure of your source code, made easy for importing submodules on-demand to optimizing performance and more.Powered by `mkdist` - 另一个@unjs包 - `unbuild` 还处理静态资产和文件到文件转译。无捆绑构建允许您保留源代码的结构，从而轻松按需导入子模块以优化性能等。
+Powered by [`mkdist`](https://github.com/unjs/mkdist) - another [@unjs](https://github.com/unjs) package - `unbuild` also handles static assets and file-to-file transpiling. Bundleless build allows you to keep the structure of your source code, made easy for importing submodules on-demand to optimizing performance and more.Powered by `mkdist` - 另一个@unjs 包 - `unbuild` 还处理静态资产和文件到文件转译。无捆绑构建允许您保留源代码的结构，从而轻松按需导入子模块以优化性能等。
 
 Config in `unbuild` will look like:中的 `unbuild` 配置如下所示：
 
@@ -269,7 +269,7 @@ P.S. `unbuild` is working on providing better out-of-box experience by auto infe
 
 With either of the tools mentioned above, now we are able to write TypeScript as the single source of truth and made the overall codebase easier to maintain. However, there are still some caveats that you will need to keep an eye on it.使用上面提到的任何一种工具，现在我们能够将 TypeScript 编写为单一事实来源，并使整个代码库更易于维护。但是，您仍然需要注意一些注意事项。
 
-**In ESM, there is NO `__dirname`, `__filename`, `require`, `require.resolve`**. Instead, you will need to use `import.meta.url` and also do some convertion to get the file path string.在 ESM 中，没有 、 、 `require` 、 `__filename` `__dirname` `require.resolve` 。相反，您将需要使用 `import.meta.url` 并进行一些转换来获取文件路径字符串。
+**In ESM, there is NO `__dirname`, `__filename`, `require`, `require.resolve`**. Instead, you will need to use `import.meta.url` and also do some convertion to get the file path string.在 ESM 中，没有、 、 `require` 、 `__filename` `__dirname` `require.resolve` 。相反，您将需要使用 `import.meta.url` 并进行一些转换来获取文件路径字符串。
 
 So since our code will be compiled to both CJS and ESM, it’s better to avoiding using those environment specific context whenever possible. If you do need them, you can refer to my note about [Isomorphic `__dirname`](https://antfu.me/posts/isomorphic-dirname):因此，由于我们的代码将同时编译为 CJS 和 ESM，因此最好尽可能避免使用这些特定于环境的上下文。如果你确实需要它们，你可以参考我关于同构的笔记 `__dirname` ：
 
@@ -282,7 +282,7 @@ const _dirname = typeof __dirname !== 'undefined'
   : dirname(fileURLToPath(import.meta.url))
 ```
 
-For `require` and `require.resolve`, you can use对于 `require` 和 `require.resolve` ，您可以使用
+For `require` and `require.resolve`, you can use 对于 `require` 和 `require.resolve` ，您可以使用
 
 ```
 import { createRequire } from 'node:module'
@@ -290,7 +290,7 @@ import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
 ```
 
-Some good news, if you are using `unbuild`, you can turn on the `cjsBridge` flag and `unbuild` will shims those CJS context in ESM automatically for you!.一些好消息，如果你正在使用 `unbuild` ，你可以打开标志， `cjsBridge` 并 `unbuild` 会自动为你在ESM中填充这些CJS上下文！
+Some good news, if you are using `unbuild`, you can turn on the `cjsBridge` flag and `unbuild` will shims those CJS context in ESM automatically for you!.一些好消息，如果你正在使用 `unbuild` ，你可以打开标志， `cjsBridge` 并 `unbuild` 会自动为你在 ESM 中填充这些 CJS 上下文！
 
 ```
 import { defineBuildConfig } from 'unbuild'
@@ -304,8 +304,8 @@ On the other hand, if you are using `tsup`, it will shims ESM’s `import.meta.u
 
 ## Verify your Packages  验证您的软件包
 
-Once your published your package, you can verify if it follows the best practices using [publint.dev](https://publint.dev/) made by [@bluwy](https://github.com/bluwy). It will also give you suggestions of how to improve them further.发布包后，可以使用@bluwy制作的 publint.dev 验证它是否遵循最佳实践。它还将为您提供有关如何进一步改进它们的建议。
+Once your published your package, you can verify if it follows the best practices using [publint.dev](https://publint.dev/) made by [@bluwy](https://github.com/bluwy). It will also give you suggestions of how to improve them further.发布包后，可以使用@bluwy 制作的 publint.dev 验证它是否遵循最佳实践。它还将为您提供有关如何进一步改进它们的建议。
 
 ## Final words  最后的话
 
-This blog post showcased you only a few features of both tools. Do check their docs for more details. And hope you find these setups useful for building your own libraries. If you have any comments or suggestions, ping me on Twitter [@antfu7](https://twitter.com/antfu7). Happy hacking!这篇博文仅向您展示了这两种工具的一些功能。请查看他们的文档以获取更多详细信息。希望您发现这些设置对构建自己的库有用。如果您有任何意见或建议，请在 Twitter @antfu7 上联系我。祝您黑客愉快！
+This blog post showcased you only a few features of both tools. Do check their docs for more details. And hope you find these setups useful for building your own libraries. If you have any comments or suggestions, ping me on Twitter [@antfu7](https://twitter.com/antfu7). Happy hacking! 这篇博文仅向您展示了这两种工具的一些功能。请查看他们的文档以获取更多详细信息。希望您发现这些设置对构建自己的库有用。如果您有任何意见或建议，请在 Twitter @antfu7 上联系我。祝您黑客愉快！

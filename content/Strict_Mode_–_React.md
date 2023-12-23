@@ -29,18 +29,18 @@ In the above example, strict mode checks will *not* be run against the `Header` 
 
 `StrictMode` currently helps with:`StrictMode` 目前有助于：
 
-* [Identifying components with unsafe lifecycles识别具有不安全生命周期的组件](#identifying-unsafe-lifecycles)
-* [Warning about legacy string ref API usage有关旧字符串引用 API 使用情况的警告](#warning-about-legacy-string-ref-api-usage)
-* [Warning about deprecated findDOMNode usage关于弃用 findDOMNode 用法的警告](#warning-about-deprecated-finddomnode-usage)
-* [Detecting unexpected side effects检测意外的副作用](#detecting-unexpected-side-effects)
-* [Detecting legacy context API检测旧上下文 API](#detecting-legacy-context-api)
+* [Identifying components with unsafe lifecycles 识别具有不安全生命周期的组件](#identifying-unsafe-lifecycles)
+* [Warning about legacy string ref API usage 有关旧字符串引用 API 使用情况的警告](#warning-about-legacy-string-ref-api-usage)
+* [Warning about deprecated findDOMNode usage 关于弃用 findDOMNode 用法的警告](#warning-about-deprecated-finddomnode-usage)
+* [Detecting unexpected side effects 检测意外的副作用](#detecting-unexpected-side-effects)
+* [Detecting legacy context API 检测旧上下文 API](#detecting-legacy-context-api)
 * [Ensuring reusable state 确保可重用状态](#ensuring-reusable-state)
 
 Additional functionality will be added with future releases of React.React 的未来版本将添加其他功能。
 
-### [](#identifying-unsafe-lifecycles)Identifying unsafe lifecycles识别不安全的生命周期
+### [](#identifying-unsafe-lifecycles)Identifying unsafe lifecycles 识别不安全的生命周期
 
-As explained [in this blog post](https://legacy.reactjs.org/blog/2018/03/27/update-on-async-rendering.html), certain legacy lifecycle methods are unsafe for use in async React applications. However, if your application uses third party libraries, it can be difficult to ensure that these lifecycles aren’t being used. Fortunately, strict mode can help with this!正如这篇博文中所解释的，某些遗留的生命周期方法在异步 React 应用程序中使用是不安全的。但是，如果应用程序使用第三方库，则很难确保不使用这些生命周期。幸运的是，严格模式可以帮助解决这个问题！
+As explained [in this blog post](https://legacy.reactjs.org/blog/2018/03/27/update-on-async-rendering.html), certain legacy lifecycle methods are unsafe for use in async React applications. However, if your application uses third party libraries, it can be difficult to ensure that these lifecycles aren’t being used. Fortunately, strict mode can help with this! 正如这篇博文中所解释的，某些遗留的生命周期方法在异步 React 应用程序中使用是不安全的。但是，如果应用程序使用第三方库，则很难确保不使用这些生命周期。幸运的是，严格模式可以帮助解决这个问题！
 
 When strict mode is enabled, React compiles a list of all class components using the unsafe lifecycles, and logs a warning message with information about these components, like so:启用严格模式后，React 会使用不安全的生命周期编译所有类组件的列表，并记录一条警告消息，其中包含有关这些组件的信息，如下所示：
 
@@ -48,7 +48,7 @@ When strict mode is enabled, React compiles a list of all class components using
 
 Addressing the issues identified by strict mode *now* will make it easier for you to take advantage of concurrent rendering in future releases of React.现在解决严格模式识别的问题将使你更容易在未来的 React 版本中利用并发渲染。
 
-### [](#warning-about-legacy-string-ref-api-usage)Warning about legacy string ref API usage有关旧字符串引用 API 使用情况的警告
+### [](#warning-about-legacy-string-ref-api-usage)Warning about legacy string ref API usage 有关旧字符串引用 API 使用情况的警告
 
 Previously, React provided two ways for managing refs: the legacy string ref API and the callback API. Although the string ref API was the more convenient of the two, it had [several downsides](https://github.com/facebook/react/issues/1373) and so our official recommendation was to [use the callback form instead](https://legacy.reactjs.org/docs/refs-and-the-dom.html#legacy-api-string-refs).以前，React 提供了两种管理 ref 的方法：遗留的字符串 ref API 和回调 API。尽管字符串 ref API 是两者中更方便的，但它有几个缺点，因此我们的官方建议是改用回调表单。
 
@@ -79,7 +79,7 @@ Since object refs were largely added as a replacement for string refs, strict mo
 
 [Learn more about the new `createRef` API here.在此处了解有关新 `createRef` API 的更多信息。](https://legacy.reactjs.org/docs/refs-and-the-dom.html)
 
-### [](#warning-about-deprecated-finddomnode-usage)Warning about deprecated findDOMNode usage关于弃用 findDOMNode 用法的警告
+### [](#warning-about-deprecated-finddomnode-usage)Warning about deprecated findDOMNode usage 关于弃用 findDOMNode 用法的警告
 
 React used to support `findDOMNode` to search the tree for a DOM node given a class instance. Normally you don’t need this because you can [attach a ref directly to a DOM node](https://legacy.reactjs.org/docs/refs-and-the-dom.html#creating-refs).React 曾经支持 `findDOMNode` 在树中搜索给定类实例的 DOM 节点。通常你不需要这个，因为你可以将 ref 直接附加到 DOM 节点。
 
@@ -103,7 +103,7 @@ class MyComponent extends React.Component {
 >
 > In CSS, the [`display: contents`](https://developer.mozilla.org/en-US/docs/Web/CSS/display#display_contents) attribute can be used if you don’t want the node to be part of the layout.在 CSS 中，如果您不希望节点成为布局的一部分，则可以使用该 `display: contents` 属性。
 
-### [](#detecting-unexpected-side-effects)Detecting unexpected side effects检测意外的副作用
+### [](#detecting-unexpected-side-effects)Detecting unexpected side effects 检测意外的副作用
 
 Conceptually, React does work in two phases:从概念上讲，React 确实分为两个阶段：
 
@@ -127,10 +127,10 @@ Because the above methods might be called more than once, it’s important that 
 
 Strict mode can’t automatically detect side effects for you, but it can help you spot them by making them a little more deterministic. This is done by intentionally double-invoking the following functions:严格模式无法自动为您检测副作用，但它可以通过使它们更具确定性来帮助您发现它们。这是通过有意双重调用以下函数来完成的：
 
-* Class component `constructor`, `render`, and `shouldComponentUpdate` methods类组件 `constructor` 、 `render` 和 `shouldComponentUpdate` 方法
-* Class component static `getDerivedStateFromProps` method类组件静态 `getDerivedStateFromProps` 方法
-* Function component bodies功能组件主体
-* State updater functions (the first argument to `setState`)状态更新程序函数（的第一个 `setState` 参数）
+* Class component `constructor`, `render`, and `shouldComponentUpdate` methods 类组件 `constructor` 、 `render` 和 `shouldComponentUpdate` 方法
+* Class component static `getDerivedStateFromProps` method 类组件静态 `getDerivedStateFromProps` 方法
+* Function component bodies 功能组件主体
+* State updater functions (the first argument to `setState`) 状态更新程序函数（的第一个 `setState` 参数）
 * Functions passed to `useState`, `useMemo`, or `useReducer`传递给 `useState` 或 `useMemo` `useReducer` 的函数
 
 > Note: 注意：
@@ -159,7 +159,7 @@ By intentionally double-invoking methods like the component constructor, strict 
 >
 > Starting from React 18, React does not suppress any logs. However, if you have React DevTools installed, the logs from the second call will appear slightly dimmed. React DevTools also offers a setting (off by default) to suppress them completely.从 React 18 开始，React 不会抑制任何日志。但是，如果安装了 React DevTools，则第二次调用的日志将显示为略微变暗。React DevTools 还提供了一个设置（默认关闭）来完全抑制它们。
 
-### [](#detecting-legacy-context-api)Detecting legacy context API检测旧上下文 API
+### [](#detecting-legacy-context-api)Detecting legacy context API 检测旧上下文 API
 
 The legacy context API is error-prone, and will be removed in a future major version. It still works for all 16.x releases but will show this warning message in strict mode:旧上下文 API 容易出错，并将在将来的主要版本中删除。它仍然适用于所有 16.x 版本，但在严格模式下会显示以下警告消息：
 
@@ -221,4 +221,4 @@ Unmounting and remounting includes:卸载和重新安装包括：
 
 For help supporting common issues, see:有关支持常见问题的帮助，请参阅：
 
-* [How to support Reusable State in Effects如何在效果中支持可重用状态](https://github.com/reactwg/react-18/discussions/18)
+* [How to support Reusable State in Effects 如何在效果中支持可重用状态](https://github.com/reactwg/react-18/discussions/18)

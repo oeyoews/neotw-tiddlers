@@ -8,17 +8,17 @@
 
 那么带入一下在`react`里`suspense`就是一种对组件怀疑的组件，这么说可能有点抽象让我们继续深入。
 
-**Suspense 现在还是 experimental features， 并不推荐在开发环境中使用，**
+**Suspense 现在还是 experimental features，并不推荐在开发环境中使用，**
 
 > Suspense lets your components “wait” for something before they can render.
 
 官方对 `Suspense` 功能最简单的描述，`Suspense` 允许我们在组件可以完成渲染之前渲染点东西出来，但看这一段的话会感觉为什么不就叫做 `<Loader />` 呢，毕竟目前 `Suspense` 给人的感觉就是 `loading ? <component /> : ...` 这个感觉。
 
-首先它确实可以叫`<Loader />`在大多数情况下，`Suspense`接受的 `fallback` 参数看起来就像是为了渲染 `<Spin />` 之类而生的，其实不然，因为 `fallback` 不单单可以处理加载中，也可以处理失败的状态。也就是说，处理组件未加载成功的状态。所以综合来说 `Suspense` 是更为准确的定义 。而且 `fallback` 更加准确的中文翻译是 `回退` 。
+首先它确实可以叫`<Loader />`在大多数情况下，`Suspense`接受的 `fallback` 参数看起来就像是为了渲染 `<Spin />` 之类而生的，其实不然，因为 `fallback` 不单单可以处理加载中，也可以处理失败的状态。也就是说，处理组件未加载成功的状态。所以综合来说 `Suspense` 是更为准确的定义。而且 `fallback` 更加准确的中文翻译是 `回退` 。
 
 > Suspense is not a data fetching library. It’s a mechanism for data fetching libraries to communicate to React that the data a component is reading is not ready yet.
 
-从定义来看，如果 `Suspense` 只是单纯拿来做数据获取的东西未免也太大材小用了使用到这个名字。`React` 团队其实更倾向把 `Suspense` 作为一种职能能对接那些包含异步(Promise)的状态的组件而且还有一些额外的功能比如并行化。
+从定义来看，如果 `Suspense` 只是单纯拿来做数据获取的东西未免也太大材小用了使用到这个名字。`React` 团队其实更倾向把 `Suspense` 作为一种职能能对接那些包含异步 (Promise) 的状态的组件而且还有一些额外的功能比如并行化。
 
 体验 `Suspense` 之前我们先看官方给的代码案例来对比用和没用 `Suspense` 的区别。
 
@@ -95,7 +95,7 @@ if (user === null) {
 </>
 ```
 
-注意看这句`if (user === null)`绝对是绝大多数人会犯的，因为逻辑上来说没毛病啊，`user`没加载完就该显示`Loading`对吧，并且`user`都没加载完干嘛要显示`post`呢, 实际上这句话会阻塞掉`<ProfileTimeline />`的渲染导致`<ProfileTimeline />`的数据延迟被获取。
+注意看这句`if (user === null)`绝对是绝大多数人会犯的，因为逻辑上来说没毛病啊，`user`没加载完就该显示`Loading`对吧，并且`user`都没加载完干嘛要显示`post`呢，实际上这句话会阻塞掉`<ProfileTimeline />`的渲染导致`<ProfileTimeline />`的数据延迟被获取。
 
 我们会看到一个类似这样的流程发生。
 
@@ -111,7 +111,7 @@ if (user === null) {
 
 客观的来看待这件事情，首先这件事情，在平时的大多数业务里都不会出问题，但是这个`<ProfileTimeline />`组件等待的过程其实是无意义的。它理论上也应该一起并行的渲染，并行的获取数据。因为如果获取 `users` 很慢的话，那么 `<ProfileTimeline />` 会一直被卡住。
 
-`waterfall`就是来形容这种现象的: `an unintentional sequence that should have been parallelized.`就是这个东西本来应该要并行的却变成了一个无意义的序列化操作。
+`waterfall`就是来形容这种现象的：`an unintentional sequence that should have been parallelized.`就是这个东西本来应该要并行的却变成了一个无意义的序列化操作。
 
 ## 第二种改造版本 Promise.then
 
@@ -184,7 +184,7 @@ function ProfileTimeline({ posts }) {
 
 这样其实已经足够好了，组以应对很多场景了，但是随着代码增加，接口越来越多等问题，维护这个东西会非常麻烦，并且组件层级越来越多，需要传递的状态也越来越多，引入的概念和东西也会越来越多。
 
-有人可能会说我们不一定要用 `Promise.all`， 确实可以，因为我们只需要把东西抽到最顶上去，通过 `useEffect` 去更新就好了，这确实是一种方案，但是也不够好，跟前面说的差不多，所以我们也不用太纠结这个写法了。
+有人可能会说我们不一定要用 `Promise.all`，确实可以，因为我们只需要把东西抽到最顶上去，通过 `useEffect` 去更新就好了，这确实是一种方案，但是也不够好，跟前面说的差不多，所以我们也不用太纠结这个写法了。
 
 ```
 useEffect(() => {
@@ -201,7 +201,7 @@ useEffect(() => {
 
 > **With Suspense, we don’t wait for the response to come back before we start rendering.** In fact, we start rendering pretty much immediately after kicking off the network request.
 
-这段话是什么意思呢，就是说用了 `Suspense` 我们会马上渲染只要一连上网络。其实这么说也有点作弊，毕竟示例代码里没有什么 `=== null` 之类的这样的控制语句。来看示例还是刚才的那个 demo 。
+这段话是什么意思呢，就是说用了 `Suspense` 我们会马上渲染只要一连上网络。其实这么说也有点作弊，毕竟示例代码里没有什么 `=== null` 之类的这样的控制语句。来看示例还是刚才的那个 demo。
 
 ```
 // 伪代码
@@ -251,7 +251,7 @@ function ProfileTimeline() {
 
 注意一下第一句话，这句话很关键。`Suspense` 它虽然跟 `Promise` 有关系。但是它也没直接拿 `Promise` 来用，它会要求用户写一种特定的格式去使用 `Suspense`。这种格式大概是这样的输入输出对应关系。
 
-* pending (对应 promise 的 pending) -> **抛出(throw)** 一个 `promise` 对象
+* pending (对应 promise 的 pending) -> **抛出 (throw)** 一个 `promise` 对象
 * error (对应 promise 的 fulfilled) -> 返回一个错误
 * success (对应 promise 的 rejected) -> 返回一个结果
 
@@ -285,7 +285,7 @@ function wrapPromise(promise) {
 }
 ```
 
-抛开原理，先就不管 `react` 是怎么用这个数据结构的和 `suspense` 那个组件有什么猫腻，但是就是这样简简单单的一个函数一包，就能实现之前提到:
+抛开原理，先就不管 `react` 是怎么用这个数据结构的和 `suspense` 那个组件有什么猫腻，但是就是这样简简单单的一个函数一包，就能实现之前提到：
 
 * 没有 `waterfall` 的代码
 * 可维护，可读性比较好的代码
@@ -294,16 +294,16 @@ function wrapPromise(promise) {
 
 这个 Demo 是官方的可以直接点[这个](https://codesandbox.io/s/frosty-hermann-bztrp)看效果。
 
-这里可以看到 `Suspense` 有一个最外层的和一个小的包住 `<ProfileTimeline />`，就是为了实现之前的那个等`user`加载完了再显示完整内容的效果(`user === null` 那段)。
+这里可以看到 `Suspense` 有一个最外层的和一个小的包住 `<ProfileTimeline />`，就是为了实现之前的那个等`user`加载完了再显示完整内容的效果 (`user === null` 那段)。
 
 还是来理解它是怎么渲染的
 
 * 首先在最开始的地方调用了 `fetchProfileData` 来获取 `user` 和 `post` 俩个对象。
 * React 开始**尝试**渲染`ProfilePage`这个组件，然后它发现里面有俩个东东 `ProfileDetails`和 `ProfileTimeline`。
-* 再然后 React 开始**尝试**渲染`ProfileDetails`, 开始调用 `resource.user.read()`，因为是刚发起，所以什么东西都没有，组件被挂起(`suspends`)了。React 把它丢一边不管了，开始渲染其他的东东，比如 `ProfileTimeline`。
-* React 又开始**尝试**渲染`ProfileTimeline`，发现它跟`ProfileDetails`差不多啥也没有，也把它挂起(`suspends`)。
+* 再然后 React 开始**尝试**渲染`ProfileDetails`, 开始调用 `resource.user.read()`，因为是刚发起，所以什么东西都没有，组件被挂起 (`suspends`) 了。React 把它丢一边不管了，开始渲染其他的东东，比如 `ProfileTimeline`。
+* React 又开始**尝试**渲染`ProfileTimeline`，发现它跟`ProfileDetails`差不多啥也没有，也把它挂起 (`suspends`)。
 * OK，到此为止，因为都没好，所以就会开始显示`fallback`的组件。
-* 随着时间的推移，`resource.user`有东西了，最外层的`fallback`会给去掉, 这时候就不会显示 `<h1>Loading profile...</h1>` 这个组件了。但是依旧会显示 `<h1>Loading posts...</h1>`直到 `posts` 的数据获取完成后。
+* 随着时间的推移，`resource.user`有东西了，最外层的`fallback`会给去掉，这时候就不会显示 `<h1>Loading profile...</h1>` 这个组件了。但是依旧会显示 `<h1>Loading posts...</h1>`直到 `posts` 的数据获取完成后。
 * 最终所有的 `fallback` 都没有了。
 
 ## 额外的玩法
@@ -321,7 +321,7 @@ function wrapPromise(promise) {
 
 ## 假想的实现
 
-其实透过这个现象我们都可以揣测, `Suspense` 会收集子组件的 `Promise`，但是每个`Suspense`都是一个作用域，如果子组件是通过`Suspense`包裹过的, 这个 `Suspense` 就不会再收集被包裹过的组件的 `Promise` 了。并且可以大胆的推测如 `Suspense` 只会收集第一层级的 `Promise`， 如果连子集的都收集，那确实是有点反人类的，而且耗费性能。。
+其实透过这个现象我们都可以揣测，`Suspense` 会收集子组件的 `Promise`，但是每个`Suspense`都是一个作用域，如果子组件是通过`Suspense`包裹过的，这个 `Suspense` 就不会再收集被包裹过的组件的 `Promise` 了。并且可以大胆的推测如 `Suspense` 只会收集第一层级的 `Promise`，如果连子集的都收集，那确实是有点反人类的，而且耗费性能。。
 
 因为之前说过`suspenser`是通过异常这样的形式抛出来的，所以我们还需要使用`componentDidCatch`来捕获`suspenser`。并且依赖`componentDidCatch`去展示对应 `fallback` 组件。
 

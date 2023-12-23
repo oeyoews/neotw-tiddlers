@@ -1,8 +1,8 @@
-I'm sure many of you are curious about our position regarding [Bun](https://bun.sh/), the product from Oven, the company behind Bun (we're going in cycles). It's so fast, is there any merits to using Yarn?我相信你们中的许多人都对我们对 Bun 的立场感到好奇，Bun 是 Oven 的产品，Bun 背后的公司（我们正在循环中）。这么快，用纱线有什么好处吗？
+I'm sure many of you are curious about our position regarding [Bun](https://bun.sh/), the product from Oven, the company behind Bun (we're going in cycles). It's so fast, is there any merits to using Yarn？我相信你们中的许多人都对我们对 Bun 的立场感到好奇，Bun 是 Oven 的产品，Bun 背后的公司（我们正在循环中）。这么快，用纱线有什么好处吗？
 
 First, we feel useful to point out that this sentence isn't particularly new. We heard the same (often from the same people) asking why use Yarn when npm/pnpm/whateverpm have all its features or outspeed it. Answering that is a little tough, because the premise is wrong: other package managers don't have its features[1](#fn-1-a24c5d)[,2](#fn-,2-a24c5d), and the speed differences are at best marginal. They are a good fight, but we believe Yarn ultimately has a unique position that no other package managers emulates today.首先，我们觉得有必要指出这句话并不是特别新。我们听到同样的人（通常来自同一个人）问为什么在 npm/pnpm/whateverpm 具有其所有功能或超过它时使用 Yarn。回答这个问题有点困难，因为前提是错误的：其他包管理器没有它的功能 [1](#fn-1-a24c5d) [,2](#fn-,2-a24c5d) ，速度差异充其量是微不足道的。这是一场精彩的战斗，但我们相信 Yarn 最终拥有今天其他包管理器无法模仿的独特地位。
 
-Bun is an interesting case, though. It's definitely much faster[3](#fn-3-a24c5d). Can Yarn compete? We believe so.不过，Bun 是一个有趣的案例。它肯定快 [3](#fn-3-a24c5d) 得多.纱线能竞争吗？我们相信是这样。
+Bun is an interesting case, though. It's definitely much faster[3](#fn-3-a24c5d). Can Yarn compete? We believe so.不过，Bun 是一个有趣的案例。它肯定快 [3](#fn-3-a24c5d) 得多。纱线能竞争吗？我们相信是这样。
 
 First, remember today's iteration of Yarn was developped over the course of two years by a team already experienced in package managers. Those tools are fickle beasts, and many edge cases loom around[4](#fn-4-a24c5d). Bun may be fast, but is it correct? That's something the community will have to figure out over time.首先，请记住，今天的 Yarn 迭代是由一个在包管理器方面已经经验丰富的团队在两年的时间里开发的。这些工具是善变的野兽，许多边缘情况若隐若现 [4](#fn-4-a24c5d) 。包子可能很快，但它是正确的吗？随着时间的推移，这是社区必须弄清楚的事情。
 

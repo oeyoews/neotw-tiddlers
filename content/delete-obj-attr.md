@@ -1,8 +1,8 @@
 :::abstract
-今天才知道还有这种语法,我还是以为是sql
+今天才知道还有这种语法，我还是以为是 sql
 :::
 
-要从JavaScript对象中删除一个属性，可以使用`delete`运算符。这个运算符接受对象和要删除的属性作为操作数。以下是一个简单的示例：
+要从 JavaScript 对象中删除一个属性，可以使用`delete`运算符。这个运算符接受对象和要删除的属性作为操作数。以下是一个简单的示例：
 
 ```javascript
 let obj = {
@@ -26,4 +26,4 @@ console.log(obj); // 输出 { name: 'John', city: 'New York' }
 delete obj.nonExistentProperty; // 不会产生错误，什么都不会发生
 ```
 
-希望这可以帮助你理解如何从JavaScript对象中删除属性。
+希望这可以帮助你理解如何从 JavaScript 对象中删除属性。

@@ -15,9 +15,9 @@ const [state, formAction] = useFormState(fn, initialState);
 * [Reference  参考](#reference)
   * [`useFormState(action, initialState)`](#useformstate)
 * [Usage  用法](#usage)
-  * [Using information returned by a form action使用表单操作返回的信息](#using-information-returned-by-a-form-action)
+  * [Using information returned by a form action 使用表单操作返回的信息](#using-information-returned-by-a-form-action)
 * [Troubleshooting  故障 排除](#troubleshooting)
-  * [My action can no longer read the submitted form data我的操作无法再读取提交的表单数据](#my-action-can-no-longer-read-the-submitted-form-data)
+  * [My action can no longer read the submitted form data 我的操作无法再读取提交的表单数据](#my-action-can-no-longer-read-the-submitted-form-data)
 
 ***
 
@@ -102,7 +102,7 @@ If used with a Server Action, `useFormState` allows the server’s response from
 
 ## Usage  用法[](#usage "Link for Usage ")
 
-### Using information returned by a form action使用表单操作返回的信息[](#using-information-returned-by-a-form-action "Link for Using information returned by a form action ")
+### Using information returned by a form action 使用表单操作返回的信息[](#using-information-returned-by-a-form-action "Link for Using information returned by a form action ")
 
 Call `useFormState` at the top level of your component to access the return value of an action from the last time a form was submitted.在组件的顶层调用 `useFormState` 以访问上次提交表单时操作的返回值。
 
@@ -151,7 +151,7 @@ return (
 
 When the form is submitted, the action function that you provided will be called. Its return value will become the new current state of the form.提交表单后，将调用您提供的操作函数。其返回值将成为表单的新当前状态。
 
-The action that you provide will also receive a new first argument, namely the current state of the form. The first time the form is submitted, this will be the initial state you provided, while with subsequent submissions, it will be the return value from the last time the action was called. The rest of the arguments are the same as if `useFormState` had not been used您提供的操作还将收到一个新的第一个参数，即表单的当前状态。首次提交表单时，这将是您提供的初始状态，而在后续提交时，它将是上次调用操作时的返回值。其余参数与 `useFormState` 未使用时相同
+The action that you provide will also receive a new first argument, namely the current state of the form. The first time the form is submitted, this will be the initial state you provided, while with subsequent submissions, it will be the return value from the last time the action was called. The rest of the arguments are the same as if `useFormState` had not been used 您提供的操作还将收到一个新的第一个参数，即表单的当前状态。首次提交表单时，这将是您提供的初始状态，而在后续提交时，它将是上次调用操作时的返回值。其余参数与 `useFormState` 未使用时相同
 
 <!--$-->
 
@@ -172,7 +172,7 @@ return 'next state';
 
 ## Troubleshooting  故障 排除[](#troubleshooting "Link for Troubleshooting ")
 
-### My action can no longer read the submitted form data我的操作无法再读取提交的表单数据[](#my-action-can-no-longer-read-the-submitted-form-data "Link for My action can no longer read the submitted form data ")
+### My action can no longer read the submitted form data 我的操作无法再读取提交的表单数据[](#my-action-can-no-longer-read-the-submitted-form-data "Link for My action can no longer read the submitted form data ")
 
 When you wrap an action with `useFormState`, it gets an extra argument *as its first argument*. The submitted form data is therefore its *second* argument instead of its first as it would usually be. The new first argument that gets added is the current state of the form.当您用 包装 `useFormState` 一个动作时，它会获得一个额外的参数作为它的第一个参数。因此，提交的表单数据是它的第二个参数，而不是通常的第一个参数。添加的第一个新参数是表单的当前状态。
 

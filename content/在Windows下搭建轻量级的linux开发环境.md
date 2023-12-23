@@ -1,6 +1,6 @@
 ### [](https://example.com)简介
 
-[MSYS2](https://so.csdn.net/so/search?q=MSYS2\&spm=1001.2101.3001.7020) （Minimal SYStem 2） 是一个 MSYS 的独立改写版本，主要用于 shell 命令行开发环境。同时它也是一个在 Cygwin （POSIX 兼容性层） 和 MinGW-w64（从"MinGW-生成"）基础上产生的，追求更好的互操作性的 Windows 软件。
+[MSYS2](https://so.csdn.net/so/search?q=MSYS2\&spm=1001.2101.3001.7020) （Minimal SYStem 2）是一个 MSYS 的独立改写版本，主要用于 shell 命令行开发环境。同时它也是一个在 Cygwin（POSIX 兼容性层）和 MinGW-w64（从"MinGW-生成"）基础上产生的，追求更好的互操作性的 Windows 软件。
 
 MSYS2 是 MSYS 的一个升级版，准确的说是集成了 pacman 和 Mingw-w64 的 [Cygwin](https://so.csdn.net/so/search?q=Cygwin\&spm=1001.2101.3001.7020) 升级版，提供了 bash shell 等 linux 环境、版本控制软件（git/hg）和 MinGW-w64 工具链。与 MSYS 最大的区别是移植了 Arch Linux 的软件包管理系统 Pacman，使用 Pacman 可以方便的维护 MSYS2 下的软件包组件。
 
@@ -29,7 +29,7 @@ MSYS2 的官方网站： [MSYS2](https://www.msys2.org/ "MSYS2")
 -R 指令\
     pacman -R \<pkg\_name> #删除软件\
     pacman -Rs \<pkg\_name> #删除软件，并删除\<pkg>所有的依赖包\
-    pacman -Rns \<pkg\_name> #删除软件，并删除\<pkg>所有的依赖，并删掉\<pkg>的全局配置文件。 推荐！！\
+    pacman -Rns \<pkg\_name> #删除软件，并删除\<pkg>所有的依赖，并删掉\<pkg>的全局配置文件。推荐！！\
 -Q 指令\
     pacman -Q #显示出所有软件 sudo pacman -Q | wc -l 查询数量\
     pacman -Qe #查询所有自己安装的软件\
@@ -52,13 +52,13 @@ MSYS2 的官方网站： [MSYS2](https://www.msys2.org/ "MSYS2")
 
     用法：    man 2 read\
           中间的数字是 man 的分卷号，man 分成很多部分，分别是：\
-        1 用户命令， 可由任何人启动的。\
-        2 系统调用， 即由内核提供的函数。\
-        3 例程， 即库函数，比如标准 C 库 libc。\
-        4 设备， 即/dev 目录下的特殊文件。\
-        5 文件格式描述， 例如/etc/passwd。\
-        6 游戏， 不用解释啦！\
-        7 杂项， 例如宏命令包、惯例等。\
-        8 系统管理员工具， 只能由 root 启动。\
-        9 其他（Linux 特定的）， 用来存放内核例行程序的文档。\
+        1 用户命令，可由任何人启动的。\
+        2 系统调用，即由内核提供的函数。\
+        3 例程，即库函数，比如标准 C 库 libc。\
+        4 设备，即/dev 目录下的特殊文件。\
+        5 文件格式描述，例如/etc/passwd。\
+        6 游戏，不用解释啦！\
+        7 杂项，例如宏命令包、惯例等。\
+        8 系统管理员工具，只能由 root 启动。\
+        9 其他（Linux 特定的），用来存放内核例行程序的文档。\
  

@@ -2,10 +2,10 @@
 在本指南中，我们介绍了 Axios 和 Fetch 并对它们进行比较，以便我们可以做出明智的决定来选择哪一个。
 
 **Fetch 和 Axios 的快速概览**\
-Fetch API 是一个接口，它公开了一个fetch()为发出网络请求而调用的方法。它内置于现代浏览器中，因此无需安装。它也可以作为[node.js 中的实验性功能使用](https://github.com/nodejs/node/pull/41749)。\
-[Axios](https://github.com/axios/axios)是一个基于浏览器提供的XMLHttpRequest接口的客户端HTTP API。一些开发人员更喜欢 Axios 而不是内置Fetch API，因为它易于使用。\
+Fetch API 是一个接口，它公开了一个 fetch() 为发出网络请求而调用的方法。它内置于现代浏览器中，因此无需安装。它也可以作为[node.js 中的实验性功能使用](https://github.com/nodejs/node/pull/41749)。\
+[Axios](https://github.com/axios/axios)是一个基于浏览器提供的 XMLHttpRequest 接口的客户端 HTTP API。一些开发人员更喜欢 Axios 而不是内置 Fetch API，因为它易于使用。\
 我们可以通过内容分发网络或 CDN 将其添加到我们的项目中，或者通过包管理器（如 npm 或 yarn）安装它。Axios 可以在浏览器或 node.js 环境中运行。\
-Fetch 和 axios 都是基于 Promise 的 HTTP 客户端。这意味着当我们使用它们发出网络请求时，它们会返回一个可以解决或拒绝的承诺promise。
+Fetch 和 axios 都是基于 Promise 的 HTTP 客户端。这意味着当我们使用它们发出网络请求时，它们会返回一个可以解决或拒绝的承诺 promise。
 
 比较 Fetch 和 Axios 的功能\
 让我们从语法开始。
@@ -84,7 +84,7 @@ fetch(url)
   .then(console.log);
 ```
 
-返回一个承诺，其fetch()响应由.then() 方法处理。此时，我们还没有我们需要的 JSON 数据格式，所以我们调用.json()响应对象上的方法。这将返回另一个使用 JSON 格式的数据解析的 promise。因此，典型的 fetch 请求包含两个.then()调用。\
+返回一个承诺，其 fetch() 响应由.then() 方法处理。此时，我们还没有我们需要的 JSON 数据格式，所以我们调用.json() 响应对象上的方法。这将返回另一个使用 JSON 格式的数据解析的 promise。因此，典型的 fetch 请求包含两个.then() 调用。\
 但是，如果我们使用 Axios 执行相同的 fetch，我们有以下代码：
 
 ```
@@ -94,8 +94,8 @@ axios.get(url)
 .then(response => console.log(response.data));
 ```
 
-使用 Axios，响应数据默认以 JSON 格式提供。响应数据始终data在响应对象的属性上可用。\
-responseType我们可以通过在配置选项中指定 来覆盖默认的 JSON 数据类型，如下所示：
+使用 Axios，响应数据默认以 JSON 格式提供。响应数据始终 data 在响应对象的属性上可用。\
+responseType 我们可以通过在配置选项中指定 来覆盖默认的 JSON 数据类型，如下所示：
 
 ```
 axios.get(url, {
@@ -127,9 +127,9 @@ axios.post(url, {
 .then(console.log);
 ```
 
-当我们用axios发出一个post请求时，我们会把要发送的数据作为请求主体分配给data属性。我们还可以设置内容类型头。默认情况下，axios将Content-Type设置为application/json。
+当我们用 axios 发出一个 post 请求时，我们会把要发送的数据作为请求主体分配给 data 属性。我们还可以设置内容类型头。默认情况下，axios 将 Content-Type 设置为 application/json。
 
-如果我们使用Fetch API，我们必须使用JSON.stringify()手动串联该对象，然后将其分配到我们的请求正文。
+如果我们使用 Fetch API，我们必须使用 JSON.stringify() 手动串联该对象，然后将其分配到我们的请求正文。
 
 ```
 const url = "https://jsonplaceholder.typicode.com/todos";
@@ -154,13 +154,13 @@ fetch(url, {
   .then((data) => console.log(data))
 ```
 
-我们还必须用Fetch明确地将Content-Type设置为application/json。
+我们还必须用 Fetch 明确地将 Content-Type 设置为 application/json。
 
 **错误处理**\
-fetch和axios都会返回一个被解决或拒绝的承诺。\
-当承诺被拒绝时，我们可以使用.catch()来处理这个错误。与Fetch方法相比，我们用axios处理错误的方式更加简洁。
+fetch 和 axios 都会返回一个被解决或拒绝的承诺。\
+当承诺被拒绝时，我们可以使用.catch() 来处理这个错误。与 Fetch 方法相比，我们用 axios 处理错误的方式更加简洁。
 
-从axios开始，用.catch()处理的典型错误是这样的。
+从 axios 开始，用.catch() 处理的典型错误是这样的。
 
 ```
 const url = "https://jsonplaceholder.typicode.com/todos";
@@ -172,7 +172,7 @@ axios.get(url)
   });
 ```
 
-如果状态代码不在2xx的范围内，Axios的承诺将拒绝。我们可以通过检查err对象是否包含响应或请求属性来确定关于错误的更多信息，就像这样:
+如果状态代码不在 2xx 的范围内，Axios 的承诺将拒绝。我们可以通过检查 err 对象是否包含响应或请求属性来确定关于错误的更多信息，就像这样：
 
 ```
 .catch((err) => {
@@ -200,9 +200,9 @@ axios.get(url)
 });
 ```
 
-错误对象上的response 属性表示客户端收到了一个状态代码在2xx范围之外的错误响应。错误对象上的请求属性表明提出了一个请求，但客户端没有收到响应。否则，如果没有请求或响应属性，说明在设置网络请求时出现了错误。
+错误对象上的 response 属性表示客户端收到了一个状态代码在 2xx 范围之外的错误响应。错误对象上的请求属性表明提出了一个请求，但客户端没有收到响应。否则，如果没有请求或响应属性，说明在设置网络请求时出现了错误。
 
-如果我们得到一个404错误或任何其他的HTTP错误，Fetch不会拒绝一个承诺。Fetch只在网络失败时拒绝一个承诺。所以我们必须在.then子句中手动处理HTTP错误。
+如果我们得到一个 404 错误或任何其他的 HTTP 错误，Fetch 不会拒绝一个承诺。Fetch 只在网络失败时拒绝一个承诺。所以我们必须在.then 子句中手动处理 HTTP 错误。
 
 让我们看一下下面的代码。
 
@@ -224,12 +224,12 @@ fetch(url) 
   });
 ```
 
-在响应块中，我们正在检查响应的ok状态是否为false，然后我们抛出一个自定义的错误，在.catch块中处理。
+在响应块中，我们正在检查响应的 ok 状态是否为 false，然后我们抛出一个自定义的错误，在.catch 块中处理。
 
 **响应超时/取消请求**\
-让我们看看这些HTTP客户端是如何处理HTTP请求的响应超时的。通过Axios，我们可以在配置对象中添加一个超时属性，并指定请求终止前的时间，单位为毫秒。
+让我们看看这些 HTTP 客户端是如何处理 HTTP 请求的响应超时的。通过 Axios，我们可以在配置对象中添加一个超时属性，并指定请求终止前的时间，单位为毫秒。
 
-在下面的代码段中，我们的目的是在请求超过4秒时终止请求，然后在控制台记录一个错误。
+在下面的代码段中，我们的目的是在请求超过 4 秒时终止请求，然后在控制台记录一个错误。
 
 ```
 const url = "https://jsonplaceholder.typicode.com/todos";
@@ -245,7 +245,7 @@ axios.get(url, {
   });
 ```
 
-为了取消Fetch的请求，我们可以使用AbortController接口。请看下面的用法。
+为了取消 Fetch 的请求，我们可以使用 AbortController 接口。请看下面的用法。
 
 ```
 const url = "https://jsonplaceholder.typicode.com/todos";
@@ -264,8 +264,8 @@ fetch(url, {
   });
 ```
 
-我们首先创建了一个控制器对象，获得了对信号对象和abort()方法的访问权。然后我们通过配置选项将信号对象传递给fetch()。有了这个，只要调用abort方法，fetch请求就会终止。我们可以看到，在setTimeout函数的帮助下，如果服务器在4秒内没有回应，操作就会终止。
+我们首先创建了一个控制器对象，获得了对信号对象和 abort() 方法的访问权。然后我们通过配置选项将信号对象传递给 fetch()。有了这个，只要调用 abort 方法，fetch 请求就会终止。我们可以看到，在 setTimeout 函数的帮助下，如果服务器在 4 秒内没有回应，操作就会终止。
 
-本地的Fetch比axios略快。这并不重要，因为两个客户端都是异步的。
+本地的 Fetch 比 axios 略快。这并不重要，因为两个客户端都是异步的。
 
-Axios和Fetch在现代浏览器中被广泛支持。对于像IE 11这样不支持ES6 Promises的旧环境，我们必须使用一个polyfill。另外，特别是对于Fetch，我们将添加另一个polyfill来支持旧版浏览器的实现。
+Axios 和 Fetch 在现代浏览器中被广泛支持。对于像 IE 11 这样不支持 ES6 Promises 的旧环境，我们必须使用一个 polyfill。另外，特别是对于 Fetch，我们将添加另一个 polyfill 来支持旧版浏览器的实现。

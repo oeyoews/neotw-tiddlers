@@ -1,4 +1,4 @@
-<!-- add 里面的log 无法在控制台输出 -->
+<!-- add 里面的 log 无法在控制台输出 -->
 
 <div class="my-8" >
 <div class="dark:hidden">

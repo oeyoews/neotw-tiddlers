@@ -1,5 +1,5 @@
 :::WARNING
-mjs 如果引入cjs, 一定要加上文件后缀, 否则也会被识别为esm
+mjs 如果引入 cjs, 一定要加上文件后缀，否则也会被识别为 esm
 :::
 
 ## 前言
@@ -47,7 +47,7 @@ lib(); // "hello"
 world(); // "world"
 ```
 
-**坑1：module.exports 和 exports.fn 混用问题**
+**坑 1：module.exports 和 exports.fn 混用问题**
 
 首先明确一点，module.exports 其实就是一个对象：{}。exports 其实是 module 下的 exports 属性的一个引用，你可以理解为等效于以下代码：
 
@@ -129,7 +129,7 @@ import("./lib.js").then((module) => {
 });
 ```
 
-**坑1：\_\_filename, \_\_dirname 无法使用**
+**坑 1：\_\_filename, \_\_dirname 无法使用**
 
 这两个变量仅能在 CJS 中使用，参考：[No \_\_filename or \_\_dirname（nodejs.org）](https://link.zhihu.com/?target=https%3A//nodejs.org/dist/latest-v16.x/docs/api/esm.html%23no-__filename-or-__dirname)。
 
@@ -153,11 +153,11 @@ export function hello() {
 import('./lib.mjs').then((lib) => console.log(lib.hello())); // 输出：world
 ```
 
-**坑1：ESM 编译注意**
+**坑 1：ESM 编译注意**
 
 如果你写了个库，使用静态 import 导入了 ESM 的第三方库（比如 [got](https://link.zhihu.com/?target=https%3A//www.npmjs.com/package/got)），那么你的代码在编译时，不能编译为 CJS（比如 tsconfig.json 中的 $.compilerOptions.module 必须为 "ES6"，而不是 "CommonJS"），否则编译后的代码无法使用。
 
-**坑2：配置文件报错**
+**坑 2：配置文件报错**
 
 通常根目录下会存放一些第三方库的配置文件（比如 .eslintrc），如果你是 package.json 中 type="module"，那么会默认项目下所有 JS 文件为 ESM，然而一些第三方库引入配置文件的方式是 CJS，这就会导致报错。
 

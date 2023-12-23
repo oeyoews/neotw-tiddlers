@@ -1,6 +1,6 @@
 ### Reverd
 
-* git revert id    # 会有冲突出现  ？
+* git revert id    # 会有冲突出现？
 
 ### Log
 
@@ -46,7 +46,7 @@
 ### Gitignore
 * doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 * 匹配模式最后跟"/"说明要忽略的是目录
-* 可以忽略该仓库的所有文件,不用写递归的路径
+* 可以忽略该仓库的所有文件，不用写递归的路径
 * deploy*/   # 忽略以 deploy 开头任意字符结束的目录
 
 ### Remote
@@ -86,7 +86,7 @@
  不管远程仓库是否存在相应的分支，将本地的所有的分支全部推送上去。
 `git push -f  origin`
 `git push -f -u origin master`
-版本回退 但是会抹去远程库的提交信息 首先进行本地的版本回退，由于进行里本地的版本回滚，版本将落后于远程分支，因此必须要使用强制推送进行版本覆盖，然后进行向远程仓库强制推送  master 为默认本仓库创建的第一个分支， 而 origin 为默认是指向这一个仓库，相当于别名
+版本回退 但是会抹去远程库的提交信息 首先进行本地的版本回退，由于进行里本地的版本回滚，版本将落后于远程分支，因此必须要使用强制推送进行版本覆盖，然后进行向远程仓库强制推送  master 为默认本仓库创建的第一个分支，而 origin 为默认是指向这一个仓库，相当于别名
 
 ### Commit
 * git commit -am ' '  // commit file message already added
@@ -109,7 +109,7 @@
 * ~/.gitconfig   # 全局配置文件
 * git config --global core.editor vim
 * git config --global credential.helper store    # 存储账户密码，但是需要输入一次
-* git config -l # 列出 git 的初始化信息。  可以查看当前的仓库链接的是那个具体仓库
+* git config -l # 列出 git 的初始化信息。可以查看当前的仓库链接的是那个具体仓库
 * git config --global user.name "oeyoews"
 * git config --global user.email "2956398608@qq.com" # 带有空格
 
@@ -129,9 +129,9 @@
 
 ### GitReset
 `git reset --hard id`
-hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，commit 的信息会被删除，并且不会保存之前错误的源码， id 不确定要写几位，一般写前面几位就行了，git 会自动寻找   HEAD 表示当前版本
+hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，commit 的信息会被删除，并且不会保存之前错误的源码，id 不确定要写几位，一般写前面几位就行了，git 会自动寻找   HEAD 表示当前版本
 `git reset  --mixed`
-> 等于 `git reset` ，会保留源码，就是之前的所有提交信息都会被保留，只是将 commit 和 index 的信息回退，即更改指针的指向,reset 的指针向后移动了，删除里一些 commit，而 revert 的指针是一直向前的，在 commit 之后有 commit 一次
+> 等于 `git reset` ，会保留源码，就是之前的所有提交信息都会被保留，只是将 commit 和 index 的信息回退，即更改指针的指向，reset 的指针向后移动了，删除里一些 commit，而 revert 的指针是一直向前的，在 commit 之后有 commit 一次
 
 ### Relative_web
 [thin_large_repository](https://gitee.com/help/articles/4232#article-header0)
