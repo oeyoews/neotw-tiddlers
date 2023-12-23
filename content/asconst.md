@@ -4,7 +4,7 @@
 
 ```typescript
 const animals = ['cat', 'dog', 'fish'];
-// TypeScript 推断的类型为 string[]
+// TypeScript 推断的类型为 string []
 ```
 
 在这个例子中，`animals` 被推断为一个 `string` 类型的数组。这是因为 TypeScript 默认将数组元素类型推断为包含所有可能值的联合类型。
