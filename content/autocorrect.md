@@ -1,1 +1,1 @@
-* autocorrect 自动会忽略test/ 目录，和.gitignore 匹配的目录文件
+* autocorrect 自动会忽略 test/ 目录，和.gitignore 匹配的目录文件
