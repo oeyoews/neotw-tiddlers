@@ -1,0 +1,16 @@
+caption: rememberme
+created: 20231226074901628
+creator: oeyoews
+modified: 20231226074952580
+modifier: oeyoews
+tags: 
+title: demo
+type: text/vnd.tiddlywiki
+
+<div class="fixed bottom-0 right-0 opacity-0 hover:opacity-100 transition-all">
+<% if [{$:/info/url/protocol}match[http:]] %>
+<$qrcode text={{$:/info/url/ip}} />
+<% else %>
+<$qrcode/>
+<% endif %>
+</div>
