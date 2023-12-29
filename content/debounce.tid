@@ -1,6 +1,6 @@
 created: 20230519120239950
 creator: oeyoews
-modified: 20230529130131747
+modified: 20231228084230109
 modifier: oeyoews
 tags: JavaScript
 title: debounce
@@ -26,7 +26,7 @@ function debounce(func, delay) {
 }
 ```
 
-好的，这个 `debounce` 函数的作用是用来防止函数在短时间内多次执行，它接收两个参数，第一个参数是要执行的函数，第二个参数是时间间隔。
+好的，这个 `debounce` 函数的作用是用来__防止函数在短时间内多次执行__，它接收两个参数，第一个参数是要执行的函数，第二个参数是时间间隔。
 
 在函数内部，我们定义了一个变量 `timer`，用来保存定时器的引用。接着，我们返回一个函数，这个函数会在一定时间间隔后执行传入的函数。
 
