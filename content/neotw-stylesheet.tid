@@ -1,7 +1,7 @@
 created: 20230202124524313
 creator: oeyoews
 empty: yes
-modified: 20230630110236239
+modified: 20231231041536656
 modifier: oeyoews
 page-cover: 
 tags: $:/tags/Stylesheet
@@ -21,17 +21,6 @@ type: text/vnd.tiddlywiki
 .tc-tiddler-frame .tc-tiddler-body {
     font-size: 20px;
 }
-
-<!-- better preview -->
-.tc-tiddler-preview-preview {
-    border: 0px !important;
-		font-size: 20px;
-}
-
-<!-- mobile -->
-<$list filter="[[$:/info/browser/is/mobile]get[text]else[no]match[yes]]">
-.nc-bottombar, .nc-sidebar { display: none; }
-</$list>
 
 <!-- alert -->
 .tc-alert { board-radius: 5px !important; }
@@ -69,17 +58,8 @@ strike {
 	color: gray;
 }
 
-.CodeMirror-wrap pre.CodeMirror-line {
-    font-size: 20px !important;
-}
-
 .tc-block-tags-dropdown > .tc-btn-invisible:hover {
   background-color: #00000008;
-}
-
-.cm-s-tiddlywiki .CodeMirror-activeline-background,
-.cm-s-tiddlywiki .CodeMirror-activeline-gutter .CodeMirror-linenumber {
-  background: #00000008;
 }
 
 .tc-editor-toolbar button,
@@ -89,18 +69,6 @@ strike {
   color: #3f3b3b;
   fill: #3f3b3b;
   border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.nc-sidebar .section.open .label {
-  color: #ffffff;
-  fill: #ffffff;
-  background: #7f4bca;
-  border-bottom: 0;
-  border-radius: 3px;
-}
-
-.nc-sidebar .section .label {
-  border-radius: 3px;
 }
 
 .tc-tiddler-preview-preview {
@@ -122,10 +90,6 @@ span.tc-tag-label {
   background: #00000008;
 }
 
-.nc-bar input[type="search"]:focus {
-  box-shadow: 0 0 0 0 transparent;
-}
-
 <!-- folde-fix -->
 button.tc-fold-banner {
   position: absolute;
@@ -139,6 +103,7 @@ button.tc-fold-banner {
   top: 25px;
   bottom: 25px;
 }
+
 button.tc-unfold-banner {
   position: unset;
   padding: 2px 0;
@@ -194,8 +159,4 @@ input:focus, textarea:focus {
 
 .tc-drop-down a, .tc-drop-down button {
     padding: 5px !important;
-}
-
-.CodeMirror-wrap pre.CodeMirror-line {
-	font-size: 18x;
 }
