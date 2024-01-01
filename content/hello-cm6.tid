@@ -1,0 +1,10 @@
+caption: 
+created: 20240101194523891
+creator: oeyoews
+modified: 20240101194610862
+modifier: oeyoews
+tags: $:/tags/TextEditor/Snippet
+title: hello-cm6
+type: text/vnd.tiddlywiki
+
+editor is ${1:cm6}. in ${2:tiddlywiki}
