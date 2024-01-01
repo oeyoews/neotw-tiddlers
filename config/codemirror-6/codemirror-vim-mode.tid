@@ -1,0 +1,11 @@
+caption: Codemirror Vim Mode
+created: 20240101095412465
+creator: oeyoews
+description: enable codemirror vim mode
+modified: 20240101095412465
+modifier: oeyoews
+settings-template: $:/plugins/BTC/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/codemirror-vim-mode
+type: text/vnd.tiddlywiki
+
+yes
