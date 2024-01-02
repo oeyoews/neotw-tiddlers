@@ -1,0 +1,12 @@
+caption: codeblock
+created: 20240102051306104
+creator: oeyoews
+modified: 20240102051401994
+modifier: oeyoews
+tags: $:/tags/TextEditor/Snippet
+title: $:/oeyoews/snippets/codeblock
+type: text/vnd.tiddlywiki
+
+```${1:lang}
+${2}
+```
