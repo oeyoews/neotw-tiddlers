@@ -1,10 +1,10 @@
 caption: Cursor thickness
-created: 20231020055449806
+created: 20240102182902483
 creator: oeyoews
 description: The thickness of the cursor
-modified: 20231231033138017
+modified: 20240102182903105
 modifier: oeyoews
-settings-template: $:/plugins/BTC/tiddlywiki-codemirror-6/ui/templates/settings/input
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/cursor-thickness
 type: text/vnd.tiddlywiki
 

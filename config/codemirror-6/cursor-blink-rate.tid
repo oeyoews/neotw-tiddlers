@@ -1,0 +1,11 @@
+caption: cursor blink rate
+created: 20240102182859379
+creator: oeyoews
+description: cursor blink rate
+modified: 20240102182859379
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
+title: $:/config/codemirror-6/cursor-blink-rate
+type: text/vnd.tiddlywiki
+
+0
