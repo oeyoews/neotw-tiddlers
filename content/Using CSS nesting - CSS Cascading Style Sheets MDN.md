@@ -16,7 +16,7 @@ There are certain instances where using the `&` nesting selector can be necessar
 * For backwards compatability. 用于向后兼容。
 * As a visual indicator to aid with readability, when seeing the `&` nesting selector you know that CSS nesting is being used. 作为帮助提高可读性的视觉指示器，当看到 `&` 嵌套选择器时，您就知道正在使用 CSS 嵌套。
 
-```
+```js
 /* Without nesting selector */
 parent {
   /* parent styles */
@@ -52,7 +52,7 @@ In these examples, one without and one with the `&` nesting selector, the `<inpu
 
 ##### HTML .HTML
 
-```
+```html
 <form>
   <label for="name">Name:
     <input type="text" id="name" />
@@ -73,7 +73,7 @@ label {
 }
 ```
 
-```
+```css
 input {
   /* styles for input not in a label  */
   border: tomato 2px solid;

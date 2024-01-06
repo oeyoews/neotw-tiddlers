@@ -2,10 +2,10 @@ caption: Minimap
 created: 20240102182910402
 creator: oeyoews
 description: minimap
-modified: 20240102182915767
+modified: 20240106131653510
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/minimap
 type: text/vnd.tiddlywiki
 
-yes
+no
