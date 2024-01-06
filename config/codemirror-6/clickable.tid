@@ -2,10 +2,10 @@ caption: 显示链接图标
 created: 20240103025728994
 creator: oeyoews
 description: show link icon
-modified: 20240103025728994
+modified: 20240106042115703
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/clickable
 type: text/vnd.tiddlywiki
 
-yes
+no
