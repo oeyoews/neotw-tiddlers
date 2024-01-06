@@ -1,8 +1,5 @@
 <!-- ContentItemController, generated at 17:19:32 Wed Nov 8, 2023, by cds1 -->
 
-* **
-* **
-
 ## **What is UUID?
 
 A UUID (Universal Unique Identifier) is a 128-bit value used to uniquely identify an object or entity on the internet. Depending on the specific mechanisms used, a UUID is either guaranteed to be different or is, at least, extremely likely to be different from any other UUID generated until A.D. 3400.
