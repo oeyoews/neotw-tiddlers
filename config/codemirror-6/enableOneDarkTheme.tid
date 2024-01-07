@@ -1,0 +1,11 @@
+caption: enable onedark
+created: 20240107042325693
+creator: oeyoews
+description: enable onedark
+modified: 20240107042351568
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/enableOneDarkTheme
+type: text/vnd.tiddlywiki
+
+yes
