@@ -1,0 +1,11 @@
+caption: 自定义 placeholder
+created: 20240108115432273
+creator: oeyoews
+description: custom placeholder
+modified: 20240108115432274
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/customPlaceholder
+type: text/vnd.tiddlywiki
+
+yes
