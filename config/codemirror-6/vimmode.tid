@@ -1,8 +1,8 @@
-caption: 开启 Vim Mode
-created: 20240102182923652
+caption: enable vim mode
+created: 20240109071953132
 creator: oeyoews
 description: 启动 vim 模式
-modified: 20240106161601400
+modified: 20240109071953132
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/vimmode
