@@ -4,8 +4,6 @@
   );
 ```
 
-:::
 ```js 
 $tw.getTiddlerText('')
 ```
-:::
