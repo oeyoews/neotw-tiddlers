@@ -1,0 +1,11 @@
+caption: link preview(WIP)
+created: 20240111155158857
+creator: oeyoews
+description: linkPreview
+modified: 20240111155158857
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/linkPreview
+type: text/vnd.tiddlywiki
+
+yes

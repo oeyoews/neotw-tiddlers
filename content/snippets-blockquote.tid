@@ -1,0 +1,12 @@
+caption: blockquote
+created: 20240111092457220
+creator: oeyoews
+modified: 20240111092548985
+modifier: oeyoews
+tags: $:/tags/TextEditor/Snippet
+title: snippets-blockquote
+type: text/vnd.tiddlywiki
+
+<$ob>
+${text}
+</$ob>

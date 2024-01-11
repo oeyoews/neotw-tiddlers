@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20231231103415264
+modified: 20240111092309415
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -26,9 +26,9 @@ type: text/vnd.tiddlywiki
 <$nbanners/>
 
 <% else %>
-<center class="my-8">
+<$blockquote color="red" number=300>
 本地wiki不加载相关线上卡片.
-</center>
+</$blockquote>
 <% endif %>
 
 {{tags}}

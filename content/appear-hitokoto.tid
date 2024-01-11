@@ -1,0 +1,12 @@
+created: 20240111032136341
+creator: oeyoews
+modified: 20240111033549900
+modifier: oeyoews
+tags: 
+title: appear-hitokoto
+type: text/vnd.tiddlywiki
+
+<$appear show='一言' type="popup" >
+[[hitokoto]]
+{{hitokoto}}
+</$appear>

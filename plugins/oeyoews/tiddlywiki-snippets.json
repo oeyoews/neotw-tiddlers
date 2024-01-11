@@ -1,0 +1,19 @@
+[
+    {
+        "created": "20241201110000000",
+        "text": "{\"tiddlers\":{\"$:/plugins/oeyoews/tiddlywiki-snippets/generat/toc01\":{\"title\":\"$:/plugins/oeyoews/tiddlywiki-snippets/generat/toc01\",\"caption\":\"toc01\",\"tags\":\"$:/tags/TextEditor/Snippet\",\"text\":\"<div class=\\\"tc-table-of-contents\\\">\\n<<toc \\\"${1:tag}\\\">>${2}\\n</div>\"}}}",
+        "title": "$:/plugins/oeyoews/tiddlywiki-snippets",
+        "type": "application/json",
+        "author": "oeyoews",
+        "core-version": ">=5.3.0",
+        "dependents": "$:/plugins/oeyoews/tiddlywiki-tailwindcss-plus",
+        "description": "tiddlywiki-snippets",
+        "list": "readme",
+        "meat#disabled": "yes",
+        "name": "tiddlywiki-snippets",
+        "plugin-type": "plugin",
+        "qrcode": "yes",
+        "version": "0.0.1",
+        "Modern.TiddlyDev#SHA256-Hashed": "b2fb8fa0888babdcc4800825ff419e8ad209340ad460a1573fed80915aa6069e"
+    }
+]
