@@ -1,8 +1,8 @@
-caption: link preview(WIP)
-created: 20240111155158857
+caption: link preview
+created: 20240112071633684
 creator: oeyoews
 description: linkPreview
-modified: 20240111155158857
+modified: 20240112071633684
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/linkPreview
