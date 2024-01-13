@@ -1,8 +1,8 @@
-caption: Cursor thickness
-created: 20240102182902483
+caption: {{$:/language/codemirror6/cursor-thickness/caption}}
+created: 20240113102852411
 creator: oeyoews
-description: The thickness of the cursor
-modified: 20240102182903105
+description: {{$:/language/codemirror6/cursor-thickness/description}}
+modified: 20240113102853280
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/cursor-thickness

@@ -1,0 +1,11 @@
+caption: {{$:/language/codemirror6/wordCount/caption}}
+created: 20240113102934144
+creator: oeyoews
+description: {{$:/language/codemirror6/wordCount/description}}
+modified: 20240113102934144
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/wordCount
+type: text/vnd.tiddlywiki
+
+yes
