@@ -1,0 +1,10 @@
+caption: checkbox
+created: 20240114132701048
+creator: oeyoews
+modified: 20240114132733778
+modifier: oeyoews
+tags: $:/tags/TextEditor/Snippet
+title: $:/snippets/oeyoews/checkbox
+type: text/vnd.tiddlywiki
+
+- [ ] ${1}
