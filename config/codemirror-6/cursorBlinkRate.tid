@@ -1,8 +1,10 @@
 caption: {{$:/language/codemirror6/cursorBlinkRate/caption}}
-created: 20240113102848542
+caption-zh: {{$:/language/codemirror6/zh/cursorBlinkRate/caption}}
+created: 20240115083758931
 creator: oeyoews
 description: {{$:/language/codemirror6/cursorBlinkRate/description}}
-modified: 20240113102848542
+description-zh: {{$:/language/codemirror6/zh/cursorBlinkRate/description}}
+modified: 20240115083758931
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/cursorBlinkRate

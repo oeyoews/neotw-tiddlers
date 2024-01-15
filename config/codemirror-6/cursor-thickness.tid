@@ -1,8 +1,10 @@
 caption: {{$:/language/codemirror6/cursor-thickness/caption}}
-created: 20240113102852411
+caption-zh: {{$:/language/codemirror6/zh/cursor-thickness/caption}}
+created: 20240115083755176
 creator: oeyoews
 description: {{$:/language/codemirror6/cursor-thickness/description}}
-modified: 20240113102853280
+description-zh: {{$:/language/codemirror6/zh/cursor-thickness/description}}
+modified: 20240115083755986
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/cursor-thickness

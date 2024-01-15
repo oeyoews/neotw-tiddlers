@@ -1,8 +1,10 @@
 caption: {{$:/language/codemirror6/customPlaceholder/caption}}
-created: 20240113102857478
+caption-zh: {{$:/language/codemirror6/zh/customPlaceholder/caption}}
+created: 20240115083801275
 creator: oeyoews
 description: {{$:/language/codemirror6/customPlaceholder/description}}
-modified: 20240113102857478
+description-zh: {{$:/language/codemirror6/zh/customPlaceholder/description}}
+modified: 20240115083801276
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/customPlaceholder

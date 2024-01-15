@@ -1,8 +1,10 @@
 caption: {{$:/language/codemirror6/snippetPreview/caption}}
-created: 20240113102941161
+caption-zh: {{$:/language/codemirror6/zh/snippetPreview/caption}}
+created: 20240115083842963
 creator: oeyoews
 description: {{$:/language/codemirror6/snippetPreview/description}}
-modified: 20240113102941161
+description-zh: {{$:/language/codemirror6/zh/snippetPreview/description}}
+modified: 20240115083842963
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/snippetPreview
