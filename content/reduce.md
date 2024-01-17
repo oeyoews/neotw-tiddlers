@@ -1,10 +1,7 @@
-created: 20230528110216050
-creator: oeyoews
-modified: 20231103080122843
-modifier: oeyoews
-tags: JavaScript
-title: reduce
-type: text/vnd.tiddlywiki
+```js
+const arr = [1, 22, 3];
+console.log(arr.reduce((a, b) => a + b));
+```
 
 对一个数组进行求和，可以使用 JavaScript 的 `reduce()` 方法。该方法接受一个回调函数作为参数，该回调函数接受累加器和当前值作为参数，然后返回新的累加器值。
 
