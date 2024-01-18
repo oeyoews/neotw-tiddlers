@@ -4,10 +4,10 @@ created: 20240115091718802
 creator: oeyoews
 description: {{$:/language/codemirror6/activateOnTyping/description}}
 description-zh: {{$:/language/codemirror6/zh/activateOnTyping/description}}
-modified: 20240115091718802
+modified: 20240118081024653
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/activateOnTyping
 type: text/vnd.tiddlywiki
 
-no
+yes
