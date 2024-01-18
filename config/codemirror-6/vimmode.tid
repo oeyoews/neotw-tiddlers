@@ -4,7 +4,7 @@ created: 20240115083849678
 creator: oeyoews
 description: {{$:/language/codemirror6/vimmode/description}}
 description-zh: {{$:/language/codemirror6/zh/vimmode/description}}
-modified: 20240115083849678
+modified: 20240118103623207
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/vimmode
