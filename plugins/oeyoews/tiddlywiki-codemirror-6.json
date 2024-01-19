@@ -5,11 +5,11 @@
         "type": "application/json",
         "core-version": ">=5.3.3",
         "dependents": "",
-        "description": "CodeMirror 6 editor with vim mode",
+        "description": "CodeMirror 6 editor",
         "list": "readme usage",
         "name": "CodeMirror6",
         "plugin-type": "plugin",
         "version": "0.9.0",
-        "Modern.TiddlyDev#SHA256-Hashed": "74a91656b22c3782b96ef2d66321fbf8c8073a4a2e513903b2e2d69bed779826"
+        "Modern.TiddlyDev#SHA256-Hashed": "96b645224048fcb5847fe4d65127c590104e8f252c1b8193bdefcfdb88dbc992"
     }
 ]
