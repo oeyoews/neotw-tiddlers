@@ -1,6 +1,11 @@
-:::tip
+:::tip 频繁更新的Windows11
 <iconify-icon icon="fluent:leaf-two-20-regular" style="color: #2c8d11;" />
-Windows 更新致力于帮助减少碳排放。
+
+`Windows 更新` 致力于帮助减少碳排放。
+:::
+
+:::fail 输入法
+windows11 的自带输入法词库太少了， 怪不得一直用着不舒服， 还带是搜狗输入法。
 :::
 
 :::note windows notes
@@ -46,7 +51,6 @@ windows11 自带解压，不需要下载 bandzip 解压缩软件
 * window 上 edge 的视觉比 Google chrome 字体支持好一点
 :::error
 * maple font 解压失败
-:::
 :::
 
 :::error edge
