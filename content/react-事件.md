@@ -1,0 +1,1 @@
+react 一般不直接使用addeventlistener, 而是直接使用onxxxx
