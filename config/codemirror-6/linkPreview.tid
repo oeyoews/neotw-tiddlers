@@ -1,0 +1,13 @@
+caption: {{$:/language/codemirror6/linkPreview/caption}}
+caption-zh: {{$:/language/codemirror6/zh/linkPreview/caption}}
+created: 20240125162620193
+creator: oeyoews
+description: {{$:/language/codemirror6/linkPreview/description}}
+description-zh: {{$:/language/codemirror6/zh/linkPreview/description}}
+modified: 20240125162620193
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/linkPreview
+type: text/vnd.tiddlywiki
+
+yes
