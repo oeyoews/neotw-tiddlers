@@ -1,0 +1,13 @@
+author: 
+core-version: 
+created: NaNNaNNaNNaNNaNNaNNaN
+dependents: 
+description: wrapper for the Mermaid diagramming library
+list: readme usage example license
+modified: NaNNaNNaNNaNNaNNaNNaN
+name: Mermaid
+plugin-type: plugin
+tags: 
+title: $:/plugins/orange/mermaid-tw5
+type: application/json
+version: 0.3.7.1
