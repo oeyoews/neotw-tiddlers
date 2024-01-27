@@ -1,7 +1,28 @@
 ---
-title: Promise Status 
+title: 
 ---
-%%{init: {'theme': 'forest'}}%%
-graph
-  A[Pending] -- resolve --> B(fulfilled)
-  A -- reject ==> C(rejected)
+
+%%{init: {'theme': 'default'}}%%
+
+graph TB
+subgraph promise mermaid graph
+direction TB
+subgraph 状态
+  A[Pending] -->|resolve| B(fulfilled)
+  A -->|reject| C(rejected)
+end
+
+subgraph 实例方法
+  D(Promise 实例方法) --> then
+  D --> catch
+  D --> finally
+end
+subgraph 静态方法
+  E(静态方法) --> Promise.all
+  E ==> Promise.any
+  E ==> Promise.allSettled
+  E ==> Promise.race
+  E ==> Promise.reject
+  E ==> Promise.resolve
+end
+end
