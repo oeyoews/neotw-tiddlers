@@ -1,10 +1,7 @@
-created: 20230519120239950
-creator: oeyoews
-modified: 20231228084230109
-modifier: oeyoews
-tags: JavaScript
-title: debounce
-type: text/vnd.tiddlywiki
+:::tip
+debounce: 手机息屏
+throttle: 闹钟定时
+:::
 
 防抖和节流都是为了减少函数的执行次数，避免频繁触发函数而影响性能。不同之处在于，防抖是在一定时间内只执行一次函数，而节流是在一定时间内间隔执行函数。
 
