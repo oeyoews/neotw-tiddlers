@@ -1,12 +1,13 @@
 created: 20231017235829236
 creator: oeyoews
-modified: 20231020102620461
+modified: 20240128011538879
 modifier: oeyoews
-tags:
+tags: 
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
-<table>
+<div class="overflow-scroll">
+<table >
 <tr>
 <th>Title</th>
 </tr>
@@ -23,3 +24,4 @@ type: text/vnd.tiddlywiki
 </$list-empty>
 </$list>
 </table>
+</div>
