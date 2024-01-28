@@ -10,8 +10,8 @@ Promise是一种用于异步编程的对象，可以将异步任务封装成一�
 2. Fulfilled
 3. Rejected
 
-```mermaid
-graph TB;
+```mermaid neutral
+graph
 subgraph promise mermaid graph
 direction TB
 subgraph 状态

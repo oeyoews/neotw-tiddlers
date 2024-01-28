@@ -1,0 +1,13 @@
+caption: mermaid
+created: 20240128123131839
+creator: oeyoews
+modified: 20240128123200491
+modifier: oeyoews
+tags: $:/tags/TextEditor/Snippet
+title: $:/snippets/oeyoews/mermaid-block
+type: text/vnd.tiddlywiki
+
+```mermaid
+graph
+${1}
+```
