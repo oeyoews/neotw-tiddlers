@@ -1,8 +1,8 @@
 created: 20240129053108505
 creator: oeyoews
-modified: 20240129054348218
+modified: 20240130101945122
 modifier: oeyoews
 title: $:/config/markdown-it-mermaid/rendertype
 type: text/vnd.tiddlywiki
 
-png
+svg

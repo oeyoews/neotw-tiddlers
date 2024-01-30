@@ -1,0 +1,13 @@
+caption: mermaid-component
+created: 20240129115047748
+creator: oeyoews
+modified: 20240129120014718
+modifier: oeyoews
+tags: $:/tags/TextEditor/Snippet
+title: $:/snippets/oeyoews/mermaid2
+type: text/vnd.tiddlywiki
+
+<$mermaid2>
+graph LR;
+${text}
+</$mermaid2>
