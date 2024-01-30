@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20240111092309415
+modified: 20240130152148227
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -11,9 +11,9 @@ tags:
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
-<% if [{$:/info/url/protocol}match[https:]] %>
+<!-- <% if [{$:/info/url/protocol}match[https:]] %>
 <$confettibg height=200 size=1 />
-<% endif %>
+<% endif %> -->
 
 {{sevenday}}
 {{tagpie}}
