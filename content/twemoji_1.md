@@ -1,0 +1,1 @@
+twemoji 本质上是以png 的形式提供支持的, twemoji 的原作者似乎已经离开twitter了。
