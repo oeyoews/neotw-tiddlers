@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20240130152148227
+modified: 20240201134753978
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -17,6 +17,10 @@ type: text/vnd.tiddlywiki
 
 {{sevenday}}
 {{tagpie}}
+
+
+
+[[最近 Tiddlers|recent-count]]
 
 <% if [{$:/info/url/protocol}match[https:]] %>
 {{$:/plugins/oeyoews/neotw/Readme}}
