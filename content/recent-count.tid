@@ -1,29 +1,31 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240201171001923
+modified: 20240202033214440
 modifier: oeyoews
 tags: 
 title: recent-count
 type: text/vnd.tiddlywiki
 
 \define timeline(limit:"100",format:"DDth MMM YYYY",subfilter:"",dateField:"modified")
-<div class="tc-timeline">
 <$list filter="[!is[system]$subfilter$has[$dateField$]!sort[$dateField$]limit[$limit$]eachday[$dateField$]]">
-<div class="tc-menu-list-item columns-2">
-<div class="font-bold my-2 font-serif">
+<div>
+<div class="font-semibold my-2 font-serif">
 <$view field="$dateField$" format="date" template="$format$"/> 
+<sup>
 (<$text text={{{ [sameday:$dateField${!!$dateField$}!is[system]$subfilter$count[]] }}} />)
+</sup>
 </div>
+<ul>
 <$list filter="[sameday:$dateField${!!$dateField$}!is[system]!is[draft]$subfilter$!sort[$dateField$]]">
-<div class="tc-menu-list-subitem">
 <li>
 <$link to={{!!title}}><<timeline-title>></$link>
 </li>
+</$list>
+</ul>
 </div>
 </$list>
-</div>
-</$list>
-</div>
 \end
 
-<<timeline>>
+<div class="columns-2">
+	<<timeline>>
+</div>
