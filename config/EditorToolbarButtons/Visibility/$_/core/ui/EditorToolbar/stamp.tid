@@ -1,8 +1,8 @@
 created: 20230203142205443
 creator: oeyoews
-modified: 20240101194439050
+modified: 20240202144744431
 modifier: oeyoews
 title: $:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/stamp
 type: text/vnd.tiddlywiki
 
-show
+hide
