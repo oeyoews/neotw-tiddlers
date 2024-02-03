@@ -13,23 +13,23 @@ flatMap(callbackFn, thisArg)
 
 ### [Parameters  参数](#parameters)
 
-* [`callbackFn`](#callbackfn)
+- [`callbackFn`](#callbackfn)
 
   A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array. The function is called with the following arguments: 对数组中的每个元素执行的函数。它应该返回一个包含新数组的新元素的数组，或要添加到新数组的单个非数组值。使用以下参数调用该函数：
 
-  * [`element`](#element)
+  - [`element`](#element)
 
     The current element being processed in the array. 数组中当前正在处理的元素。
 
-  * [`index`](#index)
+  - [`index`](#index)
 
     The index of the current element being processed in the array. 数组中当前正在处理的元素的索引。
 
-  * [`array`](#array)
+  - [`array`](#array)
 
     The array `flatMap()` was called upon. 调用了数组 `flatMap()` 。
 
-* [`thisArg`](#thisarg) Optional  `thisArg` 可选
+- [`thisArg`](#thisarg) Optional  `thisArg` 可选
 
   A value to use as `this` when executing `callbackFn`. See [iterative methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). 执行 `callbackFn` 时用作 `this` 的值。请参阅迭代方法。
 
@@ -100,7 +100,7 @@ Notice, the output list length can be different from the input list length. 请�
 
 ### [For adding and removing items during a map () 用于在 map () 期间添加和删除项目](#for_adding_and_removing_items_during_a_map)
 
-`flatMap` can be used as a way to add and remove items (modify the number of items) during a `map`. In other words, it allows you to map *many items to many items* (by handling each input item separately), rather than always *one-to-one*. In this sense, it works like the opposite of [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Return a 1-element array to keep the item, a multiple-element array to add items, or a 0-element array to remove the item.`flatMap` 可用作在 `map` 期间添加和删除项目（修改项目数量）的方法。换句话说，它允许您将许多项目映射到许多项目（通过单独处理每个输入项目），而不是始终一对一。从这个意义上说，它的工作原理与过滤器相反。返回 1 元素数组以保留项目，返回多元素数组以添加项目，或返回 0 元素数组以删除项目。
+`flatMap` can be used as a way to add and remove items (modify the number of items) during a `map`. In other words, it allows you to map _many items to many items_ (by handling each input item separately), rather than always _one-to-one_. In this sense, it works like the opposite of [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Return a 1-element array to keep the item, a multiple-element array to add items, or a 0-element array to remove the item.`flatMap` 可用作在 `map` 期间添加和删除项目（修改项目数量）的方法。换句话说，它允许您将许多项目映射到许多项目（通过单独处理每个输入项目），而不是始终一对一。从这个意义上说，它的工作原理与过滤器相反。返回 1 元素数组以保留项目，返回多元素数组以添加项目，或返回 0 元素数组以删除项目。
 
 ```
 // Let's say we want to remove all the negative numbers
@@ -135,7 +135,7 @@ const line = stations
 console.log(line); // ['New Haven - West Haven', 'West Haven - Stratford']
 ```
 
-The `array` argument is *not* the array that is being built — there is no way to access the array being built from the callback function.`array` 参数不是正在构建的数组 - 无法从回调函数访问正在构建的数组。
+The `array` argument is _not_ the array that is being built — there is no way to access the array being built from the callback function.`array` 参数不是正在构建的数组 - 无法从回调函数访问正在构建的数组。
 
 ### [Using flatMap () on sparse arrays 在稀疏数组上使用 flatMap ()](#using_flatmap_on_sparse_arrays)
 
@@ -173,24 +173,24 @@ console.log(
 
 ## [Specifications  规格](#specifications)
 
-| Specification 规格                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Specification 规格                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [ECMAScript Language SpecificationECMAScript 语言规范<!-- --> # <!-- -->sec-array.prototype.flatmap](https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.flatmap) |
 
 ## [Browser compatibility  浏览器兼容性](#browser_compatibility)
 
-[Report problems with this compatibility data on GitHub 在 GitHub 上报告此兼容性数据的问题](https://github.com/mdn/browser-compat-data/issues/new?mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2FflatMap\&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EMDN+page+report+details%3C%2Fsummary%3E%0A%0A*+Query%3A+%60javascript.builtins.Array.flatMap%60%0A*+Report+started%3A+2024-02-02T15%3A18%3A36.979Z%0A%0A%3C%2Fdetails%3E\&title=javascript.builtins.Array.flatMap+-+%3CSUMMARIZE+THE+PROBLEM%3E\&template=data-problem.yml "Report an issue with this compatibility data")
+[Report problems with this compatibility data on GitHub 在 GitHub 上报告此兼容性数据的问题](https://github.com/mdn/browser-compat-data/issues/new?mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2FflatMap&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EMDN+page+report+details%3C%2Fsummary%3E%0A%0A*+Query%3A+%60javascript.builtins.Array.flatMap%60%0A*+Report+started%3A+2024-02-02T15%3A18%3A36.979Z%0A%0A%3C%2Fdetails%3E&title=javascript.builtins.Array.flatMap+-+%3CSUMMARIZE+THE+PROBLEM%3E&template=data-problem.yml "Report an issue with this compatibility data")
 
-|           | desktop    |         |               |          |              | mobile              |                              |                    |                             |                        |                              | server  |         |
-| --------- | ---------- | ------- | ------------- | -------- | ------------ | ------------------- | ---------------------------- | ------------------ | --------------------------- | ---------------------- | ---------------------------- | ------- | ------- |
+|           | desktop       |           |                    |            |                   | mobile                 |                                      |                        |                               |                             |                                  | server    |         |
+| --------- | ------------- | --------- | ------------------ | ---------- | ----------------- | ---------------------- | ------------------------------------ | ---------------------- | ----------------------------- | --------------------------- | -------------------------------- | --------- | ------- |
 |           | Chrome 铬合金 | Edge 边缘 | Firefox 火狐浏览器 | Opera 歌剧 | Safari 苹果浏览器 | Chrome Android 铬 安卓 | Firefox for Android 安卓版火狐浏览器 | Opera Android 安卓系统 | Safari on iOS iOS 上的 Safari | Samsung Internet 三星互联网 | WebView Android Android 网页视图 | Deno 德诺 | Node.js |
-| `flatMap` |            |         |               |          |              |                     |                              |                    |                             |                        |                              |         |         |
+| `flatMap` |               |           |                    |            |                   |                        |                                      |                        |                               |                             |                                  |           |         |
 
 ### Legend
 
 Tip: you can click/tap on a cell for more information. 提示：您可以单击 / 点击单元格以获取更多信息。
 
-* Full support
+- Full support
 
   Full support 全力支持
 

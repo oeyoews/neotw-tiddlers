@@ -6,40 +6,40 @@ Web Editor 是一种基于 Web 技术开发的代码文本编辑器，可以在 
 
 ## 二、功能模块
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/692fb6d1653a470fb9fc1e3cc0011596~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1100\&h=574\&s=92200\&e=png\&a=1\&b=fefefe)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/692fb6d1653a470fb9fc1e3cc0011596~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1100&h=574&s=92200&e=png&a=1&b=fefefe)
 
 Web Editor 需要具备的主要能力
 
 ### 2.1、核心模块
 
-| 模块名      | 模块描述                                                 |
-| -------- | ---------------------------------------------------- |
-| 文本编辑     | 用于处理用户输入的文本内容，管理文本状态，还包括实现文本的插入、删除、替换、撤销、重做等操作       |
-| 语言       | 实现语言高亮、代码分析、代码补全、代码提示 & 校验等能力                        |
-| 主题       | 主要用于实现主题的管理、注册、切换等功能                                 |
-| 渲染       | 主要完成编辑器的整体设计与生命周期管理                                  |
+| 模块名        | 模块描述                                                                                              |
+| ------------- | ----------------------------------------------------------------------------------------------------- |
+| 文本编辑      | 用于处理用户输入的文本内容，管理文本状态，还包括实现文本的插入、删除、替换、撤销、重做等操作          |
+| 语言          | 实现语言高亮、代码分析、代码补全、代码提示 & 校验等能力                                               |
+| 主题          | 主要用于实现主题的管理、注册、切换等功能                                                              |
+| 渲染          | 主要完成编辑器的整体设计与生命周期管理                                                                |
 | 命令 & 快捷键 | 管理注册和编辑的各种命令，比如查找文件、撤销、复制 & 粘贴等，同时也支持将命令以快捷键的形式暴露给用户 |
-| 通信 & 数据流 | 管理编辑器各模块之前的通信，以及数据存储、流转过程                            |
+| 通信 & 数据流 | 管理编辑器各模块之前的通信，以及数据存储、流转过程                                                    |
 
 ### 2.2、扩展模块
 
-| 模块名    | 模块描述                                   |
-| ------ | -------------------------------------- |
-| 文本能力扩展 | 在现有处理文本的基础上进行功能扩展，比如修改获取文本方式。          |
-| 语言扩展   | 包括自定义新语言，扩展现有语言的关键字，完善代码解析、提示 & 校验等能力。 |
-| 主题扩展   | 包括自定义新主题，扩展现有主题的能力                     |
-| 命令扩展   | 增加新命令，或者改写 & 扩展现有命令                    |
+| 模块名       | 模块描述                                                                  |
+| ------------ | ------------------------------------------------------------------------- |
+| 文本能力扩展 | 在现有处理文本的基础上进行功能扩展，比如修改获取文本方式。                |
+| 语言扩展     | 包括自定义新语言，扩展现有语言的关键字，完善代码解析、提示 & 校验等能力。 |
+| 主题扩展     | 包括自定义新主题，扩展现有主题的能力                                      |
+| 命令扩展     | 增加新命令，或者改写 & 扩展现有命令                                       |
 
 ## 三、基本介绍
 
 ### 3.1、Monaco Editor
 
-| 类别   | 描述                                                                                                         |
-| ---- | ---------------------------------------------------------------------------------------------------------- |
-| 介绍   | 是一个功能相对比较完整的代码编辑器，实现使用了 MVP 架构，采用了模块化和组件化的思想，其中编辑器核心代码部分是与 vscode 共用的，从源码目录中能看到有很多 browser 与 common 的目录区分。 |
-| 仓库地址 | <https://github.com/microsoft/vscode/tree/main/src/vs>                                                     |
-| 入口文件 | /editor/editor.main.ts                                                                                     |
-| 开始使用 | editor.create () 方法来自 /editor/standalone/browser/standaloneEditor.ts                                       |
+| 类别     | 描述                                                                                                                                                                                   |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 介绍     | 是一个功能相对比较完整的代码编辑器，实现使用了 MVP 架构，采用了模块化和组件化的思想，其中编辑器核心代码部分是与 vscode 共用的，从源码目录中能看到有很多 browser 与 common 的目录区分。 |
+| 仓库地址 | <https://github.com/microsoft/vscode/tree/main/src/vs>                                                                                                                                 |
+| 入口文件 | /editor/editor.main.ts                                                                                                                                                                 |
+| 开始使用 | editor.create () 方法来自 /editor/standalone/browser/standaloneEditor.ts                                                                                                               |
 
 ```
 ├── base        					# 通用工具/协议和UI库
@@ -57,12 +57,12 @@ sh
 
 ### 3.2、Ace
 
-| 类别   | 描述                                                                   |
-| ---- | -------------------------------------------------------------------- |
-| 介绍   | 高性能，体积小。支持了超过 120 种语言的语法高亮，超过 20 个不同风格的主题，与 Sublime 等本地编辑器的功能和性能相匹配。 |
-| 仓库地址 | [https://github.com/ajaxorg/Ace](https://github.com/ajaxorg/ace)     |
-| 入口文件 | /src/Ace.js                                                          |
-| 开始使用 | Ace.edit()                                                           |
+| 类别     | 描述                                                                                                                   |
+| -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 介绍     | 高性能，体积小。支持了超过 120 种语言的语法高亮，超过 20 个不同风格的主题，与 Sublime 等本地编辑器的功能和性能相匹配。 |
+| 仓库地址 | [https://github.com/ajaxorg/Ace](https://github.com/ajaxorg/ace)                                                       |
+| 入口文件 | /src/Ace.js                                                                                                            |
+| 开始使用 | Ace.edit()                                                                                                             |
 
 Ace 的目录结构相对简单，按功能分成了一个个不同的 js 文件，这里列举其中一部分，部分较为复杂的功能除了提供了入口 js 文件以外，还在对应同级建立了文件夹里面实现各种逻辑，这里列举了 layer (渲染层) 为例子。
 
@@ -73,7 +73,7 @@ src/
       ├── decorators.js	#装饰层，例如波浪线
       ├── lines.js #行渲染层
       ├── text.js    #文本内容层
-      ├── ...		
+      ├── ...
 ├── ...		#其他功能，例如 keybord
 ├── Ace.js      #入口文件
 ├── ...
@@ -97,11 +97,11 @@ sh
 
 ### 3.3、Code Mirror
 
-| 类别   | 描述                                                                                                     |
-| ---- | ------------------------------------------------------------------------------------------------------ |
-| 介绍   | CodeMirror 6 是一款浏览器端代码编辑器，基于 TypeScript，该版本进行了完全的重写，核心思想是模块化和函数式，支持超过 14 种语言的语法高亮，亮点是高性能、可扩展性高以及支持移动端。 |
-| 仓库地址 | <https://github.com/codemirror>                                                                        |
-| 入口文件 | 由于高度模块化，没有一个集成的入口文件，这里放上核心库[@codemirror/view](https://github.com/codemirror/view)的入口文件：src/index.ts    |
+| 类别     | 描述                                                                                                                                                                             |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 介绍     | CodeMirror 6 是一款浏览器端代码编辑器，基于 TypeScript，该版本进行了完全的重写，核心思想是模块化和函数式，支持超过 14 种语言的语法高亮，亮点是高性能、可扩展性高以及支持移动端。 |
+| 仓库地址 | <https://github.com/codemirror>                                                                                                                                                  |
+| 入口文件 | 由于高度模块化，没有一个集成的入口文件，这里放上核心库[@codemirror/view](https://github.com/codemirror/view)的入口文件：src/index.ts                                             |
 
 由于高度模块化（分为多个仓库），这里放上比较核心的库的分布和内部结构
 
@@ -143,10 +143,10 @@ sh
 
 3、**采用面向对象思想编程**
 
-* 单一职责
+- 单一职责
 
 ```
-/* 
+/*
 1、在下面的代码片段中，定义了一个 TextModel 类，它表示一个文本模型，
 它只负责单一的职责，即管理文本的内容和版本。
 2、在代码中，将计算行数、列数等功能拆分成不同的私有方法，并将事件处理器和资源释放等功能封装成公共方法，
@@ -180,7 +180,7 @@ class TextModel implements ITextModel {
 js
 ```
 
-* 依赖注入，自研实现依赖注入能力
+- 依赖注入，自研实现依赖注入能力
 
 ```
 /*
@@ -218,8 +218,8 @@ js
 
 4、**多线程处理**，主要分为 主线程 和 语言服务线程（使用了 Web Worker 技术 来模拟多线程，主要通过 postMessage 来进行消息传递）
 
-* 主线程：主要负责处理用户与编辑器的交互操作，以及渲染编辑器的 UI 界面，还负责管理编辑器的生命周期和资源，例如创建和销毁编辑器实例、加载和卸载语言服务、加载和卸载扩展等。
-* 语言服务线程：负责提供代码分析、语法检查等功能，以及处理与特定语言相关的操作。
+- 主线程：主要负责处理用户与编辑器的交互操作，以及渲染编辑器的 UI 界面，还负责管理编辑器的生命周期和资源，例如创建和销毁编辑器实例、加载和卸载语言服务、加载和卸载扩展等。
+- 语言服务线程：负责提供代码分析、语法检查等功能，以及处理与特定语言相关的操作。
 
 ### 4.1.2、DOM 设计
 
@@ -268,13 +268,13 @@ html
 
 Ace 的设计思想很类似 Monaco 代码中采用了大量的类和对象来实现各种功能
 
-* **面向对象**
-* **事件驱动**
-  * Ace 中提供了丰富的事件系统，以供使用者直接使用或者自定义，并且通过对事件的触发和响应来进行内部数据通信实现代码检查，数据更新等等
-* **多线程**
-  * Ace 编辑器将解析代码的任务交给 Web Worker 处理，以提高代码解析的速度并避免阻塞用户界面。在 Web Worke r 中，Ace 使用 Acorn 库来解析 JavaScript 代码，并将解析结果发送回主线程进行处理
-* **分层架构**
-  * Ace 将编辑器的不同功能分离成不同的类，并使用组合的方式将它们组合在一起。使代码更加模块化、易于维护和扩展。从目录结构可见。
+- **面向对象**
+- **事件驱动**
+  - Ace 中提供了丰富的事件系统，以供使用者直接使用或者自定义，并且通过对事件的触发和响应来进行内部数据通信实现代码检查，数据更新等等
+- **多线程**
+  - Ace 编辑器将解析代码的任务交给 Web Worker 处理，以提高代码解析的速度并避免阻塞用户界面。在 Web Worke r 中，Ace 使用 Acorn 库来解析 JavaScript 代码，并将解析结果发送回主线程进行处理
+- **分层架构**
+  - Ace 将编辑器的不同功能分离成不同的类，并使用组合的方式将它们组合在一起。使代码更加模块化、易于维护和扩展。从目录结构可见。
 
 ### 4.2.2、DOM 设计
 
@@ -284,17 +284,17 @@ Ace 的设计思想很类似 Monaco 代码中采用了大量的类和对象来�
 ```
 <div class="ace-editor">
 
-  <textarea 
-      class="ace_text-input" 
-      wrap="off" 
-      autocorrect="off"     
-      autocapitalize="off" 
-      spellcheck="false" 
+  <textarea
+      class="ace_text-input"
+      wrap="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
     >
   </textarea>
   <!-- 行号区域 -->
   <div class="ace_gutter" aria-hidden="true">
-    <div 
+    <div
         class="ace_layer ace_gutter-layer"
     >
       <div class="ace_gutter-cell" >1 <span></span></div>
@@ -345,11 +345,11 @@ html
 
 ### 4.3.1、设计思想
 
-* **使用 MVVM 架构**
-  * 全称是 Model-View-ViewModel，其中 Model 表示数据模型，View 表示用户界面，ViewModel 是连接两者的桥梁。
-* **函数式编程**
-* **单线程**
-  * 同步增量解析的方式提升性能，每次仅解析视口内（viewport）的代码，从而提升解析性能。
+- **使用 MVVM 架构**
+  - 全称是 Model-View-ViewModel，其中 Model 表示数据模型，View 表示用户界面，ViewModel 是连接两者的桥梁。
+- **函数式编程**
+- **单线程**
+  - 同步增量解析的方式提升性能，每次仅解析视口内（viewport）的代码，从而提升解析性能。
 
 ### 4.3.2、DOM 设计
 
@@ -380,23 +380,23 @@ html
 
 这样看来，整个编辑器就像是一个 React 中的受控组件了。关键的受控行为大概包括这些：
 
-* **按键输入被拦截**，基于 f (selection, input) 计算出新状态
-* **复制粘贴被拦截**，基于 f (selection, input) 计算出新状态
-* **DOM 更改被拦截**，基于 nextState 单向地渲染出 DOM 状态
+- **按键输入被拦截**，基于 f (selection, input) 计算出新状态
+- **复制粘贴被拦截**，基于 f (selection, input) 计算出新状态
+- **DOM 更改被拦截**，基于 nextState 单向地渲染出 DOM 状态
 
 那么，还有哪些地方需要依赖 contenteditable 呢？其实就是和 Selection 强相关的东西：
 
-* **选区高亮状态**依赖 contenteditable，否则你需要自己渲染那个「拖蓝」区域。
+- **选区高亮状态**依赖 contenteditable，否则你需要自己渲染那个「拖蓝」区域。
 
-* **点击后的选中状态**依赖 contenteditable，否则你需要自己计算某个坐标下对应了哪个文字，意味着要自己去解析字体参数做文本排版。
+- **点击后的选中状态**依赖 contenteditable，否则你需要自己计算某个坐标下对应了哪个文字，意味着要自己去解析字体参数做文本排版。
 
-* **方向键操作后的状态**依赖 contentEditable，理由同上。
+- **方向键操作后的状态**依赖 contentEditable，理由同上。
 
 ## 五、架构分层
 
 ## 5.1、Monaco Editor
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/31639146247a4df7ac969ba4a99ae9b7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1230\&h=872\&s=95817\&e=png\&a=1\&b=d5e8d4)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/31639146247a4df7ac969ba4a99ae9b7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1230&h=872&s=95817&e=png&a=1&b=d5e8d4)
 
 核心架构图
 
@@ -404,39 +404,39 @@ html
 
 ### 5.1.1、UI 层
 
-* 代码位置：/editor/browser
+- 代码位置：/editor/browser
 
 <!---->
 
-* UI 层是 Monaco Editor 的最上层，负责渲染编辑器的界面，并且监听用户的输入事件，将用户的输入事件转发给下一层
+- UI 层是 Monaco Editor 的最上层，负责渲染编辑器的界面，并且监听用户的输入事件，将用户的输入事件转发给下一层
 
 ### 5.1.2、编辑器层
 
-* 代码位置：/editor/common
+- 代码位置：/editor/common
 
 <!---->
 
-* 负责处理用户输入事件，以及管理文本模型、撤销 / 重做栈等状态。编辑器层还负责与语言服务进行交互，以便实现代码高亮、自动完成等功能。
+- 负责处理用户输入事件，以及管理文本模型、撤销 / 重做栈等状态。编辑器层还负责与语言服务进行交互，以便实现代码高亮、自动完成等功能。
 
 ### 5.1.3、文本模型层
 
-* 代码位置：/editor/common/model
+- 代码位置：/editor/common/model
 
 <!---->
 
-* 负责管理文本内容，并且提供多种操作接口，例如插入、删除、替换等。文本模型层还负责监听文本内容变化，并且将变化事件通知给编辑器层
+- 负责管理文本内容，并且提供多种操作接口，例如插入、删除、替换等。文本模型层还负责监听文本内容变化，并且将变化事件通知给编辑器层
 
 ### 5.1.4、语言服务层
 
-* 代码位置：/editor/common/languages，内置的 4 种语言解析和提示内容：/languages/xxx/xxx.worker.js
+- 代码位置：/editor/common/languages，内置的 4 种语言解析和提示内容：/languages/xxx/xxx.worker.js
 
 <!---->
 
-* 语言服务层是 Monaco Editor 的底层，负责提供代码分析、代码补全、代码格式化等功能。为了提升执行并行度，不阻塞主流程，主要运行在 web worker 中。
+- 语言服务层是 Monaco Editor 的底层，负责提供代码分析、代码补全、代码格式化等功能。为了提升执行并行度，不阻塞主流程，主要运行在 web worker 中。
 
 ## 5.2、Ace
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6086a85b949d4c45af3d8452bf24ceee~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1332\&h=882\&s=109867\&e=png\&a=1\&b=d5e8d4)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6086a85b949d4c45af3d8452bf24ceee~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1332&h=882&s=109867&e=png&a=1&b=d5e8d4)
 
 核心架构图
 
@@ -454,7 +454,7 @@ html
 
 ## 5.3、CodeMirror
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a1c53d03bc46401d8ed633b7d32de2ef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1462\&h=822\&s=102226\&e=png\&a=1\&b=fefefe)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a1c53d03bc46401d8ed633b7d32de2ef~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1462&h=822&s=102226&e=png&a=1&b=fefefe)
 
 核心架构图
 
@@ -590,7 +590,7 @@ class PieceTreeBase {
 	create(chunks: StringBuffer[], eol: '\r\n' | '\n', eolNormalized: boolean) {}
 
 	normalizeEOL(eol: '\r\n' | '\n') {}
-	
+
 	getLineContent(lineNumber: number): string {}
 
 	public getOffsetAt(lineNumber: number, column: number): number {
@@ -665,7 +665,7 @@ js
 
 #### 6.1.1.3、结果对比
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ead4f8da0f54739be5974042b44c375~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1512\&h=472\&s=61908\&e=png\&b=fefefe)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ead4f8da0f54739be5974042b44c375~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1512&h=472&s=61908&e=png&b=fefefe)
 
 对文档应用 1000 次随机编辑或 1000 次顺序插入，行数组和 Piece Table 分别耗时（X 轴从左到右文件大小逐渐增加）
 
@@ -677,7 +677,7 @@ js
 
 **代码位置**：editor/standalone/common/monarch
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c4c3a3fb4a63471bbef84b8fd0f3dbb4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3368\&h=1730\&s=497489\&e=png\&b=fefefd)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c4c3a3fb4a63471bbef84b8fd0f3dbb4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3368&h=1730&s=497489&e=png&b=fefefd)
 
 官网示例
 
@@ -751,7 +751,7 @@ js
 
 SQL 展示示例：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0283f7326cb44ddfadfb5386f0f795d5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2810\&h=1182\&s=626125\&e=png\&b=f5f7f9)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0283f7326cb44ddfadfb5386f0f795d5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2810&h=1182&s=626125&e=png&b=f5f7f9)
 
 优势：
 
@@ -765,9 +765,9 @@ SQL 展示示例：
 
 Ace 编辑器相对于 Monaco 比较优秀的一点就是移动端支持，但它的移动端实现成本小，而且清晰简单，主要是分为了三点，
 
-* 在移动端减少了部分逻辑，例如一些比较中的代码分析逻辑，代码提示逻辑。
-* 移动端仅重写了菜单部分的 css，其他 css 自动适配就可达到效果
-* 绑定了 touch 相关的事件，这些事件对应 pc 的 mouse 事件，也主要是与菜单相关的事件
+- 在移动端减少了部分逻辑，例如一些比较中的代码分析逻辑，代码提示逻辑。
+- 移动端仅重写了菜单部分的 css，其他 css 自动适配就可达到效果
+- 绑定了 touch 相关的事件，这些事件对应 pc 的 mouse 事件，也主要是与菜单相关的事件
 
 通过简单的三点，就可以将 pc 的编辑器移植到 moblie 上，可以用极小的成本快速支持编辑器在移动端的使用。
 
@@ -777,19 +777,19 @@ Ace 编辑器内部组件通信以及响应用户输入都是通过事件系统�
 
 举一个例子，Editor 与 EditorSession 的一部分通信
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/652829cd28ab46678818d15a146889eb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1154\&h=622\&s=507860\&e=png\&b=3239ff)![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7785e607dfd6416c8b1f97a44fa08432~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1176\&h=824\&s=498012\&e=png\&b=3239ff)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/652829cd28ab46678818d15a146889eb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1154&h=622&s=507860&e=png&b=3239ff)![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7785e607dfd6416c8b1f97a44fa08432~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1176&h=824&s=498012&e=png&b=3239ff)
 
 除了上述两个对象以外，Ace 中还有大量的扩展组件需要通过事件来进行通信，因此 Ace 中实现了一个可复用的触发器机制 EventEmitter 类，，EventEmitter 类是一个基础类，用于实现事件的注册、注销和触发等功能。所有具有事件处理能力的类都继承自 EventEmitter 类，包括 Ace 编辑器中的 Editor 类。
 
 EventEmitter 的具体实现也比较经典，一些常用的事件绑定和移除方法。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee294fa8eba34747a9a42188de9be530~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1554\&h=1582\&s=740933\&e=png\&b=3239ff)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee294fa8eba34747a9a42188de9be530~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1554&h=1582&s=740933&e=png&b=3239ff)
 
 它的继承方式也相对比较特殊，不是直接使用的 extends，而是通过手动实现继承，一方面是因为 Ace 的早期 ES6 还没有普及到各大浏览器，另一方面，即使在 ES6 之后，手动实现原型链继承仍然是一种开源 js 库常见的继承方式，好处是可以更加灵活地控制继承关系，避免多重继承的潜在问题和原型链污染，这一点也是我们自己在实现继承的时候可以参考的。
 
 继承代码实现：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8b6d5fc935640359c711e2604404d39~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1286\&h=1052\&s=411358\&e=png\&b=3138ff)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8b6d5fc935640359c711e2604404d39~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1286&h=1052&s=411358&e=png&b=3138ff)
 
 值得一提得是，这里其实抛出了两个使用方法，implement 和 inherits。
 
@@ -824,7 +824,7 @@ js
 
 典型的用户交互数据流如下图：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1a922215c4d4861b838fdc0e86609c0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=958\&h=424\&s=85258\&e=png\&b=fdfdfd)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1a922215c4d4861b838fdc0e86609c0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=958&h=424&s=85258&e=png&b=fdfdfd)
 
 当 DOM 事件发生时（或者快捷键触发的命令，或者由扩展注册的事件处理器），CodeMirror 会把这些事件转换为新的 transcation，然后分发。此时生成一个新的 state，当接收到新 state 后就会去更新 DOM。
 
@@ -882,11 +882,11 @@ js
 
 Transactions 由 state 的 update 方法产生，可以实现以下的这些效果：
 
-* 实现文档更新
-* 显式移动 selection。（但是当有文档更新，但是没有明确的新 selection 生成时，此时 selection 会被完全映射到这些改变上）
-* 设置 flag 指示 view 把（main）selection 滑动到当前视窗中
-* 可以有副作用，通常是在某些扩展的状态里。（如折叠代码或者开始自动补全功能等）
-* 可以影响 state 的配置。
+- 实现文档更新
+- 显式移动 selection。（但是当有文档更新，但是没有明确的新 selection 生成时，此时 selection 会被完全映射到这些改变上）
+- 设置 flag 指示 view 把（main）selection 滑动到当前视窗中
+- 可以有副作用，通常是在某些扩展的状态里。（如折叠代码或者开始自动补全功能等）
+- 可以影响 state 的配置。
 
 为了完全重置一个 state，比如想要加载一个新文档，推荐创建一个新 state 来代替使用 transcation。这样可以保证没有未知的 state 出现干扰（如撤回历史事件等）。
 
@@ -1035,34 +1035,34 @@ js
 
 总结：CodeMirror 在包体积方面有绝对的优势
 
-| 类别          | Monaco Editor | Ace                 | Code Mirror        |
-| ----------- | ------------- | ------------------- | ------------------ |
-| 核心包大小       | 800KB 左右（压缩后） | 200KB 左右（不同版本有轻微出入） | 核心包 115 KB 左右（未压缩） |
-| 编辑器渲染 （无代码） | 400ms 左右      | 185 ms 左右（实际使用包）    | 仅核心包情况下，120ms 左右   |
+| 类别                  | Monaco Editor        | Ace                              | Code Mirror                  |
+| --------------------- | -------------------- | -------------------------------- | ---------------------------- |
+| 核心包大小            | 800KB 左右（压缩后） | 200KB 左右（不同版本有轻微出入） | 核心包 115 KB 左右（未压缩） |
+| 编辑器渲染 （无代码） | 400ms 左右           | 185 ms 左右（实际使用包）        | 仅核心包情况下，120ms 左右   |
 
 ## 7.2、功能完整度
 
 总结：Monaco 的功能集成度最高，使用最简单
 
-| 类别          | Monaco Editor                                                    | Ace                            | Code Mirror            |
-| ----------- | ---------------------------------------------------------------- | ------------------------------ | ---------------------- |
-| 代码主题        | 内置 3 种，可扩展                                                       | 内置 20+，可扩展                     | 基于扩展来支持，现有官方 1 种       |
-| 语言          | 内置 70+， 可扩展                                                      | 内置 110+，可扩展                    | 基于扩展来支持，现有官方 16 种      |
-| 代码提示 / 自动补全 | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现                                   | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现 | 基于扩展来支持，官方提供了自动补全的基础插件 |
-| 代码折叠        | ✅                                                                | ✅                              | ✅                      |
-| 快捷键         | ✅                                                                | ✅                              | ✅                      |
-| 多光标编辑       | ✅                                                                | ✅                              | ✅                      |
-| 代码检查        | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现                                   | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现 | 基于扩展来支持，官方提供了代码检查的基础插件 |
-| 代码对比        | ✅                                                                | ❌，需自己扩展                        | ✅                      |
-| MiniMap     | ✅                                                                | ❌，需自己扩展                        | ❌                      |
-| 多文本管理       | ✅                                                                | ✅                              | ❌，需自己扩展                |
-| 多视图         | ✅                                                                | ❌，需自己扩展                        | ❌，需自己扩展                |
-| 协同编辑        | 可引入额外插件支持 <https://github.com/convergencelabs/monaco-collab-ext> | ❌                              | ❌，需自己扩展                |
-| 移动端支持       | ❌                                                                | ✅                              | ✅                      |
+| 类别                | Monaco Editor                                                             | Ace                                                       | Code Mirror                                  |
+| ------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------- |
+| 代码主题            | 内置 3 种，可扩展                                                         | 内置 20+，可扩展                                          | 基于扩展来支持，现有官方 1 种                |
+| 语言                | 内置 70+， 可扩展                                                         | 内置 110+，可扩展                                         | 基于扩展来支持，现有官方 16 种               |
+| 代码提示 / 自动补全 | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现                 | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现 | 基于扩展来支持，官方提供了自动补全的基础插件 |
+| 代码折叠            | ✅                                                                        | ✅                                                        | ✅                                           |
+| 快捷键              | ✅                                                                        | ✅                                                        | ✅                                           |
+| 多光标编辑          | ✅                                                                        | ✅                                                        | ✅                                           |
+| 代码检查            | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现                 | 只支持 4 种语言，官方提供了自动补全的基础插件，可自行实现 | 基于扩展来支持，官方提供了代码检查的基础插件 |
+| 代码对比            | ✅                                                                        | ❌，需自己扩展                                            | ✅                                           |
+| MiniMap             | ✅                                                                        | ❌，需自己扩展                                            | ❌                                           |
+| 多文本管理          | ✅                                                                        | ✅                                                        | ❌，需自己扩展                               |
+| 多视图              | ✅                                                                        | ❌，需自己扩展                                            | ❌，需自己扩展                               |
+| 协同编辑            | 可引入额外插件支持 <https://github.com/convergencelabs/monaco-collab-ext> | ❌                                                        | ❌，需自己扩展                               |
+| 移动端支持          | ❌                                                                        | ✅                                                        | ✅                                           |
 
 ## 7.3、使用量对比
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/03b0269e278e452a9cc40773c31c7d01~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2622\&h=1026\&s=437534\&e=png\&b=fcfcfc)
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/03b0269e278e452a9cc40773c31c7d01~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2622&h=1026&s=437534&e=png&b=fcfcfc)
 
 ## 7.4、总结
 
