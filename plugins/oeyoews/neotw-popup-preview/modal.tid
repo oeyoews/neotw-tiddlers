@@ -1,0 +1,24 @@
+caption: untitled 1
+class: o-tm tc-modal-centered
+created: 20240203160234269
+creator: oeyoews
+mask-closable: yes
+modified: 20240203163457594
+modifier: oeyoews
+preview: Draft of 'untitled 1' by oeyoews
+subtitle: {{||$:/esc}}
+title: $:/plugins/oeyoews/neotw-popup-preview/modal
+type: text/vnd.tiddlywiki
+
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+<$vars
+  tv-config-toolbar-icons={{$:/config/Toolbar/Icons}}
+  tv-config-toolbar-text={{$:/config/Toolbar/Text}}
+  tv-config-toolbar-class={{$:/config/Toolbar/ButtonClass}}
+  tv-enable-drag-and-drop={{$:/config/DragAndDrop/Enable}}
+  tv-show-missing-links={{$:/config/MissingLinks}}
+  storyviewTitle={{$:/view}}
+  languageTitle={{{ [{$:/language}get[name]] }}}>
+
+{{{ [<currentTiddler>get[preview]] ||$:/core/ui/ViewTemplate }}}
