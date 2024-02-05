@@ -1,0 +1,12 @@
+created: 20240205044505711
+creator: oeyoews
+modified: 20240205044601598
+modifier: oeyoews
+tags: 
+title: $:/snippets/oeyoews/if-https
+type: text/vnd.tiddlywiki
+
+<% if [{$:/info/url/protocol}match[http:]] %>
+${1}
+<% elseif %>
+<% endif %>

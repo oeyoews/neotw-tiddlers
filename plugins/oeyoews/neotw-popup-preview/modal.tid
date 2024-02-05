@@ -1,16 +1,16 @@
-caption: untitled 1
-class: o-tm tc-modal-centered
-created: 20240203160234269
+caption: 编辑器探索 - 带你全面了解 Web Editor 架构设计、技术选型
+class: o-tm tc-modal-centered o-tm-preview
+created: 20240204102138223
 creator: oeyoews
 mask-closable: yes
-modified: 20240203163457594
+modified: 20240204102138223
 modifier: oeyoews
-preview: Draft of 'untitled 1' by oeyoews
+preview: Draft of '编辑器探索 - 带你全面了解 Web Editor 架构设计、技术选型' by oeyoews
 subtitle: {{||$:/esc}}
 title: $:/plugins/oeyoews/neotw-popup-preview/modal
 type: text/vnd.tiddlywiki
 
-\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+<!-- \import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 
 <$vars
   tv-config-toolbar-icons={{$:/config/Toolbar/Icons}}
@@ -19,6 +19,6 @@ type: text/vnd.tiddlywiki
   tv-enable-drag-and-drop={{$:/config/DragAndDrop/Enable}}
   tv-show-missing-links={{$:/config/MissingLinks}}
   storyviewTitle={{$:/view}}
-  languageTitle={{{ [{$:/language}get[name]] }}}>
+  languageTitle={{{ [{$:/language}get[name]] }}}> -->
 
-{{{ [<currentTiddler>get[preview]] ||$:/core/ui/ViewTemplate }}}
+{{{ [<currentTiddler>get[preview]] ||$:/plugins/oeyoews/neotw-popup-preview/preview-template }}}
