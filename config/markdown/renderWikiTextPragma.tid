@@ -1,8 +1,0 @@
-created: 20240206050309879
-creator: oeyoews
-modified: 20240206050524542
-modifier: oeyoews
-title: $:/config/markdown/renderWikiTextPragma
-type: text/vnd.tiddlywiki
-
-\rules only html entity syslink prettylink image prettyextlink wikilink commentblock commentinline macrocallblock macrocallinline transcludeblock transcludeinline filteredtranscludeblock filteredtranscludeinline conditional
