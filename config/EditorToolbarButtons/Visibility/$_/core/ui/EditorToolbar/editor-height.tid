@@ -1,8 +1,8 @@
 created: 20230203142326266
 creator: oeyoews
-modified: 20230914071657028
+modified: 20240210025407034
 modifier: oeyoews
 title: $:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/editor-height
 type: text/vnd.tiddlywiki
 
-hide
+show

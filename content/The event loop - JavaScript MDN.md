@@ -1,0 +1,1 @@
+[ext[The event loop - JavaScript MDN|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop]]
