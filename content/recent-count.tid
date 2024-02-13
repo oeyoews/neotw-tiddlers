@@ -1,6 +1,6 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240213100727844
+modified: 20240213101947427
 modifier: oeyoews
 tags: $:/tags/SideBar
 title: recent-count
@@ -22,7 +22,7 @@ type: text/vnd.tiddlywiki
 modified <$view field="modified" format="relativedate" />
 </div>
 <li class="flex flex-col justify-between">
-<$link to={{!!title}} class="rounded p-4 text-xl my-2 -ml-4 dark:bg-[#2d333b] bg-white border-[#d0d7de] dark:border-[#444c56] border border-solid">
+<$link to={{!!title}} class="rounded p-4 text-base my-2 -ml-4 dark:bg-[#2d333b] bg-white border-[#d0d7de] dark:border-[#444c56] border border-solid">
 <<timeline-title>>
 </$link> 
 </li>
