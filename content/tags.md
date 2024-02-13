@@ -1,7 +1,7 @@
 <div class="text-justify">
 <$list filter="[tags[]!prefix[$:/]]" >
-<span class="capitalize">
+<div class="capitalize mb-1 inline-block">
 <$transclude $variable='tag'/>
-</span>
+</div>
 </$list>
 </div>
