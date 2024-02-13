@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20240213144759918
+modified: 20240213145551172
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -11,10 +11,6 @@ tags:
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
-<!-- <% if [{$:/info/url/protocol}match[https:]] %>
-<$confettibg height=200 size=1 />
-<% endif %> -->
-
 {{sevenday}}
 {{tagpie}}
 
@@ -22,16 +18,25 @@ type: text/vnd.tiddlywiki
 
 {{$:/plugins/oeyoews/neotw/Readme}}
 {{docs/projects}}
-{{heatmap}}
+
 
 <div class="hidden md:block">
-<$cards filter='Videos JavaScript React TiddlyWiki Journal Tailwindcss books Article Private table-todo thoughts 名词' />
-</div>
 
-<$nbanners/>
+{{heatmap}}
+
+<$cards filter='Videos JavaScript React TiddlyWiki Journal Tailwindcss books Article Private table-todo thoughts 名词' />
+
+</div>
 
 {{recent-count}}
 
+<% else %>
+
+<!-- !! 音乐 -->
+
+<$nbanners/>
+
 <% endif %>
+
 
 {{tags}}
