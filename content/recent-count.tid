@@ -1,13 +1,13 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240213095641190
+modified: 20240213100727844
 modifier: oeyoews
 tags: $:/tags/SideBar
 title: recent-count
 type: text/vnd.tiddlywiki
 
 \define timeline(limit:"100",format:"DDth MMM YYYY",subfilter:"",dateField:"modified")
-<$list filter="[!is[system]$subfilter$has[$dateField$]!sort[$dateField$]limit[$limit$]eachday[$dateField$]]">
+<$list filter="[!is[system]$subfilter$has[$dateField$]!sort[$dateField$]limit[$limit$]eachday[$dateField$]!<currentTiddler>]">
 <div>
 <div class="font-semibold my-2 font-sans">
 <$view field="$dateField$" format="date" template="$format$"/> 
