@@ -1,6 +1,6 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240213134425183
+modified: 20240213140607971
 modifier: oeyoews
 tags: $:/tags/SideBar
 title: recent-count
@@ -8,14 +8,13 @@ type: text/vnd.tiddlywiki
 
 \define timeline(limit:"100",format:"DDth MMM YYYY",subfilter:"",dateField:"modified")
 <$list filter="[!is[system]$subfilter$has[$dateField$]!sort[$dateField$]limit[$limit$]eachday[$dateField$]!<currentTiddler>]">
-<div>
+<div class="overflow-auto">
 <div class="font-semibold my-2 font-sans">
 <$view field="$dateField$" format="date" template="$format$"/> 
 <sup>
 (<$text text={{{ [sameday:$dateField${!!$dateField$}!is[system]$subfilter$count[]] }}} />)
 </sup> 
 </div>
-<div>
 <$list filter="[sameday:$dateField${!!$dateField$}!is[system]!is[draft]$subfilter$!sort[$dateField$]]">
 <div class="flex flex-col justify-between rounded p-4 text-base my-4 dark:bg-[#2d333b] bg-white border-[#d0d7de] dark:border-[#444c56] border border-solid">
 <div class="tc-subtitle">
@@ -30,10 +29,9 @@ modified <$view field="modified" format="relativedate" />
 </div>
 </$list>
 </div>
-</div>
 </$list>
 \end
 
-<div class="columns-1 md:columns-2">
+<div class="columns-1 md:columns-2 md:py-8">
 	<<timeline>>
 </div>
