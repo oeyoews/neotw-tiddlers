@@ -1,6 +1,6 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240213101947427
+modified: 20240213134425183
 modifier: oeyoews
 tags: $:/tags/SideBar
 title: recent-count
@@ -15,23 +15,25 @@ type: text/vnd.tiddlywiki
 (<$text text={{{ [sameday:$dateField${!!$dateField$}!is[system]$subfilter$count[]] }}} />)
 </sup> 
 </div>
-<ul class="list-none">
+<div>
 <$list filter="[sameday:$dateField${!!$dateField$}!is[system]!is[draft]$subfilter$!sort[$dateField$]]">
-<div class="-ml-3 tc-subtitle">
-<$avatar inline/> {{!!creator}}
+<div class="flex flex-col justify-between rounded p-4 text-base my-4 dark:bg-[#2d333b] bg-white border-[#d0d7de] dark:border-[#444c56] border border-solid">
+<div class="tc-subtitle">
+<$avatar inline class="-ml-1"/> {{!!creator}}
 modified <$view field="modified" format="relativedate" />
 </div>
-<li class="flex flex-col justify-between">
-<$link to={{!!title}} class="rounded p-4 text-base my-2 -ml-4 dark:bg-[#2d333b] bg-white border-[#d0d7de] dark:border-[#444c56] border border-solid">
+
+<$link to={{!!title}} class="mt-2">
 <<timeline-title>>
 </$link> 
-</li>
+
+</div>
 </$list>
-</ul>
+</div>
 </div>
 </$list>
 \end
 
-<div class="columns-1">
+<div class="columns-1 md:columns-2">
 	<<timeline>>
 </div>
