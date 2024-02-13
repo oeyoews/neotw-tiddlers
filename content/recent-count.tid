@@ -1,6 +1,6 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240202033214440
+modified: 20240213094257675
 modifier: oeyoews
 tags: 
 title: recent-count
@@ -9,16 +9,22 @@ type: text/vnd.tiddlywiki
 \define timeline(limit:"100",format:"DDth MMM YYYY",subfilter:"",dateField:"modified")
 <$list filter="[!is[system]$subfilter$has[$dateField$]!sort[$dateField$]limit[$limit$]eachday[$dateField$]]">
 <div>
-<div class="font-semibold my-2 font-serif">
+<div class="font-semibold my-2 font-sans">
 <$view field="$dateField$" format="date" template="$format$"/> 
 <sup>
 (<$text text={{{ [sameday:$dateField${!!$dateField$}!is[system]$subfilter$count[]] }}} />)
-</sup>
+</sup> 
 </div>
-<ul>
+<ul class="list-none">
 <$list filter="[sameday:$dateField${!!$dateField$}!is[system]!is[draft]$subfilter$!sort[$dateField$]]">
-<li>
-<$link to={{!!title}}><<timeline-title>></$link>
+<div class="-ml-3 tc-subtitle">
+<$avatar inline/> {{!!creator}}
+modified <$view field="modified" format="relativedate" />
+</div>
+<li class="flex flex-col justify-between">
+<$link to={{!!title}} class="rounded p-4 text-xl my-2 -ml-4 dark:bg-[#2d333b] bg-white border-[#d0d7de] dark:border-[#444c56] border border-solid">
+<<timeline-title>>
+</$link> 
 </li>
 </$list>
 </ul>
@@ -26,6 +32,6 @@ type: text/vnd.tiddlywiki
 </$list>
 \end
 
-<div class="columns-2">
+<div class="columns-1">
 	<<timeline>>
 </div>

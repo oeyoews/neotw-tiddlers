@@ -1,0 +1,1 @@
+ts promiseLike await  

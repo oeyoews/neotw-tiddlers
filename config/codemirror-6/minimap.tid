@@ -4,7 +4,7 @@ created: 20240116163010667
 creator: oeyoews
 description: {{$:/language/codemirror6/minimap/description}}
 description-zh: {{$:/language/codemirror6/zh/minimap/description}}
-modified: 20240116163023235
+modified: 20240213092249621
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/minimap
