@@ -1,6 +1,6 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240214080316231
+modified: 20240214082310418
 modifier: oeyoews
 tags: $:/tags/SideBar
 title: recent-count
@@ -17,14 +17,16 @@ type: text/vnd.tiddlywiki
 </div>
 <$list filter="[sameday:$dateField${!!$dateField$}!is[system]!is[draft]$subfilter$!sort[$dateField$]limit[4]]">
 <div class="flex flex-col justify-between rounded p-4 text-base my-4 dark:bg-[#2d333b] bg-transparent border-[#d0d7de] dark:border-[#444c56] border border-solid">
-<div class="tc-subtitle">
+<div class="text-gray-500/70">
 <$avatar inline class="-ml-1"/> {{!!creator}}
 modified <$view field="modified" format="relativedate" />
 </div>
 
-<div class="tc-subtitle font-serif mt-2">
+<% if [<currentTiddler>tags[]] %>
+<div class="font-serif mt-2">
 <$text text={{{ [<currentTiddler>tags[]] }}} />
 </div>
+<% endif %>
 
 <$link to={{!!title}} class="mt-2">
 <<timeline-title>>
