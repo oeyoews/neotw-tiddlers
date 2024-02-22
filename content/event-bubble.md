@@ -12,9 +12,9 @@ graph LR;
 
 DOM 事件，也是有一个流程的。从事件触发开始到事件响应是有三个阶段。
 
-* 事件捕获阶段(外 => 里) e.preventDefault();
-* 处于目标阶段
-* 事件冒泡阶段(里 => 外) e.stopPropagation();
+1. 捕获阶段(外 => 里) e.preventDefault();
+2. 处于目标阶段
+3. 冒泡阶段(里 => 外) e.stopPropagation();
 
 ## event 委托
 
