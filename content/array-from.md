@@ -1,3 +1,5 @@
+* 接受一个可迭代对象，第二个可选参数是mapFn。
+
 ```js
 // 虚构数组
 const data = Array.from({ length: 10 }, (_, i) => i + 1);
