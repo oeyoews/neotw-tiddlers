@@ -1,9 +1,8 @@
-created: 20220826144028699
+created: 20240225093422546
 creator: oeyoews
-modified: 20230211162050717
+modified: 20240225101727730
 modifier: oeyoews
-size: 17
 title: $:/themes/tiddlywiki/vanilla/metrics/fontsize
 type: text/vnd.tiddlywiki
 
-{{!!size}}px
+18px

@@ -1,8 +1,8 @@
-created: 20200428203454207
+created: 20240225093232037
 creator: oeyoews
-modified: 20220909173652781
+modified: 20240225093233423
 modifier: oeyoews
 title: $:/themes/nico/notebook/metrics/bodyfontsize
 type: text/vnd.tiddlywiki
 
-{{!!width}}px
+18px

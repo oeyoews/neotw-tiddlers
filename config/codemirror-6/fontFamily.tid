@@ -1,0 +1,13 @@
+caption: {{$:/language/codemirror6/fontFamily/caption}}
+caption-zh: {{$:/language/codemirror6/zh/fontFamily/caption}}
+created: 20240225102006601
+creator: oeyoews
+description: {{$:/language/codemirror6/fontFamily/description}}
+description-zh: {{$:/language/codemirror6/zh/fontFamily/description}}
+modified: 20240225102415113
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
+title: $:/config/codemirror-6/fontFamily
+type: text/vnd.tiddlywiki
+
+"Maple Mono"
