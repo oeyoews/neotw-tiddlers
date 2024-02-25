@@ -4,10 +4,10 @@ created: 20240225095309682
 creator: oeyoews
 description: {{$:/language/codemirror6/fontsize/description}}
 description-zh: {{$:/language/codemirror6/zh/fontsize/description}}
-modified: 20240225095313529
+modified: 20240225133226297
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/fontsize
 type: text/vnd.tiddlywiki
 
-18px
+16px
