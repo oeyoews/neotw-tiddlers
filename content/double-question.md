@@ -5,7 +5,7 @@
 https://stackoverflow.com/questions/61480993/when-should-i-use-nullish-coalescing-vs-logical-or
 
 ## ??
-   "?? "是空值合并运算符，通常用于处理可能为空或未定义的值。如果左侧的操作数是 null 或 undefined，它会返回右侧的操作数，否则返回左侧的操作数。这对于确保你有一个有效的值来使用非常有用。
+   "?? "是 __空值合并__ 运算符，通常用于处理可能为空或未定义的值。如果左侧的操作数是 null 或 undefined，它会返回右侧的操作数，否则返回左侧的操作数。这对于确保你有一个有效的值来使用非常有用。
 
    例如：
    ```javascript

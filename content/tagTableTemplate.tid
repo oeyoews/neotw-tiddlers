@@ -1,16 +1,12 @@
 created: 20231017235829236
 creator: oeyoews
-modified: 20240128011538879
+modified: 20240225141722003
 modifier: oeyoews
 tags: 
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
-<div class="overflow-scroll">
 <table >
-<tr>
-<th>Title</th>
-</tr>
 <$list filter="[tag<currentTiddler>!sort[modified]!has[draft.of]limit[200]]">
 	<$list-template>
 <tr>
@@ -24,4 +20,3 @@ type: text/vnd.tiddlywiki
 </$list-empty>
 </$list>
 </table>
-</div>
