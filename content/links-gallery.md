@@ -1,1 +1,1 @@
-<$list-links />
+<$vue-links-gallery />
