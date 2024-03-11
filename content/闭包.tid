@@ -1,10 +1,12 @@
 created: 20230603143406153
 creator: oeyoews
-modified: 20230603143419574
+modified: 20240311151848802
 modifier: oeyoews
 tags: JavaScript
 title: 闭包
 type: text/vnd.tiddlywiki
+
+闭包: 让开发者可以从内部函数访问外部函数的作用域
 
 一个常见的实际应用闭包的例子是事件监听器。在 JavaScript 中，可以使用闭包来实现事件监听器，以便在函数之外访问事件处理程序中的变量。下面是一个示例：
 
