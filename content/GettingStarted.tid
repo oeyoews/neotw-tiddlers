@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20240308155003883
+modified: 20240312115336570
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -36,7 +36,7 @@ type: text/vnd.tiddlywiki
 
 <!-- !! 音乐 -->
 
-<$nbanners/>
+{{Netease Banners}}
 
 <% endif %>
 

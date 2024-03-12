@@ -1,1 +1,1 @@
-<$nbanners />
+<$neotw-vue-netease-banners />
