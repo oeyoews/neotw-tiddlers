@@ -1,8 +1,5 @@
-created: 20240317131051169
-creator: oeyoews
 description: position class
-modified: 20240317131053472
-modifier: oeyoews
-position: bottom-0
+draggable: yes
+position: top-0
 title: $:/plugins/oeyoews/vue-tabs/config
 type: text/vnd.tiddlywiki
