@@ -1,0 +1,1 @@
+tailwindcss v4 不支持插件， 官方仅仅在roadmap 提了一下
