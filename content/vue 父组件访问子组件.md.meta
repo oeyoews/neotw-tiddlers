@@ -1,0 +1,8 @@
+created: 20240326153521451
+creator: oeyoews
+modified: 20240326153647261
+modifier: oeyoews
+summary: 该 Vue 代码包括一个父组件和一个子组件。父组件使用 `$ref` 获取子组件的实例并引用其方法。子组件定义了 `sayHello` 方法并将其暴露给父组件。
+tags: Vue
+title: vue 父组件访问子组件
+type: text/markdown

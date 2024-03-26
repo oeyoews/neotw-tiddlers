@@ -1,6 +1,7 @@
 created: 20240311151736967
 creator: oeyoews
-modified: 20240311151736967
+description: 在 JavaScript 中，代码块使用一个新的词法环境，因此代码块内的变量不可从代码块外访问。这有助于防止变量名称冲突并实现局部作用域。
+modified: 20240326133830397
 modifier: oeyoews
 tags: 剪藏
 title: 变量作用域，闭包
