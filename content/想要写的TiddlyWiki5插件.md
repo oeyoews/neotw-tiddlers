@@ -1,3 +1,5 @@
+<$vue-gemini />
+
 :::warning
 不再更新
 :::

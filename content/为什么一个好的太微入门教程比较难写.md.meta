@@ -1,8 +1,9 @@
 created: 20231017015911946
 creator: oeyoews
-modified: 20231110050947164
+modified: 20240326154006173
 modifier: oeyoews
-publish: no
-tags:
+publish: yes
+summary: 入门教程难以编写，因为它需要涵盖各种使用方式和工具集成，同时又要保持简洁和易于理解。创建完善的入门教程需要仔细考虑和丰富的经验。
+tags: 
 title: 为什么一个好的太微入门教程比较难写
 type: text/markdown

@@ -1,7 +1,8 @@
 created: 20240325133510000
 creator: oeyoews
-modified: 20240325134452715
+modified: 20240326153822501
 modifier: oeyoews
+summary: iOS 小火箭不要选择代理选项卡，否则会导致网络不一致。
 tags: Journal
 title: 2024/03/25-nkz1gobv
 type: text/markdown
