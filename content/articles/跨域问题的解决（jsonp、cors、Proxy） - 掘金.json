@@ -1,0 +1,15 @@
+[
+    {
+        "created": "20240315072859254",
+        "creator": "oeyoews",
+        "title": "跨域问题的解决（jsonp、cors、Proxy） - 掘金",
+        "text": "### 跨域是什么\n\n跨域问题是由于浏览器的同源策略产生的，只要协议域名端口号不同就会产生跨域问题。当跨域产生时客户端的请求是已经发送出去的，服务器的响应也发送回来了，只是客户端将响应进行了拦截。\n\n### 跨域如何解决\n\n解决跨域问题常见的有三种方式，分别是 jsonp、cors 以及 webpack 提供的 Proxy 代理服务器。而属于前端的解决方案是 jsonp 以及 Proxy。\n\n#### 1、jsonp\n\njsonp 是一个比较早的解决方案，现在几乎已经不再使用。jsonp 的原理是运用了 script 标签 src 属性发送的 get 请求不受同源策略限制。html 标签发送的请求都是 get 请求，它们并不受同源策略的限制。\n\n接下来上代码，首先是前端的代码：\n\n```\n    <!-- 首先在客户端定义好一个全局函数 -->\n    <script>\n      function fn(res) {\n        // 使用一个形参准备接收后端传递过来的数据\n        console.log(res)\n      }\n    </script>\n    <!-- 模拟 jsonp 用 script标签发起get请求 -->\n    <!-- 通过script标签发出的请求接收到的字符串数据，会按照js语法执行 -->\n    <!-- 需要和后端沟通定义好接收所用到的字段名 -->\n    <script src=\"http://localhost:8888/api/jsonp?callback=fn\"></script>\n```\n\n前端首先定义了一个全局函数进行接收，而 script 标签发出的请求接收到的字符串数据，如果里面有 js 代码，会按照 js 代码进行执行。\n\n接下来上后端代码：\n\n```\n// 1.下载第三方: npm i express\n\n// 2、导入express\nconst express = require(\"express\")\n// 3、创建服务器\nconst app = express()\n\n// 4、编写接口\napp.get(\"/api/jsonp\", (req, res) => {\n  // 响应给客户端一个执行函数，前端接收到这段字符串后会按照js语法进行执行\n  // 可以通过req.query接收到前端传递来的查询参数 通过req.params接收前端传递过来的动态路由参数\n  let message = req.query.callback\n  // 发送响应数据\n  res.send(message + `({name:'张三',age:18})`)\n})\n\n// 3.开启服务器\napp.listen(8888, () => console.log(\"http://localhost:8888\"))\n```\n\n#### 2、cors\n\ncors 的实现方法是下载 cors 第三方包，配置成为全局中间件\n\n```\n// 下载: npm i cors\n// 导入\nconst cors = require('cors')\n// 配置成为全局中间件\napp.use(cors())\n```\n\n#### 3、Proxy (正向代理)\n\nProxy 是 webpack 提供的，它的原理是开启了一个代理服务器，客户端先向代理服务器发送请求，由代理服务器向服务器转发请求，服务器响应的数据也会由代理服务器响应给客户端。由于代理服务器与本地项目是同源的，并且代理服务器与服务器之间没有跨域问题。所以响应回来的数据客户端可以正常进行接收。\n\n配置方法：在 vue.config.js 的 devServer 中进行配置\n\n```\n    proxy: {\n      // 匹配所有以api开头的请求 如/api/xxx\n      '/api': {\n        target: '进行代理的目标地址',\n        changeOrigin: true, //  允许跨域\n        // 重写 url\n        pathRewrite:{\n          '^/api': '' // 目标地址/xxx\n        }\n      }\n    }\n```\n\n注意：Proxy 只适用于本地开发环境 build 打包后无法再使用\n\n(还有 Nginx 实现的反向代理，由于没有了解这里不做介绍)\n",
+        "type": "text/markdown",
+        "modified": "20240327105732335",
+        "modifier": "oeyoews",
+        "tags": "剪藏",
+        "url": "https://juejin.cn/post/7074205785886031903",
+        "publish": "article",
+        "summary": "跨域是由浏览器的同源策略引起的，它限制跨域请求。\n\n解决跨域问题的常见方法有：\n\n* **JSONP：**利用 script 标签发送不受跨域限制的 GET 请求。\n* **CORS：**配置服务器允许跨域请求。\n* **Proxy：**在开发环境中使用 webpack 的代理服务器转发请求，从而解决跨域问题。"
+    }
+]

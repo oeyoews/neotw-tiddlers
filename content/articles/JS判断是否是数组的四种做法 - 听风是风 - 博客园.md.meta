@@ -1,0 +1,10 @@
+created: 20240309114719828
+creator: oeyoews
+modified: 20240327105819428
+modifier: oeyoews
+publish: article
+summary: 推荐使用 Array.isArray() 方法判断数组，因为它提供了一个稳定可靠的方式来检测数组。对于不支持 Array.isArray() 的 ES5 之前的环境，可以手动实现一个兼容的方法。
+tags: 剪藏
+title: JS判断是否是数组的四种做法 - 听风是风 - 博客园
+type: text/markdown
+url: https://www.cnblogs.com/echolun/p/10287616.html
