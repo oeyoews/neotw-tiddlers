@@ -1,0 +1,9 @@
+created: 20240304012620147
+creator: oeyoews
+modified: 20240327131053685
+modifier: oeyoews
+publish: article
+summary: 方法链式调用允许连续调用对象方法，因为每个方法都返回指向同一对象的引用。
+tags: JavaScript
+title: 方法链式调用
+type: text/markdown
