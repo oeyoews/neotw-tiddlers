@@ -1,0 +1,13 @@
+created: 20230226083950150
+creator: oeyoews
+modified: 20240327095515806
+modifier: oeyoews
+publish: article
+summary: 使用 PicGo (GitLab 文件插件) 与 GitLab (或 GitLab 中国) 结合，并通过 jsDelivr 分发图片
+tags: 
+title: use-flameshot-to-upload-image
+type: text/vnd.tiddlywiki
+
+~~* `ctrl+alt+a` and press enter~~
+
+* picgo(gitlab files plugin) + ~~github~~ gitlab(or cn gitlab)  ~~ + jsdelivr~~

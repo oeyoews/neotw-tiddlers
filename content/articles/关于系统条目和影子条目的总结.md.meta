@@ -1,8 +1,9 @@
 created: 20230613021039755
 creator: oeyoews
-modified: 20231017102754279
+modified: 20240327095404999
 modifier: oeyoews
 publish: article
+summary: `$:/`开头的条目是系统条目，不会被`freelink`插件识别为候选链接。
 tags: TiddlyWiki
 title: 关于系统条目和影子条目的总结
 type: text/markdown

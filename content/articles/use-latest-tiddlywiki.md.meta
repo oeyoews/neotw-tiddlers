@@ -1,8 +1,9 @@
 created: 20230221081547068
 creator: oeyoews
-modified: 20231125123810946
+modified: 20240327095531276
 modifier: oeyoews
 publish: article
-tags:
+summary: 使用 pnpm 安装最新版 TiddlyWiki5 时，GitHub.dev 环境下不会出现弹窗警告，但 Vim 的撤消功能会失效。
+tags: 
 title: use-latest-tiddlywiki
 type: text/markdown
