@@ -1,0 +1,10 @@
+created: 20230330024846540
+creator: oeyoews
+gemini: yes
+modified: 20240327010122516
+modifier: oeyoews
+publish: article
+summary: 该开源项目提供了一个使用 Tailwind CSS 自定义设计的微型 RSS feed 服务，允许在线预览和编辑文章。与 oeyoews.fun 类似，用户可以使用视觉编辑器在 oeyoews.fun/admin 中登录和编辑文章。该服务支持 RSS，但缺点是缺乏 Markdown 编辑器和文章导入功能。
+tags: 
+title: microfeed-oeyoews
+type: text/markdown

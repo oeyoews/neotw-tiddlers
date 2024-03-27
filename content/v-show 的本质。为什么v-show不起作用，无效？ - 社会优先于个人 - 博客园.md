@@ -1,5 +1,3 @@
-<$vue-gemini />
-
 ## v-show 的本质，就是自动设置 css 样式，display:none
 
 ```
@@ -19,3 +17,4 @@ div{
 	display:flex;
 }
 ```
+		

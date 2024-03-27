@@ -1,7 +1,9 @@
 created: 20240326044251303
 creator: oeyoews
-modified: 20240326141416656
+gemini: yes
+modified: 20240327020532186
 modifier: oeyoews
+summary: 生成长度为 8 的随机 36 进制字符串。
 tags: JavaScript
 title: 随机字符生成
 type: text/markdown

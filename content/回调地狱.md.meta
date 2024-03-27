@@ -1,6 +1,7 @@
 created: 20240117100728433
 creator: oeyoews
-modified: 20240326155318256
+gemini: yes
+modified: 20240327012923162
 modifier: oeyoews
 summary: 使用回调函数容易导致回调地狱，使用async/await可以让代码更清晰易读，避免嵌套回调。
 tags: JavaScript
