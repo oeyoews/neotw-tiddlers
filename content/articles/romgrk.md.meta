@@ -1,0 +1,10 @@
+created: 20240327131700000
+creator: oeyoews
+modified: 20240327151838316
+modifier: oeyoews
+publish: article
+summary: 文章中总结了优化 JavaScript 代码的常见技术。虽然优化通常以可读性为代价，但何时追求性能与可读性的问题留给了读者。文章还讨论了基准测试的重要性，并指出微观基准测试常常是有缺陷的。文章给出了所有可能情况下可执行的示例，它们默认显示机器上的结果，但也允许读者自己运行它们。
+tags: 剪藏
+title: romgrk
+type: text/markdown
+url: https://romgrk.com/posts/optimizing-javascript
