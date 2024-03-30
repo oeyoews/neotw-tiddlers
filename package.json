@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nolebase/vitepress-plugin-og-image": "^1.25.2",
     "feed": "^4.2.2",
     "unocss": "^0.58.7",
     "vitepress": "^1.0.1"
