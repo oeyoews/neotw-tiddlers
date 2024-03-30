@@ -2,7 +2,6 @@
 	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"installCommand": "pnpm install",
 	"buildCommand": "pnpm run clean && pnpm run build",
-	"outputDirectory": ".tiddlywiki",
 	"cleanUrls": true,
 	"trailingSlash": false,
 	"github": {
