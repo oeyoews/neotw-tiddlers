@@ -1,0 +1,1 @@
+NeteaseCloudMusicApi GitHub 项目虽然删了， 但是文档还在， npm package 还在更新版本
