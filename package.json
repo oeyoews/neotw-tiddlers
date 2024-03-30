@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "vitepress dev .",
     "build": "pnpm run gensidebar && vitepress build .",
-    "clean": "node clean.js",
     "gensidebar": "node .vitepress/scripts/genSidebar.mjs",
     "preview": "vitepress preview ."
   },
@@ -15,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nolebase/vitepress-plugin-og-image": "^1.25.2",
+    "@nolebase/vitepress-plugin-og-image": "^1.27.0",
     "feed": "^4.2.2",
     "markdown-it-task-lists": "^2.1.1",
     "unocss": "^0.58.7",
