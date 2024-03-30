@@ -1,3 +1,0 @@
-maxsmall
-
-xs: extra small

@@ -1,0 +1,19 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "pnpm run gensidebar && vitepress build .",
+    "gensidebar": "node .vitepress/scripts/genSidebar.mjs",
+    "preview": "vitepress preview ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "unocss": "^0.58.7",
+    "vitepress": "^1.0.1"
+  }
+}

@@ -1,0 +1,3 @@
+```js
+this.getVariable('currentTiddler');
+```

@@ -1,4 +1,0 @@
-* bsr
-* csr
-* ssr
-* ssg

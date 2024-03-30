@@ -1,3 +1,0 @@
-```js
-this.getVariable('currentTiddler');
-```

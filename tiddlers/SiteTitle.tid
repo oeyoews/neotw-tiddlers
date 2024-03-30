@@ -1,0 +1,11 @@
+created: 20240330020558103
+creator: oeyoews
+modified: 20240330020558712
+modifier: oeyoews
+title: $:/SiteTitle
+type: text/vnd.tiddlywiki
+
+<!-- <% if [{$:/info/url/protocol}!match[https:]] %>
+🔴
+<% endif %> -->
+TiddlyWiki Starter Kit

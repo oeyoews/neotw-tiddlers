@@ -1,3 +1,0 @@
-```js
-navigator.connection
-```
