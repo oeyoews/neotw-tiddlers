@@ -1,6 +1,8 @@
 created: 20231031123007024
 creator: oeyoews
-modified: 20231031124157678
+modified: 20240330051211570
 modifier: oeyoews
 title: $:/config/SyncPollingInterval
-type: text/markdown
+type: text/vnd.tiddlywiki
+
+30000
