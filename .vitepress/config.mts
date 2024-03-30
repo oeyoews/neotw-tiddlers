@@ -40,7 +40,7 @@ export default defineConfig({
     logo: '/tiddlywiki.png',
     editLink: {
       pattern:
-        'https://github.com/oeyoews/tiddlywiki-starter-kit/edit/main/docs/:path',
+        'https://github.com/oeyoews/neotw-tiddlers/edit/main/:path',
       text: '在 GitHub 上编辑此页面',
     },
 
@@ -56,12 +56,12 @@ export default defineConfig({
     ...cn,
   },
   async buildEnd(siteconfig) {
-    genFeed(siteconfig);
-    await buildEndGenerateOpenGraphImages({
-      domain: 'https://neotw.vercel.app/docs',
-      category: {
-        byLevel: 3,
-      },
-    })(siteconfig);
+    // genFeed(siteconfig);
+    // await buildEndGenerateOpenGraphImages({
+    //   domain: 'https://neotw.vercel.app/docs',
+    //   category: {
+    //     byLevel: 3,
+    //   },
+    // })(siteconfig);
   },
 });

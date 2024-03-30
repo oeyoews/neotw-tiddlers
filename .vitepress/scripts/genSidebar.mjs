@@ -39,8 +39,7 @@ function formatFileStructure(directory) {
   return formattedStructure;
 }
 
-const directoryPath = docsDir
-const formattedStructure = formatFileStructure(directoryPath);
+const formattedStructure = formatFileStructure(docsDir);
 
   fs.writeFileSync(sidebarPath, JSON.stringify(formattedStructure, null, 2));
-  console.log('侧边栏已更新');
+  console.log('侧边栏已更新 @oeyoews(neotw-tiddlers)');
