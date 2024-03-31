@@ -1,7 +1,9 @@
 created: 20231104040205000
 creator: oeyoews
-modified: 20240327130818235
+modified: 20240331114115371
 modifier: oeyoews
+publish: article
+summary: "i18n" 代表国际化，涉及设计软件以适应不同语言和文化的需求，从而为全球用户提供更好的用户体验和可用性。它通过将文本字符串与源代码分离并使用可本地化的文件来实现。
 tags: 
 title: i18n
 type: text/vnd.tiddlywiki
