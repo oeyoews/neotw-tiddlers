@@ -1,0 +1,10 @@
+created: 20240331044154000
+creator: oeyoews
+modified: 20240331092258140
+modifier: oeyoews
+publish: article
+summary: SSE 用于实现从服务器端到客户端的实时数据推送，适用于轻量级场景。然而，它存在限制，如无法双向通信和并发连接数限制。WebSocket 更适合处理高并发、高吞吐量和低延迟的场景。根据具体需求选择技术十分重要。
+tags: 剪藏
+title: 为什么ChatGPT采用SSE协议而不是Websocket？-CSDN博客
+type: text/markdown
+url: https://blog.csdn.net/wo541075754/article/details/135282103
