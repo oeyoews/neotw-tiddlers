@@ -1,0 +1,10 @@
+created: 20240329054229000
+creator: oeyoews
+modified: 20240401141213087
+modifier: oeyoews
+publish: article
+summary: Vue 3 的 `provide` 函数允许在组件树中传递数据，无需逐层传递。它接收一个键和一个值，提供值可用给所有子组件通过 `inject` 函数访问。这比 props 更方便，尤其是在多个组件层级共享数据时。
+tags: 剪藏
+title: vue-provide-inject
+type: text/markdown
+url: https://chat.openai.com/c/69e08fb2-f729-4286-a4ef-abbc87672981
