@@ -2,17 +2,16 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20240401025732050
+modified: 20240401051638374
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
 publish: public
-summary: 欢迎来到 TiddlyWiki Starter Kit.
 tags: 
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
-<$vue-gemini />
+<$vue-gemini text="欢迎来到 TiddlyWiki Starter Kit." tip="TiddlyWiki"/>
 <$vue-random-cards />
 
 {{tagpie}}
