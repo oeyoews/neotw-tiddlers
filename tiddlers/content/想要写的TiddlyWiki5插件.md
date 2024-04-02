@@ -1,5 +1,3 @@
-<$vue-gemini />
-
 :::warning
 不再更新
 :::
@@ -34,7 +32,7 @@
 - [ ] grayscale page plugin
 - [ ] 可拖动 tiddler, 调整顺序
 - [ ] 全文输出 Rss 插件
-- [ ] 全文搜索插件 
+- [ ] 全文搜索插件
 - [x] 日间模式插件
 - [ ] Tiddlywiki LSP
 - [ ] 插件更新提示插件
@@ -63,7 +61,7 @@
 - [ ] 启动时使用别的 layout, 切换到主 layout 后 topbar 消失
 - [ ] 某些 widget 的条目出现在故事河如果刷新，widget 会渲染两次
 - [ ] filter 在页面滚动时会进行刷新
-```plain 
+```plain
 <!-- tags: $:/tags/Macro -->
 
 <!-- This macro will cause twice refresh -->
