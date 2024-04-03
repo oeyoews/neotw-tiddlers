@@ -1,11 +1,9 @@
 {
     "history": [
-        "Print",
-        "Edit Tiddler",
-        "Delete Tiddler",
         "Explorer",
+        "New Command Wizard",
+        "New Tiddler with title",
         "See Drafts",
-        "Clone Tiddler",
         "Refresh Server",
         "Permaview",
         "See Themes",
@@ -14,22 +12,12 @@
         "See Orphans Tiddlers",
         "Remove tag",
         "Add tag to tiddler",
-        "Close Tiddler",
-        "Recent Tiddlers",
         "Show CommandTiddlers",
         "See untagged Tiddlers",
         "See Languages",
-        "New Command Wizard",
-        "Cancel Tiddler",
-        "Save Tiddler",
-        "Close other Tiddlers",
-        "Permalink",
         "Unfold All Tiddlers",
         "Fold All Tiddlers",
-        "Close All Tiddlers",
         "Save Wiki",
-        "Home",
-        "Toggle Fullscreen",
-        "New Tiddler"
+        "Toggle Fullscreen"
     ]
 }

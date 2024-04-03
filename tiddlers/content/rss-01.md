@@ -1,1 +1,0 @@
-<$vue-rss rss="https://feeds.buzzsprout.com/2302487.rss"/>
