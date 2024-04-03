@@ -1,5 +1,5 @@
 description: position class
-draggable: yes
+draggable: no
 position: top-0
 title: $:/plugins/oeyoews/vue-tabs/config
 type: text/vnd.tiddlywiki
