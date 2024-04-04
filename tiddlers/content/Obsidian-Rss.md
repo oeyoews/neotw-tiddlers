@@ -1,1 +1,0 @@
-<$vue-rss rss="https://forum-zh.obsidian.md/latest.rss"/>
