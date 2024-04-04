@@ -16,7 +16,7 @@ GET /tiddlywiki.png
   exports.path = /^\/tiddlywiki.png$/;
 
   exports.handler = function (request, response, state) {
-    const data = state.wiki.getTiddlerText("$:/tiddlywiki.png");
+    const data = state.wiki.getTiddlerText("$:/tw256.png");
     state.sendResponse(200, { "Content-Type": "image/png" }, data, "base64");
   };
 })();
