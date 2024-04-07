@@ -1,0 +1,1 @@
+vscode extension 似乎不支持设置svg 图标
