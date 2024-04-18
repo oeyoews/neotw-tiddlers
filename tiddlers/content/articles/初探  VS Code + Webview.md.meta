@@ -1,0 +1,10 @@
+created: 20240406162140000
+creator: oeyoews
+modified: 20240412085007791
+modifier: oeyoews
+publish: article
+summary: Webview 是一种技术，可让开发者在 VS Code 中嵌入 Web 内容。它允许在插件中创建交互式 HTML 页面，以增强开发效率和用户体验。通过 Webview，开发者可以利用其 Web 技能来构建 VS Code 插件。
+tags: 剪藏
+title: 初探  VS Code + Webview
+type: text/markdown
+url: https://zhuanlan.zhihu.com/p/624776101

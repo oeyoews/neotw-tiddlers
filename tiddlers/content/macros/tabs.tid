@@ -1,0 +1,69 @@
+created: 20240413045942051
+creator: oeyoews
+description: copyed from xp, not support markdown text
+modified: 20240413050422742
+modifier: oeyoews
+tags: $:/tags/Global
+title: macros/tabs
+type: text/vnd.tiddlywiki
+
+\procedure stack(number,state:"stack",1,11,2,22,3,33,4,44,5,55,6,66)
+\whitespace trim
+\function id() [<currentTiddler>get[created]]
+\function stateTitle() [[$:/temp/stack/]addsuffix<id>addsuffix[/]addsuffix<state>]
+\function stateCode() [<stateTitle>get[text]] ~1
+
+\procedure show-radio()
+\whitespace notrim
+<div class="xp-stack-radio">
+<$tiddler tiddler=<<stateTitle>>>
+<$list filter='[range<number>]' variable=num>
+<$radio value=<<num>> default=1> <$text text={{{ [<num>getvariable[]] }}}/></$radio>
+</$list>
+</$tiddler>
+</div>
+\end show-radio
+
+\procedure show-btn()
+<div class="xp-stack-tabs">
+<$list filter='[range<number>]' variable=num>
+<$button class={{{ xp-stack-btn [<num>match<stateCode>then[xp-stack-selected-btn]] +[join[ ]] }}}>
+<$text text={{{ [<num>getvariable[]] }}}/>
+<$action-setfield $tiddler=<<stateTitle>> text=<<num>>/>
+</$button>
+</$list>
+</div>
+\end show-btn
+
+<div class="xp-stack">
+<!-- Title -->
+<<show-btn>>
+
+<!-- Body -->
+<% if [<stateCode>match[1]] %>
+
+<<11>>
+
+<% elseif [<stateCode>match[2]] %>
+
+<<22>>
+
+<% elseif [<stateCode>match[3]] %>
+
+<<33>>
+
+<% elseif [<stateCode>match[4]] %>
+
+<<44>>
+
+<% elseif [<stateCode>match[5]] %>
+
+<<55>>
+
+<% elseif [<stateCode>match[6]] %>
+
+<<66>>
+
+<% endif %>
+</div>
+\end stack
