@@ -1,0 +1,1 @@
+ES6 指的是 ECMAScript 6，也称为 ECMAScript 2015。它是 JavaScript 的一个版本，于 2015 年发布。ES6 引入了许多新的语言特性和语法，如箭头函数、类、模块化、解构赋值、扩展运算符等，丰富了 JavaScript 的功能和表达能力。
