@@ -4,7 +4,7 @@ created: 20240207021107145
 creator: oeyoews
 description: {{$:/language/codemirror6/wordCount/description}}
 description-zh: {{$:/language/codemirror6/zh/wordCount/description}}
-modified: 20240207113834517
+modified: 20240610050226626
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/wordCount
