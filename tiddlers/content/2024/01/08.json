@@ -1,0 +1,13 @@
+[
+    {
+        "title": "2024/01/08",
+        "text": ":::note\n* 太微 的中文论坛的搜索几乎是不能用的\n* GitHub 的codespace 不会自动关闭\n:::\n\nGitHub 的codespace 居然还支持dotfiles https://docs.github.com/en/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account#dotfiles\n\n* 原来chrome devtools 用的也是codemirror, 不过是5.67\n\ngit rebase 和 merge 相比的话类似 被动句和主动句之间的关系.",
+        "type": "text/markdown",
+        "created": "20240108072037914",
+        "creator": "oeyoews",
+        "modified": "20240108145533360",
+        "modifier": "oeyoews",
+        "tags": "Journal",
+        "quote": "\"为什么电脑永远不会感冒？因为它们都有Windows(窗户)关着！\"\n\n或者\n\n\"为什么书本总是很悲观？因为他们总是看到自己的结局。\"\n\n或者\n\n\"为什么鸟儿不会利用手机？因为他们已经有了一种可以随意拨号的能力！\""
+    }
+]

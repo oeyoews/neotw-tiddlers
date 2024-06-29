@@ -1,0 +1,13 @@
+[
+    {
+        "title": "2024/01/03",
+        "text": "* pnpm-workspace 的 package 写成了 pakcage, 一直导致ci失败, 但是本地居然没有提示(我在package.json 里面也加了 workspace 字段), 可能是 处理不一致.\n* 浏览器的性能分析确实不错",
+        "type": "text/markdown",
+        "created": "20240102183931130",
+        "creator": "oeyoews",
+        "modified": "20240103120852361",
+        "modifier": "oeyoews",
+        "tags": "Journal",
+        "quote": "\"早起的鸟儿有虫吃，但二愣子鸟儿才一大早去努力找虫子，聪明的鸟儿睡到中午，等人把面包屑撒在公园里。所以，有时候，懒惰也是一种智慧，只要你能让人或自然为你工作。\" \n\n这句既包含智慧和观察，又带有幽默感，希望它能给你的日常生活带来一丝乐趣。"
+    }
+]
