@@ -1,0 +1,10 @@
+{
+    "tiddlers": {
+        "$:/plugins/TWaddle/pluginsize/stylesheet": {
+            "text": "\\define pluginsize() a.tc-plugin-info[href=\"<<href>>\"]:after {content:\"$(size)$ kb = $(relToCore)$%\"}\n\n<pre>a.tc-plugin-info:after {\n\tfont-family: \"Roboto\", sans-serif;\n\tfont-size:.8rem;\n\twhite-space:nowrap;\n}\na[href=\"#%24%3A%2Fcore\"].tc-plugin-info:after {\n\toutline:1px solid <<colour muted-foreground>>;\n\tpadding: 0 5px;\n}\n<$let coresize={{{ [[$:/core]get[text]length[]] }}}>\n<$list filter=\"plugin theme language\" >\n<$list filter=\"[plugin-type<currentTiddler>!is[draft]]\" variable=plugin>\n<$let\n\thref={{{ [<plugin>encodeuricomponent[]addprefix[#]] }}}\n\tsize={{{ [<plugin>get[text]length[]divide[1000]round[]] }}}\n\trelToCore={{{ [<plugin>get[text]length[]] \n\t\t+[divide<coresize>multiply[100]fixed[0]] }}}\n><<pluginsize>>\n</$let></$list></$list></$let>\n</pre>",
+            "title": "$:/plugins/TWaddle/pluginsize/stylesheet",
+            "tags": "$:/tags/Stylesheet",
+            "type": "text/vnd.tiddlywiki"
+        }
+    }
+}

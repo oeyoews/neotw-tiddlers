@@ -1,0 +1,12 @@
+author: Mat von TWaddle
+created: 20240708082109683
+creator: MatVonTWaddle
+description: Shows plugin size and size relative to $:/core
+modified: 20240708141019726
+modifier: MatVonTWaddle
+name: Plugin size
+plugin-type: plugin
+source: https://pluginsize.tiddlyhost.com/
+title: $:/plugins/TWaddle/pluginsize
+type: application/json
+version: 1.0.0
