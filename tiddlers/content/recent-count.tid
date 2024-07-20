@@ -1,6 +1,6 @@
 created: 20230207171612917
 creator: oeyoews
-modified: 20240320104818970
+modified: 20240720033733978
 modifier: oeyoews
 tags: 
 title: recent-count
@@ -40,6 +40,6 @@ modified <$view field="modified" format="relativedate" />
 </$list>
 \end
 
-<div class="columns-1 md:columns-2 md:py-8">
+<div class="columns-1 md:py-8">
 	<<timeline>>
 </div>
