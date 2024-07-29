@@ -1,3 +1,10 @@
+```ts
+// for object, 希望同时有类型， 又有keyof 提取
+function defineConfig<T extends Object, K extends keyof T>(config: Record<K, ITiddlerConfig>) {
+  return config;
+}
+```
+
 本文处理下面这个 TypeScript 开发场景：
 
 > 有一个配置（configs）数组，数组中每一项都是一个对象，我希望定义一个 Type，是由数组中的每个对象中的某个属性值组成的联合类型（union type）。
