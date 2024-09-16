@@ -3,16 +3,76 @@
         "name": "todo",
         "items": [
             {
+                "name": "存储启动次数",
+                "id": 1726389499493,
+                "description": ""
+            },
+            {
+                "name": "优化ui",
+                "id": 1726327782617
+            },
+            {
+                "name": "优化卡片padding",
+                "id": 1726327768225
+            },
+            {
+                "name": "支持选择存储方式， localstorage 或者tiddlywiki",
+                "id": 1722653118174,
+                "description": "有些数据仅仅是临时的无需保存到tw\n"
+            },
+            {
+                "name": "添加tskpl 使用文档",
+                "id": 1725769788274,
+                "description": ""
+            },
+            {
+                "name": "写一个实用方法库",
+                "id": 1722560961523,
+                "description": ""
+            },
+            {
+                "name": "添加详情查看",
+                "id": 1722559448914,
+                "description": "for better UX"
+            },
+            {
+                "name": "support element darkmode with tiddlywiki",
+                "id": 1722496953892,
+                "description": "\n"
+            },
+            {
+                "name": "支持切换board",
+                "id": 1722499323930,
+                "description": "用于管理多个project"
+            },
+            {
+                "name": "添加refresh 方法",
+                "id": 1722511706620,
+                "description": "用于更新数据"
+            },
+            {
                 "name": "插件： 写一个 layout 切换 插件",
-                "id": 1722490880540
+                "id": 1722490880540,
+                "description": ""
+            },
+            {
+                "name": "添加清空方法",
+                "id": 1722511720386,
+                "description": "清空全部"
             },
             {
                 "name": "支持搜索",
                 "id": 1722467121958
             },
             {
+                "name": "支持新增list",
+                "id": 1722499300976,
+                "description": ""
+            },
+            {
                 "name": "虚拟滚动， 懒加载（或者分页）with ElementUI",
-                "id": 1722467117148
+                "id": 1722467117148,
+                "description": "\n"
             },
             {
                 "name": "添加配置选项",

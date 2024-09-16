@@ -1,0 +1,25 @@
+created: 20200424192751342
+creator: oeyoews
+modified: 20240802011023818
+modifier: oeyoews
+tags: 
+title: $:/plugins/nico/projectify/ui/dashboard/Dashboard
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/projectify/
+
+<$vue-kanban />
+
+<$macrocall
+  $name="tabs"
+  tabsList="[all[tiddlers+shadows]tag[$:/plugins/nico/projectify/tags/dashboard]]"
+  default={{$:/config/projectify/DefaultDashboardTab}}
+  state="$:/state/projects-and-schedule"
+  class="py-tabs"
+/>
+
+<div class="py-right-aligned">
+  <$link to="$:/plugins/nico/projectify/doc/Help">
+    {{$:/plugins/nico/projectify/images/info}} <<lingo Help>>
+  </$link>
+</div>
