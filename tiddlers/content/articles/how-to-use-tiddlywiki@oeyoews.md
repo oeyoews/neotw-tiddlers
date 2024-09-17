@@ -1,11 +1,11 @@
 :::abstract
-🛤️ 不同群体，不同背景，不同需求..., 注定了笔记软件的选择和使用是多样化的，也注定会有观点的争论不休 ... (更新中)
+~~🛤️ 不同群体，不同背景，不同需求..., 注定了笔记软件的选择和使用是多样化的，也注定会有观点的争论不休 ... (更新中)~~
 :::
 
 
 * __操作系统__:  <$iconify icon="logos:linux-tux" /> + <$iconify icon="devicon:windows11-wordmark" />
 
-* __启动方式__: <$iconify icon="logos:pm2" /> + <$iconify icon="logos:nodejs" /> + <$iconify icon="logos:docker" />
+* __启动方式__: <$iconify icon="logos:pm2" /> + <$iconify icon="logos:nodejs" /> + ~~<$iconify icon="logos:docker" />~~
 
 
 ## 如何记录并管理笔记的 ?
