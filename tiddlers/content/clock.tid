@@ -1,13 +1,13 @@
 created: 20231012055329001
 creator: oeyoews
-modified: 20240126092604135
+modified: 20240917113151185
 modifier: oeyoews
 tags: 
 title: clock
 type: text/vnd.tiddlywiki
 
 <% if [{$:/info/url/protocol}match[http:]] %>
-<div class="fixed -top-12 -right-8 -z-10 hidden lg:block">
-	<$echarts $tiddler="addon/clock.js" $width="250px" />
+<div class="fixed -top-12 -right-4 -z-10 hidden lg:block">
+	<$echarts $tiddler="addon/clock.js" $width="230px" />
 </div>
 <% endif %>

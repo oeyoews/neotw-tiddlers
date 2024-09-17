@@ -1,3 +1,6 @@
 safari 总是会有很多奇怪的问题，样式兼容是最大的问题，明明在模拟器里面很正常，真机就出幺蛾子 (:cry:)
 
 > 关键是还不知道怎么调试真机，放弃了移动端了
+
+* inset-0: ios 14 not support
+* aspect-radio: ios 14 not support
