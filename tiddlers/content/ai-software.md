@@ -1,5 +1,0 @@
-* chatgpt
-* bard
-* claude
-
-* poe 
