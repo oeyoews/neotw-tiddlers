@@ -81,7 +81,7 @@ let { username } = route.query;
 
 在定义路由的时候，不定义参数匹配字段，而是像 普通固定路由那样定义路由：
 
-```
+```js
 const routes = [
   // User 是一个 vue 组件
   { 
@@ -94,7 +94,7 @@ const routes = [
 
 路由跳转时依然正常的使用 params 字段传参数：
 
-```
+```js
 router.push({
   name:'UserHomePage',
   params: { username:"zhangsan" }

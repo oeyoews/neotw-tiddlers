@@ -1,7 +1,8 @@
 created: 20240810101817000
 creator: oeyoews
-modified: 20240810101817000
-tags: 剪藏
-title: blog [ YOG WANG ]
+modified: 20240918133658215
+modifier: oeyoews
+tags: 剪藏 Vue
+title: 组件复用debounce问题
 type: text/markdown
 url: https://yogwang.site/2022/vue-reused-components-debounce-problem/
