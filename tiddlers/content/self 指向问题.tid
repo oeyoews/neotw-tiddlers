@@ -1,9 +1,9 @@
 created: 20230526045729546
 creator: oeyoews
-modified: 20230526045739274
+modified: 20240919005838739
 modifier: oeyoews
-tags: NodeJs
-title: self
+tags: JavaScript
+title: self 指向问题
 type: text/vnd.tiddlywiki
 
 在 JavaScript 中，`self` 是一个全局对象，它引用了当前窗口或全局范围内的对象。在浏览器中，`self` 指向 `window` 对象。在 Node.js 环境中，`self` 指向 `global` 对象。
@@ -12,7 +12,7 @@ type: text/vnd.tiddlywiki
 
 以下是一个在浏览器环境中使用 `self` 的示例代码：
 
-```
+```js
 self.addEventListener('message', function(event) {
   console.log('Received message:', event.data);
   self.postMessage('Hello from the worker');
@@ -27,7 +27,7 @@ self.addEventListener('message', function(event) {
 
 以下是一个在 Node.js 环境中使用 `self` 的示例代码：
 
-```
+```js
 self.setTimeout(function() {
   console.log('Hello from the worker');
 }, 1000);

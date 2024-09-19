@@ -1,13 +1,3 @@
-最新推荐文章于 2024-05-31 19:50:46 发布
-
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/original.png)
-
-[想上天的小鱼](https://blog.csdn.net/weixin_38629529 "想上天的小鱼") ![](https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png) 于 2021-09-19 16:13:02 发布
-
-版权声明：本文为博主原创文章，遵循[ CC 4.0 BY-SA ](http://creativecommons.org/licenses/by-sa/4.0/)版权协议，转载请附上原文出处链接和本声明。
-
-说来惭愧，最近刚犯错这个错误。为避免再犯，还是记录一下吧。
-
 在出现 z-index 设置不起作用，没有效果的情况下，我们首先检查 z-index 设置的元素是否存在以下两种状况：
 
 1. 该元素是否设置了定位

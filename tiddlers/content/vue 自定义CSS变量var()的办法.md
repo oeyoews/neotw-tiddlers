@@ -1,27 +1,3 @@
-#### []()文章目录
-
-* [一、参考](#_2)
-
-* [二、问题描述](#_7)
-
-* [三、第一个方案 —— 动态 style 标签](#_style__17)
-
-* * [第一个例子](#_20)
-  * [第二个例子](#_56)
-
-* [四、第二个方案 ——CSS 变量](#CSS__104)
-
-* * [4.1 快速入门 CSS 变量 ，var () 函数](#41__CSS__var__107)
-  * [4.2 快速入门案例](#42__119)
-  * [4.3 Vue 修改 CSS 变量案例](#43_Vue_CSS_210)
-
-* [五、总结](#_254)
-
-## []()[]()一、参考
-
-1. [js 修改 style 样式\_Vue 动态样式黑魔法（超实用）](https://blog.csdn.net/weixin_39927993/article/details/110470333)
-2. [CSS 变量教程 阮一峰](https://www.ruanyifeng.com/blog/2017/05/css-variables.html)
-
 ## []()[]()二、问题描述
 
 工作中使用 [elementUI](https://so.csdn.net/so/search?q=elementUI\&spm=1001.2101.3001.7020) 的 scrollbar 组件，例如 `<el-scrollbar wrap-class="demo-scrollbar-wrap-2">`，只能让 `wrap-class`设置具体的类名，**当浏览器窗口发生变化的时候，类名没有改变，则对应的样式也没有改变，导致 scroll 无法做到 “自适应窗口变化” 的效果**
@@ -37,7 +13,7 @@
 
 ### []()[]()第一个例子
 
-```
+```vue
 <template>
   <div>
     <component is="style">
@@ -70,45 +46,12 @@ export default {
   }
 }
 </script>
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
 ```
+
 
 ### []()[]()第二个例子
 
-```
+```vue
 <div id="app">
   <v-style>
     .{{ className }} {
@@ -153,52 +96,6 @@ export default {
     }
 }
 </script>
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
 ```
 
 ## []()[]()四、第二个方案 ——CSS 变量
@@ -221,7 +118,7 @@ export default {
 
 1. 如何定义全局变量和局部变量
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -270,212 +167,6 @@ export default {
 </html>
 
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-```
-
-2. 如何通过修改样式变量改变样式
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>菜鸟教程(runoob.com)</title>
-    <style>
-      :root {
-        --color: green;
-      }
-      .box {
-        --color: yellow;
-      }
-      #box {
-        --color: orange;
-      }
-      * {
-        color: var(--color);
-      }
-    </style>
-  </head>
-  <body>
-    <span>我是绿色，继承根元素</span>
-    <div class="box">我是黄色，通过类设置的</div>
-    <div id="box">
-      我是橙色，通过ID设置的（权重最大）
-      <button onclick="changeBg()">改变背景为蓝色</button>
-    </div>
-  </body>
-  <script>
-    function changeBg() {
-      document.getElementById("box").style = "--color: blue;"
-    }
-  </script>
-</html>
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-```
-
-### []()[]()4.3 Vue 修改 CSS 变量案例
-
-```
-<template>
-    <div class="test">
-        <span :style="spanStyle" class="span1">hello world</span>
-        <br>
-        <span :style="{'--width': widthVar}" class="span2">hello earth</span>
-    </div>
-</template>
-<script>
-export default {
-    data() {
-        return {
-            spanStyle: {
-                "--color": "red"
-            },
-            widthVar: "100px"
-        };
-    }
-}
-</script>
-<style scoped>
-    .span1 {
-        color: var(--color);
-    }
-    .span2 {
-        text-align: center;
-        position: relative;
-        width: var(--width);
-    }
-    .span2::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%; 
-        width: var(--width);
-        height: var(--width);
-        border-radius: 50%;
-        border: 2px solid black;      
-    }
-</style>
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
 ```
 
 ## []()[]()五、总结
