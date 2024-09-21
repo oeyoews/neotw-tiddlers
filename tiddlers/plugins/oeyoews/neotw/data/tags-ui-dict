@@ -1,3 +1,9 @@
+git: rose
+Neovim: green
+done: cyan
+电视剧: emerald
+CSS: teal
+百科: stone
 Private: orange
 Inbox: violet
 Bug: red
@@ -17,3 +23,4 @@ Journal: indigo
 TiddlyWiki: slate
 Books: green
 Nextjs: amber
+📥 Inbox: zinc
