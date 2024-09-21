@@ -3,6 +3,11 @@
         "name": "todo",
         "items": [
             {
+                "name": "cm6 切换类型没有刷新",
+                "id": 1726885586500,
+                "description": ""
+            },
+            {
                 "name": "vue hightlightjs ",
                 "id": 1726707364496,
                 "description": "https://github.com/highlightjs/vue-plugin\n"

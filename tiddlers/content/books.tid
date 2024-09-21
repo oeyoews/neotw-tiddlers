@@ -1,14 +1,14 @@
 created: 20230614013327497
 creator: oeyoews
 icon: private.png
-modified: 20231105101930734
+modified: 20240921040309602
 modifier: oeyoews
 page-icon: fluent-emoji:card-index-dividers
-tags:
-title: books
+tags: 
+title: Books
 type: text/vnd.tiddlywiki
 
-<$echarts $tiddler="addon/tagpie.js" filter="[tag[books]]"/>
+<$echarts $tiddler="addon/tagpie.js" filter="[tag[Books]]"/>
 
-<$cards filter='[tag[books]!sort[modified]]' standard=false cols=5/>
+<$cards filter='[tag[Books]!sort[modified]]' standard=false cols=5/>
 

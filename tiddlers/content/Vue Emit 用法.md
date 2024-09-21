@@ -27,16 +27,11 @@
     Add Math.random()
   </button>
 </template>
-1.
-2.
-3.
-4.
-5.
 ```
 
 在 \*\* Parent.vue \*\* 中监听：
 
-```
+```vue
 <script setup>
 import { ref } from 'vue'
 const count = ref(0)
@@ -47,16 +42,6 @@ const count = ref(0)
   <ChildComponent @add="(i) => count += i" /> 
   <p>Count: {{ count }}</p>
 </template>
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
 ```
 
 ![图片](https://s3.51cto.com/oss/202207/13/c83f0f6675bf9bbb03c3656b051f207a3bf3e5.gif "图片")
@@ -90,7 +75,7 @@ const count = ref(0)
 
 **MyTextInput.vue**
 
-```
+```vue
 <script>
   export default {
       methods: {
@@ -107,27 +92,11 @@ const count = ref(0)
     <input type="text" placeholder="Custom input!" @input="handleChange" />
   </div>
 </template>
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
 ```
 
 在 Parent.vue 中接收：
 
-```
+```vue
 <script>
   export default {
       methods: {
@@ -144,22 +113,6 @@ const count = ref(0)
     <input type="text" placeholder="Custom input!" @input="handleChange" />
   </div>
 </template>
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
 ```
 
 #### 带有 setup ()​的组合 API - context.emit
@@ -170,7 +123,7 @@ const count = ref(0)
 
 **MyTextInput.vue**
 
-```
+```vue
 <script>
   export default {
     // can use the entire context object
@@ -200,35 +153,6 @@ const count = ref(0)
     <input type="text" placeholder="Custom input!" @input="handleChange" />
   </div>
 </template>
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-20.
-21.
-22.
-23.
-24.
-25.
-26.
-27.
-28.
-29.
 ```
 
 ![图片](https://s2.51cto.com/oss/202207/13/d41dfbf68a8d24c4caf9009e7a5533a0e4386c.gif "图片")
@@ -274,7 +198,7 @@ const handleChange = (event) => {
 
 **MyTextInput.vue**
 
-```
+```vue
 <script setup>
 const emit = defineEmits({
   unvalidatedEvent: null, // if we want an event without validation

@@ -1,0 +1,1 @@
+vue setup cdn not support ref domnode usage

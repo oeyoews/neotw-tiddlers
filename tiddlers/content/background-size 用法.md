@@ -1,11 +1,3 @@
-最新推荐文章于 2024-07-03 09:29:05 发布
-
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/original.png)
-
-[Casanover](https://blog.csdn.net/wzj2584454 "Casanover") ![](https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png) 于 2017-09-26 16:19:15 发布
-
-版权声明：本文为博主原创文章，遵循[ CC 4.0 BY-SA ](http://creativecommons.org/licenses/by-sa/4.0/)版权协议，转载请附上原文出处链接和本声明。
-
 background-size 中，100% 和 cover 都是用于将图片扩大或者缩放来适应整个容器
 
 background-size：100% 100%;--- 按容器比例撑满，图片变形；
