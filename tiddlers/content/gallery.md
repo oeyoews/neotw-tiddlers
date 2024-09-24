@@ -1,1 +1,3 @@
 <$gallery />
+
+[[image-list.json]]

@@ -1,7 +1,7 @@
 [
     {
         "created": "20241201110000000",
-        "text": "{\"tiddlers\":{\"$:/plugins/oeyoews/tiddlywiki-snippets/generat/toc01\":{\"title\":\"$:/plugins/oeyoews/tiddlywiki-snippets/generat/toc01\",\"caption\":\"toc01\",\"tags\":\"$:/tags/TextEditor/Snippet\",\"text\":\"<div class=\\\"tc-table-of-contents\\\">\\n<<toc \\\"${1:tag}\\\">>${2}\\n</div>\"}}}",
+        "text": "{\"tiddlers\":{\"$:/plugins/oeyoews/tiddlywiki-snippets/general/toc01\":{\"title\":\"$:/plugins/oeyoews/tiddlywiki-snippets/general/toc01\",\"caption\":\"toc01\",\"tags\":\"$:/tags/TextEditor/Snippet\",\"render\":\"false\",\"text\":\"<div class=\\\"tc-table-of-contents\\\">\\n<<toc \\\"${1:tag}\\\">>${2}\\n</div>\"}}}",
         "title": "$:/plugins/oeyoews/tiddlywiki-snippets",
         "type": "application/json",
         "author": "oeyoews",
@@ -14,6 +14,6 @@
         "plugin-type": "plugin",
         "qrcode": "yes",
         "version": "0.0.1",
-        "Modern.TiddlyDev#SHA256-Hashed": "b2fb8fa0888babdcc4800825ff419e8ad209340ad460a1573fed80915aa6069e"
+        "Modern.TiddlyDev#SHA256-Hashed": "1034c68ce9d4baac9c83a8dc254cbde35f2a817841f239b8ba74ed7d8f2eb791"
     }
 ]
