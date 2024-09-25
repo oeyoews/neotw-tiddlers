@@ -1,0 +1,12 @@
+caption: add new macro
+created: 20240925035451923
+creator: oeyoews
+modified: 20240925035600820
+modifier: oeyoews
+tags: 
+title: $:/snippets/new-macro
+type: text/vnd.tiddlywiki
+
+\procedure my-procedure(parameter:"${value}")
+这是进程，参数是 <<parameter>>。
+\end
