@@ -1,10 +1,10 @@
 caption: {{$:/language/codemirror6/insertModeFirst/caption}}
 caption-zh: {{$:/language/codemirror6/zh/insertModeFirst/caption}}
-created: 20240916045752546
+created: 20240925134823574
 creator: oeyoews
 description: {{$:/language/codemirror6/insertModeFirst/description}}
 description-zh: {{$:/language/codemirror6/zh/insertModeFirst/description}}
-modified: 20240916045752546
+modified: 20240925134823574
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/insertModeFirst

@@ -1,0 +1,13 @@
+caption: {{$:/language/codemirror6/checkbox/caption}}
+caption-zh: {{$:/language/codemirror6/zh/checkbox/caption}}
+created: 20240925134646370
+creator: oeyoews
+description: {{$:/language/codemirror6/checkbox/description}}
+description-zh: {{$:/language/codemirror6/zh/checkbox/description}}
+modified: 20240925134646370
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/checkbox
+type: text/vnd.tiddlywiki
+
+yes

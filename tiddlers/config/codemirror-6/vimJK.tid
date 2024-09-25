@@ -1,10 +1,10 @@
 caption: {{$:/language/codemirror6/vimJK/caption}}
 caption-zh: {{$:/language/codemirror6/zh/vimJK/caption}}
-created: 20240118171121050
+created: 20240925134533734
 creator: oeyoews
 description: {{$:/language/codemirror6/vimJK/description}}
 description-zh: {{$:/language/codemirror6/zh/vimJK/description}}
-modified: 20240118171121050
+modified: 20240925134533735
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
 title: $:/config/codemirror-6/vimJK

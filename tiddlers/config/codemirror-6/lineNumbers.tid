@@ -1,0 +1,13 @@
+caption: {{$:/language/codemirror6/lineNumbers/caption}}
+caption-zh: {{$:/language/codemirror6/zh/lineNumbers/caption}}
+created: 20240925134740390
+creator: oeyoews
+description: {{$:/language/codemirror6/lineNumbers/description}}
+description-zh: {{$:/language/codemirror6/zh/lineNumbers/description}}
+modified: 20240925134740390
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/lineNumbers
+type: text/vnd.tiddlywiki
+
+yes
