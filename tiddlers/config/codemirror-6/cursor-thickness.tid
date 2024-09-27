@@ -4,10 +4,10 @@ created: 20240925134621168
 creator: oeyoews
 description: {{$:/language/codemirror6/cursor-thickness/description}}
 description-zh: {{$:/language/codemirror6/zh/cursor-thickness/description}}
-modified: 20240925134624186
+modified: 20240927131815050
 modifier: oeyoews
 settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
 title: $:/config/codemirror-6/cursor-thickness
 type: text/vnd.tiddlywiki
 
-3px
+3.5px
