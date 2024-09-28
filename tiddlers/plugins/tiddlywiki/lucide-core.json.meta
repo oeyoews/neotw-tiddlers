@@ -1,0 +1,10 @@
+author: pmario
+dependents: 
+description: Lucide Icon Library
+list: readme license
+name: Lucide Core
+plugin-type: plugin
+stability: STABILITY_1_EXPERIMENTAL
+title: $:/plugins/tiddlywiki/lucide-core
+type: application/json
+version: v5.3.5-beta-002
