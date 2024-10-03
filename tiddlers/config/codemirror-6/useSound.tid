@@ -1,0 +1,13 @@
+caption: {{$:/language/codemirror6/useSound/caption}}
+caption-zh: {{$:/language/codemirror6/zh/useSound/caption}}
+created: 20241001060642762
+creator: oeyoews
+description: {{$:/language/codemirror6/useSound/description}}
+description-zh: {{$:/language/codemirror6/zh/useSound/description}}
+modified: 20241002021348130
+modifier: oeyoews
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/useSound
+type: text/vnd.tiddlywiki
+
+yes
