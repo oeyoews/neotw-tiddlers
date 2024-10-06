@@ -1,0 +1,17 @@
+caption: {{$:/language/codemirror6/keymap/caption}}
+caption-zh: {{$:/language/codemirror6/zh/keymap/caption}}
+created: 20241006134551161
+creator: oeyoews
+description: {{$:/language/codemirror6/keymap/description}}
+description-zh: {{$:/language/codemirror6/zh/keymap/description}}
+id: 6
+modified: 20241006134551161
+modifier: oeyoews
+option-names: standard vim
+option-values: standard vim
+settings-group: keymap
+settings-template: select
+title: $:/config/codemirror-6/keymap
+type: text/vnd.tiddlywiki
+
+vim
