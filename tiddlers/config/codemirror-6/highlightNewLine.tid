@@ -1,0 +1,15 @@
+caption: {{$:/language/codemirror6/highlightNewLine/caption}}
+caption-zh: {{$:/language/codemirror6/zh/highlightNewLine/caption}}
+created: 20241008053209244
+creator: oeyoews
+description: {{$:/language/codemirror6/highlightNewLine/description}}
+description-zh: {{$:/language/codemirror6/zh/highlightNewLine/description}}
+id: 18
+modified: 20241008053209244
+modifier: oeyoews
+settings-group: general
+settings-template: input-switch
+title: $:/config/codemirror-6/highlightNewLine
+type: text/vnd.tiddlywiki
+
+yes

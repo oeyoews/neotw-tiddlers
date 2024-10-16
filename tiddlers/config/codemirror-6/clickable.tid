@@ -1,0 +1,15 @@
+caption: {{$:/language/codemirror6/clickable/caption}}
+caption-zh: {{$:/language/codemirror6/zh/clickable/caption}}
+created: 20241007102855591
+creator: oeyoews
+description: {{$:/language/codemirror6/clickable/description}}
+description-zh: {{$:/language/codemirror6/zh/clickable/description}}
+id: 22
+modified: 20241007102855591
+modifier: oeyoews
+settings-group: general
+settings-template: input-switch
+title: $:/config/codemirror-6/clickable
+type: text/vnd.tiddlywiki
+
+yes
