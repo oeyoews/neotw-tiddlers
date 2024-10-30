@@ -10,6 +10,8 @@
 ## TODO
 
 :::todo
+- [ ] 图片上传插件： smms, or github, gitlab
+- [ ]  图片复制： 支持重命名， 多文件， 预览
 - [ ] support `tiddlywiki --init oeyoews`
 - [ ] add dplayer(很少用到，目前不做)
 - [ ] 构建输出的时候如果有大文件图片，就输出警告
@@ -20,19 +22,19 @@
 - [ ] 使用单独布局，https://github.com/casualwriter/vanilla- [x] chatgpt 模仿官网 ui
 - [ ] https://tiddlywiki.com/editions/translators/
 - [ ] tm-modal to write tiddler link notion
-- [ ] 盘古插件 neotw-pangu: 格式化文本，符合基本中文习惯，空格空行逗号处理
+- [x] 盘古插件 neotw-pangu: 格式化文本，符合基本中文习惯，空格空行逗号处理
 - [ ] 文章标题支持 fold
 - [ ] autolist plugin
 - [ ] 浮动目录 (markdown)
 - [ ] 所见即所得 (个人并不是其爱好者，更喜欢所写即所见)
 - [ ] 双链插件 链出/入 icon
-- [ ] 看板插件
+- [x] 看板插件
 - [ ] 整屏滑动页面
-- [ ] 结合 motion 插件和 commandpalette 插件
+- [x] 结合 motion 插件和 commandpalette 插件
 - [ ] grayscale page plugin
 - [ ] 可拖动 tiddler, 调整顺序
 - [ ] 全文输出 Rss 插件
-- [ ] 全文搜索插件
+- [x] 全文搜索插件
 - [x] 日间模式插件
 - [ ] Tiddlywiki LSP
 - [ ] 插件更新提示插件

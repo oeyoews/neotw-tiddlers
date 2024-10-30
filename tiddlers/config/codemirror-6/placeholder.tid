@@ -1,0 +1,15 @@
+caption: {{$:/language/codemirror6/placeholder/caption}}
+caption-zh: {{$:/language/codemirror6/zh/placeholder/caption}}
+created: 20241024134624659
+creator: oeyoews
+description: {{$:/language/codemirror6/placeholder/description}}
+description-zh: {{$:/language/codemirror6/zh/placeholder/description}}
+id: 25
+modified: 20241024134630552
+modifier: oeyoews
+settings-group: placeholder
+settings-template: input
+title: $:/config/codemirror-6/placeholder
+type: text/vnd.tiddlywiki
+
+✨ Write something ✒️ ...
