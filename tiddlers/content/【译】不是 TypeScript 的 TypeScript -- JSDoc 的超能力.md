@@ -1,19 +1,4 @@
-> 原文链接：[https://fettblog.eu/typescript-jsdoc-superpowers/](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Ffettblog.eu%2Ftypescript-jsdoc-superpowers%2F\&source=article\&objectId=1651212)undefined 作者：[@ddprrt](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Ftwitter.com%2Fddprrt\&source=article\&objectId=1651212)undefined 时间：2019.07.16
-
 我们可以把 TypeScript 看做为 JavaScript 添加了类型注释的薄层，而类型注释可以确保不会犯任何错误。TypeScript 团队也在努力确保类型检查适用于常规 JavaScript 文件。TypeScript 的编译器（tsc）以及 VSCode 等编辑器中的语言支持无需任何编译步骤，就能提供出色的开发体验。下面我们来看看如何使用。
-
-### 目录
-
-* 带有 JSDoc 注释的 TypeScript
-* 激活检查
-* 内联类型
-* 定义对象
-* 定义函数
-* 导入类型
-* 使用泛型
-* 枚举
-* typeof
-* 从类扩展
 
 #### 带有 JSDoc 注释的 TypeScript
 
@@ -331,6 +316,3 @@ class StringSet extends Set {
 
 纯 JavaScript 中增加 TypeScript 注释可以更好地维护项目。特别是在输入泛型时，TypeScript 还有一些功能，但是对于很多基本任务，你可以在不安装任何编译器情况下获得很多编辑器的能力。
 
-知道的更多？给我发一条推文。我很高兴在这里添加它们。
-
-本文参与 [腾讯云自媒体同步曝光计划](https://cloud.tencent.com/developer/support-plan)，分享自作者个人站点 / 博客。

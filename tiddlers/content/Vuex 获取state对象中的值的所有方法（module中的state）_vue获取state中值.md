@@ -1,6 +1,6 @@
-###### []()1. 直接从 store 实例取值
+## []()1. 直接从 store 实例取值
 
-```
+```js
 // main.js中，把store注册在根实例下，可使用this.$stroe.state直接取值
 export default {
   computed: {
@@ -10,19 +10,11 @@ export default {
   }
 };
 
-1
-2
-3
-4
-5
-6
-7
-8
 ```
 
-###### []()2. 使用 mapState 取值的多种方法
+## 使用 mapState 取值的多种方法
 
-```
+```js
 import { mapState } from "vuex";
 
 export default {
@@ -46,36 +38,12 @@ export default {
     ])
   }
 };
-
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
 ```
 
-###### []()3. 使用 module 中的 state
 
-```
+## 使用 module 中的 state
+
+```js
 import { mapState } from "vuex";
 
 export default {
@@ -95,22 +63,4 @@ export default {
   }
 };
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
 ```
