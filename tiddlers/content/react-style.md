@@ -1,3 +1,5 @@
+> 内联样式其实就是
+
 In React, styles=`{{}}` is a way to define inline styles for a component using JavaScript objects.
 
 The styles prop is an object that contains key-value pairs of CSS property names and their corresponding values. Each key represents a CSS property name, and each value is the value to be applied to that property. For example:
