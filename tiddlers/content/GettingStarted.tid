@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20240917112802308
+modified: 20241102080118267
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -12,7 +12,7 @@ title: GettingStarted
 type: text/vnd.tiddlywiki
 
 <!-- <$neotw-ai text="欢迎来到 TiddlyWiki Starter Kit." tip="TiddlyWiki"/> -->
-<$vue-random-cards />
+<$vue-random-cards filter="[!is[system]!prefix[$:/]!is[binary]!days[-31]]"/>
 
 {{tagpie}}
 

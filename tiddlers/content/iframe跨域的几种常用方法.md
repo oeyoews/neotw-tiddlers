@@ -1,6 +1,3 @@
-> * 苏格团队
-> * 作者：Brady
-
 ## 背景
 
 随着业务的发展，自然地会有一些公共的业务被抽离成为公共组件共各个项目使用。但是由于各个项目用到的技术栈都有所不同，所以这个公共组件就不能方便地被引用了。为解决这个问题，我们把这个组件写成了单独的页面挂到一个域名下，其他项目采用 iframe 或者 webview 的方式去加载这个页面，从而实现功能的简单复用。\
@@ -53,7 +50,7 @@ window.parent.toggleFullScreen()
 我们还可以使用一个与 a 页面同域名但不同路由的 c 页面作为中间页面，b 页面加载 c 页面，c 页面调用 a 页面的方法，从而实现 b 页面调用 a 页面的方法。具体操作如下：\
 在 a 页面的 node 层新开一个路由，此路由加载一个 c 页面作为中间页面，c 页面的 url 为 a.demo.com/c。c 页面只是一个简单的 html 页面，在 window 的 onload 事件上调用了 a 页面的方法。
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +81,7 @@ parent.postMessage(
 );
 ```
 
-```
+```html
 // a页面
 window.addEventListener("message", function( event ) {
     if (event.origin !== 'http://b.demo.com') return;
@@ -93,7 +90,3 @@ window.addEventListener("message", function( event ) {
 ```
 
 为了安全，收到信息后要检测下 event.origin 判断是否要收信息的窗口发过来的。
-
-## 总结
-
-通过以上的方法，我们就可以和 iframe 自由通信啦。

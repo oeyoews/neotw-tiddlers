@@ -16,7 +16,7 @@ pinia 是新出现的状态管理工具，相对于 vuex 更加精简： <https:
 1. pinia 合并了 mutation 和 action，包括异步
 2. 无需通过 mutation 修改 state，store.count++ 可以直接修改状态
 
-```
+```js
 // 导入pinia
 import { createPinia } from 'pinia';
 const pinia = createPinia();
@@ -24,7 +24,7 @@ let app = createApp(App);
 app.use(pinia);
 ```
 
-```
+```js
 // 正文，主模块
 import { defineStore } from 'pinia';
 const useMainStore = defineStore('main', {
@@ -67,7 +67,7 @@ const useChildStore = defineStore('child', {
 })
 ```
 
-```
+```js
 // 使用
 import { useMainStore } from '@/store';
 const store = useMainStore();
@@ -86,7 +86,7 @@ const { lang } = toRefs(store);
 1. mutations 中必须是同步函数
 2. Action 类似于 mutation，区别是 action 提交 mutation，且 action 可以异步
 
-```
+```js
 // 导入vuex
 import { createApp } from 'vue';
 import store from '@/store';
@@ -94,7 +94,7 @@ app = createApp(App);
 app.use(store);
 ```
 
-```
+```js
 // 正文
 const store = createStore({
   state: {
@@ -139,13 +139,13 @@ const childModule = createStore({
 })
 ```
 
-```
+```js
 // 使用
 import store from '@/store';
 store.commit('setLang', lang);
 ```
 
-```
+```js
 // 使用2
 import { useStore } from 'vuex';
 const store = useStore();

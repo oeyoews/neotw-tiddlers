@@ -1,1 +1,0 @@
-<https://resume.mdnice.com/>

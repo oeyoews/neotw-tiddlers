@@ -1,7 +1,8 @@
 created: 20231204125253877
 creator: oeyoews
-modified: 20231204125701013
+modified: 20241102071026605
 modifier: oeyoews
-tags:
+tags: React
 title: forwardRef
 type: text/markdown
+url: https://zh-hans.react.dev/learn/manipulating-the-dom-with-refs#accessing-another-components-dom-nodes
