@@ -6,9 +6,7 @@
 
 首先，确保在你的扩展中导入 `https` 模块：
 
-```
-javascript
-
+```avascript
 const https = require('https');
 
 function makeHttpsRequest() {
@@ -42,15 +40,7 @@ function makeHttpsRequest() {
 
 ### 2. 使用 `axios` 库：
 
-如果你更喜欢使用 `axios`，可以先将其添加到你的扩展项目中。运行以下命令来安装 `axios`：
-
-```
-```
-
-然后，你可以这样编写代码：
-
-```
-javascript
+```javascript
 
 const axios = require('axios');
 
@@ -66,10 +56,3 @@ function makeAxiosRequest() {
 ```
 
 同样，在你的 `activate` 函数中调用 `makeAxiosRequest` 即可。
-
-### 使用这些库时需要注意：
-
-* 你不需要在 VSCode 扩展中启用特殊权限来发出 HTTPS 请求，因为扩展默认是在 Node.js 环境中运行的，它支持 HTTP/HTTPS 请求。
-* 确保你的扩展在 package.json 中正确定义了依赖库（例如 `axios`）。
-
-这样，你的扩展就可以通过 HTTPS 进行网络请求了。
