@@ -1,0 +1,1 @@
+已经把meteors 集成到了好几个项目里了， 有vue, react, 也有手写的meteors 组件
