@@ -1,0 +1,15 @@
+caption: {{$:/language/codemirror6/inlineSuggestion/caption}}
+caption-zh: {{$:/language/codemirror6/zh/inlineSuggestion/caption}}
+created: 20250102053128958
+creator: oeyoews
+description: {{$:/language/codemirror6/inlineSuggestion/description}}
+description-zh: {{$:/language/codemirror6/zh/inlineSuggestion/description}}
+id: 10
+modified: 20250102053128958
+modifier: oeyoews
+settings-group: general
+settings-template: input-switch
+title: $:/config/codemirror-6/inlineSuggestion
+type: text/vnd.tiddlywiki
+
+no
