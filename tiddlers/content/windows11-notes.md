@@ -1,5 +1,5 @@
 :::tip 频繁更新的Windows11
-<iconify-icon icon="fluent:leaf-two-20-regular" style="color: #2c8d11;" />
+<iconify-icon icon="fluent:leaf-two-20-regular" style="color: #2c8d11;" /> 
 
 `Windows 更新` 致力于帮助减少碳排放。
 :::
@@ -14,6 +14,7 @@ windows11 的自带输入法词库太少了， 怪不得一直用着不舒服，
 
 ## windows software
 
+- vlc
 - gifcam, screentogif
 - lx-music-desktop netease-music 3.0+
 - cloc
