@@ -5,6 +5,7 @@ modified: 20240917124138466
 modifier: oeyoews
 name: 🤔 Thinking
 publish: article
+summary: 这篇文章主要探讨了个人如何使用和管理 Tiddlywiki 这一笔记软件，强调了其多样性与个性化需求。作者分享了自己接触 Tiddlywiki 的经历，从最初的兴趣淡薄到深入了解和实际操作，逐步转向使用 Nodejs 版本并开发插件。文中提到，虽然 Tiddlywiki 不是完美的工具，但适合不断修整以满足个人需求。作者建议，想要流畅使用该软件需要投入时间和精力，工作流的形成是一个逐步的过程。整体而言，使用 Tiddlywiki 的过程强调了自我定制和适应变化的重要性。📓💻
 tags: TiddlyWiki article
 title: how-to-use-tiddlywiki@oeyoews
 type: text/markdown

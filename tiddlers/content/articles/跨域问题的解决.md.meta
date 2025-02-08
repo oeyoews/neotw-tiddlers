@@ -1,0 +1,10 @@
+created: 20240315072859254
+creator: oeyoews
+modified: 20241102062843801
+modifier: oeyoews
+publish: article
+summary: 跨域问题源于浏览器的同源策略，主要是当协议、域名或端口不同的请求会被拦截。常见的解决方案包括 JSONP、CORS 和 Webpack Proxy。JSONP 是通过 script 标签发送 GET 请求的早期方法，但现在使用较少。CORS 需下载相关包并配置为全局中间件，以允许跨域请求。Proxy 利用 Webpack 的代理服务器功能，在开发环境中将请求转发，避免跨域问题。总的来说，这些方法各有特点，适用于不同场景。🛠️🌐
+tags: 剪藏 八股文
+title: 跨域问题的解决
+type: text/markdown
+url: https://juejin.cn/post/7074205785886031903

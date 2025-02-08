@@ -1,7 +1,9 @@
 created: 20250115071857000
 creator: oeyoews
-modified: 20250128145037713
+gemini: yes
+modified: 20250201054518389
 modifier: oeyoews
+summary: 本文介绍了如何判断一个 DOM 元素是否滚动到底部，重点解释了三个关键属性：scrollTop、clientHeight 和 scrollHeight，以及它们之间的关系。通过结合这三个属性，可以使用公式判断元素是否滚动到底部（即 scrollTop + clientHeight 等于 scrollHeight）。文章还提供了 Vue 的具体实现方法，通过监听滚动事件来获取这些属性值并进行判断。最后，展示了相关的效果演示和参考链接。📜📈
 tags: 剪藏 JavaScript
 title: 简单判断元素是否滚动到了底部
 type: text/markdown
