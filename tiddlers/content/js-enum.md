@@ -1,7 +1,6 @@
-
 在 JSDoc 中，你可以使用`@enum`标签来定义一个枚举类型。对于值是数字的枚举，可以像下面这样使用：
 
-```
+```js
 /**
  * @enum {number}
  */
@@ -20,10 +19,6 @@ let currentStatus = Status.NORMAL;
 
 这种方式能够清晰地定义数字枚举类型，并且在使用时也能得到良好的代码提示。
 
-##### 您说：
-
-##### ChatGPT 说：
-
 `@enum` 在 JSDoc 中用于定义枚举类型，主要有以下几个用途和优势：
 
 1. **类型安全**: 通过`@enum`定义的枚举类型，可以为变量提供明确的值范围，避免传入无效值。例如，当你定义了一个`Status`枚举，只有`Status.NORMAL`, `Status.DISABLED`, `Status.DELETED`等值是有效的，这样可以减少运行时错误。
@@ -36,13 +31,13 @@ let currentStatus = Status.NORMAL;
 
 举个例子，如果没有使用枚举，代码可能像这样：
 
-```
+```js
 let currentStatus = 1; // 什么是1？
 ```
 
 使用枚举后，代码会更清晰：
 
-```
+```js
 let currentStatus = Status.NORMAL; // Status.NORMAL 表示正常状态
 ```
 

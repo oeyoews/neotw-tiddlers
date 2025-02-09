@@ -1,3 +1,15 @@
+```html
+<!-- example code -->
+<div class="flex w-full bg-rose-300 h-96">
+<div class="w-[100px] bg-black grow">	 </div>	
+<div class="w-[50px] bg-green-200 grow">	 </div>	
+<div class="w-[80px] bg-gray-300 grow-0">	 </div>	
+</div>
+
+<div>
+<div class="w-96 bg-rose-400 mt-10 ml-auto"> demo</div>
+</div>
+```
 <div class="flex w-full bg-rose-300 h-96">
 <div class="w-[100px] bg-black grow">	 </div>	
 <div class="w-[50px] bg-green-200 grow">	 </div>	
