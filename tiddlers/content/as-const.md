@@ -2,7 +2,7 @@
 
 在 TypeScript 中，当你创建一个包含常量值的数组时，默认情况下 TypeScript 会将数组中的元素类型推断为最宽泛的类型，即联合类型。考虑下面的例子：
 
-```typescript
+```ts
 const animals = ['cat', 'dog', 'fish'];
 // TypeScript 推断的类型为 string []
 ```
