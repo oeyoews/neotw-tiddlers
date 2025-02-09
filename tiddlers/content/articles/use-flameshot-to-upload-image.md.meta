@@ -1,0 +1,9 @@
+created: 20230226083950150
+creator: oeyoews
+modified: 20250209054733868
+modifier: oeyoews
+publish: article
+summary: 该文章提到了一些技术组合，主要包括使用 picgo 作为 GitLab 文件插件，以及相应的图像加速服务。重点在于借助这些工具实现文件管理和快速访问，指向了对于开发者工作效率的提升。🤖
+tags: 
+title: use-flameshot-to-upload-image
+type: text/markdown

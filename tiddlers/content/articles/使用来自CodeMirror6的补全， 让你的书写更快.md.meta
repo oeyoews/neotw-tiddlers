@@ -3,6 +3,7 @@ creator: oeyoews
 modified: 20240923125542595
 modifier: oeyoews
 publish: article
+summary: 这篇文章介绍了在tiddlywiki中使用代码编辑器codemirror6的各种补全功能，包括标签自动补全、模板选择、代码片段创建、图片和Emoji补全等。用户可以通过特定的输入指令简化操作，提高写作效率，如使用`#`选择标签，`@t`选择模板，`/`调用代码片段等。此外，文章提到支持vim模式，方便用户使用快捷键，并提供了bug提交的方法，鼓励用户反馈问题以改善软件体验。💻✨
 tags: 
 title: 使用来自CodeMirror6的补全， 让你的书写更快
 type: text/markdown
