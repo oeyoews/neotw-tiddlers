@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20250209092442240
+modified: 20250209102859953
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -13,9 +13,14 @@ type: text/vnd.tiddlywiki
 welcome: 👋 Hi!, 欢迎来到 🚀 TiddlyWiki Starter Kit 🎉！
 
 <$neotw-ai text={{!!welcome}} tip="TiddlyWiki"/>
-<$vue-random-cards filter="[!is[system]!prefix[$:/]!is[binary]!days[-31]!tag[todo]tag[Journal]]" text="回顾"/>
+<$vue-random-cards tag="Journal" text="回顾"/>
 
-<$vue-random-cards filter="[!is[system]!prefix[$:/]!is[binary]!days[-31]!tag[todo]]"/>
+-----
+
+<$vue-random-cards tag="剪藏" text="剪藏"/>
+
+---
+<$vue-random-cards />
 
 {{tagpie}}
 

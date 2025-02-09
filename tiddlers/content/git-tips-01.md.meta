@@ -1,0 +1,8 @@
+created: 20231224110848078
+creator: oeyoews
+modified: 20250209110602494
+modifier: oeyoews
+quote: 今天用`--no-verify`跳过了hooks检查，并用`reset --soft HEAD^`撤销了最近一次提交 ⏪
+tags: Journal git
+title: git-tips-01
+type: text/markdown
