@@ -1,0 +1,9 @@
+created: 20230325061156807
+creator: oeyoews
+modified: 20250209090401949
+modifier: oeyoews
+tags: Tailwindcss
+title: tailwindcss-server
+type: text/vnd.tiddlywiki
+
+for tailwind-language-server(neovim), will scall all folders like tailwindcss.config.js file, please comment these

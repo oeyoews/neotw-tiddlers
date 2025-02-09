@@ -1,0 +1,23 @@
+created: 20250131131144068
+creator: oeyoews
+modified: 20250131132404435
+modifier: oeyoews
+tags: demo
+title: spoiler example
+type: text/vnd.tiddlywiki
+
+!! Usage 
+
+```html
+<*Spoiler Text Example*> 
+```
+
+!! Example
+
+This is a <*Spoiler Text Example*> 
+
+<s-t> Spoiler Web Component Example </s-t>
+
+<$s-t> Spoiler Widget Example </$s-t>
+
+<$s-t text="Spoiler Widget Example"> </$s-t>
