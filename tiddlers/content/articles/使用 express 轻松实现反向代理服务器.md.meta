@@ -1,6 +1,6 @@
 created: 20240330100907000
 creator: oeyoews
-modified: 20240331095805952
+modified: 20250212013224410
 modifier: oeyoews
 publish: article
 summary: 搭建本地后端环境非常麻烦，反向代理可以解决这个问题。通过使用 express 和 http-proxy-middleware 搭建一个反向代理服务器，可以将前端请求代理到后端 API，从而在不配置后端环境的情况下进行开发。这种方法简单快捷，无需安装额外的软件。
