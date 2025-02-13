@@ -1,7 +1,0 @@
-created: 20240808123505000
-creator: oeyoews
-modified: 20240808123505000
-tags: 剪藏
-title: vue3中使用reactive定义的变量响应式丢失问题（重新分配一个新对象会丢失响应性 大坑！！！）_object.assign后 reactive-CSDN博客
-type: text/markdown
-url: https://blog.csdn.net/qq_44848480/article/details/134415350

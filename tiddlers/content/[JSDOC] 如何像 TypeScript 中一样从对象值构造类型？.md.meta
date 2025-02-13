@@ -1,10 +1,10 @@
 created: 20240725102643000
 creator: 
 gemini: yes
-modified: 20250201054627247
+modified: 20250213082153645
 modifier: oeyoews
 summary: 使用 JSDOC 为对象创建类型，该类型具有来自原对象的相同值类型的不同键。可以通过创建一个 JSDOC 类型将对象值映射到新键，从而实现此目的。该类型可以用于创建具有不同键但相同值类型的新对象。
 tags: 剪藏
-title: [JSDOC的]有没有办法像在 TypeScript 中那样从 Object 的值构造类型？： r/打字稿 --- [JSDOC] Is there a way to construct a type from the values of an Object like you can in TypeScript
+title: [JSDOC] 如何像 TypeScript 中一样从对象值构造类型？
 type: text/markdown
 url: https://www.reddit.com/r/typescript/comments/10fcrf0/jsdoc_is_there_a_way_to_construct_a_type_from_the/
