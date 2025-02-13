@@ -1,7 +1,8 @@
 created: 20241029125034000
 creator: oeyoews
-modified: 20241029125034000
+modified: 20250213111550937
+modifier: oeyoews
 tags: 剪藏
-title: 记：flex布局遇到white-space:nowrap失效的问题_white-space: nowrap;不支持-CSDN博客
+title: Flex布局下nowrap失效
 type: text/markdown
 url: https://blog.csdn.net/weixin_39072332/article/details/100162537

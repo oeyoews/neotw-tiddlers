@@ -1,7 +1,8 @@
 created: 20240724061120000
 creator: 
-modified: 20240728073529433
+modified: 20250213111605405
+modifier: oeyoews
 tags: 剪藏
-title: TypeScript 如何从数组元素的值中定义 Union Type · 海岛心hey
+title: TypeScript 数组元素的联合类型
 type: text/markdown
 url: https://fehey.com/typescript-const-generic-union-type
