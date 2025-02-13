@@ -1,7 +1,8 @@
 created: 20241102113751000
 creator: oeyoews-bot
-modified: 20241102113751000
-quote: 今天学习了lit这个web components框架，感觉挺有意思👍，发现vscode的GitLens插件就是用它写的！
+modified: 20250213045443771
+modifier: oeyoews
+quote: 今天发现在 lit 这个 web components 框架上很有意思，看到 git leng 的 vscode 插件也是用它写的😄。回顾一个 tiddler，想起最近给 tiddlywiki 写的 spoiler 插件，正是因为看了 swiper 的代码而受到启发🔍。
 tags: Journal
 title: 2024/11-02-pfo1moxzlbi
 type: text/markdown
