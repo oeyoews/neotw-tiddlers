@@ -1,9 +1,0 @@
-created: 20240330065803957
-creator: oeyoews
-modified: 20240401163213974
-modifier: oeyoews
-publish: article
-summary: 这段代码展示了如何在 Node.js 中创建 WebSocket 服务器和在 HTML（客户端）中建立与该服务器的 WebSocket 连接。它监听服务器和客户端之间的消息事件，并展示了发送和接收消息的过程。
-tags: JavaScript
-title: 一个简单的ws示例
-type: text/markdown

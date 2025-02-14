@@ -1,0 +1,9 @@
+created: 20240330065803957
+creator: oeyoews
+modified: 20250214130518195
+modifier: oeyoews
+publish: article
+summary: 这段代码展示了一个简单的WebSocket服务器和客户端的实现，服务器监听8080端口，客户端可以连接到服务器并进行双向通信，包括发送和接收消息。其中包含一个本地服务器示例和一个连接到公共WebSocket服务器`echo.websocket.org`的客户端示例。 💻
+tags: JavaScript
+title: 简单的WS示例
+type: text/markdown
