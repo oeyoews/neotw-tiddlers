@@ -1,0 +1,10 @@
+created: 20240324074225000
+creator: oeyoews
+gemini: yes
+modified: 20250214101612313
+modifier: oeyoews
+summary: Vue项目中使用lodash的_.debounce防抖函数无效，是因为代码直接调用debounce函数，未执行其返回的函数导致。解决方法是将debounce函数的返回值(一个函数)再执行一次，例如`inputChange: debounce(() => this.load())`。  🥳
+tags: 剪藏
+title: Vue 防抖函数无效问题解析
+type: text/markdown
+url: https://www.cnblogs.com/linjiangxian/p/17646293.html
