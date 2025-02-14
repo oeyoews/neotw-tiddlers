@@ -1,7 +1,8 @@
 created: 20240721035210000
 creator: oeyoews
-modified: 20240721035210000
+modified: 20250214120439326
+modifier: oeyoews
 tags: 剪藏
-title: React中引入Vue3的@vue/reactivity 实现响应式状态管理 - 掘金
+title: React中使用Vue3的@vue-reactivity实现响应式状态管理
 type: text/markdown
 url: https://juejin.cn/post/6844904054192078855
