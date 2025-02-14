@@ -1,9 +1,10 @@
 created: 20230604144252693
 creator: oeyoews
-modified: 20230604145158431
+modified: 20250214131816470
 modifier: oeyoews
+publish: article
 summary: I am a popover with more information.
-tags: 
+tags: HTML
 title: popover-114
 type: text/vnd.tiddlywiki
 
@@ -11,6 +12,6 @@ type: text/vnd.tiddlywiki
 
 <button popovertarget="my-popover"> Open Popover </button>
 
-<div id="my-popover" popover class="bg-red-200 rounded border-none shadow-lg p-2 duration-300 transition">
+<div id="my-popover" popover class="bg-red-200 rounded border-none shadow-lg p-2 duration-300 transition ">
 {{!!summary}}
 </div>

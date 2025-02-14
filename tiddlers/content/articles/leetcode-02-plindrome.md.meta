@@ -1,0 +1,9 @@
+created: 20240720072240003
+creator: oeyoews
+modified: 20250214131602424
+modifier: oeyoews
+publish: article
+summary: 函数`isPalindrome`判断一个整数是否为回文数：负数直接返回false，正数则将其转换为字符串，反转后与原数比较，相等则为回文数，返回true，否则返回false。
+tags: LeetCode
+title: leetcode-02-plindrome
+type: text/markdown
