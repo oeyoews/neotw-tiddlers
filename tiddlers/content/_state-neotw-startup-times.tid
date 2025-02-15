@@ -1,0 +1,6 @@
+lastTime: 1739616698598
+times: 1
+title: _state-neotw-startup-times
+type: text/vnd.tiddlywiki
+
+启动次数：{{!!times}}, 上次更新时间：<$view field="lastTime" format="timestamp" />
