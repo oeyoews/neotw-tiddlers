@@ -1,7 +1,8 @@
 created: 20240901105021000
 creator: oeyoews
-modified: 20240901105021000
+modified: 20250215143115031
+modifier: oeyoews
 tags: 剪藏
-title: Vue 的 style 加了 scoped 也会样式冲突？_scoped style-CSDN博客
+title: Vue scoped style 也会样式冲突吗？
 type: text/markdown
 url: https://blog.csdn.net/m0_72788309/article/details/136928087
