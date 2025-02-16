@@ -1,7 +1,3 @@
-{{||headerTemplate}}
-
-## 常见问题
-
 ## 如果包存储在全局存储中，为什么我的 `node_modules` 使用了磁盘空间？[​](#如果包存储在全局存储中为什么我的-node_modules-使用了磁盘空间 "Direct link to 如果包存储在全局存储中为什么我的-node_modules-使用了磁盘空间")
 
 pnpm 创建从全局存储到项目下 `node_modules` 文件夹的 [硬链接](https://en.wikipedia.org/wiki/Hard_link)。硬链接指向磁盘上原始文件所在的同一位置。因此，例如，如果您的项目中 `foo` 并且它占用 1MB 的空间，那么看起来它在项目的 `node_modules` 文件夹中占用了与全局存储相同的 1MB 的空间。但是，该 1MB 是磁盘上两个不同位置的*相同空间* 。所以 `foo` 总共占用 1MB，而不是 2MB。

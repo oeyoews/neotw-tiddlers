@@ -1,8 +1,9 @@
 created: 20231030052029225
 creator: 太微搜藏
-modified: 20231030052029225
-modifier: 太微搜藏
-tags: 剪藏
+modified: 20250216032405310
+modifier: oeyoews
+summary: 作者认为阅读劣质代码有害思维，更喜欢他人讲解代码并用图示解释其思想，而非直接阅读代码。他以修改PyTorch代码为例，说明即使是优秀项目，由于代码复杂、使用了大量宏、DSL和自动代码生成等技术，理解其核心也极度困难，学习效率极低。他更推崇通过编写精简代码，反复琢磨核心逻辑来提升编程能力，而非阅读大型项目。  与其阅读代码，不如让作者讲解，这更有效率也更能提升双方能力。🤔
+tags: 剪藏 🤔thoughts
 title: 如何阅读别人的代码
 type: text/markdown
 url: https://www.yinwang.org/blog-cn/2020/02/05/how-to-read-code
