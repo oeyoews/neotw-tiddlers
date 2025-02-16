@@ -1,8 +1,8 @@
 created: 20240222070431309
 creator: oeyoews
-modified: 20240222070431309
+modified: 20250216031323458
 modifier: oeyoews
 tags: 剪藏
-title: 在 JavaScript 中 0.1 + 0.2 会是多少？为什么？如何避免相关问题？
+title: JavaScript 中 0.1 + 0.2 的结果及解决方案
 type: text/markdown
 url: https://www.explainthis.io/zh-hans/swe/js-zero-point-one-plus-zero-point-two
