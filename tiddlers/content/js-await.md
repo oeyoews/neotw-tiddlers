@@ -1,4 +1,3 @@
-{{||headerTemplate}}
 `await` 关键字是 ECMAScript 2017 中引入的一个语法特性，用于等待异步操作的完成并返回结果。它只能出现在 `async` 函数中，而且只能在异步的 Promise 对象前使用。
 
 当 `await` 后面跟着一个 Promise 对象时，它会暂停当前 async 函数的执行，并等待 Promise 对象的解决（即状态变为 fulfilled 或 rejected）。在接收到 Promise 对象的解决后，`await` 表达式会返回 Promise 对象的解决值。
