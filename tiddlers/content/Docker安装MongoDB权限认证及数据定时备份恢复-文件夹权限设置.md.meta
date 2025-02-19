@@ -1,8 +1,8 @@
 created: 20240519042838000
 creator: oeyoews
-modified: 20241030130014028
+modified: 20250219045320777
 modifier: oeyoews
 tags: 剪藏 solution
-title: docker安装mongodb开启权限认证以及mongodb数据定时脚本备份与恢复_docker mongodb 文件夹权限
+title: Docker安装MongoDB权限认证及数据定时备份恢复-文件夹权限设置
 type: text/markdown
 url: https://blog.csdn.net/suprezheng/article/details/105533403
