@@ -1,6 +1,8 @@
 created: 20230402161915292
 creator: oeyoews
-modified: 20230910080101016
+modified: 20250219092544679
 modifier: oeyoews
+summary: 电脑500G硬盘空间告急，需清理缓存(例如使用yay -Scc或yarn cache clean)。
+tags: 🤔thoughts
 title: clean-pc
 type: text/markdown
