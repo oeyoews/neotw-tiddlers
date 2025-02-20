@@ -28,3 +28,24 @@ const nums = [3, 2, 4];
 const target = 6;
 console.log(twoSum(nums, target));
 ```
+
+```js
+const twoSum = (nums, target) => {
+    const map = new Map();
+    let result = [];
+
+    nums.some((num, i) => {
+        if (map.has(target - num)) {
+            result = [map.get(target - num), i];
+            return true; // 终止遍历
+        }
+        map.set(num, i);
+        return false;
+    });
+
+    return result;
+};
+
+// 示例
+console.log(twoSum([2, 7, 11, 15], 9)); // 输出: [0, 1]
+```
