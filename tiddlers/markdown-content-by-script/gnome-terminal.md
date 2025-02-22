@@ -1,1 +1,0 @@
-gnome-shell terminal not support literal feature

@@ -1,7 +1,8 @@
 created: 20231013044633373
 creator: oeyoews
-modified: 20231015000920434
+modified: 20250222161131166
 modifier: oeyoews
-tags:
+summary: Windows 10 系统在2023年10月13日12:27:11意外关闭，导致蓝屏关键原因是创建转储文件失败，同时Windows Security Center服务启动失败，无法验证文件的数字签名，可能存在恶意软件或文件损坏问题。.debugLine
+tags: 🤔thoughts
 title: 每天一个蓝屏小技巧
 type: text/markdown
