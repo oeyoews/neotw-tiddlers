@@ -1,1 +1,0 @@
-* if you use gitua(git add . && git commit -m "xxx") this pre-commit will not work (maybe this bug), and this hook execute need time(I cannot bear that for personal projects)
