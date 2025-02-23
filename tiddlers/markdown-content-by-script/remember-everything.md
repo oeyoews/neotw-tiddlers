@@ -1,1 +1,0 @@
-* <https://ncase.me/remember/zh.html>

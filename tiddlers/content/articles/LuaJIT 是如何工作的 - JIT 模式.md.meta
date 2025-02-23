@@ -1,0 +1,10 @@
+created: 20240116064042432
+creator: oeyoews
+modified: 20250223135747119
+modifier: oeyoews
+publish: article
+summary: LuaJIT通过JIT技术即时编译Lua字节码为机器指令提升程序性能，其基于trace的JIT编译过程包括计数、录制、生成和执行等步骤，能实现高效机器码生成及执行，同时在遇到分支或非热点代码时灵活切换至解释模式，展现了LuaJIT在提高执行效率方面的卓越设计。
+tags: 
+title: LuaJIT 是如何工作的 - JIT 模式
+type: text/markdown
+url: https://segmentfault.com/a/1190000040229672
