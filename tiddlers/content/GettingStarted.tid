@@ -2,7 +2,7 @@ created: 20230117102714737
 creator: oeyoews
 description: HomePage
 icon: $:/favicon.ico
-modified: 20250223031039195
+modified: 20250223033907613
 modifier: oeyoews
 page-cover: 
 page-icon: fluent-emoji-flat:waving-hand
@@ -18,7 +18,7 @@ welcome: 👋 Hi!, 欢迎来到 🚀 TiddlyWiki Starter Kit 🎉！
 <hr />
 <$vue-random-cards tag="剪藏" text="剪藏"/>
 <hr />
-<$vue-random-cards filter="[field:tags[]!is[system]!is[binary]!is[tag]!suffix[svg]!sort[title]!publish[private]]" text="NoTag"/>
+<$vue-random-cards filter="[field:tags[]!is[system]!is[binary]!is[tag]!suffix[svg]!sort[title]publish[]]" text="NoTag"/>
 <hr />
 <$vue-random-cards />
 
