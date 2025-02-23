@@ -1,7 +1,8 @@
 created: 20231022133617251
 creator: oeyoews
-modified: 20231023060606244
+modified: 20250223030711486
 modifier: oeyoews
-tags:
+summary: Komorebi需要手动安装配置，动画效果欠流畅，需配合autohotkey使用，详细配置可参考官方GitHub文档。💻
+tags: 🤔thoughts
 title: windows11-window-manager
 type: text/markdown

@@ -1,5 +1,8 @@
 created: 20230915034338993
-modified: 20230915034403798
-tags: 
+creator: oeyoews
+modified: 20250223030525600
+modifier: oeyoews
+summary: 使用 patch-package 工具进行打补丁操作也具有一定复杂性痛点。
+tags: 🤔thoughts
 title: use-patch-package
 type: text/markdown

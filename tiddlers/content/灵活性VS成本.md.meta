@@ -1,6 +1,8 @@
 created: 20230612142417407
 creator: oeyoews
-modified: 20230726045248346
+modified: 20250223030315478
 modifier: oeyoews
+summary: 追求高灵活性会增加开发、维护和复用成本，适当限制灵活性反而可以提高生产力。OptionsResolver
+tags: 🤔thoughts
 title: 灵活性VS成本
 type: text/markdown

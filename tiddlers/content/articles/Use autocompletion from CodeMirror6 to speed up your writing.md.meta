@@ -3,6 +3,7 @@ creator: oeyoews
 modified: 20240923125537405
 modifier: oeyoews
 publish: article
+summary: 使用CodeMirror6的自动完成功能可以显著提高书写效率，包括标签自动补全、模板选择、代码片段插入、图像、宏和表情符号自动补全等，支持Vim模式，可通过`/?`查看快捷键列表，`@#bug`提交问题报告，增强写作便捷性。😊
 tags: 
 title: Use autocompletion from CodeMirror6 to speed up your writing
 type: text/markdown

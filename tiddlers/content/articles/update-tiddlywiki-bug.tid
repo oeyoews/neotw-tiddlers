@@ -1,10 +1,10 @@
 created: 20230224052401697
 creator: oeyoews
-modified: 20240327095508627
+modified: 20250223030218776
 modifier: oeyoews
 publish: article
 summary: 启动动作中使用 deletetiddler 会阻止文件被更新到文件系统。
-tags: 
+tags: TiddlyWiki
 title: update-tiddlywiki-bug
 type: text/vnd.tiddlywiki
 
