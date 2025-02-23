@@ -1,1 +1,0 @@
-* POSIX defines EACCES as " an attempt was made to access a file in a way forbidden by its file access permissions " and EPERM as " an attempt was made to perform an operation limited to processes with appropriate privileges or to the owner of a file or other resource ".

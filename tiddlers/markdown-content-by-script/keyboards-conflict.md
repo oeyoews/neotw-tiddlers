@@ -1,1 +1,0 @@
-screenity conflict for neotw tiddlywiki shortcuts
