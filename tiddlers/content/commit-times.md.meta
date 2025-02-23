@@ -1,7 +1,8 @@
 created: 20231009124755515
 creator: oeyoews
-modified: 20231009124933622
+modified: 20250223134330525
 modifier: oeyoews
-tags:
+summary: 在Linux下提交commit非常流畅，而在Windows下则速度慢很多，导致commit频率大大降低，这说明操作的便捷性直接影响行为的频率⬆️
+tags: 🤔thoughts
 title: commit-times
 type: text/markdown

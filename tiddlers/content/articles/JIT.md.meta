@@ -1,0 +1,10 @@
+created: 20240116063901065
+creator: oeyoews
+modified: 20250223132016753
+modifier: oeyoews
+publish: article
+summary: LuaJIT是Lua的一种高效版本，提供了JIT（即时编译）和Interpreter（解释器）两种运行模式。JIT模式通过推测性执行和优化机器码生成提升性能，但增加了复杂性和潜在错误检查成本；Interpreter模式则更为简单直接，稳定性高且性能优于原生Lua，尤其适合iOS平台。可在脚本运行前通过特定代码来切换至Interpreter模式。
+tags: 
+title: JIT
+type: text/markdown
+url: https://www.cnblogs.com/zhaolaosan/p/16185249.html

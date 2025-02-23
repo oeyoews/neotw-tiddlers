@@ -1,1 +1,0 @@
-* google chrome have some cache bug for password
