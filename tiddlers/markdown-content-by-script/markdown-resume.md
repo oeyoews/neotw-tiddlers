@@ -1,1 +1,0 @@
-* <http://cv.ftqq.com/?fr=github#>

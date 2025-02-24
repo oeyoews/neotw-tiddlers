@@ -1,7 +1,8 @@
 created: 20230830070831048
 creator: oeyoews
-modified: 20230830070947062
+modified: 20250224020030221
 modifier: oeyoews
-tags: 
+summary: Vercel 的 cron 功能正式版需付费且仅限 serverless，与 GitHub Actions 的定时触发更新机制不同 emoji: 🕒🖥️
+tags: 🤔thoughts
 title: vercel-cron
 type: text/markdown

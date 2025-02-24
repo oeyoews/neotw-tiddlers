@@ -1,10 +1,6 @@
-created: 20230519124001082
-creator: oeyoews
-modified: 20230519124011393
-modifier: oeyoews
-tags: 
-title: unsplash-source-api
-type: text/vnd.tiddlywiki
+:::warning
+接口挂
+:::
 
 `https://source.unsplash.com/random` 是 Unsplash 提供的一个 API，用于随机获取 Unsplash 图片库中的一张公共照片。使用该 API 时不需要进行身份验证，只需访问该 URL 即可返回一张随机图片。
 

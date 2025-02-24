@@ -1,9 +1,10 @@
 created: 20220903034039812
 creator: oeyoews
-modified: 20220903034328254
+modified: 20250224020902028
 modifier: oeyoews
-tags: 
-title: neotw/docs/macro-not-snippet
+summary: 在 NeoVim 中可以使用代码片段，即使在 TiddlyWiki 中也能依靠 codemirror-enhanced 使用片段，但更喜欢用宏替代片段，因为更简洁且小巧，同时保持了 TiddlyWiki 的极简原则。
+tags: 🤔thoughts
+title: macro-not-snippet
 type: text/vnd.tiddlywiki
 
 In neovim, use snippets, even in tiddlywiki still can use snippet depend codemirror-enhanced, but I prefer to use macro replace snippets, it's more simplify and tiny. an the time, it keep kiss tiddlywiki principle 
