@@ -1,11 +1,12 @@
 created: 20221117052014352
 creator: oeyoews
-modified: 20230113170211246
+modified: 20250225011359007
 modifier: oeyoews
-tags: 
+tags: TiddlyWiki
 title: neotw/css/below-toolbar
 type: text/vnd.tiddlywiki
 
+```css
 .tc-tiddler-edit-frame .tc-dropzone-editor > .tc-reveal {
    display: flex;
    flex-direction: column;
@@ -16,3 +17,4 @@ type: text/vnd.tiddlywiki
    position: sticky;
    bottom: 0;
 }
+```
