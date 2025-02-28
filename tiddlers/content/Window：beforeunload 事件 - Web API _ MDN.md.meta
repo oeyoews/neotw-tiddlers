@@ -1,7 +1,8 @@
 created: 20240905000300000
 creator: oeyoews
-modified: 20240905000300000
-tags: 剪藏
+modified: 20250227111416585
+modifier: oeyoews
+tags: 剪藏 JavaScript
 title: Window：beforeunload 事件 - Web API | MDN
 type: text/markdown
 url: https://developer.mozilla.org/zh-CN/docs/Web/API/Window/beforeunload_event

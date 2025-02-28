@@ -1,7 +1,8 @@
 created: 20240729004809000
 creator: 
-modified: 20240729004809000
-tags: 剪藏
+modified: 20250227123240598
+modifier: oeyoews
+tags: 剪藏 TypeScript
 title: In TypeScript, what do "extends keyof" and "in keyof" mean
 type: text/markdown
 url: https://stackoverflow.com/questions/57337598/in-typescript-what-do-extends-keyof-and-in-keyof-mean

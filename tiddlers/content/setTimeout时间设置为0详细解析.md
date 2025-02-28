@@ -5,14 +5,10 @@
 `setTimeout(fn,millisec)` 方法用于在指定的毫秒数后调用函数或计算表达式。\
 很简单，`setTimeout()` 只执行 fn 一次，到底什么时候执行取决于第二个参数 millisec 设定的毫秒数，所以很多人习惯上称之为延迟，无非就是延迟一段时间后再执行里面的代码。
 
-```
+```js
 setTimeout(function(){
  console.log('我是setTimeout');
 }, 1000);
-
-1
-2
-3
 ```
 
 正常情况下，我是`setTimeout` 这句话并不会马上输出而是等 1000 毫秒以后会在浏览器的控制台输出。
@@ -21,18 +17,12 @@ setTimeout(function(){
 
 OK，看一个例子，这个例子的输出结果是什么？
 
-```
+```js
 setTimeout(function(){
  console.log(1);
 }, 0);
 console.log(2);
 console.log(3);
-
-1
-2
-3
-4
-5
 ```
 
 出乎一些人的意料，得到的结果竟然是`2、3、1`。这似乎不按套路出牌啊，明明是等待了 0 毫秒也就是不等待直接输出啊，为啥 1 却在最后输出了呢？
