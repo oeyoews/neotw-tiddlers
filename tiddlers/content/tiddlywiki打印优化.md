@@ -1,6 +1,6 @@
 <$iconify /> tiddlywiki 的默认主题实际上是有打印优化的， 其实还是通过样式来控制的， 但是我注意到绝大多少人都没有注意到这一点， 导致自己的 wiki 打印出来后效果不理想， 原因大多是改造扩展定制了自己的tiddlywiki后， 缺少了对应的优化。
 
-```css
+```html
 @media print {
 	.xxx {
 		display: none;

@@ -1,5 +1,3 @@
-<$vue-gemini />
-
 ```vue
 <script setup lang="ts">
 import Son from './Son.vue';
