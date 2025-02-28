@@ -2,10 +2,10 @@ created: 20240311151736967
 creator: oeyoews
 description: 在 JavaScript 中，代码块使用一个新的词法环境，因此代码块内的变量不可从代码块外访问。这有助于防止变量名称冲突并实现局部作用域。
 gemini: yes
-modified: 20240327093945728
+modified: 20250228123040493
 modifier: oeyoews
 summary: 代码块能够将变量隔离到局部作用域中，防止不同脚本对相同变量的覆盖，从而避免冲突。代码块自身拥有独立的词法环境，内部变量不会被外部代码或其他脚本访问到。
-tags: 剪藏
+tags: 剪藏 JavaScript
 title: 变量作用域，闭包
 type: text/markdown
 url: https://zh.javascript.info/closure
