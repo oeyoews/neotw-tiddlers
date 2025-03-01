@@ -1,0 +1,15 @@
+created: 20230928073125298
+creator: oeyoews
+modified: 20250301133952872
+modifier: oeyoews
+tags: Plugins
+title: darkmode-dirgram
+type: text/vnd.tiddlywiki
+
+```mermaid
+graph TD;
+    TW启动 -->|检测是否需要跟随系统| 判断{需要跟随系统?};
+    判断 -- Yes --> 初始化调色[初始化对应模式下的调色];
+    判断 -- No --> 手动切换[dark/light];
+    判断 --> 监听[监听事件, 自动切换];
+```
