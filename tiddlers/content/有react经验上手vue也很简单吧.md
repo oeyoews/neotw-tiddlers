@@ -1,10 +1,8 @@
-> 自己文章中虽然有几篇涉及到 vue 相关的知识，不过那都是学生时代总结的。可笑的是工作以来，自己一直是处在 react 技术栈。但是近来由于工作需要，不得不复习一下 vue 了。虽然说都是工具而已，但是毕竟一直在写 react，走出舒适区去接受一个不太熟悉的事物总的来说还是不太好受的。结下来我就结合 vue 与 react 的 diff，复习一下 vue 的重点知识。
-
 ## 从两者的入口函数和 app 组件开始
 
 **react**
 
-```
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -17,7 +15,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 **vue**
 
-```
+```vue
 import Vue from "vue";
 import App from "./App.vue";
 
@@ -65,7 +63,7 @@ export default {
 
   **function 类型**
 
-  ```
+  ```js
   const App = () => {
     return <div>app组件</div>;
   };
@@ -73,7 +71,7 @@ export default {
 
   **class 类型**
 
-  ```
+  ```js
   class App extends React.Component {
     render() {
       return <div>app</div>;
@@ -83,7 +81,7 @@ export default {
 
   看一下 react 的 vnode
 
-  ```
+  ```jsx
   import React from "react";
   import ReactDOM from "react-dom";
 
@@ -114,7 +112,7 @@ export default {
 
 首先通过阅读文档，其解释说：每个 vue 组件本质是都是 vue 实例。我们先去验证一下，打印一下根实例，看看其数据结构是怎样的。
 
-```
+```js
 import Vue from "vue";
 import App from "./App.vue";
 
