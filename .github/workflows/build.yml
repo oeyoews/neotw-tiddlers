@@ -22,4 +22,4 @@ jobs:
     steps:
       - uses: oeyoews/tiddlywiki-publish@main
         with:
-          tiddlers-directory: src
+          tiddlers-directory: .
