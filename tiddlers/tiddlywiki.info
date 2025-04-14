@@ -1,0 +1,6 @@
+{
+	"plugins": [
+		"tiddlywiki/markdown",
+		"tiddlywiki/browser-sniff"
+	]
+}
