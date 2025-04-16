@@ -22,6 +22,7 @@ jobs:
     steps:
       - uses: oeyoews/tiddlywiki-publish@main
         with:
+          site-title: " My Personal notes"
           tiddlers-directory: .
           default-home-tiddlers: 最近更新
           version: "master"
