@@ -24,3 +24,4 @@ jobs:
         with:
           tiddlers-directory: .
           default-home-tiddlers: 最近更新
+          version: "master"
