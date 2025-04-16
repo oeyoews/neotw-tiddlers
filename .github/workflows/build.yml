@@ -23,3 +23,4 @@ jobs:
       - uses: oeyoews/tiddlywiki-publish@main
         with:
           tiddlers-directory: .
+          default-home-tiddlers: 最近更新
