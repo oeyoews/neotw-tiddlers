@@ -23,6 +23,7 @@ jobs:
       - uses: oeyoews/tiddlywiki-publish@main
         with:
           site-title: " My Personal notes"
+          favicon: "./favicon.svg"
           tiddlers-directory: .
           default-home-tiddlers: 最近更新
           version: "master"
