@@ -1,15 +1,14 @@
 created: 20231017235829236
 creator: oeyoews
-modified: 20250509150724955
+modified: 20250509151035377
 modifier: oeyoews
 tags: TiddlyWiki
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
-  <%if [[$:/plugins/oeyoews/neotw-vue3]plugin-type[plugin]] %>
   <%if [[$:/plugins/oeyoews/vue-table]plugin-type[plugin]] %>
+  <%if [[$:/plugins/oeyoews/neotw-vue3]plugin-type[plugin]] %>
     <$vue-table tags="tags"/>
-  <%endif%>
   <% else %>
     <div class="overflow-x-auto">
       <table class="min-w-full border-collapse">
@@ -36,4 +35,5 @@ type: text/vnd.tiddlywiki
         </tbody>
       </table>
     </div>
+  <%endif%>
   <%endif%>
