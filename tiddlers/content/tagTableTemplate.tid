@@ -1,25 +1,37 @@
 created: 20231017235829236
 creator: oeyoews
-modified: 20250225011703319
+modified: 20250509143425084
 modifier: oeyoews
 tags: TiddlyWiki
 title: tagTableTemplate
 type: text/vnd.tiddlywiki
 
-<!-- // feat: support change sort button -->
-<div class="overflow-x-hidden">
-<table>
-<$list filter="[tag<currentTiddler>!sort[modified]!has[draft.of]limit[200]]">
-	<$list-template>
-<tr>
-<td class="p-2 bg-gray-200 capitalize dark:bg-black dark:text-white">
-		<$link />
-</td>
-</tr>
-	</$list-template>
-<$list-empty>
- 这里是一个tag table template!
-</$list-empty>
-</$list>
-</table>
-</div>
+  <%if [[$:/plugins/oeyoews/vue-table]plugin-type[plugin]] %>
+    <$vue-table tags="tags"/>
+  <% else %>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border-collapse">
+        <thead>
+          <tr>
+            <th class="p-2 bg-gray-300 dark:bg-gray-800 dark:text-white text-left">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <$list filter="[tag<currentTiddler>!sort[modified]!has[draft.of]limit[200]]">
+            <$list-template>
+              <tr>
+                <td class="p-2 bg-gray-200 dark:bg-black dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors capitalize">
+                  <$link />
+                </td>
+              </tr>
+            </$list-template>
+            <$list-empty>
+              <tr>
+                <td class="p-2 text-gray-500 italic">这里是一个tag table template!</td>
+              </tr>
+            </$list-empty>
+          </$list>
+        </tbody>
+      </table>
+    </div>
+  <%endif%>
